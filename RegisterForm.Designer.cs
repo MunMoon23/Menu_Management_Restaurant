@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             RegBanner = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             Logo = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -50,7 +50,7 @@
             Password = new Guna.UI2.WinForms.Guna2TextBox();
             label3 = new Label();
             RegButton = new Guna.UI2.WinForms.Guna2Button();
-            linkLabel1 = new LinkLabel();
+            GotoLogin = new LinkLabel();
             label4 = new Label();
             ConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
             label5 = new Label();
@@ -60,14 +60,14 @@
             // 
             // RegBanner
             // 
-            RegBanner.CustomizableEdges = customizableEdges1;
+            RegBanner.CustomizableEdges = customizableEdges25;
             RegBanner.Dock = DockStyle.Left;
             RegBanner.Image = Properties.Resources.registerPicture2;
             RegBanner.ImageRotate = 0F;
             RegBanner.Location = new Point(0, 0);
             RegBanner.Margin = new Padding(3, 4, 3, 4);
             RegBanner.Name = "RegBanner";
-            RegBanner.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            RegBanner.ShadowDecoration.CustomizableEdges = customizableEdges26;
             RegBanner.Size = new Size(469, 803);
             RegBanner.TabIndex = 0;
             RegBanner.TabStop = false;
@@ -80,13 +80,13 @@
             // 
             // Logo
             // 
-            Logo.CustomizableEdges = customizableEdges11;
+            Logo.CustomizableEdges = customizableEdges35;
             Logo.Image = Properties.Resources.delicousrestaurantlogo;
             Logo.ImageRotate = 0F;
             Logo.Location = new Point(1014, 0);
             Logo.Margin = new Padding(3, 4, 3, 4);
             Logo.Name = "Logo";
-            Logo.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            Logo.ShadowDecoration.CustomizableEdges = customizableEdges36;
             Logo.Size = new Size(181, 167);
             Logo.SizeMode = PictureBoxSizeMode.Zoom;
             Logo.TabIndex = 1;
@@ -106,7 +106,7 @@
             // 
             User.BackColor = Color.White;
             User.BorderRadius = 10;
-            User.CustomizableEdges = customizableEdges9;
+            User.CustomizableEdges = customizableEdges33;
             User.DefaultText = "";
             User.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             User.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -121,7 +121,7 @@
             User.Name = "User";
             User.PlaceholderText = "Enter your username";
             User.SelectedText = "";
-            User.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            User.ShadowDecoration.CustomizableEdges = customizableEdges34;
             User.Size = new Size(555, 60);
             User.TabIndex = 3;
             // 
@@ -139,7 +139,7 @@
             // 
             Password.BackColor = Color.White;
             Password.BorderRadius = 10;
-            Password.CustomizableEdges = customizableEdges7;
+            Password.CustomizableEdges = customizableEdges31;
             Password.DefaultText = "";
             Password.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             Password.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -154,7 +154,7 @@
             Password.Name = "Password";
             Password.PlaceholderText = "Your password";
             Password.SelectedText = "";
-            Password.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            Password.ShadowDecoration.CustomizableEdges = customizableEdges32;
             Password.Size = new Size(555, 60);
             Password.TabIndex = 3;
             Password.UseSystemPasswordChar = true;
@@ -172,7 +172,7 @@
             // RegButton
             // 
             RegButton.BorderRadius = 10;
-            RegButton.CustomizableEdges = customizableEdges3;
+            RegButton.CustomizableEdges = customizableEdges27;
             RegButton.DisabledState.BorderColor = Color.DarkGray;
             RegButton.DisabledState.CustomBorderColor = Color.DarkGray;
             RegButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -183,22 +183,23 @@
             RegButton.Location = new Point(559, 663);
             RegButton.Margin = new Padding(3, 4, 3, 4);
             RegButton.Name = "RegButton";
-            RegButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            RegButton.ShadowDecoration.CustomizableEdges = customizableEdges28;
             RegButton.Size = new Size(555, 65);
             RegButton.TabIndex = 5;
             RegButton.Text = "Register";
             RegButton.Click += RegButton_Click;
             // 
-            // linkLabel1
+            // GotoLogin
             // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.LinkColor = Color.FromArgb(255, 107, 0);
-            linkLabel1.Location = new Point(879, 755);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(82, 20);
-            linkLabel1.TabIndex = 6;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Login Here";
+            GotoLogin.AutoSize = true;
+            GotoLogin.LinkColor = Color.FromArgb(255, 107, 0);
+            GotoLogin.Location = new Point(879, 755);
+            GotoLogin.Name = "GotoLogin";
+            GotoLogin.Size = new Size(82, 20);
+            GotoLogin.TabIndex = 6;
+            GotoLogin.TabStop = true;
+            GotoLogin.Text = "Login Here";
+            GotoLogin.LinkClicked += GotoLogin_LinkClicked;
             // 
             // label4
             // 
@@ -214,7 +215,7 @@
             // 
             ConfirmPassword.BackColor = Color.White;
             ConfirmPassword.BorderRadius = 10;
-            ConfirmPassword.CustomizableEdges = customizableEdges5;
+            ConfirmPassword.CustomizableEdges = customizableEdges29;
             ConfirmPassword.DefaultText = "";
             ConfirmPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             ConfirmPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -229,7 +230,7 @@
             ConfirmPassword.Name = "ConfirmPassword";
             ConfirmPassword.PlaceholderText = "Confirm password";
             ConfirmPassword.SelectedText = "";
-            ConfirmPassword.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            ConfirmPassword.ShadowDecoration.CustomizableEdges = customizableEdges30;
             ConfirmPassword.Size = new Size(555, 60);
             ConfirmPassword.TabIndex = 3;
             ConfirmPassword.UseSystemPasswordChar = true;
@@ -251,7 +252,7 @@
             BackColor = Color.White;
             ClientSize = new Size(1208, 803);
             Controls.Add(label4);
-            Controls.Add(linkLabel1);
+            Controls.Add(GotoLogin);
             Controls.Add(RegButton);
             Controls.Add(label5);
             Controls.Add(label3);
@@ -285,7 +286,7 @@
         private Guna.UI2.WinForms.Guna2TextBox Password;
         private Guna.UI2.WinForms.Guna2Button RegButton;
         private Label label4;
-        private LinkLabel linkLabel1;
+        private LinkLabel GotoLogin;
         private Label label5;
         private Guna.UI2.WinForms.Guna2TextBox ConfirmPassword;
     }

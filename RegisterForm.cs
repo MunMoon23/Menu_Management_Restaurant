@@ -20,17 +20,17 @@ namespace Menu_Management
             }
             else
             {
-                if(!System.Text.RegularExpressions.Regex.IsMatch(User.Text, user_regex))
+                if (!System.Text.RegularExpressions.Regex.IsMatch(User.Text, user_regex))
                 {
                     MessageBox.Show("Username must be 3-16 alphanumeric characters.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                else if(!System.Text.RegularExpressions.Regex.IsMatch(Password.Text, password_regex))
+                else if (!System.Text.RegularExpressions.Regex.IsMatch(Password.Text, password_regex))
                 {
                     MessageBox.Show("Password must be at least 8 characters long", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                else if(Password.Text != ConfirmPassword.Text)
+                else if (Password.Text != ConfirmPassword.Text)
                 {
                     MessageBox.Show("Passwords do not match.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -39,9 +39,19 @@ namespace Menu_Management
                 {
                     // Registration logic here (e.g., save to database or file)
                     MessageBox.Show("Registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close(); // Close the registration form after successful registration
+                    LoginForm loginform = new LoginForm();
+
+                    loginform.Show();
+                    this.Hide();
                 }
-            }    
+            }
+        }
+
+        private void GotoLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LoginForm loginform = new LoginForm();
+            loginform.Show();
+            this.Hide();
         }
     }
 }

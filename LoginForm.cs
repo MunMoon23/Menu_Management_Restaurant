@@ -21,5 +21,12 @@ namespace Menu_Management
         {
 
         }
+
+        private void GotoRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RegisterForm regform = new RegisterForm();
+            regform.Show();
+            this.Hide();
+        }
     }
 }

@@ -177,7 +177,7 @@
             // guna2PictureBox2
             // 
             guna2PictureBox2.CustomizableEdges = customizableEdges7;
-            guna2PictureBox2.Image = Menu_Management._.delicousrestaurantlogo;
+            
             guna2PictureBox2.ImageRotate = 0F;
             guna2PictureBox2.Location = new Point(899, 0);
             guna2PictureBox2.Name = "guna2PictureBox2";
@@ -189,9 +189,10 @@
             // 
             // guna2PictureBox1
             // 
+            guna2PictureBox1.BackColor = Color.White;
             guna2PictureBox1.CustomizableEdges = customizableEdges9;
             guna2PictureBox1.Dock = DockStyle.Left;
-            guna2PictureBox1.Image = Menu_Management._.LoginP;
+           
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.Location = new Point(0, 0);
             guna2PictureBox1.Name = "guna2PictureBox1";

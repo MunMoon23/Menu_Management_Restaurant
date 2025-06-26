@@ -38,6 +38,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             label4 = new Label();
@@ -168,44 +169,45 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(493, 117);
+            label1.Location = new Point(493, 135);
             label1.Name = "label1";
             label1.Size = new Size(66, 30);
             label1.TabIndex = 10;
             label1.Text = "Login";
+            label1.Click += label1_Click;
             // 
             // guna2PictureBox1
             // 
             guna2PictureBox1.CustomizableEdges = customizableEdges3;
             guna2PictureBox1.Dock = DockStyle.Left;
-            guna2PictureBox1.Image = Menu_Management._.LoginP;
+            guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.Location = new Point(0, 0);
             guna2PictureBox1.Name = "guna2PictureBox1";
             guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2PictureBox1.Size = new Size(393, 602);
+            guna2PictureBox1.Size = new Size(392, 600);
             guna2PictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            guna2PictureBox1.TabIndex = 20;
+            guna2PictureBox1.TabIndex = 22;
             guna2PictureBox1.TabStop = false;
             // 
             // guna2PictureBox2
             // 
             guna2PictureBox2.CustomizableEdges = customizableEdges1;
-            guna2PictureBox2.Image = Menu_Management._.delicousrestaurantlogo;
+            guna2PictureBox2.Image = (Image)resources.GetObject("guna2PictureBox2.Image");
             guna2PictureBox2.ImageRotate = 0F;
-            guna2PictureBox2.Location = new Point(887, 0);
+            guna2PictureBox2.Location = new Point(659, 0);
             guna2PictureBox2.Name = "guna2PictureBox2";
             guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2PictureBox2.Size = new Size(158, 125);
             guna2PictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            guna2PictureBox2.TabIndex = 21;
+            guna2PictureBox2.TabIndex = 23;
             guna2PictureBox2.TabStop = false;
             // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1057, 602);
+            ClientSize = new Size(1057, 600);
             Controls.Add(guna2PictureBox2);
             Controls.Add(guna2PictureBox1);
             Controls.Add(label4);

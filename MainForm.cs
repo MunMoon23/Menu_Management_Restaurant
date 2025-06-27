@@ -16,5 +16,10 @@ namespace Menu_Management
         {
             InitializeComponent();
         }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

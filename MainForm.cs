@@ -36,5 +36,15 @@ namespace Menu_Management
             MainPanel.Controls.Add(hf);
             hf.Show();
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            MainPanel.Controls.Clear();
+            HomeForm hf = new HomeForm();
+            hf.TopLevel = false;
+            hf.Dock = DockStyle.Fill;
+            MainPanel.Controls.Add(hf);
+            hf.Show();
+        }
     }
 }

@@ -45,6 +45,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             label1 = new Label();
@@ -54,6 +56,7 @@
             Reports = new Guna.UI2.WinForms.Guna2Button();
             Tables = new Guna.UI2.WinForms.Guna2Button();
             Home = new Guna.UI2.WinForms.Guna2Button();
+            MainPanel = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).BeginInit();
@@ -307,12 +310,23 @@
             Home.TextOffset = new Point(20, 0);
             Home.Click += Home_Click;
             // 
+            // MainPanel
+            // 
+            MainPanel.CustomizableEdges = customizableEdges17;
+            MainPanel.Dock = DockStyle.Fill;
+            MainPanel.Location = new Point(276, 0);
+            MainPanel.Name = "MainPanel";
+            MainPanel.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            MainPanel.Size = new Size(974, 775);
+            MainPanel.TabIndex = 1;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1250, 775);
+            Controls.Add(MainPanel);
             Controls.Add(guna2Panel1);
             Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
@@ -337,5 +351,6 @@
         private Guna.UI2.WinForms.Guna2Button Exit;
         private Label label1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2Panel MainPanel;
     }
 }

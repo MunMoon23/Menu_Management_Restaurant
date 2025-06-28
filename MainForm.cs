@@ -16,5 +16,20 @@ namespace Menu_Management
         {
             InitializeComponent();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Home_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

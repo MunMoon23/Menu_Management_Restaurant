@@ -101,7 +101,7 @@
             label1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(97, 729);
             label1.Name = "label1";
-            label1.Size = new Size(87, 23);
+            label1.Size = new Size(69, 17);
             label1.TabIndex = 3;
             label1.Text = "Username";
             // 
@@ -322,8 +322,7 @@
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(9F, 21F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.White;
             ClientSize = new Size(1250, 775);
             Controls.Add(MainPanel);

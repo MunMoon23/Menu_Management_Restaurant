@@ -39,18 +39,20 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             panel6 = new Panel();
@@ -101,6 +103,9 @@
             label2 = new Label();
             uC_OrderItem1 = new UC_OrderItem();
             uC_OrderItem2 = new UC_OrderItem();
+            guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            label4 = new Label();
+            label5 = new Label();
             guna2Panel1.SuspendLayout();
             guna2Panel5.SuspendLayout();
             panel6.SuspendLayout();
@@ -110,6 +115,7 @@
             guna2Panel3.SuspendLayout();
             guna2Panel2.SuspendLayout();
             guna2Panel8.SuspendLayout();
+            panel1.SuspendLayout();
             flowLayoutPanel3.SuspendLayout();
             guna2Panel7.SuspendLayout();
             guna2Panel6.SuspendLayout();
@@ -486,11 +492,11 @@
             guna2Panel2.Controls.Add(guna2Panel8);
             guna2Panel2.Controls.Add(guna2Panel7);
             guna2Panel2.Controls.Add(guna2Panel6);
-            guna2Panel2.CustomizableEdges = customizableEdges21;
+            guna2Panel2.CustomizableEdges = customizableEdges23;
             guna2Panel2.Dock = DockStyle.Right;
             guna2Panel2.Location = new Point(927, 0);
             guna2Panel2.Name = "guna2Panel2";
-            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges24;
             guna2Panel2.Size = new Size(323, 775);
             guna2Panel2.TabIndex = 1;
             // 
@@ -498,16 +504,19 @@
             // 
             guna2Panel8.Controls.Add(panel1);
             guna2Panel8.Controls.Add(flowLayoutPanel3);
-            guna2Panel8.CustomizableEdges = customizableEdges11;
+            guna2Panel8.CustomizableEdges = customizableEdges13;
             guna2Panel8.Dock = DockStyle.Fill;
             guna2Panel8.Location = new Point(0, 132);
             guna2Panel8.Name = "guna2Panel8";
-            guna2Panel8.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2Panel8.ShadowDecoration.CustomizableEdges = customizableEdges14;
             guna2Panel8.Size = new Size(323, 643);
             guna2Panel8.TabIndex = 2;
             // 
             // panel1
             // 
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(guna2Button3);
             panel1.Dock = DockStyle.Bottom;
             panel1.Location = new Point(0, 530);
             panel1.Name = "panel1";
@@ -528,11 +537,11 @@
             // 
             guna2Panel7.Controls.Add(guna2Button2);
             guna2Panel7.Controls.Add(guna2Button1);
-            guna2Panel7.CustomizableEdges = customizableEdges17;
+            guna2Panel7.CustomizableEdges = customizableEdges19;
             guna2Panel7.Dock = DockStyle.Top;
             guna2Panel7.Location = new Point(0, 66);
             guna2Panel7.Name = "guna2Panel7";
-            guna2Panel7.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            guna2Panel7.ShadowDecoration.CustomizableEdges = customizableEdges20;
             guna2Panel7.Size = new Size(323, 66);
             guna2Panel7.TabIndex = 1;
             // 
@@ -544,7 +553,7 @@
             guna2Button2.CheckedState.FillColor = Color.Black;
             guna2Button2.CheckedState.Font = new Font("Segoe UI", 9.75F);
             guna2Button2.CheckedState.ForeColor = Color.FromArgb(187, 187, 187);
-            guna2Button2.CustomizableEdges = customizableEdges13;
+            guna2Button2.CustomizableEdges = customizableEdges15;
             guna2Button2.DisabledState.BorderColor = Color.DarkGray;
             guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -554,7 +563,7 @@
             guna2Button2.ForeColor = Color.Black;
             guna2Button2.Location = new Point(162, 18);
             guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges16;
             guna2Button2.Size = new Size(131, 33);
             guna2Button2.TabIndex = 0;
             guna2Button2.Text = "Eat Out";
@@ -568,7 +577,7 @@
             guna2Button1.CheckedState.FillColor = Color.Black;
             guna2Button1.CheckedState.Font = new Font("Segoe UI", 9.75F);
             guna2Button1.CheckedState.ForeColor = Color.FromArgb(187, 187, 187);
-            guna2Button1.CustomizableEdges = customizableEdges15;
+            guna2Button1.CustomizableEdges = customizableEdges17;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -578,7 +587,7 @@
             guna2Button1.ForeColor = Color.Black;
             guna2Button1.Location = new Point(13, 18);
             guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges18;
             guna2Button1.Size = new Size(131, 33);
             guna2Button1.TabIndex = 0;
             guna2Button1.Text = "Eat In";
@@ -587,11 +596,11 @@
             // 
             guna2Panel6.Controls.Add(label3);
             guna2Panel6.Controls.Add(label2);
-            guna2Panel6.CustomizableEdges = customizableEdges19;
+            guna2Panel6.CustomizableEdges = customizableEdges21;
             guna2Panel6.Dock = DockStyle.Top;
             guna2Panel6.Location = new Point(0, 0);
             guna2Panel6.Name = "guna2Panel6";
-            guna2Panel6.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            guna2Panel6.ShadowDecoration.CustomizableEdges = customizableEdges22;
             guna2Panel6.Size = new Size(323, 66);
             guna2Panel6.TabIndex = 0;
             // 
@@ -631,6 +640,46 @@
             uC_OrderItem2.Size = new Size(290, 110);
             uC_OrderItem2.TabIndex = 1;
             // 
+            // guna2Button3
+            // 
+            guna2Button3.BackColor = Color.Transparent;
+            guna2Button3.BorderRadius = 10;
+            guna2Button3.CustomizableEdges = customizableEdges11;
+            guna2Button3.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button3.FillColor = Color.FromArgb(255, 107, 0);
+            guna2Button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button3.ForeColor = Color.White;
+            guna2Button3.Location = new Point(13, 52);
+            guna2Button3.Name = "guna2Button3";
+            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2Button3.Size = new Size(298, 49);
+            guna2Button3.TabIndex = 18;
+            guna2Button3.Text = "Order";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(13, 15);
+            label4.Name = "label4";
+            label4.Size = new Size(63, 25);
+            label4.TabIndex = 19;
+            label4.Text = "Total :";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(224, 15);
+            label5.Name = "label5";
+            label5.Size = new Size(69, 25);
+            label5.TabIndex = 20;
+            label5.Text = "$15,98";
+            // 
             // HomeForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -655,6 +704,8 @@
             guna2Panel3.PerformLayout();
             guna2Panel2.ResumeLayout(false);
             guna2Panel8.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             flowLayoutPanel3.ResumeLayout(false);
             guna2Panel7.ResumeLayout(false);
             guna2Panel6.ResumeLayout(false);
@@ -729,5 +780,8 @@
         private FlowLayoutPanel flowLayoutPanel3;
         private UC_OrderItem uC_OrderItem1;
         private UC_OrderItem uC_OrderItem2;
+        private Label label5;
+        private Label label4;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
     }
 }

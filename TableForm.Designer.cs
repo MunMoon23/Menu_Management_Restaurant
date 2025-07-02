@@ -30,81 +30,15 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            longTable1 = new LongTable();
-            longTable2 = new LongTable();
-            sideWayTable1 = new SideWayTable();
-            smallTable1 = new SmallTable();
-            smallTable2 = new SmallTable();
-            smallTable3 = new SmallTable();
-            smallTable4 = new SmallTable();
-            sideWayTable2 = new SideWayTable();
-            smallTable5 = new SmallTable();
             label1 = new Label();
             SeachTB = new Guna.UI2.WinForms.Guna2TextBox();
+            panel1 = new Panel();
+            listBox2 = new ListBox();
+            listBox1 = new ListBox();
+            label3 = new Label();
+            label2 = new Label();
+            panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // longTable1
-            // 
-            longTable1.Location = new Point(54, 99);
-            longTable1.Name = "longTable1";
-            longTable1.Size = new Size(205, 254);
-            longTable1.TabIndex = 0;
-            // 
-            // longTable2
-            // 
-            longTable2.Location = new Point(553, 522);
-            longTable2.Name = "longTable2";
-            longTable2.Size = new Size(205, 254);
-            longTable2.TabIndex = 0;
-            // 
-            // sideWayTable1
-            // 
-            sideWayTable1.Location = new Point(23, 522);
-            sideWayTable1.Name = "sideWayTable1";
-            sideWayTable1.Size = new Size(292, 231);
-            sideWayTable1.TabIndex = 1;
-            // 
-            // smallTable1
-            // 
-            smallTable1.Location = new Point(54, 359);
-            smallTable1.Name = "smallTable1";
-            smallTable1.Size = new Size(202, 147);
-            smallTable1.TabIndex = 2;
-            // 
-            // smallTable2
-            // 
-            smallTable2.Location = new Point(556, 359);
-            smallTable2.Name = "smallTable2";
-            smallTable2.Size = new Size(202, 147);
-            smallTable2.TabIndex = 2;
-            // 
-            // smallTable3
-            // 
-            smallTable3.Location = new Point(320, 359);
-            smallTable3.Name = "smallTable3";
-            smallTable3.Size = new Size(202, 147);
-            smallTable3.TabIndex = 2;
-            // 
-            // smallTable4
-            // 
-            smallTable4.Location = new Point(333, 568);
-            smallTable4.Name = "smallTable4";
-            smallTable4.Size = new Size(202, 147);
-            smallTable4.TabIndex = 2;
-            // 
-            // sideWayTable2
-            // 
-            sideWayTable2.Location = new Point(465, 99);
-            sideWayTable2.Name = "sideWayTable2";
-            sideWayTable2.Size = new Size(293, 232);
-            sideWayTable2.TabIndex = 3;
-            // 
-            // smallTable5
-            // 
-            smallTable5.Location = new Point(265, 143);
-            smallTable5.Name = "smallTable5";
-            smallTable5.Size = new Size(202, 147);
-            smallTable5.TabIndex = 2;
             // 
             // label1
             // 
@@ -139,41 +73,79 @@
             SeachTB.Size = new Size(200, 36);
             SeachTB.TabIndex = 5;
             // 
+            // panel1
+            // 
+            panel1.Controls.Add(listBox2);
+            panel1.Controls.Add(listBox1);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(label2);
+            panel1.Location = new Point(1, 101);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(830, 687);
+            panel1.TabIndex = 6;
+            // 
+            // listBox2
+            // 
+            listBox2.FormattingEnabled = true;
+            listBox2.Location = new Point(427, 81);
+            listBox2.Name = "listBox2";
+            listBox2.Size = new Size(319, 409);
+            listBox2.TabIndex = 1;
+            // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.Items.AddRange(new object[] { "Table 1", "Table 2", "Table 5", "Table 7", "Table 12", "Table 16", "Table 20", "Table 21", "Table 22", "Table 23" });
+            listBox1.Location = new Point(23, 81);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(319, 409);
+            listBox1.TabIndex = 1;
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(241, 25);
+            label3.Name = "label3";
+            label3.Size = new Size(59, 25);
+            label3.TabIndex = 0;
+            label3.Text = "10/30";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(53, 25);
+            label2.Name = "label2";
+            label2.Size = new Size(129, 25);
+            label2.TabIndex = 0;
+            label2.Text = "số bàn còn lại";
+            // 
             // TableForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(831, 817);
+            Controls.Add(panel1);
             Controls.Add(SeachTB);
             Controls.Add(label1);
-            Controls.Add(sideWayTable2);
-            Controls.Add(smallTable4);
-            Controls.Add(smallTable5);
-            Controls.Add(smallTable3);
-            Controls.Add(smallTable2);
-            Controls.Add(smallTable1);
-            Controls.Add(sideWayTable1);
-            Controls.Add(longTable2);
-            Controls.Add(longTable1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "TableForm";
             Text = "TableForm";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private LongTable longTable1;
-        private LongTable longTable2;
-        private SideWayTable sideWayTable1;
-        private SmallTable smallTable1;
-        private SmallTable smallTable2;
-        private SmallTable smallTable3;
-        private SmallTable smallTable4;
-        private SideWayTable sideWayTable2;
-        private SmallTable smallTable5;
         private Label label1;
         private Guna.UI2.WinForms.Guna2TextBox SeachTB;
+        private Panel panel1;
+        private Label label2;
+        private Label label3;
+        private ListBox listBox2;
+        private ListBox listBox1;
     }
 }

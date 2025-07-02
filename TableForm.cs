@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Menu_Management
 {
-    public partial class TableForm: Form
+    public partial class TableForm : Form
     {
         public TableForm()
         {
             InitializeComponent();
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("bạn đã chọn '"+listBox1.SelectedIndex+"'");
         }
     }
 }

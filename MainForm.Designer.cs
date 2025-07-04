@@ -48,7 +48,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            OptionPanel = new Guna.UI2.WinForms.Guna2Panel();
             label1 = new Label();
             guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             Exit = new Guna.UI2.WinForms.Guna2Button();
@@ -58,7 +58,7 @@
             Home = new Guna.UI2.WinForms.Guna2Button();
             MainPanel = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
-            guna2Panel1.SuspendLayout();
+            OptionPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).BeginInit();
             SuspendLayout();
             // 
@@ -75,8 +75,9 @@
             guna2PictureBox1.TabIndex = 0;
             guna2PictureBox1.TabStop = false;
             // 
-            // guna2Panel1
+            // OptionPanel
             // 
+
             guna2Panel1.BackColor = Color.WhiteSmoke;
             guna2Panel1.BorderThickness = 1;
             guna2Panel1.Controls.Add(label1);
@@ -101,7 +102,7 @@
             label1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(97, 729);
             label1.Name = "label1";
-            label1.Size = new Size(69, 17);
+            label1.Size = new Size(87, 23);
             label1.TabIndex = 3;
             label1.Text = "Username";
             // 
@@ -334,8 +335,8 @@
             Text = "MainForm";
             Load += MainForm_Load;
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
-            guna2Panel1.ResumeLayout(false);
-            guna2Panel1.PerformLayout();
+            OptionPanel.ResumeLayout(false);
+            OptionPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).EndInit();
             ResumeLayout(false);
         }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Data.SqlClient;
+
 
 namespace Menu_Management
 {
@@ -38,7 +40,7 @@ namespace Menu_Management
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            ShowForm(new HomeForm());
+            Home_Click(sender, e);
         }
 
         private void Tables_Click(object sender, EventArgs e)

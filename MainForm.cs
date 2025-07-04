@@ -52,5 +52,15 @@ namespace Menu_Management
             TF.Dock = DockStyle.Fill;
             TF.Show();
         }
+
+        private void Settings_Click(object sender, EventArgs e)
+        {
+            MainPanel.Controls.Clear();
+            Setting SF = new Setting();
+            SF.TopLevel = false;
+            MainPanel.Controls.Add(SF);
+            SF.Dock = DockStyle.Fill;
+            SF.Show();
+        }
     }
 }

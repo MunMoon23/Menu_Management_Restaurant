@@ -195,6 +195,7 @@ namespace Menu_Management
             Settings.Text = "Settings";
             Settings.TextAlign = HorizontalAlignment.Left;
             Settings.TextOffset = new Point(20, 0);
+            Settings.Click += Settings_Click;
             // 
             // Reports
             // 

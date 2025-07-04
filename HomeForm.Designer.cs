@@ -129,9 +129,10 @@
             guna2Panel1.CustomizableEdges = customizableEdges9;
             guna2Panel1.Dock = DockStyle.Fill;
             guna2Panel1.Location = new Point(0, 0);
+            guna2Panel1.Margin = new Padding(3, 4, 3, 4);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Panel1.Size = new Size(982, 775);
+            guna2Panel1.Size = new Size(1122, 1033);
             guna2Panel1.TabIndex = 0;
             // 
             // guna2Panel5
@@ -139,10 +140,11 @@
             guna2Panel5.Controls.Add(panel6);
             guna2Panel5.CustomizableEdges = customizableEdges1;
             guna2Panel5.Dock = DockStyle.Fill;
-            guna2Panel5.Location = new Point(0, 212);
+            guna2Panel5.Location = new Point(0, 283);
+            guna2Panel5.Margin = new Padding(3, 4, 3, 4);
             guna2Panel5.Name = "guna2Panel5";
             guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Panel5.Size = new Size(982, 563);
+            guna2Panel5.Size = new Size(1122, 750);
             guna2Panel5.TabIndex = 2;
             // 
             // panel6
@@ -150,18 +152,19 @@
             panel6.Controls.Add(label9);
             panel6.Controls.Add(label7);
             panel6.Controls.Add(flowLayoutPanel2);
-            panel6.Location = new Point(3, 17);
+            panel6.Location = new Point(3, 23);
+            panel6.Margin = new Padding(3, 4, 3, 4);
             panel6.Name = "panel6";
-            panel6.Size = new Size(651, 546);
+            panel6.Size = new Size(744, 728);
             panel6.TabIndex = 9;
             // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(107, 24);
+            label9.Location = new Point(122, 32);
             label9.Name = "label9";
-            label9.Size = new Size(75, 20);
+            label9.Size = new Size(94, 25);
             label9.TabIndex = 2;
             label9.Text = "(21 items)";
             // 
@@ -169,9 +172,9 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 15.75F);
-            label7.Location = new Point(3, 16);
+            label7.Location = new Point(3, 21);
             label7.Name = "label7";
-            label7.Size = new Size(98, 30);
+            label7.Size = new Size(124, 37);
             label7.TabIndex = 1;
             label7.Text = "Breakfast";
             // 
@@ -197,161 +200,181 @@
             flowLayoutPanel2.Controls.Add(uC_MenuItem32);
             flowLayoutPanel2.Controls.Add(uC_MenuItem33);
             flowLayoutPanel2.Controls.Add(uC_MenuItem34);
-            flowLayoutPanel2.Location = new Point(3, 62);
+            flowLayoutPanel2.Location = new Point(3, 83);
+            flowLayoutPanel2.Margin = new Padding(3, 4, 3, 4);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(648, 484);
+            flowLayoutPanel2.Size = new Size(741, 645);
             flowLayoutPanel2.TabIndex = 0;
             // 
             // uC_MenuItem16
             // 
             uC_MenuItem16.BackColor = Color.White;
-            uC_MenuItem16.Location = new Point(3, 3);
+            uC_MenuItem16.Location = new Point(3, 5);
+            uC_MenuItem16.Margin = new Padding(3, 5, 3, 5);
             uC_MenuItem16.Name = "uC_MenuItem16";
-            uC_MenuItem16.Size = new Size(150, 180);
+            uC_MenuItem16.Size = new Size(171, 240);
             uC_MenuItem16.TabIndex = 0;
             // 
             // uC_MenuItem17
             // 
             uC_MenuItem17.BackColor = Color.White;
-            uC_MenuItem17.Location = new Point(159, 3);
+            uC_MenuItem17.Location = new Point(180, 5);
+            uC_MenuItem17.Margin = new Padding(3, 5, 3, 5);
             uC_MenuItem17.Name = "uC_MenuItem17";
-            uC_MenuItem17.Size = new Size(150, 180);
+            uC_MenuItem17.Size = new Size(171, 240);
             uC_MenuItem17.TabIndex = 1;
             // 
             // uC_MenuItem18
             // 
             uC_MenuItem18.BackColor = Color.White;
-            uC_MenuItem18.Location = new Point(315, 3);
+            uC_MenuItem18.Location = new Point(357, 5);
+            uC_MenuItem18.Margin = new Padding(3, 5, 3, 5);
             uC_MenuItem18.Name = "uC_MenuItem18";
-            uC_MenuItem18.Size = new Size(150, 180);
+            uC_MenuItem18.Size = new Size(171, 240);
             uC_MenuItem18.TabIndex = 2;
             // 
             // uC_MenuItem19
             // 
             uC_MenuItem19.BackColor = Color.White;
-            uC_MenuItem19.Location = new Point(471, 3);
+            uC_MenuItem19.Location = new Point(534, 5);
+            uC_MenuItem19.Margin = new Padding(3, 5, 3, 5);
             uC_MenuItem19.Name = "uC_MenuItem19";
-            uC_MenuItem19.Size = new Size(150, 180);
+            uC_MenuItem19.Size = new Size(171, 240);
             uC_MenuItem19.TabIndex = 3;
             // 
             // uC_MenuItem20
             // 
             uC_MenuItem20.BackColor = Color.White;
-            uC_MenuItem20.Location = new Point(3, 189);
+            uC_MenuItem20.Location = new Point(3, 255);
+            uC_MenuItem20.Margin = new Padding(3, 5, 3, 5);
             uC_MenuItem20.Name = "uC_MenuItem20";
-            uC_MenuItem20.Size = new Size(150, 180);
+            uC_MenuItem20.Size = new Size(171, 240);
             uC_MenuItem20.TabIndex = 4;
             // 
             // uC_MenuItem21
             // 
             uC_MenuItem21.BackColor = Color.White;
-            uC_MenuItem21.Location = new Point(159, 189);
+            uC_MenuItem21.Location = new Point(180, 255);
+            uC_MenuItem21.Margin = new Padding(3, 5, 3, 5);
             uC_MenuItem21.Name = "uC_MenuItem21";
-            uC_MenuItem21.Size = new Size(150, 180);
+            uC_MenuItem21.Size = new Size(171, 240);
             uC_MenuItem21.TabIndex = 5;
             // 
             // uC_MenuItem22
             // 
             uC_MenuItem22.BackColor = Color.White;
-            uC_MenuItem22.Location = new Point(315, 189);
+            uC_MenuItem22.Location = new Point(357, 255);
+            uC_MenuItem22.Margin = new Padding(3, 5, 3, 5);
             uC_MenuItem22.Name = "uC_MenuItem22";
-            uC_MenuItem22.Size = new Size(150, 180);
+            uC_MenuItem22.Size = new Size(171, 240);
             uC_MenuItem22.TabIndex = 6;
             // 
             // uC_MenuItem23
             // 
             uC_MenuItem23.BackColor = Color.White;
-            uC_MenuItem23.Location = new Point(471, 189);
+            uC_MenuItem23.Location = new Point(534, 255);
+            uC_MenuItem23.Margin = new Padding(3, 5, 3, 5);
             uC_MenuItem23.Name = "uC_MenuItem23";
-            uC_MenuItem23.Size = new Size(150, 180);
+            uC_MenuItem23.Size = new Size(171, 240);
             uC_MenuItem23.TabIndex = 7;
             // 
             // uC_MenuItem24
             // 
             uC_MenuItem24.BackColor = Color.White;
-            uC_MenuItem24.Location = new Point(3, 375);
+            uC_MenuItem24.Location = new Point(3, 505);
+            uC_MenuItem24.Margin = new Padding(3, 5, 3, 5);
             uC_MenuItem24.Name = "uC_MenuItem24";
-            uC_MenuItem24.Size = new Size(150, 180);
+            uC_MenuItem24.Size = new Size(171, 240);
             uC_MenuItem24.TabIndex = 8;
             // 
             // uC_MenuItem25
             // 
             uC_MenuItem25.BackColor = Color.White;
-            uC_MenuItem25.Location = new Point(159, 375);
+            uC_MenuItem25.Location = new Point(180, 505);
+            uC_MenuItem25.Margin = new Padding(3, 5, 3, 5);
             uC_MenuItem25.Name = "uC_MenuItem25";
-            uC_MenuItem25.Size = new Size(150, 180);
+            uC_MenuItem25.Size = new Size(171, 240);
             uC_MenuItem25.TabIndex = 9;
             // 
             // uC_MenuItem26
             // 
             uC_MenuItem26.BackColor = Color.White;
-            uC_MenuItem26.Location = new Point(315, 375);
+            uC_MenuItem26.Location = new Point(357, 505);
+            uC_MenuItem26.Margin = new Padding(3, 5, 3, 5);
             uC_MenuItem26.Name = "uC_MenuItem26";
-            uC_MenuItem26.Size = new Size(150, 180);
+            uC_MenuItem26.Size = new Size(171, 240);
             uC_MenuItem26.TabIndex = 10;
             // 
             // uC_MenuItem27
             // 
             uC_MenuItem27.BackColor = Color.White;
-            uC_MenuItem27.Location = new Point(471, 375);
+            uC_MenuItem27.Location = new Point(534, 505);
+            uC_MenuItem27.Margin = new Padding(3, 5, 3, 5);
             uC_MenuItem27.Name = "uC_MenuItem27";
-            uC_MenuItem27.Size = new Size(150, 180);
+            uC_MenuItem27.Size = new Size(171, 240);
             uC_MenuItem27.TabIndex = 11;
             // 
             // uC_MenuItem28
             // 
             uC_MenuItem28.BackColor = Color.White;
-            uC_MenuItem28.Location = new Point(3, 561);
+            uC_MenuItem28.Location = new Point(3, 755);
+            uC_MenuItem28.Margin = new Padding(3, 5, 3, 5);
             uC_MenuItem28.Name = "uC_MenuItem28";
-            uC_MenuItem28.Size = new Size(150, 180);
+            uC_MenuItem28.Size = new Size(171, 240);
             uC_MenuItem28.TabIndex = 12;
             // 
             // uC_MenuItem29
             // 
             uC_MenuItem29.BackColor = Color.White;
-            uC_MenuItem29.Location = new Point(159, 561);
+            uC_MenuItem29.Location = new Point(180, 755);
+            uC_MenuItem29.Margin = new Padding(3, 5, 3, 5);
             uC_MenuItem29.Name = "uC_MenuItem29";
-            uC_MenuItem29.Size = new Size(150, 180);
+            uC_MenuItem29.Size = new Size(171, 240);
             uC_MenuItem29.TabIndex = 13;
             // 
             // uC_MenuItem30
             // 
             uC_MenuItem30.BackColor = Color.White;
-            uC_MenuItem30.Location = new Point(315, 561);
+            uC_MenuItem30.Location = new Point(357, 755);
+            uC_MenuItem30.Margin = new Padding(3, 5, 3, 5);
             uC_MenuItem30.Name = "uC_MenuItem30";
-            uC_MenuItem30.Size = new Size(150, 180);
+            uC_MenuItem30.Size = new Size(171, 240);
             uC_MenuItem30.TabIndex = 14;
             // 
             // uC_MenuItem31
             // 
             uC_MenuItem31.BackColor = Color.White;
-            uC_MenuItem31.Location = new Point(471, 561);
+            uC_MenuItem31.Location = new Point(534, 755);
+            uC_MenuItem31.Margin = new Padding(3, 5, 3, 5);
             uC_MenuItem31.Name = "uC_MenuItem31";
-            uC_MenuItem31.Size = new Size(150, 180);
+            uC_MenuItem31.Size = new Size(171, 240);
             uC_MenuItem31.TabIndex = 15;
             // 
             // uC_MenuItem32
             // 
             uC_MenuItem32.BackColor = Color.White;
-            uC_MenuItem32.Location = new Point(3, 747);
+            uC_MenuItem32.Location = new Point(3, 1005);
+            uC_MenuItem32.Margin = new Padding(3, 5, 3, 5);
             uC_MenuItem32.Name = "uC_MenuItem32";
-            uC_MenuItem32.Size = new Size(150, 180);
+            uC_MenuItem32.Size = new Size(171, 240);
             uC_MenuItem32.TabIndex = 16;
             // 
             // uC_MenuItem33
             // 
             uC_MenuItem33.BackColor = Color.White;
-            uC_MenuItem33.Location = new Point(159, 747);
+            uC_MenuItem33.Location = new Point(180, 1005);
+            uC_MenuItem33.Margin = new Padding(3, 5, 3, 5);
             uC_MenuItem33.Name = "uC_MenuItem33";
-            uC_MenuItem33.Size = new Size(150, 180);
+            uC_MenuItem33.Size = new Size(171, 240);
             uC_MenuItem33.TabIndex = 17;
             // 
             // uC_MenuItem34
             // 
             uC_MenuItem34.BackColor = Color.White;
-            uC_MenuItem34.Location = new Point(315, 747);
+            uC_MenuItem34.Location = new Point(357, 1005);
+            uC_MenuItem34.Margin = new Padding(3, 5, 3, 5);
             uC_MenuItem34.Name = "uC_MenuItem34";
-            uC_MenuItem34.Size = new Size(150, 180);
+            uC_MenuItem34.Size = new Size(171, 240);
             uC_MenuItem34.TabIndex = 18;
             // 
             // guna2Panel4
@@ -359,10 +382,11 @@
             guna2Panel4.Controls.Add(flowLayoutPanel1);
             guna2Panel4.CustomizableEdges = customizableEdges3;
             guna2Panel4.Dock = DockStyle.Top;
-            guna2Panel4.Location = new Point(0, 66);
+            guna2Panel4.Location = new Point(0, 88);
+            guna2Panel4.Margin = new Padding(3, 4, 3, 4);
             guna2Panel4.Name = "guna2Panel4";
             guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Panel4.Size = new Size(982, 146);
+            guna2Panel4.Size = new Size(1122, 195);
             guna2Panel4.TabIndex = 1;
             // 
             // flowLayoutPanel1
@@ -376,66 +400,80 @@
             flowLayoutPanel1.Controls.Add(uC_CategoryItem6);
             flowLayoutPanel1.Controls.Add(uC_CategoryItem7);
             flowLayoutPanel1.Controls.Add(uC_CategoryItem8);
-            flowLayoutPanel1.Location = new Point(9, 3);
+            flowLayoutPanel1.Location = new Point(10, 4);
+            flowLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(645, 140);
+            flowLayoutPanel1.Size = new Size(737, 187);
             flowLayoutPanel1.TabIndex = 10;
             flowLayoutPanel1.WrapContents = false;
             // 
             // uC_CategoryItem1
             // 
-            uC_CategoryItem1.Location = new Point(3, 3);
+            uC_CategoryItem1.Location = new Point(3, 5);
+            uC_CategoryItem1.Margin = new Padding(3, 5, 3, 5);
             uC_CategoryItem1.Name = "uC_CategoryItem1";
-            uC_CategoryItem1.Size = new Size(112, 103);
+            uC_CategoryItem1.Size = new Size(128, 137);
             uC_CategoryItem1.TabIndex = 0;
+            uC_CategoryItem1.Tag = "category";
             // 
             // uC_CategoryItem2
             // 
-            uC_CategoryItem2.Location = new Point(121, 3);
+            uC_CategoryItem2.Location = new Point(137, 5);
+            uC_CategoryItem2.Margin = new Padding(3, 5, 3, 5);
             uC_CategoryItem2.Name = "uC_CategoryItem2";
-            uC_CategoryItem2.Size = new Size(112, 103);
+            uC_CategoryItem2.Size = new Size(128, 137);
             uC_CategoryItem2.TabIndex = 1;
+            uC_CategoryItem2.Tag = "category";
             // 
             // uC_CategoryItem3
             // 
-            uC_CategoryItem3.Location = new Point(239, 3);
+            uC_CategoryItem3.Location = new Point(271, 5);
+            uC_CategoryItem3.Margin = new Padding(3, 5, 3, 5);
             uC_CategoryItem3.Name = "uC_CategoryItem3";
-            uC_CategoryItem3.Size = new Size(112, 103);
+            uC_CategoryItem3.Size = new Size(128, 137);
             uC_CategoryItem3.TabIndex = 2;
+            uC_CategoryItem3.Tag = "category";
             // 
             // uC_CategoryItem4
             // 
-            uC_CategoryItem4.Location = new Point(357, 3);
+            uC_CategoryItem4.Location = new Point(405, 5);
+            uC_CategoryItem4.Margin = new Padding(3, 5, 3, 5);
             uC_CategoryItem4.Name = "uC_CategoryItem4";
-            uC_CategoryItem4.Size = new Size(112, 103);
+            uC_CategoryItem4.Size = new Size(128, 137);
             uC_CategoryItem4.TabIndex = 3;
+            uC_CategoryItem4.Tag = "category";
             // 
             // uC_CategoryItem5
             // 
-            uC_CategoryItem5.Location = new Point(475, 3);
+            uC_CategoryItem5.Location = new Point(539, 5);
+            uC_CategoryItem5.Margin = new Padding(3, 5, 3, 5);
             uC_CategoryItem5.Name = "uC_CategoryItem5";
-            uC_CategoryItem5.Size = new Size(112, 103);
+            uC_CategoryItem5.Size = new Size(128, 137);
             uC_CategoryItem5.TabIndex = 4;
+            uC_CategoryItem5.Tag = "category";
             // 
             // uC_CategoryItem6
             // 
-            uC_CategoryItem6.Location = new Point(593, 3);
+            uC_CategoryItem6.Location = new Point(673, 5);
+            uC_CategoryItem6.Margin = new Padding(3, 5, 3, 5);
             uC_CategoryItem6.Name = "uC_CategoryItem6";
-            uC_CategoryItem6.Size = new Size(112, 103);
+            uC_CategoryItem6.Size = new Size(128, 137);
             uC_CategoryItem6.TabIndex = 5;
             // 
             // uC_CategoryItem7
             // 
-            uC_CategoryItem7.Location = new Point(711, 3);
+            uC_CategoryItem7.Location = new Point(807, 5);
+            uC_CategoryItem7.Margin = new Padding(3, 5, 3, 5);
             uC_CategoryItem7.Name = "uC_CategoryItem7";
-            uC_CategoryItem7.Size = new Size(112, 103);
+            uC_CategoryItem7.Size = new Size(128, 137);
             uC_CategoryItem7.TabIndex = 6;
             // 
             // uC_CategoryItem8
             // 
-            uC_CategoryItem8.Location = new Point(829, 3);
+            uC_CategoryItem8.Location = new Point(941, 5);
+            uC_CategoryItem8.Margin = new Padding(3, 5, 3, 5);
             uC_CategoryItem8.Name = "uC_CategoryItem8";
-            uC_CategoryItem8.Size = new Size(112, 103);
+            uC_CategoryItem8.Size = new Size(128, 137);
             uC_CategoryItem8.TabIndex = 7;
             // 
             // guna2Panel3
@@ -445,9 +483,10 @@
             guna2Panel3.CustomizableEdges = customizableEdges7;
             guna2Panel3.Dock = DockStyle.Top;
             guna2Panel3.Location = new Point(0, 0);
+            guna2Panel3.Margin = new Padding(3, 4, 3, 4);
             guna2Panel3.Name = "guna2Panel3";
             guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Panel3.Size = new Size(982, 66);
+            guna2Panel3.Size = new Size(1122, 88);
             guna2Panel3.TabIndex = 0;
             // 
             // guna2TextBox1
@@ -466,23 +505,23 @@
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.IconRight = (Image)resources.GetObject("guna2TextBox1.IconRight");
             guna2TextBox1.IconRightSize = new Size(36, 36);
-            guna2TextBox1.Location = new Point(254, 9);
-            guna2TextBox1.Margin = new Padding(4);
+            guna2TextBox1.Location = new Point(290, 12);
+            guna2TextBox1.Margin = new Padding(5, 5, 5, 5);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PlaceholderForeColor = Color.Silver;
             guna2TextBox1.PlaceholderText = "Search dish";
             guna2TextBox1.SelectedText = "";
             guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2TextBox1.Size = new Size(385, 45);
+            guna2TextBox1.Size = new Size(440, 60);
             guna2TextBox1.TabIndex = 9;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(12, 9);
+            label1.Location = new Point(14, 12);
             label1.Name = "label1";
-            label1.Size = new Size(113, 45);
+            label1.Size = new Size(139, 54);
             label1.TabIndex = 8;
             label1.Text = "Dishes";
             // 
@@ -494,10 +533,11 @@
             guna2Panel2.Controls.Add(guna2Panel6);
             guna2Panel2.CustomizableEdges = customizableEdges23;
             guna2Panel2.Dock = DockStyle.Right;
-            guna2Panel2.Location = new Point(659, 0);
+            guna2Panel2.Location = new Point(753, 0);
+            guna2Panel2.Margin = new Padding(3, 4, 3, 4);
             guna2Panel2.Name = "guna2Panel2";
             guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            guna2Panel2.Size = new Size(323, 775);
+            guna2Panel2.Size = new Size(369, 1033);
             guna2Panel2.TabIndex = 1;
             // 
             // guna2Panel8
@@ -506,10 +546,11 @@
             guna2Panel8.Controls.Add(flowLayoutPanel3);
             guna2Panel8.CustomizableEdges = customizableEdges13;
             guna2Panel8.Dock = DockStyle.Fill;
-            guna2Panel8.Location = new Point(0, 132);
+            guna2Panel8.Location = new Point(0, 176);
+            guna2Panel8.Margin = new Padding(3, 4, 3, 4);
             guna2Panel8.Name = "guna2Panel8";
             guna2Panel8.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2Panel8.Size = new Size(323, 643);
+            guna2Panel8.Size = new Size(369, 857);
             guna2Panel8.TabIndex = 2;
             // 
             // panel1
@@ -518,9 +559,10 @@
             panel1.Controls.Add(label4);
             panel1.Controls.Add(guna2Button3);
             panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(0, 530);
+            panel1.Location = new Point(0, 706);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(323, 113);
+            panel1.Size = new Size(369, 151);
             panel1.TabIndex = 1;
             // 
             // label5
@@ -528,9 +570,9 @@
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(224, 15);
+            label5.Location = new Point(256, 20);
             label5.Name = "label5";
-            label5.Size = new Size(69, 25);
+            label5.Size = new Size(82, 32);
             label5.TabIndex = 20;
             label5.Text = "$15,98";
             // 
@@ -538,9 +580,9 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(13, 15);
+            label4.Location = new Point(15, 20);
             label4.Name = "label4";
-            label4.Size = new Size(63, 25);
+            label4.Size = new Size(80, 32);
             label4.TabIndex = 19;
             label4.Text = "Total :";
             // 
@@ -556,10 +598,11 @@
             guna2Button3.FillColor = Color.FromArgb(255, 107, 0);
             guna2Button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button3.ForeColor = Color.White;
-            guna2Button3.Location = new Point(13, 52);
+            guna2Button3.Location = new Point(15, 69);
+            guna2Button3.Margin = new Padding(3, 4, 3, 4);
             guna2Button3.Name = "guna2Button3";
             guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Button3.Size = new Size(298, 49);
+            guna2Button3.Size = new Size(341, 65);
             guna2Button3.TabIndex = 18;
             guna2Button3.Text = "Order";
             // 
@@ -569,24 +612,27 @@
             flowLayoutPanel3.Controls.Add(uC_OrderItem1);
             flowLayoutPanel3.Controls.Add(uC_OrderItem2);
             flowLayoutPanel3.Location = new Point(0, 0);
+            flowLayoutPanel3.Margin = new Padding(3, 4, 3, 4);
             flowLayoutPanel3.Name = "flowLayoutPanel3";
-            flowLayoutPanel3.Size = new Size(323, 528);
+            flowLayoutPanel3.Size = new Size(369, 704);
             flowLayoutPanel3.TabIndex = 0;
             // 
             // uC_OrderItem1
             // 
             uC_OrderItem1.BackColor = Color.Transparent;
-            uC_OrderItem1.Location = new Point(3, 3);
+            uC_OrderItem1.Location = new Point(3, 5);
+            uC_OrderItem1.Margin = new Padding(3, 5, 3, 5);
             uC_OrderItem1.Name = "uC_OrderItem1";
-            uC_OrderItem1.Size = new Size(290, 110);
+            uC_OrderItem1.Size = new Size(331, 147);
             uC_OrderItem1.TabIndex = 0;
             // 
             // uC_OrderItem2
             // 
             uC_OrderItem2.BackColor = Color.Transparent;
-            uC_OrderItem2.Location = new Point(3, 119);
+            uC_OrderItem2.Location = new Point(3, 162);
+            uC_OrderItem2.Margin = new Padding(3, 5, 3, 5);
             uC_OrderItem2.Name = "uC_OrderItem2";
-            uC_OrderItem2.Size = new Size(290, 110);
+            uC_OrderItem2.Size = new Size(331, 147);
             uC_OrderItem2.TabIndex = 1;
             // 
             // guna2Panel7
@@ -595,10 +641,11 @@
             guna2Panel7.Controls.Add(guna2Button1);
             guna2Panel7.CustomizableEdges = customizableEdges19;
             guna2Panel7.Dock = DockStyle.Top;
-            guna2Panel7.Location = new Point(0, 66);
+            guna2Panel7.Location = new Point(0, 88);
+            guna2Panel7.Margin = new Padding(3, 4, 3, 4);
             guna2Panel7.Name = "guna2Panel7";
             guna2Panel7.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            guna2Panel7.Size = new Size(323, 66);
+            guna2Panel7.Size = new Size(369, 88);
             guna2Panel7.TabIndex = 1;
             // 
             // guna2Button2
@@ -617,10 +664,11 @@
             guna2Button2.FillColor = Color.FromArgb(187, 187, 187);
             guna2Button2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2Button2.ForeColor = Color.Black;
-            guna2Button2.Location = new Point(162, 18);
+            guna2Button2.Location = new Point(185, 24);
+            guna2Button2.Margin = new Padding(3, 4, 3, 4);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2Button2.Size = new Size(131, 33);
+            guna2Button2.Size = new Size(150, 44);
             guna2Button2.TabIndex = 0;
             guna2Button2.Text = "Eat Out";
             // 
@@ -641,10 +689,11 @@
             guna2Button1.FillColor = Color.FromArgb(187, 187, 187);
             guna2Button1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2Button1.ForeColor = Color.Black;
-            guna2Button1.Location = new Point(13, 18);
+            guna2Button1.Location = new Point(15, 24);
+            guna2Button1.Margin = new Padding(3, 4, 3, 4);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2Button1.Size = new Size(131, 33);
+            guna2Button1.Size = new Size(150, 44);
             guna2Button1.TabIndex = 0;
             guna2Button1.Text = "Eat In";
             // 
@@ -655,18 +704,19 @@
             guna2Panel6.CustomizableEdges = customizableEdges21;
             guna2Panel6.Dock = DockStyle.Top;
             guna2Panel6.Location = new Point(0, 0);
+            guna2Panel6.Margin = new Padding(3, 4, 3, 4);
             guna2Panel6.Name = "guna2Panel6";
             guna2Panel6.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            guna2Panel6.Size = new Size(323, 66);
+            guna2Panel6.Size = new Size(369, 88);
             guna2Panel6.TabIndex = 0;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(13, 39);
+            label3.Location = new Point(15, 52);
             label3.Name = "label3";
-            label3.Size = new Size(107, 17);
+            label3.Size = new Size(139, 23);
             label3.TabIndex = 1;
             label3.Text = "Transaction #243";
             // 
@@ -674,22 +724,23 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(13, 9);
+            label2.Location = new Point(15, 12);
             label2.Name = "label2";
-            label2.Size = new Size(131, 25);
+            label2.Size = new Size(167, 32);
             label2.TabIndex = 0;
             label2.Text = "Current Order";
             // 
             // HomeForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(982, 775);
+            ClientSize = new Size(1122, 1033);
             Controls.Add(guna2Panel2);
             Controls.Add(guna2Panel1);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "HomeForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "HomeForm";

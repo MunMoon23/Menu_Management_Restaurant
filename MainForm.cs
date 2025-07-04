@@ -17,6 +17,14 @@ namespace Menu_Management
             InitializeComponent();
         }
 
+        private void ShowForm(Form f)
+        {
+            MainPanel.Controls.Clear();
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            MainPanel.Controls.Add(f);
+            f.Show();
+        }
         private void Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -25,42 +33,22 @@ namespace Menu_Management
 
         private void Home_Click(object sender, EventArgs e)
         {
-            MainPanel.Controls.Clear();
-            HomeForm hf = new HomeForm();
-            hf.TopLevel = false;
-            hf.Dock = DockStyle.Fill;
-            MainPanel.Controls.Add(hf);
-            hf.Show();
+            ShowForm(new HomeForm());
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            MainPanel.Controls.Clear();
-            HomeForm hf = new HomeForm();
-            hf.TopLevel = false;
-            hf.Dock = DockStyle.Fill;
-            MainPanel.Controls.Add(hf);
-            hf.Show();
+            ShowForm(new HomeForm());
         }
 
         private void Tables_Click(object sender, EventArgs e)
         {
-            MainPanel.Controls.Clear();
-            TableForm TF = new TableForm();
-            TF.TopLevel = false;
-            MainPanel.Controls.Add(TF);
-            TF.Dock = DockStyle.Fill;
-            TF.Show();
+            ShowForm(new TableForm());
         }
 
         private void Settings_Click(object sender, EventArgs e)
         {
-            MainPanel.Controls.Clear();
-            Setting SF = new Setting();
-            SF.TopLevel = false;
-            MainPanel.Controls.Add(SF);
-            SF.Dock = DockStyle.Fill;
-            SF.Show();
+            ShowForm(new Setting());
         }
     }
 }

@@ -42,5 +42,15 @@ namespace Menu_Management
             MainPanel.Controls.Add(hf);
             hf.Show();
         }
+
+        private void Tables_Click(object sender, EventArgs e)
+        {
+            MainPanel.Controls.Clear();
+            TableForm TF = new TableForm();
+            TF.TopLevel = false;
+            MainPanel.Controls.Add(TF);
+            TF.Dock = DockStyle.Fill;
+            TF.Show();
+        }
     }
 }

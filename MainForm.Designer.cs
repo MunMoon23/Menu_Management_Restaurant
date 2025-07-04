@@ -1,4 +1,6 @@
-﻿namespace Menu_Management
+﻿using Guna.UI2.WinForms;
+
+namespace Menu_Management
 {
     partial class MainForm
     {
@@ -47,18 +49,18 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            OptionPanel = new Guna.UI2.WinForms.Guna2Panel();
+            guna2PictureBox1 = new Guna2PictureBox();
+            SidePanel = new Guna2Panel();
             label1 = new Label();
-            guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            Exit = new Guna.UI2.WinForms.Guna2Button();
-            Settings = new Guna.UI2.WinForms.Guna2Button();
-            Reports = new Guna.UI2.WinForms.Guna2Button();
-            Tables = new Guna.UI2.WinForms.Guna2Button();
-            Home = new Guna.UI2.WinForms.Guna2Button();
-            MainPanel = new Guna.UI2.WinForms.Guna2Panel();
+            guna2PictureBox2 = new Guna2PictureBox();
+            Exit = new Guna2Button();
+            Settings = new Guna2Button();
+            Reports = new Guna2Button();
+            Tables = new Guna2Button();
+            Home = new Guna2Button();
+            MainPanel = new Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
-            OptionPanel.SuspendLayout();
+            SidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).BeginInit();
             SuspendLayout();
             // 
@@ -75,26 +77,25 @@
             guna2PictureBox1.TabIndex = 0;
             guna2PictureBox1.TabStop = false;
             // 
-            // OptionPanel
+            // SidePanel
             // 
-
-            guna2Panel1.BackColor = Color.WhiteSmoke;
-            guna2Panel1.BorderThickness = 1;
-            guna2Panel1.Controls.Add(label1);
-            guna2Panel1.Controls.Add(guna2PictureBox2);
-            guna2Panel1.Controls.Add(Exit);
-            guna2Panel1.Controls.Add(Settings);
-            guna2Panel1.Controls.Add(Reports);
-            guna2Panel1.Controls.Add(Tables);
-            guna2Panel1.Controls.Add(Home);
-            guna2Panel1.Controls.Add(guna2PictureBox1);
-            guna2Panel1.CustomizableEdges = customizableEdges15;
-            guna2Panel1.Dock = DockStyle.Left;
-            guna2Panel1.Location = new Point(0, 0);
-            guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2Panel1.Size = new Size(276, 775);
-            guna2Panel1.TabIndex = 0;
+            SidePanel.BackColor = Color.WhiteSmoke;
+            SidePanel.BorderThickness = 1;
+            SidePanel.Controls.Add(label1);
+            SidePanel.Controls.Add(guna2PictureBox2);
+            SidePanel.Controls.Add(Exit);
+            SidePanel.Controls.Add(Settings);
+            SidePanel.Controls.Add(Reports);
+            SidePanel.Controls.Add(Tables);
+            SidePanel.Controls.Add(Home);
+            SidePanel.Controls.Add(guna2PictureBox1);
+            SidePanel.CustomizableEdges = customizableEdges15;
+            SidePanel.Dock = DockStyle.Left;
+            SidePanel.Location = new Point(0, 0);
+            SidePanel.Name = "SidePanel";
+            SidePanel.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            SidePanel.Size = new Size(276, 775);
+            SidePanel.TabIndex = 0;
             // 
             // label1
             // 
@@ -270,6 +271,7 @@
             Tables.Text = "Tables";
             Tables.TextAlign = HorizontalAlignment.Left;
             Tables.TextOffset = new Point(20, 0);
+            Tables.Click += Tables_Click;
             // 
             // Home
             // 
@@ -327,7 +329,7 @@
             BackColor = Color.White;
             ClientSize = new Size(1250, 775);
             Controls.Add(MainPanel);
-            Controls.Add(guna2Panel1);
+            Controls.Add(SidePanel);
             Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
             Name = "MainForm";
@@ -335,8 +337,8 @@
             Text = "MainForm";
             Load += MainForm_Load;
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
-            OptionPanel.ResumeLayout(false);
-            OptionPanel.PerformLayout();
+            SidePanel.ResumeLayout(false);
+            SidePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).EndInit();
             ResumeLayout(false);
         }
@@ -353,5 +355,6 @@
         private Label label1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2Panel MainPanel;
+        private Guna2Panel SidePanel;
     }
 }

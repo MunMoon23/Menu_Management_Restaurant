@@ -12,6 +12,10 @@ namespace Menu_Management
 {
     public partial class HomeForm : Form
     {
+        public FlowLayoutPanel CategoryPanel 
+        {
+            get => CategoryFlowPanel;
+        }
         public HomeForm()
         {
             InitializeComponent();

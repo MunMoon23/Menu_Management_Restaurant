@@ -11,7 +11,7 @@ namespace Menu_Management
         internal static string GetConnectionString()
         {
             // Replace with your actual database connection string
-            return "Data Source=localhost;Initial Catalog=Restaurant_Menu;Integrated Security=True";
+            return "Data Source=localhost;Initial Catalog=Restaurant_Menu;Integrated Security=True;Trust Server Certificate=True";
         }
     }
 }

@@ -16,7 +16,5 @@ namespace Menu_Management
         {
             InitializeComponent();
         }
-
-        
     }
 }

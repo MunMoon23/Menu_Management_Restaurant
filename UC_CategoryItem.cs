@@ -19,5 +19,15 @@ namespace Menu_Management
             CategoryLabel.Text = name;
             CategoryImage.Image = image;
         }
+
+        private void UC_CategoryItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You clked on category: " + CategoryLabel.Text, "Category Clicked", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void CategoryImage_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You clked on category: " + CategoryLabel.Text, "Category Clicked", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

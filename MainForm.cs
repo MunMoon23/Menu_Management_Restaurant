@@ -20,24 +20,6 @@ namespace Menu_Management
             CheckConnection();
             InitializeComponent();
         }
-        private Image convertToImage(byte[] data)
-        {
-            byte[] imgData = data; //mảng chứa data của ảnh lấy từ CSDL (lúc này chính là byte)
-            Image img = null; //tạo biến Image để lưu ảnh sau khi convert
-            if(imgData != null) //khi ảnh được đọc lên khác null
-            {
-                using (MemoryStream ms = new MemoryStream(imgData)) //sử dụng đối tượng MemoryStream để lưu data ảnh (byte) được đọc vào luồng trực tiếp (bộ nhớ thay vì ổ cứng)
-                {
-                    img = Image.FromStream(ms); //chuyển đổi 1 luồng dữ liệu (byte) thành dạng ảnh thông qua FromStream và lưu vào biến img trước đó đã tạo
-                    return img;
-                }    
-            }
-            else
-            {
-                return null;
-            }
-
-        }
         private void CheckConnection()
         {
             try
@@ -80,18 +62,7 @@ namespace Menu_Management
             HomeForm hf = new HomeForm();
             ShowForm(hf);
 
-            SqlCommand sqlcmd = new SqlCommand("SELECT * FROM Categories", sqlcon);
-            SqlDataReader reader = sqlcmd.ExecuteReader();
-            while (reader.Read())
-            {
-                string categoryName = reader["CategoryName"].ToString();
-                byte[] cateimgdata = reader["CategoryIMG"] as byte[];
-                Image categoryImage = convertToImage(cateimgdata);
-                UC_CategoryItem categoryItem = new UC_CategoryItem(categoryName, categoryImage);
-                hf.CategoryPanel.Controls.Add(categoryItem);
-            }
-            reader.Close();
-            sqlcon.Close();
+            
         }
 
         private void MainForm_Load(object sender, EventArgs e)

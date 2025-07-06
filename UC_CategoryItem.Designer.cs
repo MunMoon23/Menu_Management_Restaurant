@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_CategoryItem));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
             CategoryImage = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             CategoryLabel = new Label();
@@ -56,12 +56,13 @@
             CategoryImage.Location = new Point(25, 5);
             CategoryImage.Margin = new Padding(3, 4, 3, 4);
             CategoryImage.Name = "CategoryImage";
-            CategoryImage.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            CategoryImage.ShadowDecoration.CustomizableEdges = customizableEdges1;
             CategoryImage.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             CategoryImage.Size = new Size(81, 87);
             CategoryImage.SizeMode = PictureBoxSizeMode.StretchImage;
             CategoryImage.TabIndex = 4;
             CategoryImage.TabStop = false;
+            CategoryImage.Click += CategoryImage_Click;
             // 
             // CategoryLabel
             // 
@@ -82,6 +83,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "UC_CategoryItem";
             Size = new Size(128, 137);
+            Click += UC_CategoryItem_Click;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)CategoryImage).EndInit();
             ResumeLayout(false);

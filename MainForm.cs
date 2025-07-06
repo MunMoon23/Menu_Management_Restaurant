@@ -79,35 +79,19 @@ namespace Menu_Management
         {
             HomeForm hf = new HomeForm();
             ShowForm(hf);
-            sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString());
-            try
-            {
-                sqlcon.Open();
-                SqlCommand sqlcmd = new SqlCommand("SELECT * FROM Categories", sqlcon);
-                SqlDataReader reader = sqlcmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    string categoryName = reader["CategoryName"].ToString();
-                    byte[] cateimgdata = reader["CategoryIMG"] as byte[];
-                    Image categoryImage = convertToImage(cateimgdata);
-                    UC_CategoryItem categoryItem = new UC_CategoryItem(categoryName, categoryImage);
-                    hf.CategoryPanel.Controls.Add(categoryItem);
-                }
-                reader.Close();
-                sqlcon.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message, "Database Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                if (sqlcon != null && sqlcon.State == ConnectionState.Open)
-                {
-                    sqlcon.Close();
 
-                }
+            SqlCommand sqlcmd = new SqlCommand("SELECT * FROM Categories", sqlcon);
+            SqlDataReader reader = sqlcmd.ExecuteReader();
+            while (reader.Read())
+            {
+                string categoryName = reader["CategoryName"].ToString();
+                byte[] cateimgdata = reader["CategoryIMG"] as byte[];
+                Image categoryImage = convertToImage(cateimgdata);
+                UC_CategoryItem categoryItem = new UC_CategoryItem(categoryName, categoryImage);
+                hf.CategoryPanel.Controls.Add(categoryItem);
             }
+            reader.Close();
+            sqlcon.Close();
         }
 
         private void MainForm_Load(object sender, EventArgs e)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,8 +16,9 @@ namespace Menu_Management
         public HomeForm()
         {
             InitializeComponent();
+            DatabaseHelper.ShowCategory(CategoryFlowPanel, DishFlowPanel);
+            DatabaseHelper.ShowDishes(DishFlowPanel);
+            OrderPanel.Visible = false;
         }
-
-        
     }
 }

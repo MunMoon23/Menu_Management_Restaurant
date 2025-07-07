@@ -28,96 +28,99 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_MenuItem));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            label2 = new Label();
-            label1 = new Label();
-            guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            DishPrice = new Label();
+            DishName = new Label();
+            DishImage = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DishImage).BeginInit();
             SuspendLayout();
             // 
             // guna2Panel1
             // 
             guna2Panel1.BackColor = Color.White;
             guna2Panel1.BorderRadius = 20;
-            guna2Panel1.Controls.Add(label2);
-            guna2Panel1.Controls.Add(label1);
-            guna2Panel1.Controls.Add(guna2PictureBox1);
-            guna2Panel1.CustomizableEdges = customizableEdges3;
+            guna2Panel1.Controls.Add(DishPrice);
+            guna2Panel1.Controls.Add(DishName);
+            guna2Panel1.Controls.Add(DishImage);
+            guna2Panel1.CustomizableEdges = customizableEdges7;
             guna2Panel1.Dock = DockStyle.Fill;
             guna2Panel1.FillColor = Color.FromArgb(234, 234, 234);
             guna2Panel1.Location = new Point(0, 0);
+            guna2Panel1.Margin = new Padding(3, 4, 3, 4);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Panel1.Size = new Size(150, 180);
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2Panel1.Size = new Size(171, 240);
             guna2Panel1.TabIndex = 0;
             // 
-            // label2
+            // DishPrice
             // 
-            label2.BackColor = Color.FromArgb(234, 234, 234);
-            label2.Dock = DockStyle.Top;
-            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.FromArgb(255, 107, 0);
-            label2.Location = new Point(0, 134);
-            label2.Name = "label2";
-            label2.Size = new Size(150, 26);
-            label2.TabIndex = 2;
-            label2.Text = "$5.99";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
+            DishPrice.BackColor = Color.FromArgb(234, 234, 234);
+            DishPrice.Dock = DockStyle.Top;
+            DishPrice.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            DishPrice.ForeColor = Color.FromArgb(255, 107, 0);
+            DishPrice.Location = new Point(0, 179);
+            DishPrice.Name = "DishPrice";
+            DishPrice.Size = new Size(171, 35);
+            DishPrice.TabIndex = 2;
+            DishPrice.Text = "$5.99";
+            DishPrice.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // DishName
             // 
-            label1.BackColor = Color.FromArgb(234, 234, 234);
-            label1.Dock = DockStyle.Top;
-            label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(28, 40, 51);
-            label1.Location = new Point(0, 89);
-            label1.Name = "label1";
-            label1.Size = new Size(150, 45);
-            label1.TabIndex = 1;
-            label1.Text = "Pancake";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            DishName.BackColor = Color.FromArgb(234, 234, 234);
+            DishName.Dock = DockStyle.Top;
+            DishName.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            DishName.ForeColor = Color.FromArgb(28, 40, 51);
+            DishName.Location = new Point(0, 119);
+            DishName.Name = "DishName";
+            DishName.Size = new Size(171, 60);
+            DishName.TabIndex = 1;
+            DishName.Text = "Pancake";
+            DishName.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // guna2PictureBox1
+            // DishImage
             // 
-            guna2PictureBox1.BorderRadius = 20;
-            customizableEdges1.BottomLeft = false;
-            customizableEdges1.BottomRight = false;
-            guna2PictureBox1.CustomizableEdges = customizableEdges1;
-            guna2PictureBox1.Dock = DockStyle.Top;
-            guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
-            guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new Point(0, 0);
-            guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2PictureBox1.Size = new Size(150, 89);
-            guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            guna2PictureBox1.TabIndex = 0;
-            guna2PictureBox1.TabStop = false;
+            DishImage.BorderRadius = 20;
+            customizableEdges5.BottomLeft = false;
+            customizableEdges5.BottomRight = false;
+            DishImage.CustomizableEdges = customizableEdges5;
+            DishImage.Dock = DockStyle.Top;
+            DishImage.Image = (Image)resources.GetObject("DishImage.Image");
+            DishImage.ImageRotate = 0F;
+            DishImage.Location = new Point(0, 0);
+            DishImage.Margin = new Padding(3, 4, 3, 4);
+            DishImage.Name = "DishImage";
+            DishImage.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            DishImage.Size = new Size(171, 119);
+            DishImage.SizeMode = PictureBoxSizeMode.StretchImage;
+            DishImage.TabIndex = 0;
+            DishImage.TabStop = false;
             // 
             // UC_MenuItem
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Transparent;
             Controls.Add(guna2Panel1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "UC_MenuItem";
-            Size = new Size(150, 180);
+            Size = new Size(171, 240);
             guna2Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DishImage).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Label label1;
-        private Label label2;
+        private Guna.UI2.WinForms.Guna2PictureBox DishImage;
+        private Label DishName;
+        private Label DishPrice;
     }
 }

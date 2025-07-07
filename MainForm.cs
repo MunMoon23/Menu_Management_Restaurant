@@ -14,11 +14,35 @@ namespace Menu_Management
 {
     public partial class MainForm : Form
     {
+        SqlConnection sqlcon = null;
         public MainForm()
         {
+            CheckConnection();
             InitializeComponent();
         }
-
+        private void CheckConnection()
+        {
+            try
+            {
+                sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString());
+                sqlcon.Open();
+                if (sqlcon.State == ConnectionState.Open)
+                {
+                    MessageBox.Show("Database connection successful!", "Connection Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Database Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (sqlcon != null && sqlcon.State == ConnectionState.Open)
+                {
+                    sqlcon.Close();
+                }
+            }
+        }
         private void ShowForm(Form f)
         {
             MainPanel.Controls.Clear();
@@ -35,7 +59,8 @@ namespace Menu_Management
 
         private void Home_Click(object sender, EventArgs e)
         {
-            ShowForm(new HomeForm());
+            HomeForm hf = new HomeForm();
+            ShowForm(hf); 
         }
 
         private void MainForm_Load(object sender, EventArgs e)

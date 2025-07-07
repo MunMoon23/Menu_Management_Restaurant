@@ -30,8 +30,6 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -53,12 +51,9 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
-            panel6 = new Panel();
-            label9 = new Label();
-            label7 = new Label();
-            DishFlowPanel = new FlowLayoutPanel();
             guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             CategoryFlowPanel = new FlowLayoutPanel();
             guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
@@ -79,9 +74,12 @@
             guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             label3 = new Label();
             label2 = new Label();
+            panel6 = new Panel();
+            DishFlowPanel = new FlowLayoutPanel();
+            label7 = new Label();
+            label9 = new Label();
+            guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel1.SuspendLayout();
-            guna2Panel5.SuspendLayout();
-            panel6.SuspendLayout();
             guna2Panel4.SuspendLayout();
             guna2Panel3.SuspendLayout();
             OrderPanel.SuspendLayout();
@@ -90,6 +88,8 @@
             flowLayoutPanel3.SuspendLayout();
             guna2Panel7.SuspendLayout();
             guna2Panel6.SuspendLayout();
+            panel6.SuspendLayout();
+            guna2Panel5.SuspendLayout();
             SuspendLayout();
             // 
             // guna2Panel1
@@ -105,59 +105,6 @@
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2Panel1.Size = new Size(1122, 1033);
             guna2Panel1.TabIndex = 0;
-            // 
-            // guna2Panel5
-            // 
-            guna2Panel5.Controls.Add(panel6);
-            guna2Panel5.CustomizableEdges = customizableEdges1;
-            guna2Panel5.Dock = DockStyle.Fill;
-            guna2Panel5.Location = new Point(0, 283);
-            guna2Panel5.Margin = new Padding(3, 4, 3, 4);
-            guna2Panel5.Name = "guna2Panel5";
-            guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Panel5.Size = new Size(1122, 750);
-            guna2Panel5.TabIndex = 2;
-            // 
-            // panel6
-            // 
-            panel6.Controls.Add(label9);
-            panel6.Controls.Add(label7);
-            panel6.Controls.Add(DishFlowPanel);
-            panel6.Location = new Point(3, 23);
-            panel6.Margin = new Padding(3, 4, 3, 4);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(1116, 728);
-            panel6.TabIndex = 9;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(122, 32);
-            label9.Name = "label9";
-            label9.Size = new Size(94, 25);
-            label9.TabIndex = 2;
-            label9.Text = "(21 items)";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 15.75F);
-            label7.Location = new Point(3, 21);
-            label7.Name = "label7";
-            label7.Size = new Size(124, 37);
-            label7.TabIndex = 1;
-            label7.Text = "Breakfast";
-            // 
-            // DishFlowPanel
-            // 
-            DishFlowPanel.AutoScroll = true;
-            DishFlowPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            DishFlowPanel.Location = new Point(3, 83);
-            DishFlowPanel.Margin = new Padding(3, 4, 3, 4);
-            DishFlowPanel.Name = "DishFlowPanel";
-            DishFlowPanel.Size = new Size(741, 645);
-            DishFlowPanel.TabIndex = 0;
             // 
             // guna2Panel4
             // 
@@ -177,7 +124,7 @@
             CategoryFlowPanel.Location = new Point(10, 4);
             CategoryFlowPanel.Margin = new Padding(3, 4, 3, 4);
             CategoryFlowPanel.Name = "CategoryFlowPanel";
-            CategoryFlowPanel.Size = new Size(737, 187);
+            CategoryFlowPanel.Size = new Size(1109, 187);
             CategoryFlowPanel.TabIndex = 10;
             CategoryFlowPanel.WrapContents = false;
             // 
@@ -435,6 +382,59 @@
             label2.TabIndex = 0;
             label2.Text = "Current Order";
             // 
+            // panel6
+            // 
+            panel6.Controls.Add(label9);
+            panel6.Controls.Add(label7);
+            panel6.Controls.Add(DishFlowPanel);
+            panel6.Location = new Point(3, 8);
+            panel6.Margin = new Padding(3, 4, 3, 4);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(1116, 743);
+            panel6.TabIndex = 9;
+            // 
+            // DishFlowPanel
+            // 
+            DishFlowPanel.AutoScroll = true;
+            DishFlowPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            DishFlowPanel.Location = new Point(3, 83);
+            DishFlowPanel.Margin = new Padding(3, 4, 3, 4);
+            DishFlowPanel.Name = "DishFlowPanel";
+            DishFlowPanel.Size = new Size(1110, 645);
+            DishFlowPanel.TabIndex = 0;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 15.75F);
+            label7.Location = new Point(3, 21);
+            label7.Name = "label7";
+            label7.Size = new Size(124, 37);
+            label7.TabIndex = 1;
+            label7.Text = "Breakfast";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.Location = new Point(122, 32);
+            label9.Name = "label9";
+            label9.Size = new Size(94, 25);
+            label9.TabIndex = 2;
+            label9.Text = "(21 items)";
+            // 
+            // guna2Panel5
+            // 
+            guna2Panel5.Controls.Add(panel6);
+            guna2Panel5.CustomizableEdges = customizableEdges1;
+            guna2Panel5.Dock = DockStyle.Fill;
+            guna2Panel5.Location = new Point(0, 283);
+            guna2Panel5.Margin = new Padding(3, 4, 3, 4);
+            guna2Panel5.Name = "guna2Panel5";
+            guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Panel5.Size = new Size(1122, 750);
+            guna2Panel5.TabIndex = 2;
+            // 
             // HomeForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -451,9 +451,6 @@
             Text = "HomeForm";
             WindowState = FormWindowState.Maximized;
             guna2Panel1.ResumeLayout(false);
-            guna2Panel5.ResumeLayout(false);
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
             guna2Panel4.ResumeLayout(false);
             guna2Panel3.ResumeLayout(false);
             guna2Panel3.PerformLayout();
@@ -465,20 +462,18 @@
             guna2Panel7.ResumeLayout(false);
             guna2Panel6.ResumeLayout(false);
             guna2Panel6.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
+            guna2Panel5.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2Panel OrderPanel;
-        private Panel panel6;
-        private Label label9;
-        private Label label7;
-        private FlowLayoutPanel DishFlowPanel;
         private FlowLayoutPanel CategoryFlowPanel;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Label label1;
@@ -511,5 +506,10 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
         private Label label3;
         private Label label2;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
+        private Panel panel6;
+        private Label label9;
+        private Label label7;
+        private FlowLayoutPanel DishFlowPanel;
     }
 }

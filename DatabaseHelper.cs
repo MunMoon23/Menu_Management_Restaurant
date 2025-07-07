@@ -26,18 +26,17 @@ namespace Menu_Management
                 return null;
             }
         }
+
+
         internal static string GetConnectionString()
         {
             // Replace with your actual database connection string
             return "Data Source=localhost;Initial Catalog=Restaurant_Menu;Integrated Security=True;Trust Server Certificate=True";
         }
 
-        internal static void ClearDishes(FlowLayoutPanel fl)
-        {
-            fl.Controls.Clear();
-        }
 
-        internal static void ShowCategory(FlowLayoutPanel fl)
+
+        internal static void ShowCategory(FlowLayoutPanel fl, FlowLayoutPanel DishShowPanel)
         {
             using (SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
             {
@@ -51,12 +50,23 @@ namespace Menu_Management
                     string ID = reader["CategoryID"].ToString();
                     Image categoryImage = DatabaseHelper.convertToImage(cateimgdata);
                     UC_CategoryItem categoryItem = new UC_CategoryItem(categoryName, categoryImage, ID);
+                    categoryItem.CategorySelect += (sender, e) =>
+                    {
+                        // Handle category selection
+                        ShowDishes(DishShowPanel, ID);
+                    };
                     fl.Controls.Add(categoryItem);
+
                 }
             }
         }
+
+
+
+
         internal static void ShowDishes(FlowLayoutPanel fl, string categoryselection = null)
         {
+            fl.Controls.Clear();
             using (SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
             {
                 sqlcon.Open();

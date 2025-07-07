@@ -16,7 +16,7 @@ namespace Menu_Management
         public HomeForm()
         {
             InitializeComponent();
-            DatabaseHelper.ShowCategory(CategoryFlowPanel);
+            DatabaseHelper.ShowCategory(CategoryFlowPanel, DishFlowPanel);
             DatabaseHelper.ShowDishes(DishFlowPanel);
             OrderPanel.Visible = false;
         }

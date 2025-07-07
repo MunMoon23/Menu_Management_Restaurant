@@ -13,6 +13,7 @@ namespace Menu_Management
 {
     public partial class UC_CategoryItem : UserControl
     {
+        public event EventHandler CategorySelect;
         string CategoryID;
         public UC_CategoryItem(string name, Image image, string categoryID)
         {
@@ -25,12 +26,12 @@ namespace Menu_Management
 
         private void UC_CategoryItem_Click(object sender, EventArgs e)
         {
-            //            
+            CategorySelect.Invoke(this, e);
         }
 
         private void CategoryImage_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You clked on category: " + CategoryLabel.Text, "Category Clicked", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            CategorySelect.Invoke(this, e);
         }
     }
 }

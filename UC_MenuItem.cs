@@ -12,12 +12,16 @@ namespace Menu_Management
 {
     public partial class UC_MenuItem : UserControl
     {
-        public UC_MenuItem(string name, float price, Image img)
+        string DishID;
+        string DishTypeID;
+        public UC_MenuItem(string name, float price, Image img, string ID, string dishTypeID)
         {
             InitializeComponent();
             DishName.Text = name;
             DishPrice.Text = price.ToString();
             DishImage.Image = img;
+            this.DishID = ID;
+            this.DishTypeID = dishTypeID;
         }
     }
 }

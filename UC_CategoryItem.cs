@@ -13,16 +13,19 @@ namespace Menu_Management
 {
     public partial class UC_CategoryItem : UserControl
     {
-        public UC_CategoryItem(string name, Image image)
+        string CategoryID;
+        public UC_CategoryItem(string name, Image image, string categoryID)
         {
             InitializeComponent();
             CategoryLabel.Text = name;
             CategoryImage.Image = image;
+            CategoryID=categoryID;
+            this.CategoryID = categoryID;
         }
 
         private void UC_CategoryItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You clked on category: " + CategoryLabel.Text, "Category Clicked", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //            
         }
 
         private void CategoryImage_Click(object sender, EventArgs e)

@@ -60,9 +60,7 @@ namespace Menu_Management
         private void Home_Click(object sender, EventArgs e)
         {
             HomeForm hf = new HomeForm();
-            ShowForm(hf);
-
-            
+            ShowForm(hf); 
         }
 
         private void MainForm_Load(object sender, EventArgs e)

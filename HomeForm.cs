@@ -34,9 +34,9 @@ namespace Menu_Management
                 return null;
             }
         }
-        public HomeForm()
+
+        private void ShowCategory()
         {
-            InitializeComponent();
             using (SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
             {
                 sqlcon.Open();
@@ -51,6 +51,44 @@ namespace Menu_Management
                     CategoryPanel.Controls.Add(categoryItem);
                 }
             }
+        }
+        internal void ShowDishes(string categoryselection = null)
+        {
+            using (SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
+            {
+                sqlcon.Open();
+                string dishfilteredQuery = "SELECT * FROM Dishes WHERE CategoryID = @categoryid";
+                string fulldishQuery = "SELECT * FROM Dishes";
+                SqlCommand sqlcmd = new SqlCommand();
+                sqlcmd.Connection = sqlcon;
+                if (string.IsNullOrEmpty(categoryselection))
+                {
+                    sqlcmd.CommandText = fulldishQuery;
+                }
+                else
+                {
+                    sqlcmd.CommandText = dishfilteredQuery;
+                    sqlcmd.Parameters.AddWithValue("@categoryid", categoryselection);
+                }
+                SqlDataReader reader = sqlcmd.ExecuteReader();
+                while(reader.Read())
+                {
+                    string dishName = reader["DishName"].ToString();
+                    float price = float.Parse(reader["Price"].ToString());
+                    byte[] dishImagedata = reader["DishIMG"]as byte[];
+                    Image DishImage = convertToImage(dishImagedata);
+                    UC_MenuItem Dish = new UC_MenuItem(dishName, price, DishImage);
+                    DishFlowPanel.Controls.Add(Dish);
+                }
+                reader.Close();
+            }
+        }
+        public HomeForm()
+        {
+            InitializeComponent();
+            ShowCategory();
+            ShowDishes();
+            OrderPanel.Visible = false;
         }
     }
 }

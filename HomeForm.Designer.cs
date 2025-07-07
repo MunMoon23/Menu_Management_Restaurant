@@ -64,7 +64,7 @@
             guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             label1 = new Label();
-            guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            OrderPanel = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
             panel1 = new Panel();
             label5 = new Label();
@@ -84,7 +84,7 @@
             panel6.SuspendLayout();
             guna2Panel4.SuspendLayout();
             guna2Panel3.SuspendLayout();
-            guna2Panel2.SuspendLayout();
+            OrderPanel.SuspendLayout();
             guna2Panel8.SuspendLayout();
             panel1.SuspendLayout();
             flowLayoutPanel3.SuspendLayout();
@@ -126,7 +126,7 @@
             panel6.Location = new Point(3, 23);
             panel6.Margin = new Padding(3, 4, 3, 4);
             panel6.Name = "panel6";
-            panel6.Size = new Size(744, 728);
+            panel6.Size = new Size(1116, 728);
             panel6.TabIndex = 9;
             // 
             // label9
@@ -152,6 +152,7 @@
             // DishFlowPanel
             // 
             DishFlowPanel.AutoScroll = true;
+            DishFlowPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             DishFlowPanel.Location = new Point(3, 83);
             DishFlowPanel.Margin = new Padding(3, 4, 3, 4);
             DishFlowPanel.Name = "DishFlowPanel";
@@ -229,20 +230,20 @@
             label1.TabIndex = 8;
             label1.Text = "Dishes";
             // 
-            // guna2Panel2
+            // OrderPanel
             // 
-            guna2Panel2.BackColor = Color.FromArgb(234, 234, 234);
-            guna2Panel2.Controls.Add(guna2Panel8);
-            guna2Panel2.Controls.Add(guna2Panel7);
-            guna2Panel2.Controls.Add(guna2Panel6);
-            guna2Panel2.CustomizableEdges = customizableEdges23;
-            guna2Panel2.Dock = DockStyle.Right;
-            guna2Panel2.Location = new Point(753, 0);
-            guna2Panel2.Margin = new Padding(3, 4, 3, 4);
-            guna2Panel2.Name = "guna2Panel2";
-            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            guna2Panel2.Size = new Size(369, 1033);
-            guna2Panel2.TabIndex = 1;
+            OrderPanel.BackColor = Color.FromArgb(234, 234, 234);
+            OrderPanel.Controls.Add(guna2Panel8);
+            OrderPanel.Controls.Add(guna2Panel7);
+            OrderPanel.Controls.Add(guna2Panel6);
+            OrderPanel.CustomizableEdges = customizableEdges23;
+            OrderPanel.Dock = DockStyle.Right;
+            OrderPanel.Location = new Point(753, 0);
+            OrderPanel.Margin = new Padding(3, 4, 3, 4);
+            OrderPanel.Name = "OrderPanel";
+            OrderPanel.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            OrderPanel.Size = new Size(369, 1033);
+            OrderPanel.TabIndex = 1;
             // 
             // guna2Panel8
             // 
@@ -440,7 +441,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1122, 1033);
-            Controls.Add(guna2Panel2);
+            Controls.Add(OrderPanel);
             Controls.Add(guna2Panel1);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
@@ -448,6 +449,7 @@
             Name = "HomeForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "HomeForm";
+            WindowState = FormWindowState.Maximized;
             guna2Panel1.ResumeLayout(false);
             guna2Panel5.ResumeLayout(false);
             panel6.ResumeLayout(false);
@@ -455,7 +457,7 @@
             guna2Panel4.ResumeLayout(false);
             guna2Panel3.ResumeLayout(false);
             guna2Panel3.PerformLayout();
-            guna2Panel2.ResumeLayout(false);
+            OrderPanel.ResumeLayout(false);
             guna2Panel8.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -472,7 +474,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2Panel OrderPanel;
         private Panel panel6;
         private Label label9;
         private Label label7;
@@ -495,19 +497,19 @@
         private UC_MenuItem uC_MenuItem13;
         private UC_MenuItem uC_MenuItem14;
         private UC_MenuItem uC_MenuItem15;
-        private Label label2;
-        private Label label3;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
         private Panel panel1;
-        private FlowLayoutPanel flowLayoutPanel3;
-        private UC_OrderItem uC_OrderItem1;
-        private UC_OrderItem uC_OrderItem2;
         private Label label5;
         private Label label4;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private FlowLayoutPanel flowLayoutPanel3;
+        private UC_OrderItem uC_OrderItem1;
+        private UC_OrderItem uC_OrderItem2;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
+        private Label label3;
+        private Label label2;
     }
 }

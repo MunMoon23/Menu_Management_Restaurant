@@ -15,6 +15,7 @@ namespace Menu_Management
         public UC_MenuItem()
         {
             InitializeComponent();
+
         }
     }
 }

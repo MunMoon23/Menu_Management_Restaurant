@@ -11,9 +11,10 @@ using System.Windows.Forms;
 
 namespace Menu_Management
 {
+
     public partial class UC_CategoryItem : UserControl
     {
-        public event EventHandler CategorySelect;
+        public event EventHandler OnCategorySelect; //Khai báo 1 sự kiện
         string CategoryID;
         public UC_CategoryItem(string name, Image image, string categoryID)
         {
@@ -24,14 +25,14 @@ namespace Menu_Management
             this.CategoryID = categoryID;
         }
 
-        private void UC_CategoryItem_Click(object sender, EventArgs e)
+        private void UC_CategoryItem_Click(object sender, EventArgs e) //sự kiện nhấp này là để thông báo kích hoạt sự kiện OnCategorySelect
         {
-            CategorySelect.Invoke(this, e);
+            OnCategorySelect.Invoke(this, e); //gọi sự kiện CategorySelect khi người dùng nhấp vào điều khiển này
         }
 
         private void CategoryImage_Click(object sender, EventArgs e)
         {
-            CategorySelect.Invoke(this, e);
+            OnCategorySelect.Invoke(this, e);
         }
     }
 }

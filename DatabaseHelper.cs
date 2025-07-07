@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.Xml;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -50,10 +51,9 @@ namespace Menu_Management
                     string ID = reader["CategoryID"].ToString();
                     Image categoryImage = DatabaseHelper.convertToImage(cateimgdata);
                     UC_CategoryItem categoryItem = new UC_CategoryItem(categoryName, categoryImage, ID);
-                    categoryItem.CategorySelect += (sender, e) =>
+                    categoryItem.OnCategorySelect += (sender, e) => //Gán hành động cho sự kiện đã khai báo trước
                     {
-                        // Handle category selection
-                        ShowDishes(DishShowPanel, ID);
+                        ShowDishes(DishShowPanel, ID); //tại vì ở UC không hề reference được tới FlowPanel của form này nên phải gán sự kiện ở đây
                     };
                     fl.Controls.Add(categoryItem);
 

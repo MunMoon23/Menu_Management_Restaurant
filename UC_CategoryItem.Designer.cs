@@ -55,6 +55,7 @@
             // CategoryImage
             // 
             CategoryImage.Anchor = AnchorStyles.None;
+            CategoryImage.BackColor = Color.Transparent;
             CategoryImage.Image = (Image)resources.GetObject("CategoryImage.Image");
             CategoryImage.ImageRotate = 0F;
             CategoryImage.Location = new Point(24, 4);
@@ -62,7 +63,7 @@
             CategoryImage.Name = "CategoryImage";
             CategoryImage.ShadowDecoration.CustomizableEdges = customizableEdges1;
             CategoryImage.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            CategoryImage.Size = new Size(81, 87);
+            CategoryImage.Size = new Size(80, 80);
             CategoryImage.SizeMode = PictureBoxSizeMode.StretchImage;
             CategoryImage.TabIndex = 4;
             CategoryImage.TabStop = false;
@@ -73,13 +74,14 @@
             // CategoryLabel
             // 
             CategoryLabel.Dock = DockStyle.Bottom;
-            CategoryLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            CategoryLabel.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             CategoryLabel.Location = new Point(0, 102);
             CategoryLabel.Name = "CategoryLabel";
             CategoryLabel.Size = new Size(126, 33);
             CategoryLabel.TabIndex = 1;
             CategoryLabel.Text = "Breakfast";
             CategoryLabel.TextAlign = ContentAlignment.MiddleCenter;
+            CategoryLabel.Click += CategoryLabel_Click;
             CategoryLabel.MouseLeave += CategoryLabel_MouseLeave;
             CategoryLabel.MouseHover += CategoryLabel_MouseHover;
             // 

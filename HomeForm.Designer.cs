@@ -64,10 +64,9 @@
             guna2Panel1.CustomizableEdges = customizableEdges19;
             guna2Panel1.Dock = DockStyle.Fill;
             guna2Panel1.Location = new Point(0, 0);
-            guna2Panel1.Margin = new Padding(3, 4, 3, 4);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            guna2Panel1.Size = new Size(1122, 1033);
+            guna2Panel1.Size = new Size(982, 775);
             guna2Panel1.TabIndex = 0;
             // 
             // guna2Panel5
@@ -75,30 +74,28 @@
             guna2Panel5.Controls.Add(panel6);
             guna2Panel5.CustomizableEdges = customizableEdges11;
             guna2Panel5.Dock = DockStyle.Fill;
-            guna2Panel5.Location = new Point(0, 283);
-            guna2Panel5.Margin = new Padding(3, 4, 3, 4);
+            guna2Panel5.Location = new Point(0, 212);
             guna2Panel5.Name = "guna2Panel5";
             guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Panel5.Size = new Size(1122, 750);
+            guna2Panel5.Size = new Size(982, 563);
             guna2Panel5.TabIndex = 2;
             // 
             // panel6
             // 
             panel6.Controls.Add(CategoryLabel);
             panel6.Controls.Add(DishFlowPanel);
-            panel6.Location = new Point(3, 8);
-            panel6.Margin = new Padding(3, 4, 3, 4);
+            panel6.Location = new Point(3, 6);
             panel6.Name = "panel6";
-            panel6.Size = new Size(1116, 743);
+            panel6.Size = new Size(976, 557);
             panel6.TabIndex = 9;
             // 
             // CategoryLabel
             // 
             CategoryLabel.AutoSize = true;
             CategoryLabel.Font = new Font("Segoe UI", 15.75F);
-            CategoryLabel.Location = new Point(3, 21);
+            CategoryLabel.Location = new Point(3, 16);
             CategoryLabel.Name = "CategoryLabel";
-            CategoryLabel.Size = new Size(124, 37);
+            CategoryLabel.Size = new Size(98, 30);
             CategoryLabel.TabIndex = 1;
             CategoryLabel.Text = "Breakfast";
             // 
@@ -106,10 +103,9 @@
             // 
             DishFlowPanel.AutoScroll = true;
             DishFlowPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            DishFlowPanel.Location = new Point(3, 83);
-            DishFlowPanel.Margin = new Padding(3, 4, 3, 4);
+            DishFlowPanel.Location = new Point(3, 62);
             DishFlowPanel.Name = "DishFlowPanel";
-            DishFlowPanel.Size = new Size(1110, 645);
+            DishFlowPanel.Size = new Size(971, 484);
             DishFlowPanel.TabIndex = 0;
             // 
             // guna2Panel4
@@ -117,20 +113,18 @@
             guna2Panel4.Controls.Add(CategoryFlowPanel);
             guna2Panel4.CustomizableEdges = customizableEdges13;
             guna2Panel4.Dock = DockStyle.Top;
-            guna2Panel4.Location = new Point(0, 88);
-            guna2Panel4.Margin = new Padding(3, 4, 3, 4);
+            guna2Panel4.Location = new Point(0, 66);
             guna2Panel4.Name = "guna2Panel4";
             guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2Panel4.Size = new Size(1122, 195);
+            guna2Panel4.Size = new Size(982, 146);
             guna2Panel4.TabIndex = 1;
             // 
             // CategoryFlowPanel
             // 
             CategoryFlowPanel.AutoScroll = true;
-            CategoryFlowPanel.Location = new Point(10, 4);
-            CategoryFlowPanel.Margin = new Padding(3, 4, 3, 4);
+            CategoryFlowPanel.Location = new Point(9, 3);
             CategoryFlowPanel.Name = "CategoryFlowPanel";
-            CategoryFlowPanel.Size = new Size(1109, 187);
+            CategoryFlowPanel.Size = new Size(970, 123);
             CategoryFlowPanel.TabIndex = 10;
             CategoryFlowPanel.WrapContents = false;
             // 
@@ -141,10 +135,9 @@
             guna2Panel3.CustomizableEdges = customizableEdges17;
             guna2Panel3.Dock = DockStyle.Top;
             guna2Panel3.Location = new Point(0, 0);
-            guna2Panel3.Margin = new Padding(3, 4, 3, 4);
             guna2Panel3.Name = "guna2Panel3";
             guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2Panel3.Size = new Size(1122, 88);
+            guna2Panel3.Size = new Size(982, 66);
             guna2Panel3.TabIndex = 0;
             // 
             // SearchBar
@@ -163,14 +156,14 @@
             SearchBar.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             SearchBar.IconRight = (Image)resources.GetObject("SearchBar.IconRight");
             SearchBar.IconRightSize = new Size(36, 36);
-            SearchBar.Location = new Point(310, 12);
-            SearchBar.Margin = new Padding(5);
+            SearchBar.Location = new Point(271, 9);
+            SearchBar.Margin = new Padding(4, 4, 4, 4);
             SearchBar.Name = "SearchBar";
             SearchBar.PlaceholderForeColor = Color.Silver;
             SearchBar.PlaceholderText = "Search dish";
             SearchBar.SelectedText = "";
             SearchBar.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            SearchBar.Size = new Size(440, 60);
+            SearchBar.Size = new Size(385, 45);
             SearchBar.TabIndex = 9;
             SearchBar.TextChanged += SearchBar_TextChanged;
             // 
@@ -178,26 +171,24 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(14, 12);
+            label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(139, 54);
+            label1.Size = new Size(113, 45);
             label1.TabIndex = 8;
             label1.Text = "Dishes";
             // 
             // HomeForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1122, 1033);
+            ClientSize = new Size(982, 775);
             Controls.Add(guna2Panel1);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "HomeForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "HomeForm";
-            WindowState = FormWindowState.Maximized;
             guna2Panel1.ResumeLayout(false);
             guna2Panel5.ResumeLayout(false);
             panel6.ResumeLayout(false);

@@ -103,7 +103,7 @@ namespace Menu_Management
             label1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(97, 729);
             label1.Name = "label1";
-            label1.Size = new Size(87, 23);
+            label1.Size = new Size(69, 17);
             label1.TabIndex = 3;
             label1.Text = "Username";
             // 
@@ -336,7 +336,6 @@ namespace Menu_Management
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MainForm";
-            WindowState = FormWindowState.Maximized;
             Load += MainForm_Load;
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             SidePanel.ResumeLayout(false);

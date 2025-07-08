@@ -148,7 +148,7 @@
             guna2Button2.Location = new Point(24, 82);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button2.Size = new Size(30, 22);
+            guna2Button2.Size = new Size(30, 25);
             guna2Button2.TabIndex = 2;
             // 
             // guna2Button1

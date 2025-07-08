@@ -39,6 +39,8 @@
             // 
             // panel1
             // 
+            panel1.BackColor = SystemColors.ControlLightLight;
+            panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(CategoryImage);
             panel1.Controls.Add(CategoryLabel);
             panel1.Dock = DockStyle.Fill;
@@ -47,13 +49,15 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(128, 137);
             panel1.TabIndex = 4;
+            panel1.MouseLeave += panel1_MouseLeave;
+            panel1.MouseHover += panel1_MouseHover;
             // 
             // CategoryImage
             // 
             CategoryImage.Anchor = AnchorStyles.None;
             CategoryImage.Image = (Image)resources.GetObject("CategoryImage.Image");
             CategoryImage.ImageRotate = 0F;
-            CategoryImage.Location = new Point(25, 5);
+            CategoryImage.Location = new Point(24, 4);
             CategoryImage.Margin = new Padding(3, 4, 3, 4);
             CategoryImage.Name = "CategoryImage";
             CategoryImage.ShadowDecoration.CustomizableEdges = customizableEdges1;
@@ -63,22 +67,27 @@
             CategoryImage.TabIndex = 4;
             CategoryImage.TabStop = false;
             CategoryImage.Click += CategoryImage_Click;
+            CategoryImage.MouseLeave += CategoryImage_MouseLeave;
+            CategoryImage.MouseHover += CategoryImage_MouseHover;
             // 
             // CategoryLabel
             // 
             CategoryLabel.Dock = DockStyle.Bottom;
             CategoryLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            CategoryLabel.Location = new Point(0, 104);
+            CategoryLabel.Location = new Point(0, 102);
             CategoryLabel.Name = "CategoryLabel";
-            CategoryLabel.Size = new Size(128, 33);
+            CategoryLabel.Size = new Size(126, 33);
             CategoryLabel.TabIndex = 1;
             CategoryLabel.Text = "Breakfast";
             CategoryLabel.TextAlign = ContentAlignment.MiddleCenter;
+            CategoryLabel.MouseLeave += CategoryLabel_MouseLeave;
+            CategoryLabel.MouseHover += CategoryLabel_MouseHover;
             // 
             // UC_CategoryItem
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlLightLight;
             Controls.Add(panel1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "UC_CategoryItem";

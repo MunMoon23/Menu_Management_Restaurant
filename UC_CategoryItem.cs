@@ -16,6 +16,8 @@ namespace Menu_Management
     {
         public event EventHandler OnCategorySelect; //Khai báo 1 sự kiện
         string CategoryID;
+        int normalSize = 85;
+        int hoverSize = 80;
         public UC_CategoryItem(string name, Image image, string categoryID)
         {
             InitializeComponent();
@@ -24,7 +26,15 @@ namespace Menu_Management
             CategoryID=categoryID;
             this.CategoryID = categoryID;
         }
+        private void CategoryLabel_Click(object sender, EventArgs e)
+        {
+            OnCategorySelect.Invoke(this, e);
+        }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            OnCategorySelect.Invoke(this, e);
+        }
         private void UC_CategoryItem_Click(object sender, EventArgs e) //sự kiện nhấp này là để thông báo kích hoạt sự kiện OnCategorySelect
         {
             OnCategorySelect.Invoke(this, e); //gọi sự kiện CategorySelect khi người dùng nhấp vào điều khiển này
@@ -34,5 +44,37 @@ namespace Menu_Management
         {
             OnCategorySelect.Invoke(this, e);
         }
+
+        private void CategoryImage_MouseHover(object sender, EventArgs e)
+        {
+            CategoryImage.Size = new Size(hoverSize, hoverSize); //đổi kích thước ảnh khi hover chuột vào
+        }
+
+        private void CategoryImage_MouseLeave(object sender, EventArgs e)
+        {
+            CategoryImage.Size = new Size(normalSize, normalSize); //trả về kích thước ban đầu khi chuột rời khỏi ảnh
+        }
+
+        private void panel1_MouseHover(object sender, EventArgs e)
+        {
+            CategoryImage.Size = new Size(hoverSize, hoverSize); //đổi kích thước ảnh khi hover chuột vào
+        }
+
+        private void panel1_MouseLeave(object sender, EventArgs e)
+        {
+            CategoryImage.Size = new Size(normalSize, normalSize); //trả về kích thước ban đầu khi chuột rời khỏi ảnh
+        }
+
+        private void CategoryLabel_MouseHover(object sender, EventArgs e)
+        {
+            CategoryImage.Size = new Size(hoverSize, hoverSize); //đổi kích thước ảnh khi hover chuột vào
+        }
+
+        private void CategoryLabel_MouseLeave(object sender, EventArgs e)
+        {
+            CategoryImage.Size = new Size(normalSize, normalSize); //trả về kích thước ban đầu khi chuột rời khỏi ảnh
+        }
+
+
     }
 }

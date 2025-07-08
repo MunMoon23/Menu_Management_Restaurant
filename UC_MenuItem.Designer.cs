@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_MenuItem));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             DishPrice = new Label();
             DishName = new Label();
@@ -48,19 +48,19 @@
             guna2Panel1.Controls.Add(DishPrice);
             guna2Panel1.Controls.Add(DishName);
             guna2Panel1.Controls.Add(DishImage);
-            guna2Panel1.CustomizableEdges = customizableEdges7;
+            guna2Panel1.CustomizableEdges = customizableEdges3;
             guna2Panel1.Dock = DockStyle.Fill;
             guna2Panel1.FillColor = Color.FromArgb(234, 234, 234);
             guna2Panel1.Location = new Point(0, 0);
             guna2Panel1.Margin = new Padding(3, 4, 3, 4);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Panel1.Size = new Size(171, 240);
             guna2Panel1.TabIndex = 0;
             // 
             // DishPrice
             // 
-            DishPrice.BackColor = Color.FromArgb(234, 234, 234);
+            DishPrice.BackColor = Color.Transparent;
             DishPrice.Dock = DockStyle.Top;
             DishPrice.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             DishPrice.ForeColor = Color.FromArgb(255, 107, 0);
@@ -73,7 +73,7 @@
             // 
             // DishName
             // 
-            DishName.BackColor = Color.FromArgb(234, 234, 234);
+            DishName.BackColor = Color.Transparent;
             DishName.Dock = DockStyle.Top;
             DishName.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             DishName.ForeColor = Color.FromArgb(28, 40, 51);
@@ -87,16 +87,16 @@
             // DishImage
             // 
             DishImage.BorderRadius = 20;
-            customizableEdges5.BottomLeft = false;
-            customizableEdges5.BottomRight = false;
-            DishImage.CustomizableEdges = customizableEdges5;
+            customizableEdges1.BottomLeft = false;
+            customizableEdges1.BottomRight = false;
+            DishImage.CustomizableEdges = customizableEdges1;
             DishImage.Dock = DockStyle.Top;
             DishImage.Image = (Image)resources.GetObject("DishImage.Image");
             DishImage.ImageRotate = 0F;
             DishImage.Location = new Point(0, 0);
             DishImage.Margin = new Padding(3, 4, 3, 4);
             DishImage.Name = "DishImage";
-            DishImage.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            DishImage.ShadowDecoration.CustomizableEdges = customizableEdges2;
             DishImage.Size = new Size(171, 119);
             DishImage.SizeMode = PictureBoxSizeMode.StretchImage;
             DishImage.TabIndex = 0;

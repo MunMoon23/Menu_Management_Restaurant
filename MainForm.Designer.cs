@@ -336,6 +336,7 @@ namespace Menu_Management
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MainForm";
+            WindowState = FormWindowState.Maximized;
             Load += MainForm_Load;
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             SidePanel.ResumeLayout(false);

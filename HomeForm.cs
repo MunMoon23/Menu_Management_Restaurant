@@ -18,7 +18,20 @@ namespace Menu_Management
             InitializeComponent();
             DatabaseHelper.ShowCategory(CategoryFlowPanel, DishFlowPanel);
             DatabaseHelper.ShowDishes(DishFlowPanel);
-            OrderPanel.Visible = false;
+        }
+
+        private void SearchBar_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = SearchBar.Text.Trim();
+            if (string.IsNullOrEmpty(searchText))
+            {
+                DishFlowPanel.Controls.Clear(); // Xóa tất cả các điều khiển trong DishFlowPanel nếu không có từ khóa tìm kiếm
+                DatabaseHelper.ShowDishes(DishFlowPanel); // Hiển thị lại tất cả các món ăn
+            }
+            else
+            {
+                DatabaseHelper.ShowDishesBySearch(DishFlowPanel, searchText);
+            }
         }
     }
 }

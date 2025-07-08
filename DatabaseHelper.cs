@@ -13,7 +13,7 @@ namespace Menu_Management
         internal static Image convertToImage(byte[] data)
         {
             byte[] imgData = data; //mảng chứa data của ảnh lấy từ CSDL (lúc này chính là byte)
-            Image img = null; //tạo biến Image để lưu ảnh sau khi convert
+            Image img; //tạo biến Image để lưu ảnh sau khi convert
             if (imgData != null) //khi ảnh được đọc lên khác null
             {
                 using (MemoryStream ms = new MemoryStream(imgData)) //sử dụng đối tượng MemoryStream để lưu data ảnh (byte) được đọc vào luồng trực tiếp (bộ nhớ thay vì ổ cứng)
@@ -62,7 +62,36 @@ namespace Menu_Management
         }
 
 
+        internal static void ShowDishesBySearch(FlowLayoutPanel fl, string text)
+        {
+            fl.Controls.Clear();
+            using (SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
+            {
+                sqlcon.Open();
+                string query = "SELECT * FROM Dishes WHERE DishName LIKE @text";
+                SqlCommand sqlcmd = new SqlCommand(query, sqlcon);
+                sqlcmd.Parameters.AddWithValue("@text", '%' + text + '%'); //Thêm tham số để tránh SQL Injection
 
+                SqlDataReader reader = sqlcmd.ExecuteReader();  
+
+                if (!reader.HasRows)
+                {
+                    fl.Controls.Add(new Label() { Text = "No dishes found matching your search.", AutoSize = true });
+                    return;
+                }
+                while (reader.Read())
+                {
+                    string dishName = reader["DishName"].ToString();
+                    float price = float.Parse(reader["Price"].ToString());
+                    byte[] dishImagedata = reader["DishIMG"] as byte[];
+                    Image DishImage = convertToImage(dishImagedata);
+                    string ID = reader["DishID"].ToString();
+                    string dishtypeID = reader["CategoryID"].ToString();
+                    UC_MenuItem Dish = new UC_MenuItem(dishName, price, DishImage, ID, dishtypeID);
+                    fl.Controls.Add(Dish);
+                }
+            }    
+        }
 
         internal static void ShowDishes(FlowLayoutPanel fl, string categoryselection = null)
         {

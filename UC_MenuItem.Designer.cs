@@ -108,6 +108,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Transparent;
             Controls.Add(guna2Panel1);
+            Cursor = Cursors.Hand;
             Margin = new Padding(3, 4, 3, 4);
             Name = "UC_MenuItem";
             Size = new Size(171, 240);

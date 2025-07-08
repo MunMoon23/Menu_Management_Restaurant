@@ -94,14 +94,14 @@ namespace Menu_Management
             SidePanel.Location = new Point(0, 0);
             SidePanel.Name = "SidePanel";
             SidePanel.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            SidePanel.Size = new Size(276, 775);
+            SidePanel.Size = new Size(276, 1033);
             SidePanel.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(97, 729);
+            label1.Location = new Point(101, 977);
             label1.Name = "label1";
             label1.Size = new Size(87, 23);
             label1.TabIndex = 3;
@@ -112,7 +112,7 @@ namespace Menu_Management
             guna2PictureBox2.CustomizableEdges = customizableEdges3;
             guna2PictureBox2.Image = (Image)resources.GetObject("guna2PictureBox2.Image");
             guna2PictureBox2.ImageRotate = 0F;
-            guna2PictureBox2.Location = new Point(38, 708);
+            guna2PictureBox2.Location = new Point(42, 960);
             guna2PictureBox2.Name = "guna2PictureBox2";
             guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2PictureBox2.Size = new Size(53, 55);
@@ -321,14 +321,14 @@ namespace Menu_Management
             MainPanel.Location = new Point(276, 0);
             MainPanel.Name = "MainPanel";
             MainPanel.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            MainPanel.Size = new Size(974, 775);
+            MainPanel.Size = new Size(974, 1033);
             MainPanel.TabIndex = 1;
             // 
             // MainForm
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.White;
-            ClientSize = new Size(1250, 775);
+            ClientSize = new Size(1250, 1033);
             Controls.Add(MainPanel);
             Controls.Add(SidePanel);
             Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);

@@ -16,6 +16,7 @@ namespace Menu_Management
         public HomeForm()
         {
             InitializeComponent();
+            CategoryLabel.Text = "All";
             DatabaseHelper.ShowCategory(CategoryFlowPanel, DishFlowPanel);
             DatabaseHelper.ShowDishes(DishFlowPanel);
         }

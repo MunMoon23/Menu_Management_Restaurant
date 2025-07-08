@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             panel6 = new Panel();
-            label7 = new Label();
+            CategoryLabel = new Label();
             DishFlowPanel = new FlowLayoutPanel();
             guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             CategoryFlowPanel = new FlowLayoutPanel();
@@ -61,30 +61,30 @@
             guna2Panel1.Controls.Add(guna2Panel5);
             guna2Panel1.Controls.Add(guna2Panel4);
             guna2Panel1.Controls.Add(guna2Panel3);
-            guna2Panel1.CustomizableEdges = customizableEdges9;
+            guna2Panel1.CustomizableEdges = customizableEdges19;
             guna2Panel1.Dock = DockStyle.Fill;
             guna2Panel1.Location = new Point(0, 0);
             guna2Panel1.Margin = new Padding(3, 4, 3, 4);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges20;
             guna2Panel1.Size = new Size(1122, 1033);
             guna2Panel1.TabIndex = 0;
             // 
             // guna2Panel5
             // 
             guna2Panel5.Controls.Add(panel6);
-            guna2Panel5.CustomizableEdges = customizableEdges1;
+            guna2Panel5.CustomizableEdges = customizableEdges11;
             guna2Panel5.Dock = DockStyle.Fill;
             guna2Panel5.Location = new Point(0, 283);
             guna2Panel5.Margin = new Padding(3, 4, 3, 4);
             guna2Panel5.Name = "guna2Panel5";
-            guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2Panel5.Size = new Size(1122, 750);
             guna2Panel5.TabIndex = 2;
             // 
             // panel6
             // 
-            panel6.Controls.Add(label7);
+            panel6.Controls.Add(CategoryLabel);
             panel6.Controls.Add(DishFlowPanel);
             panel6.Location = new Point(3, 8);
             panel6.Margin = new Padding(3, 4, 3, 4);
@@ -92,15 +92,15 @@
             panel6.Size = new Size(1116, 743);
             panel6.TabIndex = 9;
             // 
-            // label7
+            // CategoryLabel
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 15.75F);
-            label7.Location = new Point(3, 21);
-            label7.Name = "label7";
-            label7.Size = new Size(124, 37);
-            label7.TabIndex = 1;
-            label7.Text = "Breakfast";
+            CategoryLabel.AutoSize = true;
+            CategoryLabel.Font = new Font("Segoe UI", 15.75F);
+            CategoryLabel.Location = new Point(3, 21);
+            CategoryLabel.Name = "CategoryLabel";
+            CategoryLabel.Size = new Size(124, 37);
+            CategoryLabel.TabIndex = 1;
+            CategoryLabel.Text = "Breakfast";
             // 
             // DishFlowPanel
             // 
@@ -115,12 +115,12 @@
             // guna2Panel4
             // 
             guna2Panel4.Controls.Add(CategoryFlowPanel);
-            guna2Panel4.CustomizableEdges = customizableEdges3;
+            guna2Panel4.CustomizableEdges = customizableEdges13;
             guna2Panel4.Dock = DockStyle.Top;
             guna2Panel4.Location = new Point(0, 88);
             guna2Panel4.Margin = new Padding(3, 4, 3, 4);
             guna2Panel4.Name = "guna2Panel4";
-            guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges14;
             guna2Panel4.Size = new Size(1122, 195);
             guna2Panel4.TabIndex = 1;
             // 
@@ -138,12 +138,12 @@
             // 
             guna2Panel3.Controls.Add(SearchBar);
             guna2Panel3.Controls.Add(label1);
-            guna2Panel3.CustomizableEdges = customizableEdges7;
+            guna2Panel3.CustomizableEdges = customizableEdges17;
             guna2Panel3.Dock = DockStyle.Top;
             guna2Panel3.Location = new Point(0, 0);
             guna2Panel3.Margin = new Padding(3, 4, 3, 4);
             guna2Panel3.Name = "guna2Panel3";
-            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges18;
             guna2Panel3.Size = new Size(1122, 88);
             guna2Panel3.TabIndex = 0;
             // 
@@ -151,7 +151,7 @@
             // 
             SearchBar.BorderRadius = 20;
             SearchBar.BorderThickness = 0;
-            SearchBar.CustomizableEdges = customizableEdges5;
+            SearchBar.CustomizableEdges = customizableEdges15;
             SearchBar.DefaultText = "";
             SearchBar.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             SearchBar.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -169,7 +169,7 @@
             SearchBar.PlaceholderForeColor = Color.Silver;
             SearchBar.PlaceholderText = "Search dish";
             SearchBar.SelectedText = "";
-            SearchBar.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            SearchBar.ShadowDecoration.CustomizableEdges = customizableEdges16;
             SearchBar.Size = new Size(440, 60);
             SearchBar.TabIndex = 9;
             SearchBar.TextChanged += SearchBar_TextChanged;
@@ -218,7 +218,7 @@
         private Label label1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private Panel panel6;
-        private Label label7;
+        private Label CategoryLabel;
         private FlowLayoutPanel DishFlowPanel;
     }
 }

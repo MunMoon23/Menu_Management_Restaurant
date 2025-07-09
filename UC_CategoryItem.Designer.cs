@@ -40,7 +40,6 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ControlLightLight;
-            panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(CategoryImage);
             panel1.Controls.Add(CategoryLabel);
             panel1.Dock = DockStyle.Fill;
@@ -58,7 +57,7 @@
             CategoryImage.BackColor = Color.Transparent;
             CategoryImage.Image = (Image)resources.GetObject("CategoryImage.Image");
             CategoryImage.ImageRotate = 0F;
-            CategoryImage.Location = new Point(21, 3);
+            CategoryImage.Location = new Point(22, 4);
             CategoryImage.Name = "CategoryImage";
             CategoryImage.ShadowDecoration.CustomizableEdges = customizableEdges1;
             CategoryImage.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -74,9 +73,9 @@
             // 
             CategoryLabel.Dock = DockStyle.Bottom;
             CategoryLabel.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            CategoryLabel.Location = new Point(0, 76);
+            CategoryLabel.Location = new Point(0, 78);
             CategoryLabel.Name = "CategoryLabel";
-            CategoryLabel.Size = new Size(110, 25);
+            CategoryLabel.Size = new Size(112, 25);
             CategoryLabel.TabIndex = 1;
             CategoryLabel.Text = "Breakfast";
             CategoryLabel.TextAlign = ContentAlignment.MiddleCenter;

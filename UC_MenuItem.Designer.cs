@@ -109,11 +109,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Transparent;
             Controls.Add(guna2Panel1);
-            Name = "UC_MenuItem";
-            Size = new Size(150, 180);
-            guna2Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)DishImage).EndInit();
-            ResumeLayout(false);
+
+            Cursor = Cursors.Hand;
+            Margin = new Padding(3, 4, 3, 4);
+
         }
 
         #endregion

@@ -42,14 +42,13 @@
             panel1.BackColor = SystemColors.ControlLightLight;
             panel1.Controls.Add(CategoryImage);
             panel1.Controls.Add(CategoryLabel);
+            panel1.Cursor = Cursors.Hand;
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(10, 10, 0, 10);
             panel1.Name = "panel1";
             panel1.Size = new Size(112, 103);
             panel1.TabIndex = 4;
-            panel1.MouseLeave += panel1_MouseLeave;
-            panel1.MouseHover += panel1_MouseHover;
             // 
             // CategoryImage
             // 
@@ -66,8 +65,6 @@
             CategoryImage.TabIndex = 4;
             CategoryImage.TabStop = false;
             CategoryImage.Click += CategoryImage_Click;
-            CategoryImage.MouseLeave += CategoryImage_MouseLeave;
-            CategoryImage.MouseHover += CategoryImage_MouseHover;
             // 
             // CategoryLabel
             // 
@@ -80,8 +77,6 @@
             CategoryLabel.Text = "Breakfast";
             CategoryLabel.TextAlign = ContentAlignment.MiddleCenter;
             CategoryLabel.Click += CategoryLabel_Click;
-            CategoryLabel.MouseLeave += CategoryLabel_MouseLeave;
-            CategoryLabel.MouseHover += CategoryLabel_MouseHover;
             // 
             // UC_CategoryItem
             // 

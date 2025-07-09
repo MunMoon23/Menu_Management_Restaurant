@@ -115,6 +115,7 @@
             // 
             // guna2Button3
             // 
+            guna2Button3.BorderRadius = 5;
             guna2Button3.CustomizableEdges = customizableEdges5;
             guna2Button3.DisabledState.BorderColor = Color.DarkGray;
             guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -124,16 +125,16 @@
             guna2Button3.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button3.ForeColor = Color.Black;
             guna2Button3.Image = (Image)resources.GetObject("guna2Button3.Image");
-            guna2Button3.ImageOffset = new Point(0, -2);
             guna2Button3.ImageSize = new Size(15, 15);
-            guna2Button3.Location = new Point(96, 85);
+            guna2Button3.Location = new Point(96, 82);
             guna2Button3.Name = "guna2Button3";
             guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button3.Size = new Size(30, 22);
+            guna2Button3.Size = new Size(30, 25);
             guna2Button3.TabIndex = 2;
             // 
             // guna2Button2
             // 
+            guna2Button2.BorderRadius = 5;
             guna2Button2.CustomizableEdges = customizableEdges7;
             guna2Button2.DisabledState.BorderColor = Color.DarkGray;
             guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -153,6 +154,9 @@
             // 
             // guna2Button1
             // 
+            guna2Button1.BorderRadius = 10;
+            customizableEdges9.BottomRight = false;
+            customizableEdges9.TopLeft = false;
             guna2Button1.CustomizableEdges = customizableEdges9;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -163,7 +167,7 @@
             guna2Button1.ForeColor = Color.Black;
             guna2Button1.Image = (Image)resources.GetObject("guna2Button1.Image");
             guna2Button1.ImageSize = new Size(12, 12);
-            guna2Button1.Location = new Point(122, 3);
+            guna2Button1.Location = new Point(124, 0);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2Button1.Size = new Size(30, 22);

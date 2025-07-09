@@ -17,7 +17,7 @@ namespace Menu_Management
         string selectedItem;
         public TableForm()
         {
-            
+
             InitializeComponent();
             popuppanel.Visible = false;
         }
@@ -27,22 +27,49 @@ namespace Menu_Management
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listBox1.SelectedItem != null)
+            if (AvailableTable.SelectedItem != null)
             {
-                selectedItem = listBox1.SelectedItem.ToString();
-
-                //MessageBox.Show("Bạn đã chọn: " + selectedItem);
+                selectedItem = AvailableTable.SelectedItem.ToString();
+                NameTxt.Text = "";
+                NumberOrderTxt.Text = "";
                 popuppanel.Visible = true;
                 label4.Text = selectedItem;
-               
+                Accept.Visible = true;
+                vacantAccept.Visible = false;
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            listBox2.Items.Add(selectedItem);
+            VacanTable.Items.Add(selectedItem);
 
-            listBox1.Items.Remove(selectedItem);
+            AvailableTable.Items.Remove(selectedItem);
+            popuppanel.Visible = false;
+        }
+
+        private void VacanTable_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (VacanTable.SelectedItem != null)
+            {
+                selectedItem = VacanTable.SelectedItem.ToString();
+
+                popuppanel.Visible = true;
+                label4.Text = selectedItem;
+                vacantAccept.Visible = true;
+                Accept.Visible = false;
+            }
+        }
+
+        private void vacantAccept_Click(object sender, EventArgs e)
+        {
+            AvailableTable.Items.Add(selectedItem);
+
+            VacanTable.Items.Remove(selectedItem);
+            popuppanel.Visible = false;
+        }
+
+        private void ExitPopup_Click(object sender, EventArgs e)
+        {
             popuppanel.Visible = false;
         }
     }

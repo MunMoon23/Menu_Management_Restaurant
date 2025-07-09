@@ -7,14 +7,60 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace Menu_Management
 {
-    public partial class ChangeMenuForm: Form
+    public partial class ChangeMenuForm : Form
     {
+        SqlConnection sqlcon = null;
         public ChangeMenuForm()
         {
             InitializeComponent();
+        }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+               
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void AlterBtn_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void RemoveBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

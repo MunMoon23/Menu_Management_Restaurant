@@ -28,26 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             SeachTB = new Guna.UI2.WinForms.Guna2TextBox();
             panel1 = new Panel();
-            listBox2 = new ListBox();
-            listBox1 = new ListBox();
-            label3 = new Label();
+            VacanTable = new ListBox();
+            AvailableTable = new ListBox();
+            AvailableUpdate = new Label();
             label2 = new Label();
             popuppanel = new Panel();
-            button1 = new Button();
+            ExitPopup = new Guna.UI2.WinForms.Guna2CircleButton();
+            vacantAccept = new Button();
+            DateTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            Accept = new Button();
             label7 = new Label();
-            textBox2 = new TextBox();
+            NumberOrderTxt = new TextBox();
             label6 = new Label();
-            textBox1 = new TextBox();
+            NameTxt = new TextBox();
             label5 = new Label();
             label4 = new Label();
-            guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             panel1.SuspendLayout();
             popuppanel.SuspendLayout();
             SuspendLayout();
@@ -66,8 +69,8 @@
             // 
             SeachTB.BackColor = Color.Transparent;
             SeachTB.BorderRadius = 20;
-            customizableEdges1.TopRight = false;
-            SeachTB.CustomizableEdges = customizableEdges1;
+            customizableEdges6.TopRight = false;
+            SeachTB.CustomizableEdges = customizableEdges6;
             SeachTB.DefaultText = "";
             SeachTB.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             SeachTB.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -81,48 +84,49 @@
             SeachTB.Name = "SeachTB";
             SeachTB.PlaceholderText = "Find Guest";
             SeachTB.SelectedText = "";
-            SeachTB.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            SeachTB.ShadowDecoration.CustomizableEdges = customizableEdges7;
             SeachTB.Size = new Size(200, 36);
             SeachTB.TabIndex = 5;
             // 
             // panel1
             // 
-            panel1.Controls.Add(listBox2);
-            panel1.Controls.Add(listBox1);
-            panel1.Controls.Add(label3);
+            panel1.Controls.Add(VacanTable);
+            panel1.Controls.Add(AvailableTable);
+            panel1.Controls.Add(AvailableUpdate);
             panel1.Controls.Add(label2);
             panel1.Location = new Point(1, 101);
             panel1.Name = "panel1";
             panel1.Size = new Size(830, 687);
             panel1.TabIndex = 6;
             // 
-            // listBox2
+            // VacanTable
             // 
-            listBox2.FormattingEnabled = true;
-            listBox2.Location = new Point(427, 81);
-            listBox2.Name = "listBox2";
-            listBox2.Size = new Size(319, 409);
-            listBox2.TabIndex = 1;
+            VacanTable.FormattingEnabled = true;
+            VacanTable.Location = new Point(427, 81);
+            VacanTable.Name = "VacanTable";
+            VacanTable.Size = new Size(319, 409);
+            VacanTable.TabIndex = 1;
+            VacanTable.SelectedIndexChanged += VacanTable_SelectedIndexChanged;
             // 
-            // listBox1
+            // AvailableTable
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.Items.AddRange(new object[] { "Table 1", "Table 2", "Table 5", "Table 7", "Table 12", "Table 16", "Table 20", "Table 21", "Table 22", "Table 23" });
-            listBox1.Location = new Point(23, 81);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(319, 409);
-            listBox1.TabIndex = 1;
-            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            AvailableTable.FormattingEnabled = true;
+            AvailableTable.Items.AddRange(new object[] { "Table 1", "Table 2", "Table 5", "Table 7", "Table 12", "Table 16", "Table 20", "Table 21", "Table 22", "Table 23" });
+            AvailableTable.Location = new Point(23, 81);
+            AvailableTable.Name = "AvailableTable";
+            AvailableTable.Size = new Size(319, 409);
+            AvailableTable.TabIndex = 1;
+            AvailableTable.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
-            // label3
+            // AvailableUpdate
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(241, 25);
-            label3.Name = "label3";
-            label3.Size = new Size(59, 25);
-            label3.TabIndex = 0;
-            label3.Text = "10/30";
+            AvailableUpdate.AutoSize = true;
+            AvailableUpdate.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            AvailableUpdate.Location = new Point(241, 25);
+            AvailableUpdate.Name = "AvailableUpdate";
+            AvailableUpdate.Size = new Size(59, 25);
+            AvailableUpdate.TabIndex = 0;
+            AvailableUpdate.Text = "10/30";
             // 
             // label2
             // 
@@ -136,12 +140,14 @@
             // 
             // popuppanel
             // 
-            popuppanel.Controls.Add(guna2DateTimePicker1);
-            popuppanel.Controls.Add(button1);
+            popuppanel.Controls.Add(ExitPopup);
+            popuppanel.Controls.Add(vacantAccept);
+            popuppanel.Controls.Add(DateTime);
+            popuppanel.Controls.Add(Accept);
             popuppanel.Controls.Add(label7);
-            popuppanel.Controls.Add(textBox2);
+            popuppanel.Controls.Add(NumberOrderTxt);
             popuppanel.Controls.Add(label6);
-            popuppanel.Controls.Add(textBox1);
+            popuppanel.Controls.Add(NameTxt);
             popuppanel.Controls.Add(label5);
             popuppanel.Controls.Add(label4);
             popuppanel.Location = new Point(496, -5);
@@ -149,15 +155,58 @@
             popuppanel.Size = new Size(332, 790);
             popuppanel.TabIndex = 7;
             // 
-            // button1
+            // ExitPopup
             // 
-            button1.Location = new Point(89, 415);
-            button1.Name = "button1";
-            button1.Size = new Size(139, 42);
-            button1.TabIndex = 8;
-            button1.Text = "xác nhận";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            ExitPopup.DisabledState.BorderColor = Color.DarkGray;
+            ExitPopup.DisabledState.CustomBorderColor = Color.DarkGray;
+            ExitPopup.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            ExitPopup.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            ExitPopup.FillColor = Color.Silver;
+            ExitPopup.Font = new Font("Segoe UI", 9F);
+            ExitPopup.ForeColor = Color.White;
+            ExitPopup.Location = new Point(20, 32);
+            ExitPopup.Name = "ExitPopup";
+            ExitPopup.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            ExitPopup.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            ExitPopup.Size = new Size(50, 39);
+            ExitPopup.TabIndex = 11;
+            ExitPopup.Text = "<--";
+            ExitPopup.Click += ExitPopup_Click;
+            // 
+            // vacantAccept
+            // 
+            vacantAccept.Location = new Point(89, 415);
+            vacantAccept.Name = "vacantAccept";
+            vacantAccept.Size = new Size(139, 42);
+            vacantAccept.TabIndex = 10;
+            vacantAccept.Text = "accept";
+            vacantAccept.UseVisualStyleBackColor = true;
+            vacantAccept.Click += vacantAccept_Click;
+            // 
+            // DateTime
+            // 
+            DateTime.Checked = true;
+            DateTime.CustomizableEdges = customizableEdges9;
+            DateTime.Font = new Font("Segoe UI", 9F);
+            DateTime.Format = DateTimePickerFormat.Long;
+            DateTime.Location = new Point(35, 303);
+            DateTime.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            DateTime.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            DateTime.Name = "DateTime";
+            DateTime.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            DateTime.Size = new Size(272, 29);
+            DateTime.TabIndex = 9;
+            DateTime.Value = new DateTime(2025, 7, 9, 12, 20, 37, 456);
+            // 
+            // Accept
+            // 
+            Accept.Location = new Point(89, 415);
+            Accept.Name = "Accept";
+            Accept.Size = new Size(139, 42);
+            Accept.TabIndex = 8;
+            Accept.Text = "xác nhận";
+            Accept.UseVisualStyleBackColor = true;
+            Accept.Click += button1_Click;
             // 
             // label7
             // 
@@ -168,12 +217,12 @@
             label7.TabIndex = 5;
             label7.Text = "ngày được đặt";
             // 
-            // textBox2
+            // NumberOrderTxt
             // 
-            textBox2.Location = new Point(42, 214);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(99, 23);
-            textBox2.TabIndex = 6;
+            NumberOrderTxt.Location = new Point(42, 214);
+            NumberOrderTxt.Name = "NumberOrderTxt";
+            NumberOrderTxt.Size = new Size(99, 23);
+            NumberOrderTxt.TabIndex = 6;
             // 
             // label6
             // 
@@ -184,12 +233,12 @@
             label6.TabIndex = 5;
             label6.Text = "số lượng người";
             // 
-            // textBox1
+            // NameTxt
             // 
-            textBox1.Location = new Point(42, 131);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(256, 23);
-            textBox1.TabIndex = 6;
+            NameTxt.Location = new Point(42, 131);
+            NameTxt.Name = "NameTxt";
+            NameTxt.Size = new Size(256, 23);
+            NameTxt.TabIndex = 6;
             // 
             // label5
             // 
@@ -204,26 +253,11 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("VNI-Disney", 24F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label4.Location = new Point(74, 32);
+            label4.Location = new Point(103, 32);
             label4.Name = "label4";
             label4.Size = new Size(106, 39);
             label4.TabIndex = 4;
             label4.Text = "TABLES";
-            // 
-            // guna2DateTimePicker1
-            // 
-            guna2DateTimePicker1.Checked = true;
-            guna2DateTimePicker1.CustomizableEdges = customizableEdges3;
-            guna2DateTimePicker1.Font = new Font("Segoe UI", 9F);
-            guna2DateTimePicker1.Format = DateTimePickerFormat.Long;
-            guna2DateTimePicker1.Location = new Point(35, 303);
-            guna2DateTimePicker1.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            guna2DateTimePicker1.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2DateTimePicker1.Size = new Size(272, 29);
-            guna2DateTimePicker1.TabIndex = 9;
-            guna2DateTimePicker1.Value = new DateTime(2025, 7, 9, 12, 20, 37, 456);
             // 
             // TableForm
             // 
@@ -250,17 +284,19 @@
         private Guna.UI2.WinForms.Guna2TextBox SeachTB;
         private Panel panel1;
         private Label label2;
-        private Label label3;
-        private ListBox listBox2;
-        private ListBox listBox1;
+        private Label AvailableUpdate;
+        private ListBox VacanTable;
+        private ListBox AvailableTable;
         private Panel popuppanel;
         private Label label4;
         private Label label7;
-        private TextBox textBox2;
+        private TextBox NumberOrderTxt;
         private Label label6;
-        private TextBox textBox1;
+        private TextBox NameTxt;
         private Label label5;
-        private Button button1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Button Accept;
+        private Guna.UI2.WinForms.Guna2DateTimePicker DateTime;
+        private Button vacantAccept;
+        private Guna.UI2.WinForms.Guna2CircleButton ExitPopup;
     }
 }

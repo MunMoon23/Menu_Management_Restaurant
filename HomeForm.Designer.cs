@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panelMainContent = new Panel();
             panelMenu = new Panel();
             CategoryLabel = new Label();
@@ -47,11 +47,10 @@
             SearchBar = new Guna.UI2.WinForms.Guna2TextBox();
             label1 = new Label();
             panel1 = new Panel();
-            label5 = new Label();
+            OrderTotalLabel = new Label();
             label4 = new Label();
             btnOrder = new Guna.UI2.WinForms.Guna2Button();
             OrderflowLayout = new FlowLayoutPanel();
-            uC_OrderItem1 = new UC_OrderItem();
             btnEatOut = new Guna.UI2.WinForms.Guna2Button();
             btnEatIn = new Guna.UI2.WinForms.Guna2Button();
             label3 = new Label();
@@ -61,7 +60,6 @@
             panelCategory.SuspendLayout();
             panelHeader.SuspendLayout();
             panel1.SuspendLayout();
-            OrderflowLayout.SuspendLayout();
             SuspendLayout();
             // 
             // panelMainContent
@@ -137,7 +135,7 @@
             // 
             SearchBar.BorderRadius = 20;
             SearchBar.BorderThickness = 0;
-            SearchBar.CustomizableEdges = customizableEdges9;
+            SearchBar.CustomizableEdges = customizableEdges1;
             SearchBar.DefaultText = "";
             SearchBar.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             SearchBar.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -155,7 +153,7 @@
             SearchBar.PlaceholderForeColor = Color.Silver;
             SearchBar.PlaceholderText = "Search dish";
             SearchBar.SelectedText = "";
-            SearchBar.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            SearchBar.ShadowDecoration.CustomizableEdges = customizableEdges2;
             SearchBar.Size = new Size(385, 45);
             SearchBar.TabIndex = 11;
             SearchBar.TextChanged += SearchBar_TextChanged;
@@ -173,7 +171,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(234, 234, 234);
-            panel1.Controls.Add(label5);
+            panel1.Controls.Add(OrderTotalLabel);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(btnOrder);
             panel1.Controls.Add(OrderflowLayout);
@@ -187,16 +185,16 @@
             panel1.Size = new Size(323, 775);
             panel1.TabIndex = 0;
             // 
-            // label5
+            // OrderTotalLabel
             // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(231, 670);
-            label5.Name = "label5";
-            label5.Size = new Size(69, 25);
-            label5.TabIndex = 23;
-            label5.Text = "$15,98";
+            OrderTotalLabel.AutoSize = true;
+            OrderTotalLabel.BackColor = Color.Transparent;
+            OrderTotalLabel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            OrderTotalLabel.Location = new Point(142, 670);
+            OrderTotalLabel.Name = "OrderTotalLabel";
+            OrderTotalLabel.Size = new Size(69, 25);
+            OrderTotalLabel.TabIndex = 23;
+            OrderTotalLabel.Text = "VNĐ 0";
             // 
             // label4
             // 
@@ -212,7 +210,7 @@
             // 
             btnOrder.BackColor = Color.Transparent;
             btnOrder.BorderRadius = 10;
-            btnOrder.CustomizableEdges = customizableEdges11;
+            btnOrder.CustomizableEdges = customizableEdges3;
             btnOrder.DisabledState.BorderColor = Color.DarkGray;
             btnOrder.DisabledState.CustomBorderColor = Color.DarkGray;
             btnOrder.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -222,27 +220,19 @@
             btnOrder.ForeColor = Color.White;
             btnOrder.Location = new Point(13, 714);
             btnOrder.Name = "btnOrder";
-            btnOrder.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnOrder.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnOrder.Size = new Size(298, 49);
             btnOrder.TabIndex = 21;
             btnOrder.Text = "Order";
+            btnOrder.Click += btnOrder_Click;
             // 
             // OrderflowLayout
             // 
             OrderflowLayout.AutoScroll = true;
-            OrderflowLayout.Controls.Add(uC_OrderItem1);
             OrderflowLayout.Location = new Point(0, 121);
             OrderflowLayout.Name = "OrderflowLayout";
             OrderflowLayout.Size = new Size(323, 528);
             OrderflowLayout.TabIndex = 6;
-            // 
-            // uC_OrderItem1
-            // 
-            uC_OrderItem1.BackColor = Color.Transparent;
-            uC_OrderItem1.Location = new Point(3, 3);
-            uC_OrderItem1.Name = "uC_OrderItem1";
-            uC_OrderItem1.Size = new Size(290, 110);
-            uC_OrderItem1.TabIndex = 0;
             // 
             // btnEatOut
             // 
@@ -252,7 +242,7 @@
             btnEatOut.CheckedState.FillColor = Color.Black;
             btnEatOut.CheckedState.Font = new Font("Segoe UI", 9.75F);
             btnEatOut.CheckedState.ForeColor = Color.FromArgb(187, 187, 187);
-            btnEatOut.CustomizableEdges = customizableEdges13;
+            btnEatOut.CustomizableEdges = customizableEdges5;
             btnEatOut.DisabledState.BorderColor = Color.DarkGray;
             btnEatOut.DisabledState.CustomBorderColor = Color.DarkGray;
             btnEatOut.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -262,7 +252,7 @@
             btnEatOut.ForeColor = Color.Black;
             btnEatOut.Location = new Point(169, 66);
             btnEatOut.Name = "btnEatOut";
-            btnEatOut.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnEatOut.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnEatOut.Size = new Size(131, 33);
             btnEatOut.TabIndex = 4;
             btnEatOut.Text = "Eat Out";
@@ -276,7 +266,7 @@
             btnEatIn.CheckedState.FillColor = Color.Black;
             btnEatIn.CheckedState.Font = new Font("Segoe UI", 9.75F);
             btnEatIn.CheckedState.ForeColor = Color.FromArgb(187, 187, 187);
-            btnEatIn.CustomizableEdges = customizableEdges15;
+            btnEatIn.CustomizableEdges = customizableEdges7;
             btnEatIn.DisabledState.BorderColor = Color.DarkGray;
             btnEatIn.DisabledState.CustomBorderColor = Color.DarkGray;
             btnEatIn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -286,7 +276,7 @@
             btnEatIn.ForeColor = Color.Black;
             btnEatIn.Location = new Point(20, 66);
             btnEatIn.Name = "btnEatIn";
-            btnEatIn.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnEatIn.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnEatIn.Size = new Size(131, 33);
             btnEatIn.TabIndex = 5;
             btnEatIn.Text = "Eat In";
@@ -331,7 +321,6 @@
             panelHeader.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            OrderflowLayout.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -347,7 +336,7 @@
         private Guna.UI2.WinForms.Guna2TextBox SearchBar;
         private Label label1;
         private Panel panel1;
-        private Label label5;
+        private Label OrderTotalLabel;
         private Label label4;
         private Guna.UI2.WinForms.Guna2Button btnOrder;
         private FlowLayoutPanel OrderflowLayout;

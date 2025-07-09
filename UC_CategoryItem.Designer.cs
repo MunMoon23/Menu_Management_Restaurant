@@ -40,15 +40,14 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ControlLightLight;
-            panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(CategoryImage);
             panel1.Controls.Add(CategoryLabel);
             panel1.Cursor = Cursors.Hand;
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(11, 13, 0, 13);
+            panel1.Margin = new Padding(10, 10, 0, 10);
             panel1.Name = "panel1";
-            panel1.Size = new Size(128, 137);
+            panel1.Size = new Size(112, 103);
             panel1.TabIndex = 4;
             // 
             // CategoryImage
@@ -57,12 +56,11 @@
             CategoryImage.BackColor = Color.Transparent;
             CategoryImage.Image = (Image)resources.GetObject("CategoryImage.Image");
             CategoryImage.ImageRotate = 0F;
-            CategoryImage.Location = new Point(24, 4);
-            CategoryImage.Margin = new Padding(3, 4, 3, 4);
+            CategoryImage.Location = new Point(22, 4);
             CategoryImage.Name = "CategoryImage";
             CategoryImage.ShadowDecoration.CustomizableEdges = customizableEdges1;
             CategoryImage.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            CategoryImage.Size = new Size(80, 80);
+            CategoryImage.Size = new Size(70, 60);
             CategoryImage.SizeMode = PictureBoxSizeMode.StretchImage;
             CategoryImage.TabIndex = 4;
             CategoryImage.TabStop = false;
@@ -72,9 +70,9 @@
             // 
             CategoryLabel.Dock = DockStyle.Bottom;
             CategoryLabel.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            CategoryLabel.Location = new Point(0, 102);
+            CategoryLabel.Location = new Point(0, 78);
             CategoryLabel.Name = "CategoryLabel";
-            CategoryLabel.Size = new Size(126, 33);
+            CategoryLabel.Size = new Size(112, 25);
             CategoryLabel.TabIndex = 1;
             CategoryLabel.Text = "Breakfast";
             CategoryLabel.TextAlign = ContentAlignment.MiddleCenter;
@@ -82,13 +80,12 @@
             // 
             // UC_CategoryItem
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
             Controls.Add(panel1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "UC_CategoryItem";
-            Size = new Size(128, 137);
+            Size = new Size(112, 103);
             Click += UC_CategoryItem_Click;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)CategoryImage).EndInit();

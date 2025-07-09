@@ -52,10 +52,9 @@
             guna2Panel1.Dock = DockStyle.Fill;
             guna2Panel1.FillColor = Color.FromArgb(234, 234, 234);
             guna2Panel1.Location = new Point(0, 0);
-            guna2Panel1.Margin = new Padding(3, 4, 3, 4);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Panel1.Size = new Size(171, 240);
+            guna2Panel1.Size = new Size(150, 180);
             guna2Panel1.TabIndex = 0;
             // 
             // DishPrice
@@ -64,12 +63,13 @@
             DishPrice.Dock = DockStyle.Top;
             DishPrice.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             DishPrice.ForeColor = Color.FromArgb(255, 107, 0);
-            DishPrice.Location = new Point(0, 179);
+            DishPrice.Location = new Point(0, 134);
             DishPrice.Name = "DishPrice";
-            DishPrice.Size = new Size(171, 35);
+            DishPrice.Size = new Size(150, 26);
             DishPrice.TabIndex = 2;
             DishPrice.Text = "$5.99";
             DishPrice.TextAlign = ContentAlignment.MiddleCenter;
+            DishPrice.Click += DishImage_Click;
             // 
             // DishName
             // 
@@ -77,12 +77,13 @@
             DishName.Dock = DockStyle.Top;
             DishName.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             DishName.ForeColor = Color.FromArgb(28, 40, 51);
-            DishName.Location = new Point(0, 119);
+            DishName.Location = new Point(0, 89);
             DishName.Name = "DishName";
-            DishName.Size = new Size(171, 60);
+            DishName.Size = new Size(150, 45);
             DishName.TabIndex = 1;
             DishName.Text = "Pancake";
             DishName.TextAlign = ContentAlignment.MiddleCenter;
+            DishName.Click += DishImage_Click;
             // 
             // DishImage
             // 
@@ -94,27 +95,24 @@
             DishImage.Image = (Image)resources.GetObject("DishImage.Image");
             DishImage.ImageRotate = 0F;
             DishImage.Location = new Point(0, 0);
-            DishImage.Margin = new Padding(3, 4, 3, 4);
             DishImage.Name = "DishImage";
             DishImage.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            DishImage.Size = new Size(171, 119);
+            DishImage.Size = new Size(150, 89);
             DishImage.SizeMode = PictureBoxSizeMode.StretchImage;
             DishImage.TabIndex = 0;
             DishImage.TabStop = false;
+            DishImage.Click += DishImage_Click;
             // 
             // UC_MenuItem
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Transparent;
             Controls.Add(guna2Panel1);
+
             Cursor = Cursors.Hand;
             Margin = new Padding(3, 4, 3, 4);
-            Name = "UC_MenuItem";
-            Size = new Size(171, 240);
-            guna2Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)DishImage).EndInit();
-            ResumeLayout(false);
+
         }
 
         #endregion

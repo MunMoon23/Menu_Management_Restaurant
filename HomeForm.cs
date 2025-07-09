@@ -17,8 +17,8 @@ namespace Menu_Management
         {
             InitializeComponent();
             CategoryLabel.Text = "All";
-            DatabaseHelper.ShowCategory(CategoryFlowPanel, DishFlowPanel);
-            DatabaseHelper.ShowDishes(DishFlowPanel);
+            DatabaseHelper.ShowCategory(CategoryFlowPanel, OrderflowLayout,OrderTotalLabel, DishFlowPanel);
+            DatabaseHelper.ShowDishes(DishFlowPanel, OrderflowLayout, OrderTotalLabel);
         }
 
         private void SearchBar_TextChanged(object sender, EventArgs e)
@@ -27,12 +27,17 @@ namespace Menu_Management
             if (string.IsNullOrEmpty(searchText))
             {
                 DishFlowPanel.Controls.Clear(); // Xóa tất cả các điều khiển trong DishFlowPanel nếu không có từ khóa tìm kiếm
-                DatabaseHelper.ShowDishes(DishFlowPanel); // Hiển thị lại tất cả các món ăn
+                DatabaseHelper.ShowDishes(DishFlowPanel, OrderflowLayout, OrderTotalLabel); // Hiển thị lại tất cả các món ăn
             }
             else
             {
                 DatabaseHelper.ShowDishesBySearch(DishFlowPanel, searchText);
             }
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

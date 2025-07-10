@@ -88,7 +88,6 @@ namespace Menu_Management
 
         private void EmployeeViewer_SelectionChanged(object sender, EventArgs e)
         {
-            EmployeeViewer
         }
     }
 }

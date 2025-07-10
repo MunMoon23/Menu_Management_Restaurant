@@ -130,9 +130,9 @@
             label2.ForeColor = Color.FromArgb(255, 107, 0);
             label2.Location = new Point(27, 174);
             label2.Name = "label2";
-            label2.Size = new Size(92, 21);
+            label2.Size = new Size(86, 21);
             label2.TabIndex = 1;
-            label2.Text = "Real Name:";
+            label2.Text = "Full Name:";
             // 
             // panel2
             // 

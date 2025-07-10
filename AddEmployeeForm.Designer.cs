@@ -35,6 +35,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeleteEmployee));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
@@ -76,6 +77,7 @@
             // 
             // Username
             // 
+            Username.BorderRadius = 10;
             Username.CustomizableEdges = customizableEdges1;
             Username.DefaultText = "";
             Username.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -95,6 +97,7 @@
             // 
             // Fullname
             // 
+            Fullname.BorderRadius = 10;
             Fullname.CustomizableEdges = customizableEdges3;
             Fullname.DefaultText = "";
             Fullname.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -114,6 +117,7 @@
             // 
             // Password
             // 
+            Password.BorderRadius = 10;
             Password.CustomizableEdges = customizableEdges5;
             Password.DefaultText = "";
             Password.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -184,20 +188,22 @@
             // GenderComboBox
             // 
             GenderComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            GenderComboBox.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             GenderComboBox.FormattingEnabled = true;
             GenderComboBox.Items.AddRange(new object[] { "Male", "Female" });
-            GenderComboBox.Location = new Point(786, 41);
+            GenderComboBox.Location = new Point(786, 44);
             GenderComboBox.Name = "GenderComboBox";
-            GenderComboBox.Size = new Size(121, 40);
+            GenderComboBox.Size = new Size(121, 33);
             GenderComboBox.TabIndex = 11;
             // 
             // RoleComboBox
             // 
             RoleComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            RoleComboBox.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             RoleComboBox.FormattingEnabled = true;
-            RoleComboBox.Location = new Point(465, 137);
+            RoleComboBox.Location = new Point(463, 140);
             RoleComboBox.Name = "RoleComboBox";
-            RoleComboBox.Size = new Size(187, 40);
+            RoleComboBox.Size = new Size(187, 33);
             RoleComboBox.TabIndex = 12;
             // 
             // groupBox1
@@ -223,14 +229,18 @@
             // 
             // AddEmployee
             // 
+            AddEmployee.BackColor = Color.Transparent;
+            AddEmployee.BorderRadius = 10;
             AddEmployee.CustomizableEdges = customizableEdges7;
             AddEmployee.DisabledState.BorderColor = Color.DarkGray;
             AddEmployee.DisabledState.CustomBorderColor = Color.DarkGray;
             AddEmployee.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             AddEmployee.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            AddEmployee.FillColor = Color.Gray;
-            AddEmployee.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            AddEmployee.ForeColor = Color.White;
+            AddEmployee.FillColor = Color.FromArgb(255, 107, 0);
+            AddEmployee.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            AddEmployee.ForeColor = Color.FromArgb(28, 40, 51);
+            AddEmployee.Image = (Image)resources.GetObject("AddEmployee.Image");
+            AddEmployee.ImageSize = new Size(15, 15);
             AddEmployee.Location = new Point(727, 137);
             AddEmployee.Name = "AddEmployee";
             AddEmployee.ShadowDecoration.CustomizableEdges = customizableEdges8;
@@ -297,9 +307,11 @@
             DelelteEmployee.DisabledState.CustomBorderColor = Color.DarkGray;
             DelelteEmployee.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             DelelteEmployee.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            DelelteEmployee.FillColor = Color.Gray;
+            DelelteEmployee.FillColor = Color.FromArgb(229, 57, 53);
             DelelteEmployee.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             DelelteEmployee.ForeColor = Color.White;
+            DelelteEmployee.HoverState.FillColor = Color.FromArgb(211, 47, 47);
+            DelelteEmployee.Image = (Image)resources.GetObject("DelelteEmployee.Image");
             DelelteEmployee.Location = new Point(680, 613);
             DelelteEmployee.Name = "DelelteEmployee";
             DelelteEmployee.ShadowDecoration.CustomizableEdges = customizableEdges10;

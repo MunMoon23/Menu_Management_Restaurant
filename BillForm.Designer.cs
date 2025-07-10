@@ -29,16 +29,18 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BillForm));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             panel1 = new Panel();
-            label1 = new Label();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            flowLayoutPanel1 = new FlowLayoutPanel();
+            label1 = new Label();
+            BillflowPanel = new FlowLayoutPanel();
+            uC_BillItem1 = new UC_BillItem();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
+            BillflowPanel.SuspendLayout();
             SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -58,6 +60,20 @@
             panel1.Size = new Size(966, 66);
             panel1.TabIndex = 0;
             // 
+            // guna2PictureBox1
+            // 
+            guna2PictureBox1.CustomizableEdges = customizableEdges1;
+            guna2PictureBox1.FillColor = Color.Transparent;
+            guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
+            guna2PictureBox1.ImageRotate = 0F;
+            guna2PictureBox1.Location = new Point(27, 12);
+            guna2PictureBox1.Name = "guna2PictureBox1";
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2PictureBox1.Size = new Size(45, 41);
+            guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            guna2PictureBox1.TabIndex = 1;
+            guna2PictureBox1.TabStop = false;
+            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -69,40 +85,39 @@
             label1.TabIndex = 0;
             label1.Text = "Bill";
             // 
-            // guna2PictureBox1
+            // BillflowPanel
             // 
-            guna2PictureBox1.CustomizableEdges = customizableEdges7;
-            guna2PictureBox1.FillColor = Color.Transparent;
-            guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
-            guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new Point(27, 12);
-            guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2PictureBox1.Size = new Size(45, 41);
-            guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            guna2PictureBox1.TabIndex = 1;
-            guna2PictureBox1.TabStop = false;
+            BillflowPanel.AutoScroll = true;
+            BillflowPanel.BackColor = Color.FromArgb(234, 234, 234);
+            BillflowPanel.Controls.Add(uC_BillItem1);
+            BillflowPanel.Location = new Point(19, 72);
+            BillflowPanel.Name = "BillflowPanel";
+            BillflowPanel.Size = new Size(935, 652);
+            BillflowPanel.TabIndex = 1;
             // 
-            // flowLayoutPanel1
+            // uC_BillItem1
             // 
-            flowLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            flowLayoutPanel1.Location = new Point(12, 72);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(935, 652);
-            flowLayoutPanel1.TabIndex = 1;
+            uC_BillItem1.Location = new Point(10, 10);
+            uC_BillItem1.Margin = new Padding(10);
+            uC_BillItem1.Name = "uC_BillItem1";
+            uC_BillItem1.Size = new Size(280, 400);
+            uC_BillItem1.TabIndex = 0;
             // 
             // BillForm
             // 
             AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(966, 736);
-            Controls.Add(flowLayoutPanel1);
+            Controls.Add(BillflowPanel);
             Controls.Add(panel1);
+            DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             Name = "BillForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "BillForm";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
+            BillflowPanel.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -112,6 +127,7 @@
         private Panel panel1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Label label1;
-        private FlowLayoutPanel flowLayoutPanel1;
+        private FlowLayoutPanel BillflowPanel;
+        private UC_BillItem uC_BillItem1;
     }
 }

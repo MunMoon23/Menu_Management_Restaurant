@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Guna.UI2.WinForms;
 using Microsoft.Data.SqlClient;
 
 
@@ -43,14 +44,7 @@ namespace Menu_Management
                 }
             }
         }
-        private void ShowForm(Form f)
-        {
-            MainPanel.Controls.Clear();
-            f.TopLevel = false;
-            f.Dock = DockStyle.Fill;
-            MainPanel.Controls.Add(f);
-            f.Show();
-        }
+
         private void Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -60,7 +54,7 @@ namespace Menu_Management
         private void Home_Click(object sender, EventArgs e)
         {
             HomeForm hf = new HomeForm();
-            ShowForm(hf); 
+            MainHelper.ShowForm(hf, MainPanel);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -70,12 +64,14 @@ namespace Menu_Management
 
         private void Tables_Click(object sender, EventArgs e)
         {
-            ShowForm(new TableForm());
+            TableForm tf = new TableForm();
+            MainHelper.ShowForm(tf, MainPanel);
         }
 
         private void Settings_Click(object sender, EventArgs e)
         {
-            ShowForm(new Setting());
+            Setting setting = new Setting(MainPanel);
+            MainHelper.ShowForm(setting, MainPanel);
         }
     }
 }

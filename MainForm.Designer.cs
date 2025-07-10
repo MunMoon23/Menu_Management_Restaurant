@@ -32,8 +32,8 @@ namespace Menu_Management
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -47,8 +47,10 @@ namespace Menu_Management
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2PictureBox1 = new Guna2PictureBox();
             SidePanel = new Guna2Panel();
             label1 = new Label();
@@ -56,6 +58,7 @@ namespace Menu_Management
             Exit = new Guna2Button();
             Settings = new Guna2Button();
             Reports = new Guna2Button();
+            btnBill = new Guna2Button();
             Tables = new Guna2Button();
             Home = new Guna2Button();
             MainPanel = new Guna2Panel();
@@ -86,14 +89,15 @@ namespace Menu_Management
             SidePanel.Controls.Add(Exit);
             SidePanel.Controls.Add(Settings);
             SidePanel.Controls.Add(Reports);
+            SidePanel.Controls.Add(btnBill);
             SidePanel.Controls.Add(Tables);
             SidePanel.Controls.Add(Home);
             SidePanel.Controls.Add(guna2PictureBox1);
-            SidePanel.CustomizableEdges = customizableEdges15;
+            SidePanel.CustomizableEdges = customizableEdges17;
             SidePanel.Dock = DockStyle.Left;
             SidePanel.Location = new Point(0, 0);
             SidePanel.Name = "SidePanel";
-            SidePanel.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            SidePanel.ShadowDecoration.CustomizableEdges = customizableEdges18;
             SidePanel.Size = new Size(276, 775);
             SidePanel.TabIndex = 0;
             // 
@@ -147,7 +151,7 @@ namespace Menu_Management
             Exit.ImageAlign = HorizontalAlignment.Left;
             Exit.ImageOffset = new Point(15, 0);
             Exit.ImageSize = new Size(25, 25);
-            Exit.Location = new Point(38, 375);
+            Exit.Location = new Point(38, 426);
             Exit.Name = "Exit";
             Exit.PressedColor = Color.LightGray;
             Exit.ShadowDecoration.CustomizableEdges = customizableEdges6;
@@ -186,7 +190,7 @@ namespace Menu_Management
             Settings.ImageAlign = HorizontalAlignment.Left;
             Settings.ImageOffset = new Point(15, 0);
             Settings.ImageSize = new Size(25, 25);
-            Settings.Location = new Point(38, 324);
+            Settings.Location = new Point(38, 375);
             Settings.Name = "Settings";
             Settings.PressedColor = Color.LightGray;
             Settings.ShadowDecoration.CustomizableEdges = customizableEdges8;
@@ -225,7 +229,7 @@ namespace Menu_Management
             Reports.ImageAlign = HorizontalAlignment.Left;
             Reports.ImageOffset = new Point(15, 0);
             Reports.ImageSize = new Size(25, 25);
-            Reports.Location = new Point(38, 273);
+            Reports.Location = new Point(38, 324);
             Reports.Name = "Reports";
             Reports.PressedColor = Color.LightGray;
             Reports.ShadowDecoration.CustomizableEdges = customizableEdges10;
@@ -234,6 +238,44 @@ namespace Menu_Management
             Reports.Text = "Reports";
             Reports.TextAlign = HorizontalAlignment.Left;
             Reports.TextOffset = new Point(20, 0);
+            // 
+            // btnBill
+            // 
+            btnBill.BorderColor = Color.Empty;
+            btnBill.BorderRadius = 20;
+            btnBill.BorderThickness = 2;
+            btnBill.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            btnBill.CheckedState.BorderColor = Color.FromArgb(255, 107, 0);
+            btnBill.CheckedState.FillColor = Color.WhiteSmoke;
+            btnBill.CheckedState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            btnBill.CheckedState.ForeColor = Color.FromArgb(255, 107, 0);
+            btnBill.CheckedState.Image = (Image)resources.GetObject("resource.Image6");
+            btnBill.CustomizableEdges = customizableEdges11;
+            btnBill.DisabledState.BorderColor = Color.DarkGray;
+            btnBill.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnBill.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnBill.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnBill.FillColor = Color.WhiteSmoke;
+            btnBill.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBill.ForeColor = Color.FromArgb(28, 40, 51);
+            btnBill.HoverState.BorderColor = Color.FromArgb(255, 162, 80);
+            btnBill.HoverState.FillColor = Color.WhiteSmoke;
+            btnBill.HoverState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            btnBill.HoverState.ForeColor = Color.FromArgb(255, 162, 80);
+            btnBill.HoverState.Image = (Image)resources.GetObject("resource.Image7");
+            btnBill.Image = (Image)resources.GetObject("btnBill.Image");
+            btnBill.ImageAlign = HorizontalAlignment.Left;
+            btnBill.ImageOffset = new Point(15, 0);
+            btnBill.ImageSize = new Size(25, 25);
+            btnBill.Location = new Point(38, 222);
+            btnBill.Name = "btnBill";
+            btnBill.PressedColor = Color.LightGray;
+            btnBill.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnBill.Size = new Size(211, 45);
+            btnBill.TabIndex = 1;
+            btnBill.Text = "Bill";
+            btnBill.TextAlign = HorizontalAlignment.Left;
+            btnBill.TextOffset = new Point(20, 0);
             // 
             // Tables
             // 
@@ -245,8 +287,8 @@ namespace Menu_Management
             Tables.CheckedState.FillColor = Color.WhiteSmoke;
             Tables.CheckedState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             Tables.CheckedState.ForeColor = Color.FromArgb(255, 107, 0);
-            Tables.CheckedState.Image = (Image)resources.GetObject("resource.Image6");
-            Tables.CustomizableEdges = customizableEdges11;
+            Tables.CheckedState.Image = (Image)resources.GetObject("resource.Image8");
+            Tables.CustomizableEdges = customizableEdges13;
             Tables.DisabledState.BorderColor = Color.DarkGray;
             Tables.DisabledState.CustomBorderColor = Color.DarkGray;
             Tables.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -258,15 +300,15 @@ namespace Menu_Management
             Tables.HoverState.FillColor = Color.WhiteSmoke;
             Tables.HoverState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             Tables.HoverState.ForeColor = Color.FromArgb(255, 162, 80);
-            Tables.HoverState.Image = (Image)resources.GetObject("resource.Image7");
+            Tables.HoverState.Image = (Image)resources.GetObject("resource.Image9");
             Tables.Image = (Image)resources.GetObject("Tables.Image");
             Tables.ImageAlign = HorizontalAlignment.Left;
             Tables.ImageOffset = new Point(15, 0);
             Tables.ImageSize = new Size(25, 25);
-            Tables.Location = new Point(38, 222);
+            Tables.Location = new Point(38, 273);
             Tables.Name = "Tables";
             Tables.PressedColor = Color.LightGray;
-            Tables.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            Tables.ShadowDecoration.CustomizableEdges = customizableEdges14;
             Tables.Size = new Size(211, 45);
             Tables.TabIndex = 1;
             Tables.Text = "Tables";
@@ -285,8 +327,8 @@ namespace Menu_Management
             Home.CheckedState.FillColor = Color.WhiteSmoke;
             Home.CheckedState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             Home.CheckedState.ForeColor = Color.FromArgb(255, 107, 0);
-            Home.CheckedState.Image = (Image)resources.GetObject("resource.Image8");
-            Home.CustomizableEdges = customizableEdges13;
+            Home.CheckedState.Image = (Image)resources.GetObject("resource.Image10");
+            Home.CustomizableEdges = customizableEdges15;
             Home.DisabledState.BorderColor = Color.DarkGray;
             Home.DisabledState.CustomBorderColor = Color.DarkGray;
             Home.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -298,7 +340,7 @@ namespace Menu_Management
             Home.HoverState.FillColor = Color.WhiteSmoke;
             Home.HoverState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             Home.HoverState.ForeColor = Color.FromArgb(255, 162, 80);
-            Home.HoverState.Image = (Image)resources.GetObject("resource.Image9");
+            Home.HoverState.Image = (Image)resources.GetObject("resource.Image11");
             Home.Image = (Image)resources.GetObject("Home.Image");
             Home.ImageAlign = HorizontalAlignment.Left;
             Home.ImageOffset = new Point(15, 0);
@@ -306,7 +348,7 @@ namespace Menu_Management
             Home.Location = new Point(38, 171);
             Home.Name = "Home";
             Home.PressedColor = Color.LightGray;
-            Home.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            Home.ShadowDecoration.CustomizableEdges = customizableEdges16;
             Home.Size = new Size(211, 45);
             Home.TabIndex = 1;
             Home.Text = "Home";
@@ -316,11 +358,11 @@ namespace Menu_Management
             // 
             // MainPanel
             // 
-            MainPanel.CustomizableEdges = customizableEdges17;
+            MainPanel.CustomizableEdges = customizableEdges19;
             MainPanel.Dock = DockStyle.Fill;
             MainPanel.Location = new Point(276, 0);
             MainPanel.Name = "MainPanel";
-            MainPanel.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            MainPanel.ShadowDecoration.CustomizableEdges = customizableEdges20;
             MainPanel.Size = new Size(974, 775);
             MainPanel.TabIndex = 1;
             // 
@@ -357,5 +399,6 @@ namespace Menu_Management
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2Panel MainPanel;
         private Guna2Panel SidePanel;
+        private Guna2Button btnBill;
     }
 }

@@ -15,6 +15,8 @@ namespace Menu_Management
         string DishID;
         string DishTypeID;
         Color colorChanged = Color.Gray;
+
+        public event EventHandler DishSelected; // Sự kiện khi món ăn được chọn
         public UC_MenuItem(string name, float price, Image img, string ID, string dishTypeID)
         {
             InitializeComponent();
@@ -23,6 +25,11 @@ namespace Menu_Management
             DishImage.Image = img;
             this.DishID = ID;
             this.DishTypeID = dishTypeID;
+        }
+
+        private void DishImage_Click(object sender, EventArgs e)
+        {
+            DishSelected.Invoke(this, e); // Gọi sự kiện khi món ăn được chọn
         }
     }
 }

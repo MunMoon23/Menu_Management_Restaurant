@@ -28,7 +28,6 @@ namespace Menu_Management
             }
         }
 
-
         internal static string GetConnectionString()
         {
             // Replace with your actual database connection string
@@ -37,7 +36,7 @@ namespace Menu_Management
 
 
 
-        internal static void ShowCategory(FlowLayoutPanel fl, FlowLayoutPanel DishShowPanel)
+        internal static void ShowCategory(FlowLayoutPanel fl,FlowLayoutPanel Orderfl,Label TotalLabel, FlowLayoutPanel DishShowPanel)
         {
             using (SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
             {
@@ -53,10 +52,9 @@ namespace Menu_Management
                     UC_CategoryItem categoryItem = new UC_CategoryItem(categoryName, categoryImage, ID);
                     categoryItem.OnCategorySelect += (sender, e) => //Gán hành động cho sự kiện đã khai báo trước
                     {
-                        ShowDishes(DishShowPanel, ID); //tại vì ở UC không hề reference được tới FlowPanel của form này nên phải gán sự kiện ở đây
+                        ShowDishes(DishShowPanel, Orderfl, TotalLabel, ID); //tại vì ở UC không hề reference được tới FlowPanel của form này nên phải gán sự kiện ở đây
                     };
                     fl.Controls.Add(categoryItem);
-
                 }
             }
         }
@@ -92,8 +90,7 @@ namespace Menu_Management
                 }
             }    
         }
-
-        internal static void ShowDishes(FlowLayoutPanel fl, string categoryselection = null)
+        internal static void ShowDishes(FlowLayoutPanel fl,FlowLayoutPanel Orderfl,Label totalpriceLabel, string categoryselection = null)
         {
             fl.Controls.Clear();
             using (SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
@@ -122,6 +119,28 @@ namespace Menu_Management
                     string ID = reader["DishID"].ToString();
                     string dishtypeID = reader["CategoryID"].ToString();
                     UC_MenuItem Dish = new UC_MenuItem(dishName, price, DishImage, ID, dishtypeID);
+                    Dish.DishSelected += (sender, e) => //Gán hành động cho sự kiện đã khai báo trước
+                    {
+                        
+                        UC_OrderItem orderItem = new UC_OrderItem(dishName, price, DishImage, ID, dishtypeID);
+                        orderItem.removeOrderItem += (s, ev) => //Gán hành động cho sự kiện đã khai báo trước
+                        {
+                            Orderfl.Controls.Remove(orderItem); //Xóa món ăn đã chọn khỏi FlowLayoutPanel Orderfl
+                            totalpriceLabel.ResetText();
+                            OrderHelper.CalculateTotalPrice(Orderfl);
+                            totalpriceLabel.Text = "VNĐ " + OrderHelper.totalPrice.ToString();
+                        };
+                        orderItem.quantityChanged += (sender, ev) => //Gán hành động cho sự kiện đã khai báo trước
+                        {
+                            OrderHelper.CalculateTotalPrice(Orderfl);
+                            totalpriceLabel.ResetText();
+                            totalpriceLabel.Text = "VNĐ " + OrderHelper.totalPrice.ToString();
+                        };
+                        Orderfl.Controls.Add(orderItem); //Thêm món ăn đã chọn vào FlowLayoutPanel Orderfl
+                        totalpriceLabel.ResetText();
+                        OrderHelper.CalculateTotalPrice(Orderfl);
+                        totalpriceLabel.Text = "VNĐ " + OrderHelper.totalPrice.ToString();
+                    };
                     fl.Controls.Add(Dish);
                 }
                 reader.Close();

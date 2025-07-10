@@ -61,10 +61,11 @@
             // Shift
             // 
             Shift.BackColor = Color.Transparent;
+
             Shift.Font = new Font(".VnBook-AntiquaH", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Shift.Location = new Point(59, 68);
             Shift.Name = "Shift";
-            Shift.Size = new Size(68, 34);
+            Shift.Size = new Size(68, 27);
             Shift.TabIndex = 0;
             Shift.Text = "SHIFT";
             // 
@@ -161,8 +162,9 @@
             FShift.BackColor = Color.Transparent;
             FShift.Font = new Font(".VnBook-AntiquaH", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             FShift.Location = new Point(59, 507);
+
             FShift.Name = "FShift";
-            FShift.Size = new Size(182, 34);
+            FShift.Size = new Size(148, 27);
             FShift.TabIndex = 0;
             FShift.Text = "Finished Shift";
             // 
@@ -222,7 +224,7 @@
             guna2HtmlLabel1.Font = new Font(".VnBook-AntiquaH", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel1.Location = new Point(59, 577);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(153, 34);
+            guna2HtmlLabel1.Size = new Size(150, 27);
             guna2HtmlLabel1.TabIndex = 0;
             guna2HtmlLabel1.Text = "LATE ARRIVE";
             // 

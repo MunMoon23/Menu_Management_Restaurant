@@ -19,8 +19,6 @@ namespace Menu_Management
             mainpanel = main;
         }
 
-
-
         private void ChangeMenuBtn_Click(object sender, EventArgs e)
         {
             ChangeMenuForm ChangeMenuForm = new ChangeMenuForm(mainpanel);

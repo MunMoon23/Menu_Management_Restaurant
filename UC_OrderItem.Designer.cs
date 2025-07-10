@@ -41,45 +41,45 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            OrderImage = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            label2 = new Label();
-            label1 = new Label();
-            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
+            Quantity = new Guna.UI2.WinForms.Guna2TextBox();
+            IncreaseOrder = new Guna.UI2.WinForms.Guna2Button();
+            MinusOrder = new Guna.UI2.WinForms.Guna2Button();
+            ClearOrderItem = new Guna.UI2.WinForms.Guna2Button();
+            OrderPrice = new Label();
+            OrderName = new Label();
+            ((System.ComponentModel.ISupportInitialize)OrderImage).BeginInit();
             guna2Panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // guna2PictureBox1
+            // OrderImage
             // 
-            guna2PictureBox1.BorderRadius = 10;
+            OrderImage.BorderRadius = 10;
             customizableEdges1.BottomRight = false;
             customizableEdges1.TopRight = false;
-            guna2PictureBox1.CustomizableEdges = customizableEdges1;
-            guna2PictureBox1.Dock = DockStyle.Left;
-            guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
-            guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new Point(0, 0);
-            guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2PictureBox1.Size = new Size(136, 110);
-            guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            guna2PictureBox1.TabIndex = 0;
-            guna2PictureBox1.TabStop = false;
+            OrderImage.CustomizableEdges = customizableEdges1;
+            OrderImage.Dock = DockStyle.Left;
+            OrderImage.Image = (Image)resources.GetObject("OrderImage.Image");
+            OrderImage.ImageRotate = 0F;
+            OrderImage.Location = new Point(0, 0);
+            OrderImage.Name = "OrderImage";
+            OrderImage.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            OrderImage.Size = new Size(136, 110);
+            OrderImage.SizeMode = PictureBoxSizeMode.StretchImage;
+            OrderImage.TabIndex = 0;
+            OrderImage.TabStop = false;
             // 
             // guna2Panel1
             // 
             guna2Panel1.BackColor = Color.Transparent;
             guna2Panel1.BorderRadius = 10;
-            guna2Panel1.Controls.Add(guna2TextBox1);
-            guna2Panel1.Controls.Add(guna2Button3);
-            guna2Panel1.Controls.Add(guna2Button2);
-            guna2Panel1.Controls.Add(guna2Button1);
-            guna2Panel1.Controls.Add(label2);
-            guna2Panel1.Controls.Add(label1);
+            guna2Panel1.Controls.Add(Quantity);
+            guna2Panel1.Controls.Add(IncreaseOrder);
+            guna2Panel1.Controls.Add(MinusOrder);
+            guna2Panel1.Controls.Add(ClearOrderItem);
+            guna2Panel1.Controls.Add(OrderPrice);
+            guna2Panel1.Controls.Add(OrderName);
             customizableEdges11.BottomLeft = false;
             customizableEdges11.TopLeft = false;
             guna2Panel1.CustomizableEdges = customizableEdges11;
@@ -91,103 +91,112 @@
             guna2Panel1.Size = new Size(154, 110);
             guna2Panel1.TabIndex = 1;
             // 
-            // guna2TextBox1
+            // Quantity
             // 
-            guna2TextBox1.BorderRadius = 5;
-            guna2TextBox1.BorderThickness = 0;
-            guna2TextBox1.CustomizableEdges = customizableEdges3;
-            guna2TextBox1.DefaultText = "2";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI", 9F);
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(60, 82);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PlaceholderText = "";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2TextBox1.Size = new Size(30, 25);
-            guna2TextBox1.TabIndex = 3;
-            guna2TextBox1.TextAlign = HorizontalAlignment.Center;
+            Quantity.BorderRadius = 5;
+            Quantity.BorderThickness = 0;
+            Quantity.CustomizableEdges = customizableEdges3;
+            Quantity.DefaultText = "1";
+            Quantity.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            Quantity.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            Quantity.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            Quantity.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            Quantity.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            Quantity.Font = new Font("Segoe UI", 9F);
+            Quantity.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            Quantity.Location = new Point(60, 82);
+            Quantity.Name = "Quantity";
+            Quantity.PlaceholderText = "";
+            Quantity.SelectedText = "";
+            Quantity.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            Quantity.Size = new Size(30, 25);
+            Quantity.TabIndex = 3;
+            Quantity.TextAlign = HorizontalAlignment.Center;
+            Quantity.TextChanged += Quantity_TextChanged;
+            Quantity.KeyPress += Quantity_KeyPress;
             // 
-            // guna2Button3
+            // IncreaseOrder
             // 
-            guna2Button3.CustomizableEdges = customizableEdges5;
-            guna2Button3.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button3.FillColor = Color.Transparent;
-            guna2Button3.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button3.ForeColor = Color.Black;
-            guna2Button3.Image = (Image)resources.GetObject("guna2Button3.Image");
-            guna2Button3.ImageOffset = new Point(0, -2);
-            guna2Button3.ImageSize = new Size(15, 15);
-            guna2Button3.Location = new Point(96, 85);
-            guna2Button3.Name = "guna2Button3";
-            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button3.Size = new Size(30, 22);
-            guna2Button3.TabIndex = 2;
+            IncreaseOrder.BorderRadius = 5;
+            IncreaseOrder.CustomizableEdges = customizableEdges5;
+            IncreaseOrder.DisabledState.BorderColor = Color.DarkGray;
+            IncreaseOrder.DisabledState.CustomBorderColor = Color.DarkGray;
+            IncreaseOrder.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            IncreaseOrder.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            IncreaseOrder.FillColor = Color.Transparent;
+            IncreaseOrder.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            IncreaseOrder.ForeColor = Color.Black;
+            IncreaseOrder.Image = (Image)resources.GetObject("IncreaseOrder.Image");
+            IncreaseOrder.ImageSize = new Size(15, 15);
+            IncreaseOrder.Location = new Point(96, 82);
+            IncreaseOrder.Name = "IncreaseOrder";
+            IncreaseOrder.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            IncreaseOrder.Size = new Size(30, 25);
+            IncreaseOrder.TabIndex = 2;
+            IncreaseOrder.Click += IncreaseOrder_Click;
             // 
-            // guna2Button2
+            // MinusOrder
             // 
-            guna2Button2.CustomizableEdges = customizableEdges7;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.FillColor = Color.Transparent;
-            guna2Button2.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button2.ForeColor = Color.Black;
-            guna2Button2.Image = (Image)resources.GetObject("guna2Button2.Image");
-            guna2Button2.ImageOffset = new Point(0, 1);
-            guna2Button2.ImageSize = new Size(15, 15);
-            guna2Button2.Location = new Point(24, 82);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button2.Size = new Size(30, 22);
-            guna2Button2.TabIndex = 2;
+            MinusOrder.BorderRadius = 5;
+            MinusOrder.CustomizableEdges = customizableEdges7;
+            MinusOrder.DisabledState.BorderColor = Color.DarkGray;
+            MinusOrder.DisabledState.CustomBorderColor = Color.DarkGray;
+            MinusOrder.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            MinusOrder.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            MinusOrder.FillColor = Color.Transparent;
+            MinusOrder.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            MinusOrder.ForeColor = Color.Black;
+            MinusOrder.Image = (Image)resources.GetObject("MinusOrder.Image");
+            MinusOrder.ImageOffset = new Point(0, 1);
+            MinusOrder.ImageSize = new Size(15, 15);
+            MinusOrder.Location = new Point(24, 82);
+            MinusOrder.Name = "MinusOrder";
+            MinusOrder.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            MinusOrder.Size = new Size(30, 25);
+            MinusOrder.TabIndex = 2;
+            MinusOrder.Click += MinusOrder_Click;
             // 
-            // guna2Button1
+            // ClearOrderItem
             // 
-            guna2Button1.CustomizableEdges = customizableEdges9;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.Transparent;
-            guna2Button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button1.ForeColor = Color.Black;
-            guna2Button1.Image = (Image)resources.GetObject("guna2Button1.Image");
-            guna2Button1.ImageSize = new Size(12, 12);
-            guna2Button1.Location = new Point(122, 3);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Button1.Size = new Size(30, 22);
-            guna2Button1.TabIndex = 2;
+            ClearOrderItem.BorderRadius = 10;
+            customizableEdges9.BottomRight = false;
+            customizableEdges9.TopLeft = false;
+            ClearOrderItem.CustomizableEdges = customizableEdges9;
+            ClearOrderItem.DisabledState.BorderColor = Color.DarkGray;
+            ClearOrderItem.DisabledState.CustomBorderColor = Color.DarkGray;
+            ClearOrderItem.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            ClearOrderItem.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            ClearOrderItem.FillColor = Color.Transparent;
+            ClearOrderItem.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ClearOrderItem.ForeColor = Color.Black;
+            ClearOrderItem.Image = (Image)resources.GetObject("ClearOrderItem.Image");
+            ClearOrderItem.ImageSize = new Size(12, 12);
+            ClearOrderItem.Location = new Point(124, 0);
+            ClearOrderItem.Name = "ClearOrderItem";
+            ClearOrderItem.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            ClearOrderItem.Size = new Size(30, 22);
+            ClearOrderItem.TabIndex = 2;
+            ClearOrderItem.Click += ClearOrderItem_Click;
             // 
-            // label2
+            // OrderPrice
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(6, 46);
-            label2.Name = "label2";
-            label2.Size = new Size(50, 21);
-            label2.TabIndex = 1;
-            label2.Text = "$7.99";
+            OrderPrice.AutoSize = true;
+            OrderPrice.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            OrderPrice.Location = new Point(6, 46);
+            OrderPrice.Name = "OrderPrice";
+            OrderPrice.Size = new Size(50, 21);
+            OrderPrice.TabIndex = 1;
+            OrderPrice.Text = "$7.99";
             // 
-            // label1
+            // OrderName
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(6, 18);
-            label1.Name = "label1";
-            label1.Size = new Size(51, 21);
-            label1.TabIndex = 0;
-            label1.Text = "Beefs";
+            OrderName.AutoSize = true;
+            OrderName.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            OrderName.Location = new Point(6, 18);
+            OrderName.Name = "OrderName";
+            OrderName.Size = new Size(51, 21);
+            OrderName.TabIndex = 0;
+            OrderName.Text = "Beefs";
             // 
             // UC_OrderItem
             // 
@@ -195,10 +204,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Transparent;
             Controls.Add(guna2Panel1);
-            Controls.Add(guna2PictureBox1);
+            Controls.Add(OrderImage);
             Name = "UC_OrderItem";
             Size = new Size(290, 110);
-            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)OrderImage).EndInit();
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
             ResumeLayout(false);
@@ -206,13 +215,13 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox OrderImage;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Label label2;
-        private Label label1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Label OrderPrice;
+        private Label OrderName;
+        private Guna.UI2.WinForms.Guna2TextBox Quantity;
+        private Guna.UI2.WinForms.Guna2Button MinusOrder;
+        private Guna.UI2.WinForms.Guna2Button ClearOrderItem;
+        private Guna.UI2.WinForms.Guna2Button IncreaseOrder;
     }
 }

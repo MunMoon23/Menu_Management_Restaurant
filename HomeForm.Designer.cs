@@ -28,130 +28,114 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
-            panel6 = new Panel();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            panelMainContent = new Panel();
+            panelMenu = new Panel();
             CategoryLabel = new Label();
             DishFlowPanel = new FlowLayoutPanel();
-            guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            panelCategory = new Panel();
             CategoryFlowPanel = new FlowLayoutPanel();
-            guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            panelHeader = new Panel();
             SearchBar = new Guna.UI2.WinForms.Guna2TextBox();
             label1 = new Label();
-            guna2Panel1.SuspendLayout();
-            guna2Panel5.SuspendLayout();
-            panel6.SuspendLayout();
-            guna2Panel4.SuspendLayout();
-            guna2Panel3.SuspendLayout();
+            panel1 = new Panel();
+            OrderTotalLabel = new Label();
+            label4 = new Label();
+            btnOrder = new Guna.UI2.WinForms.Guna2Button();
+            OrderflowLayout = new FlowLayoutPanel();
+            btnEatOut = new Guna.UI2.WinForms.Guna2Button();
+            btnEatIn = new Guna.UI2.WinForms.Guna2Button();
+            label3 = new Label();
+            label2 = new Label();
+            panelMainContent.SuspendLayout();
+            panelMenu.SuspendLayout();
+            panelCategory.SuspendLayout();
+            panelHeader.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // guna2Panel1
+            // panelMainContent
             // 
-            guna2Panel1.Controls.Add(guna2Panel5);
-            guna2Panel1.Controls.Add(guna2Panel4);
-            guna2Panel1.Controls.Add(guna2Panel3);
-            guna2Panel1.CustomizableEdges = customizableEdges19;
-            guna2Panel1.Dock = DockStyle.Fill;
-            guna2Panel1.Location = new Point(0, 0);
-            guna2Panel1.Margin = new Padding(3, 4, 3, 4);
-            guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            guna2Panel1.Size = new Size(1122, 1033);
-            guna2Panel1.TabIndex = 0;
+            panelMainContent.Controls.Add(panelMenu);
+            panelMainContent.Controls.Add(panelCategory);
+            panelMainContent.Controls.Add(panelHeader);
+            panelMainContent.Controls.Add(panel1);
+            panelMainContent.Dock = DockStyle.Fill;
+            panelMainContent.Location = new Point(0, 0);
+            panelMainContent.Name = "panelMainContent";
+            panelMainContent.Size = new Size(982, 775);
+            panelMainContent.TabIndex = 1;
             // 
-            // guna2Panel5
+            // panelMenu
             // 
-            guna2Panel5.Controls.Add(panel6);
-            guna2Panel5.CustomizableEdges = customizableEdges11;
-            guna2Panel5.Dock = DockStyle.Fill;
-            guna2Panel5.Location = new Point(0, 283);
-            guna2Panel5.Margin = new Padding(3, 4, 3, 4);
-            guna2Panel5.Name = "guna2Panel5";
-            guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Panel5.Size = new Size(1122, 750);
-            guna2Panel5.TabIndex = 2;
-            // 
-            // panel6
-            // 
-            panel6.Controls.Add(CategoryLabel);
-            panel6.Controls.Add(DishFlowPanel);
-            panel6.Location = new Point(3, 8);
-            panel6.Margin = new Padding(3, 4, 3, 4);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(1116, 743);
-            panel6.TabIndex = 9;
+            panelMenu.Controls.Add(CategoryLabel);
+            panelMenu.Controls.Add(DishFlowPanel);
+            panelMenu.Dock = DockStyle.Fill;
+            panelMenu.Location = new Point(0, 196);
+            panelMenu.Name = "panelMenu";
+            panelMenu.Size = new Size(659, 579);
+            panelMenu.TabIndex = 3;
             // 
             // CategoryLabel
             // 
             CategoryLabel.AutoSize = true;
             CategoryLabel.Font = new Font("Segoe UI", 15.75F);
-            CategoryLabel.Location = new Point(3, 21);
+            CategoryLabel.Location = new Point(8, 3);
             CategoryLabel.Name = "CategoryLabel";
-            CategoryLabel.Size = new Size(124, 37);
-            CategoryLabel.TabIndex = 1;
+            CategoryLabel.Size = new Size(98, 30);
+            CategoryLabel.TabIndex = 4;
             CategoryLabel.Text = "Breakfast";
             // 
             // DishFlowPanel
             // 
             DishFlowPanel.AutoScroll = true;
-            DishFlowPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            DishFlowPanel.Location = new Point(3, 83);
-            DishFlowPanel.Margin = new Padding(3, 4, 3, 4);
+            DishFlowPanel.Location = new Point(3, 36);
             DishFlowPanel.Name = "DishFlowPanel";
-            DishFlowPanel.Size = new Size(1110, 645);
-            DishFlowPanel.TabIndex = 0;
+            DishFlowPanel.Size = new Size(643, 543);
+            DishFlowPanel.TabIndex = 3;
             // 
-            // guna2Panel4
+            // panelCategory
             // 
-            guna2Panel4.Controls.Add(CategoryFlowPanel);
-            guna2Panel4.CustomizableEdges = customizableEdges13;
-            guna2Panel4.Dock = DockStyle.Top;
-            guna2Panel4.Location = new Point(0, 88);
-            guna2Panel4.Margin = new Padding(3, 4, 3, 4);
-            guna2Panel4.Name = "guna2Panel4";
-            guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2Panel4.Size = new Size(1122, 195);
-            guna2Panel4.TabIndex = 1;
+            panelCategory.Controls.Add(CategoryFlowPanel);
+            panelCategory.Dock = DockStyle.Top;
+            panelCategory.Location = new Point(0, 66);
+            panelCategory.Name = "panelCategory";
+            panelCategory.Size = new Size(659, 130);
+            panelCategory.TabIndex = 2;
             // 
             // CategoryFlowPanel
             // 
             CategoryFlowPanel.AutoScroll = true;
-            CategoryFlowPanel.Location = new Point(10, 4);
-            CategoryFlowPanel.Margin = new Padding(3, 4, 3, 4);
+            CategoryFlowPanel.Dock = DockStyle.Fill;
+            CategoryFlowPanel.Location = new Point(0, 0);
             CategoryFlowPanel.Name = "CategoryFlowPanel";
-            CategoryFlowPanel.Size = new Size(1109, 187);
-            CategoryFlowPanel.TabIndex = 10;
+            CategoryFlowPanel.Size = new Size(659, 130);
+            CategoryFlowPanel.TabIndex = 11;
             CategoryFlowPanel.WrapContents = false;
             // 
-            // guna2Panel3
+            // panelHeader
             // 
-            guna2Panel3.Controls.Add(SearchBar);
-            guna2Panel3.Controls.Add(label1);
-            guna2Panel3.CustomizableEdges = customizableEdges17;
-            guna2Panel3.Dock = DockStyle.Top;
-            guna2Panel3.Location = new Point(0, 0);
-            guna2Panel3.Margin = new Padding(3, 4, 3, 4);
-            guna2Panel3.Name = "guna2Panel3";
-            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2Panel3.Size = new Size(1122, 88);
-            guna2Panel3.TabIndex = 0;
+            panelHeader.Controls.Add(SearchBar);
+            panelHeader.Controls.Add(label1);
+            panelHeader.Dock = DockStyle.Top;
+            panelHeader.Location = new Point(0, 0);
+            panelHeader.Name = "panelHeader";
+            panelHeader.Size = new Size(659, 66);
+            panelHeader.TabIndex = 1;
             // 
             // SearchBar
             // 
             SearchBar.BorderRadius = 20;
             SearchBar.BorderThickness = 0;
-            SearchBar.CustomizableEdges = customizableEdges15;
+            SearchBar.CustomizableEdges = customizableEdges1;
             SearchBar.DefaultText = "";
             SearchBar.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             SearchBar.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -163,62 +147,203 @@
             SearchBar.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             SearchBar.IconRight = (Image)resources.GetObject("SearchBar.IconRight");
             SearchBar.IconRightSize = new Size(36, 36);
-            SearchBar.Location = new Point(310, 12);
-            SearchBar.Margin = new Padding(5);
+            SearchBar.Location = new Point(250, 11);
+            SearchBar.Margin = new Padding(4);
             SearchBar.Name = "SearchBar";
             SearchBar.PlaceholderForeColor = Color.Silver;
             SearchBar.PlaceholderText = "Search dish";
             SearchBar.SelectedText = "";
-            SearchBar.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            SearchBar.Size = new Size(440, 60);
-            SearchBar.TabIndex = 9;
+            SearchBar.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            SearchBar.Size = new Size(385, 45);
+            SearchBar.TabIndex = 11;
             SearchBar.TextChanged += SearchBar_TextChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(14, 12);
+            label1.Location = new Point(8, 11);
             label1.Name = "label1";
-            label1.Size = new Size(139, 54);
-            label1.TabIndex = 8;
+            label1.Size = new Size(113, 45);
+            label1.TabIndex = 10;
             label1.Text = "Dishes";
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(234, 234, 234);
+            panel1.Controls.Add(OrderTotalLabel);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(btnOrder);
+            panel1.Controls.Add(OrderflowLayout);
+            panel1.Controls.Add(btnEatOut);
+            panel1.Controls.Add(btnEatIn);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(label2);
+            panel1.Dock = DockStyle.Right;
+            panel1.Location = new Point(659, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(323, 775);
+            panel1.TabIndex = 0;
+            // 
+            // OrderTotalLabel
+            // 
+            OrderTotalLabel.AutoSize = true;
+            OrderTotalLabel.BackColor = Color.Transparent;
+            OrderTotalLabel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            OrderTotalLabel.Location = new Point(142, 670);
+            OrderTotalLabel.Name = "OrderTotalLabel";
+            OrderTotalLabel.Size = new Size(69, 25);
+            OrderTotalLabel.TabIndex = 23;
+            OrderTotalLabel.Text = "VNĐ 0";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(20, 670);
+            label4.Name = "label4";
+            label4.Size = new Size(63, 25);
+            label4.TabIndex = 22;
+            label4.Text = "Total :";
+            // 
+            // btnOrder
+            // 
+            btnOrder.BackColor = Color.Transparent;
+            btnOrder.BorderRadius = 10;
+            btnOrder.CustomizableEdges = customizableEdges3;
+            btnOrder.DisabledState.BorderColor = Color.DarkGray;
+            btnOrder.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnOrder.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnOrder.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnOrder.FillColor = Color.FromArgb(255, 107, 0);
+            btnOrder.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnOrder.ForeColor = Color.White;
+            btnOrder.Location = new Point(13, 714);
+            btnOrder.Name = "btnOrder";
+            btnOrder.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnOrder.Size = new Size(298, 49);
+            btnOrder.TabIndex = 21;
+            btnOrder.Text = "Order";
+            btnOrder.Click += btnOrder_Click;
+            // 
+            // OrderflowLayout
+            // 
+            OrderflowLayout.AutoScroll = true;
+            OrderflowLayout.Location = new Point(0, 121);
+            OrderflowLayout.Name = "OrderflowLayout";
+            OrderflowLayout.Size = new Size(323, 528);
+            OrderflowLayout.TabIndex = 6;
+            // 
+            // btnEatOut
+            // 
+            btnEatOut.BackColor = Color.Transparent;
+            btnEatOut.BorderRadius = 8;
+            btnEatOut.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            btnEatOut.CheckedState.FillColor = Color.Black;
+            btnEatOut.CheckedState.Font = new Font("Segoe UI", 9.75F);
+            btnEatOut.CheckedState.ForeColor = Color.FromArgb(187, 187, 187);
+            btnEatOut.CustomizableEdges = customizableEdges5;
+            btnEatOut.DisabledState.BorderColor = Color.DarkGray;
+            btnEatOut.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnEatOut.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnEatOut.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnEatOut.FillColor = Color.FromArgb(187, 187, 187);
+            btnEatOut.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnEatOut.ForeColor = Color.Black;
+            btnEatOut.Location = new Point(169, 66);
+            btnEatOut.Name = "btnEatOut";
+            btnEatOut.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnEatOut.Size = new Size(131, 33);
+            btnEatOut.TabIndex = 4;
+            btnEatOut.Text = "Eat Out";
+            // 
+            // btnEatIn
+            // 
+            btnEatIn.BackColor = Color.Transparent;
+            btnEatIn.BorderRadius = 8;
+            btnEatIn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            btnEatIn.Checked = true;
+            btnEatIn.CheckedState.FillColor = Color.Black;
+            btnEatIn.CheckedState.Font = new Font("Segoe UI", 9.75F);
+            btnEatIn.CheckedState.ForeColor = Color.FromArgb(187, 187, 187);
+            btnEatIn.CustomizableEdges = customizableEdges7;
+            btnEatIn.DisabledState.BorderColor = Color.DarkGray;
+            btnEatIn.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnEatIn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnEatIn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnEatIn.FillColor = Color.FromArgb(187, 187, 187);
+            btnEatIn.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnEatIn.ForeColor = Color.Black;
+            btnEatIn.Location = new Point(20, 66);
+            btnEatIn.Name = "btnEatIn";
+            btnEatIn.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnEatIn.Size = new Size(131, 33);
+            btnEatIn.TabIndex = 5;
+            btnEatIn.Text = "Eat In";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(20, 39);
+            label3.Name = "label3";
+            label3.Size = new Size(107, 17);
+            label3.TabIndex = 3;
+            label3.Text = "Transaction #243";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(20, 9);
+            label2.Name = "label2";
+            label2.Size = new Size(131, 25);
+            label2.TabIndex = 2;
+            label2.Text = "Current Order";
             // 
             // HomeForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1122, 1033);
-            Controls.Add(guna2Panel1);
+            ClientSize = new Size(982, 775);
+            Controls.Add(panelMainContent);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "HomeForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "HomeForm";
-            WindowState = FormWindowState.Maximized;
-            guna2Panel1.ResumeLayout(false);
-            guna2Panel5.ResumeLayout(false);
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
-            guna2Panel4.ResumeLayout(false);
-            guna2Panel3.ResumeLayout(false);
-            guna2Panel3.PerformLayout();
+            panelMainContent.ResumeLayout(false);
+            panelMenu.ResumeLayout(false);
+            panelMenu.PerformLayout();
+            panelCategory.ResumeLayout(false);
+            panelHeader.ResumeLayout(false);
+            panelHeader.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private FlowLayoutPanel CategoryFlowPanel;
-        private Guna.UI2.WinForms.Guna2TextBox SearchBar;
-        private Label label1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
-        private Panel panel6;
+        private Panel panelMainContent;
+        private Panel panelMenu;
         private Label CategoryLabel;
         private FlowLayoutPanel DishFlowPanel;
+        private Panel panelCategory;
+        private FlowLayoutPanel CategoryFlowPanel;
+        private Panel panelHeader;
+        private Guna.UI2.WinForms.Guna2TextBox SearchBar;
+        private Label label1;
+        private Panel panel1;
+        private Label OrderTotalLabel;
+        private Label label4;
+        private Guna.UI2.WinForms.Guna2Button btnOrder;
+        private FlowLayoutPanel OrderflowLayout;
+        private Guna.UI2.WinForms.Guna2Button btnEatOut;
+        private Guna.UI2.WinForms.Guna2Button btnEatIn;
+        private Label label3;
+        private Label label2;
+        private UC_OrderItem uC_OrderItem1;
     }
 }

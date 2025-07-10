@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Guna.UI2.WinForms;
 using Microsoft.Data.SqlClient;
 
 
@@ -52,7 +53,9 @@ namespace Menu_Management
         private void Home_Click(object sender, EventArgs e)
         {
             HomeForm hf = new HomeForm();
-            MainHelper.ShowForm(hf, MainPanel); 
+
+            MainHelper.ShowForm(hf, MainPanel);
+
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -67,8 +70,8 @@ namespace Menu_Management
 
         private void Settings_Click(object sender, EventArgs e)
         {
-            Setting settingForm = new Setting(MainPanel);
-            MainHelper.ShowForm(settingForm, MainPanel);
+            Setting setting = new Setting(MainPanel);
+            MainHelper.ShowForm(setting, MainPanel);
         }
     }
 }

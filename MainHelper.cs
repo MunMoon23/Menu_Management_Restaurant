@@ -8,12 +8,12 @@ namespace Menu_Management
 {
     internal class MainHelper
     {
-        internal static void ShowForm(Form f, Panel fl)
+        internal static void ShowForm(Form f, Panel MainPanel)
         {
-            fl.Controls.Clear();
+            MainPanel.Controls.Clear();
             f.TopLevel = false;
             f.Dock = DockStyle.Fill;
-            fl.Controls.Add(f);
+            MainPanel.Controls.Add(f);
             f.Show();
         }
     }

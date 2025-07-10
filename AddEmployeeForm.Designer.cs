@@ -36,10 +36,11 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             Username = new Guna.UI2.WinForms.Guna2TextBox();
             Fullname = new Guna.UI2.WinForms.Guna2TextBox();
@@ -52,19 +53,11 @@
             GenderComboBox = new ComboBox();
             RoleComboBox = new ComboBox();
             groupBox1 = new GroupBox();
-            groupBox2 = new GroupBox();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            AddEmployee = new Guna.UI2.WinForms.Guna2Button();
+            EmployeeViewer = new Guna.UI2.WinForms.Guna2DataGridView();
+            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)EmployeeViewer).BeginInit();
             SuspendLayout();
             // 
             // guna2HtmlLabel1
@@ -187,6 +180,7 @@
             // 
             // GenderComboBox
             // 
+            GenderComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             GenderComboBox.FormattingEnabled = true;
             GenderComboBox.Items.AddRange(new object[] { "Male", "Female" });
             GenderComboBox.Location = new Point(786, 41);
@@ -196,6 +190,7 @@
             // 
             // RoleComboBox
             // 
+            RoleComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             RoleComboBox.FormattingEnabled = true;
             RoleComboBox.Location = new Point(465, 137);
             RoleComboBox.Name = "RoleComboBox";
@@ -204,6 +199,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(AddEmployee);
             groupBox1.Controls.Add(GenderComboBox);
             groupBox1.Controls.Add(RoleComboBox);
             groupBox1.Controls.Add(Username);
@@ -222,156 +218,92 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Add Account";
             // 
-            // groupBox2
+            // AddEmployee
             // 
-            groupBox2.Controls.Add(comboBox1);
-            groupBox2.Controls.Add(comboBox2);
-            groupBox2.Controls.Add(guna2TextBox1);
-            groupBox2.Controls.Add(guna2TextBox2);
-            groupBox2.Controls.Add(guna2HtmlLabel7);
-            groupBox2.Controls.Add(guna2TextBox3);
-            groupBox2.Controls.Add(guna2HtmlLabel8);
-            groupBox2.Controls.Add(guna2HtmlLabel9);
-            groupBox2.Controls.Add(guna2HtmlLabel10);
-            groupBox2.Controls.Add(guna2HtmlLabel11);
-            groupBox2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            groupBox2.Location = new Point(12, 312);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(938, 200);
-            groupBox2.TabIndex = 14;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Add Account";
+            AddEmployee.CustomizableEdges = customizableEdges7;
+            AddEmployee.DisabledState.BorderColor = Color.DarkGray;
+            AddEmployee.DisabledState.CustomBorderColor = Color.DarkGray;
+            AddEmployee.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            AddEmployee.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            AddEmployee.FillColor = Color.Gray;
+            AddEmployee.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            AddEmployee.ForeColor = Color.White;
+            AddEmployee.Location = new Point(727, 137);
+            AddEmployee.Name = "AddEmployee";
+            AddEmployee.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            AddEmployee.Size = new Size(180, 45);
+            AddEmployee.TabIndex = 14;
+            AddEmployee.Text = "Add";
+            AddEmployee.Click += AddEmployee_Click;
             // 
-            // comboBox1
+            // EmployeeViewer
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Male", "Female" });
-            comboBox1.Location = new Point(786, 41);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 40);
-            comboBox1.TabIndex = 11;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            EmployeeViewer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            EmployeeViewer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            EmployeeViewer.ColumnHeadersHeight = 4;
+            EmployeeViewer.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            EmployeeViewer.DefaultCellStyle = dataGridViewCellStyle3;
+            EmployeeViewer.GridColor = Color.FromArgb(231, 229, 255);
+            EmployeeViewer.Location = new Point(28, 290);
+            EmployeeViewer.MultiSelect = false;
+            EmployeeViewer.Name = "EmployeeViewer";
+            EmployeeViewer.RowHeadersVisible = false;
+            EmployeeViewer.Size = new Size(568, 768);
+            EmployeeViewer.TabIndex = 14;
+            EmployeeViewer.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            EmployeeViewer.ThemeStyle.AlternatingRowsStyle.Font = null;
+            EmployeeViewer.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            EmployeeViewer.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            EmployeeViewer.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            EmployeeViewer.ThemeStyle.BackColor = Color.White;
+            EmployeeViewer.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            EmployeeViewer.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            EmployeeViewer.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            EmployeeViewer.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            EmployeeViewer.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            EmployeeViewer.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            EmployeeViewer.ThemeStyle.HeaderStyle.Height = 4;
+            EmployeeViewer.ThemeStyle.ReadOnly = false;
+            EmployeeViewer.ThemeStyle.RowsStyle.BackColor = Color.White;
+            EmployeeViewer.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            EmployeeViewer.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            EmployeeViewer.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            EmployeeViewer.ThemeStyle.RowsStyle.Height = 25;
+            EmployeeViewer.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            EmployeeViewer.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            EmployeeViewer.SelectionChanged += EmployeeViewer_SelectionChanged;
             // 
-            // comboBox2
+            // guna2Panel1
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(465, 137);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(187, 40);
-            comboBox2.TabIndex = 12;
-            // 
-            // guna2TextBox1
-            // 
-            guna2TextBox1.CustomizableEdges = customizableEdges7;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI", 9F);
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(141, 41);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PlaceholderText = "";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2TextBox1.Size = new Size(200, 36);
-            guna2TextBox1.TabIndex = 1;
-            // 
-            // guna2TextBox2
-            // 
-            guna2TextBox2.CustomizableEdges = customizableEdges9;
-            guna2TextBox2.DefaultText = "";
-            guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Font = new Font("Segoe UI", 9F);
-            guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Location = new Point(141, 137);
-            guna2TextBox2.Name = "guna2TextBox2";
-            guna2TextBox2.PlaceholderText = "";
-            guna2TextBox2.SelectedText = "";
-            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2TextBox2.Size = new Size(200, 36);
-            guna2TextBox2.TabIndex = 2;
-            // 
-            // guna2HtmlLabel7
-            // 
-            guna2HtmlLabel7.BackColor = Color.Transparent;
-            guna2HtmlLabel7.Font = new Font("Segoe UI", 12F);
-            guna2HtmlLabel7.Location = new Point(689, 54);
-            guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            guna2HtmlLabel7.Size = new Size(57, 23);
-            guna2HtmlLabel7.TabIndex = 10;
-            guna2HtmlLabel7.Text = "Gender: ";
-            // 
-            // guna2TextBox3
-            // 
-            guna2TextBox3.CustomizableEdges = customizableEdges11;
-            guna2TextBox3.DefaultText = "";
-            guna2TextBox3.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox3.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox3.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox3.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox3.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Font = new Font("Segoe UI", 9F);
-            guna2TextBox3.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Location = new Point(463, 41);
-            guna2TextBox3.Name = "guna2TextBox3";
-            guna2TextBox3.PlaceholderText = "";
-            guna2TextBox3.SelectedText = "";
-            guna2TextBox3.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2TextBox3.Size = new Size(200, 36);
-            guna2TextBox3.TabIndex = 3;
-            // 
-            // guna2HtmlLabel8
-            // 
-            guna2HtmlLabel8.BackColor = Color.Transparent;
-            guna2HtmlLabel8.Font = new Font("Segoe UI", 12F);
-            guna2HtmlLabel8.Location = new Point(371, 146);
-            guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            guna2HtmlLabel8.Size = new Size(37, 23);
-            guna2HtmlLabel8.TabIndex = 8;
-            guna2HtmlLabel8.Text = "Role: ";
-            // 
-            // guna2HtmlLabel9
-            // 
-            guna2HtmlLabel9.BackColor = Color.Transparent;
-            guna2HtmlLabel9.Font = new Font("Segoe UI", 12F);
-            guna2HtmlLabel9.Location = new Point(34, 54);
-            guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            guna2HtmlLabel9.Size = new Size(80, 23);
-            guna2HtmlLabel9.TabIndex = 5;
-            guna2HtmlLabel9.Text = "UserName:";
-            // 
-            // guna2HtmlLabel10
-            // 
-            guna2HtmlLabel10.BackColor = Color.Transparent;
-            guna2HtmlLabel10.Font = new Font("Segoe UI", 12F);
-            guna2HtmlLabel10.Location = new Point(37, 146);
-            guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            guna2HtmlLabel10.Size = new Size(77, 23);
-            guna2HtmlLabel10.TabIndex = 7;
-            guna2HtmlLabel10.Text = "Full Name:";
-            // 
-            // guna2HtmlLabel11
-            // 
-            guna2HtmlLabel11.BackColor = Color.Transparent;
-            guna2HtmlLabel11.Font = new Font("Segoe UI", 12F);
-            guna2HtmlLabel11.Location = new Point(363, 54);
-            guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            guna2HtmlLabel11.Size = new Size(73, 23);
-            guna2HtmlLabel11.TabIndex = 6;
-            guna2HtmlLabel11.Text = "Password:";
+            guna2Panel1.CustomizableEdges = customizableEdges9;
+            guna2Panel1.Location = new Point(615, 290);
+            guna2Panel1.Name = "guna2Panel1";
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2Panel1.Size = new Size(350, 390);
+            guna2Panel1.TabIndex = 15;
             // 
             // AddEmployeeForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(974, 1070);
-            Controls.Add(groupBox2);
+            Controls.Add(guna2Panel1);
+            Controls.Add(EmployeeViewer);
             Controls.Add(groupBox1);
             Controls.Add(guna2HtmlLabel1);
             FormBorderStyle = FormBorderStyle.None;
@@ -379,8 +311,7 @@
             Text = "AddEmployeeForm";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)EmployeeViewer).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -399,16 +330,8 @@
         private ComboBox GenderComboBox;
         private ComboBox RoleComboBox;
         private GroupBox groupBox1;
-        private GroupBox groupBox2;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
+        private Guna.UI2.WinForms.Guna2Button AddEmployee;
+        private Guna.UI2.WinForms.Guna2DataGridView EmployeeViewer;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }

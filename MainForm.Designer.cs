@@ -101,7 +101,7 @@ namespace Menu_Management
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(116, 688);
+            label1.Location = new Point(97, 716);
             label1.Name = "label1";
             label1.Size = new Size(69, 17);
             label1.TabIndex = 3;
@@ -112,7 +112,7 @@ namespace Menu_Management
             guna2PictureBox2.CustomizableEdges = customizableEdges3;
             guna2PictureBox2.Image = (Image)resources.GetObject("guna2PictureBox2.Image");
             guna2PictureBox2.ImageRotate = 0F;
-            guna2PictureBox2.Location = new Point(57, 671);
+            guna2PictureBox2.Location = new Point(38, 696);
             guna2PictureBox2.Name = "guna2PictureBox2";
             guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2PictureBox2.Size = new Size(53, 55);

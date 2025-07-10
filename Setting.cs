@@ -30,5 +30,10 @@ namespace Menu_Management
             HomeForm homeForm = new HomeForm();
             MainHelper.ShowForm(homeForm, mainpanel);
         }
+
+        private void AddEmployee_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

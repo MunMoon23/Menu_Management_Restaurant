@@ -14,13 +14,15 @@ namespace Menu_Management
 {
     public partial class ChangeMenuForm : Form
     {
+        Panel mainpanel;
         SqlConnection sqlcon = null;
-        public ChangeMenuForm()
+        public ChangeMenuForm(Panel mainpanel)
         {
             InitializeComponent();
+            this.mainpanel=mainpanel;
         }
 
-       
+
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
@@ -77,6 +79,12 @@ namespace Menu_Management
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            Setting setting = new Setting(mainpanel);
+            MainHelper.ShowForm(setting, mainpanel);
         }
     }
 }

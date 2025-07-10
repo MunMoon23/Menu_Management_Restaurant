@@ -12,28 +12,25 @@ namespace Menu_Management
 {
     public partial class Setting : Form
     {
-        public Setting()
+        Panel mainpanel;
+        public Setting(Panel main)
         {
             InitializeComponent();
+            mainpanel = main;
         }
 
-        private void ShowForm(Form f)
-        {
-            MainPanel.Controls.Clear();
-            f.TopLevel = false;
-            f.Dock = DockStyle.Fill;
-            MainPanel.Controls.Add(f);
-            f.Show();
-        }
+
 
         private void ChangeMenuBtn_Click(object sender, EventArgs e)
         {
-            ShowForm(new ChangeMenuForm());
+            ChangeMenuForm ChangeMenuForm = new ChangeMenuForm(mainpanel);
+            MainHelper.ShowForm(ChangeMenuForm, mainpanel);
         }
 
         private void ExitBtn_Click(object sender, EventArgs e)
         {
-            ShowForm(new HomeForm());
+            HomeForm homeForm = new HomeForm();
+            MainHelper.ShowForm(homeForm, mainpanel);
         }
     }
 }

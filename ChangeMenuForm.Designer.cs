@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangeMenuForm));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
             SearchBar = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             panel2 = new Panel();
+            Back = new Button();
             CategoryCBB = new ComboBox();
             panel3 = new Panel();
             Browse = new Button();
@@ -66,7 +67,7 @@
             // 
             SearchBar.BorderRadius = 20;
             SearchBar.BorderThickness = 0;
-            SearchBar.CustomizableEdges = customizableEdges5;
+            SearchBar.CustomizableEdges = customizableEdges1;
             SearchBar.DefaultText = "";
             SearchBar.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             SearchBar.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -84,22 +85,23 @@
             SearchBar.PlaceholderForeColor = Color.Silver;
             SearchBar.PlaceholderText = "Search dish";
             SearchBar.SelectedText = "";
-            SearchBar.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            SearchBar.ShadowDecoration.CustomizableEdges = customizableEdges2;
             SearchBar.Size = new Size(385, 45);
             SearchBar.TabIndex = 10;
             // 
             // guna2HtmlLabel1
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Font = new Font(".VnBook-AntiquaH", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel1.Location = new Point(52, 47);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(179, 34);
+            guna2HtmlLabel1.Size = new Size(171, 27);
             guna2HtmlLabel1.TabIndex = 1;
             guna2HtmlLabel1.Text = "CHANGE MENU";
             // 
             // panel2
             // 
+            panel2.Controls.Add(Back);
             panel2.Controls.Add(CategoryCBB);
             panel2.Controls.Add(panel3);
             panel2.Controls.Add(Browse);
@@ -116,6 +118,16 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(974, 657);
             panel2.TabIndex = 4;
+            // 
+            // Back
+            // 
+            Back.Location = new Point(42, 431);
+            Back.Name = "Back";
+            Back.Size = new Size(133, 58);
+            Back.TabIndex = 7;
+            Back.Text = "Quay lại";
+            Back.UseVisualStyleBackColor = true;
+            Back.Click += Back_Click;
             // 
             // CategoryCBB
             // 
@@ -219,7 +231,7 @@
             label1.AutoSize = true;
             label1.Location = new Point(52, 85);
             label1.Name = "label1";
-            label1.Size = new Size(54, 15);
+            label1.Size = new Size(53, 15);
             label1.TabIndex = 2;
             label1.Text = "Tên món";
             // 
@@ -258,5 +270,7 @@
         private ComboBox CategoryCBB;
         private Label label4;
         private Button Browse;
+        private Button button1;
+        private Button Back;
     }
 }

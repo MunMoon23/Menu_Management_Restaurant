@@ -33,7 +33,7 @@ namespace Menu_Management
 
         private void AddEmployee_Click(object sender, EventArgs e)
         {
-            AddEmployeeForm addform = new AddEmployeeForm();
+            DeleteEmployee addform = new DeleteEmployee();
             MainHelper.ShowForm(addform, mainpanel);
         }
     }

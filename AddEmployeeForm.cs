@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Menu_Management
 {
-    public partial class AddEmployeeForm : Form
+    public partial class DeleteEmployee : Form
     {
-        public AddEmployeeForm()
+        public DeleteEmployee()
         {
             InitializeComponent();
             DatabaseHelper.LoadRoles(RoleComboBox);
@@ -86,8 +86,29 @@ namespace Menu_Management
             }
         }
 
-        private void EmployeeViewer_SelectionChanged(object sender, EventArgs e)
+        private void DelelteEmployee_Click(object sender, EventArgs e)
         {
+            DataGridViewRow selectedRow = EmployeeViewer.SelectedRows[0];
+            string username = selectedRow.Cells["UserName"].Value.ToString();
+            using (SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
+            {
+                sqlcon.Open();
+                string query = "DELETE FROM Accounts WHERE UserName = @username";
+                SqlCommand sqlcmd = new SqlCommand(query, sqlcon);
+                sqlcmd.Parameters.AddWithValue("@username", username);
+                int rows = sqlcmd.ExecuteNonQuery();
+                if (rows == 0)
+                {
+                    MessageBox.Show("Fail to delete account");
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Account deleted successfully");
+                    DatabaseHelper.ShowEmployee(EmployeeViewer);
+                    return;
+                }
+            }
         }
     }
 }

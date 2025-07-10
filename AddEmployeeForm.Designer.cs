@@ -1,6 +1,6 @@
 ﻿namespace Menu_Management
 {
-    partial class AddEmployeeForm
+    partial class DeleteEmployee
     {
         /// <summary>
         /// Required designer variable.
@@ -41,6 +41,8 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             Username = new Guna.UI2.WinForms.Guna2TextBox();
             Fullname = new Guna.UI2.WinForms.Guna2TextBox();
@@ -55,7 +57,8 @@
             groupBox1 = new GroupBox();
             AddEmployee = new Guna.UI2.WinForms.Guna2Button();
             EmployeeViewer = new Guna.UI2.WinForms.Guna2DataGridView();
-            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            SelectedAccountInfoPanel = new Guna.UI2.WinForms.Guna2Panel();
+            DelelteEmployee = new Guna.UI2.WinForms.Guna2Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)EmployeeViewer).BeginInit();
             SuspendLayout();
@@ -286,28 +289,46 @@
             EmployeeViewer.ThemeStyle.RowsStyle.Height = 25;
             EmployeeViewer.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             EmployeeViewer.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            EmployeeViewer.SelectionChanged += EmployeeViewer_SelectionChanged;
             // 
-            // guna2Panel1
+            // SelectedAccountInfoPanel
             // 
-            guna2Panel1.CustomizableEdges = customizableEdges9;
-            guna2Panel1.Location = new Point(615, 290);
-            guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Panel1.Size = new Size(350, 390);
-            guna2Panel1.TabIndex = 15;
+            SelectedAccountInfoPanel.CustomizableEdges = customizableEdges9;
+            SelectedAccountInfoPanel.Location = new Point(612, 290);
+            SelectedAccountInfoPanel.Name = "SelectedAccountInfoPanel";
+            SelectedAccountInfoPanel.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            SelectedAccountInfoPanel.Size = new Size(350, 302);
+            SelectedAccountInfoPanel.TabIndex = 15;
             // 
-            // AddEmployeeForm
+            // DelelteEmployee
+            // 
+            DelelteEmployee.CustomizableEdges = customizableEdges11;
+            DelelteEmployee.DisabledState.BorderColor = Color.DarkGray;
+            DelelteEmployee.DisabledState.CustomBorderColor = Color.DarkGray;
+            DelelteEmployee.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            DelelteEmployee.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            DelelteEmployee.FillColor = Color.Gray;
+            DelelteEmployee.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DelelteEmployee.ForeColor = Color.White;
+            DelelteEmployee.Location = new Point(680, 613);
+            DelelteEmployee.Name = "DelelteEmployee";
+            DelelteEmployee.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            DelelteEmployee.Size = new Size(218, 45);
+            DelelteEmployee.TabIndex = 15;
+            DelelteEmployee.Text = "Delete this account?";
+            DelelteEmployee.Click += DelelteEmployee_Click;
+            // 
+            // DeleteEmployee
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(974, 1070);
-            Controls.Add(guna2Panel1);
+            Controls.Add(DelelteEmployee);
+            Controls.Add(SelectedAccountInfoPanel);
             Controls.Add(EmployeeViewer);
             Controls.Add(groupBox1);
             Controls.Add(guna2HtmlLabel1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "AddEmployeeForm";
+            Name = "DeleteEmployee";
             Text = "AddEmployeeForm";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
@@ -332,6 +353,7 @@
         private GroupBox groupBox1;
         private Guna.UI2.WinForms.Guna2Button AddEmployee;
         private Guna.UI2.WinForms.Guna2DataGridView EmployeeViewer;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel SelectedAccountInfoPanel;
+        private Guna.UI2.WinForms.Guna2Button DelelteEmployee;
     }
 }

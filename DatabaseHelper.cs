@@ -178,5 +178,10 @@ namespace Menu_Management
                 }    
             }    
         }
+
+        internal static void LoadInfo(Panel infopanel)
+        {
+            infopanel.Controls.Clear();
+        }
     }
 }

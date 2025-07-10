@@ -117,9 +117,9 @@
             label9.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label9.Location = new Point(13, 16);
             label9.Name = "label9";
-            label9.Size = new Size(261, 17);
+            label9.Size = new Size(265, 17);
             label9.TabIndex = 0;
-            label9.Text = "[số tt] --- [Tên món] ---- [số lượng]  ---[Giá]";
+            label9.Text = "[số tt] --- [Tên món] ---- [số lượng]  --- [Giá]";
             // 
             // panel1
             // 

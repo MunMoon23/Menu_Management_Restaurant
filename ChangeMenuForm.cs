@@ -20,11 +20,13 @@ namespace Menu_Management
             InitializeComponent();
         }
 
+       
+
         private void AddBtn_Click(object sender, EventArgs e)
         {
             try
             {
-               
+
 
 
             }
@@ -61,6 +63,20 @@ namespace Menu_Management
             {
                 MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void ChangeMenuForm_Load(object sender, EventArgs e)
+        {
+            string[] st = { "Foods", "Drinks" };
+            foreach (string s in st)
+            {
+                CategoryCBB.Items.Add(s);
+            }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

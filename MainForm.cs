@@ -70,7 +70,7 @@ namespace Menu_Management
 
         private void Tables_Click(object sender, EventArgs e)
         {
-            ShowForm(new TableForm());
+            
         }
 
         private void Settings_Click(object sender, EventArgs e)

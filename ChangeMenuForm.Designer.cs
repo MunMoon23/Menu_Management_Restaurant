@@ -110,8 +110,9 @@
             guna2HtmlLabel1.TabIndex = 1;
             guna2HtmlLabel1.Text = "CHANGE MENU";
             // 
+            // panel2
+            // 
             panel2.Controls.Add(ShowData);
-
             panel2.Controls.Add(CategoryCBB);
             panel2.Controls.Add(panel3);
             panel2.Controls.Add(Browse);
@@ -135,7 +136,7 @@
             // 
             ShowData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             ShowData.Columns.AddRange(new DataGridViewColumn[] { DishID, DishName, CategoryID, Price, DishIMG });
-            ShowData.Location = new Point(3, 278);
+            ShowData.Location = new Point(24, 259);
             ShowData.Name = "ShowData";
             ShowData.Size = new Size(664, 376);
             ShowData.TabIndex = 7;

@@ -223,7 +223,7 @@
             groupBox1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             groupBox1.Location = new Point(12, 84);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(938, 200);
+            groupBox1.Size = new Size(945, 200);
             groupBox1.TabIndex = 13;
             groupBox1.TabStop = false;
             groupBox1.Text = "Add Account";
@@ -242,10 +242,10 @@
             AddEmployee.ForeColor = Color.FromArgb(28, 40, 51);
             AddEmployee.Image = (Image)resources.GetObject("AddEmployee.Image");
             AddEmployee.ImageSize = new Size(15, 15);
-            AddEmployee.Location = new Point(727, 137);
+            AddEmployee.Location = new Point(786, 128);
             AddEmployee.Name = "AddEmployee";
             AddEmployee.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            AddEmployee.Size = new Size(180, 45);
+            AddEmployee.Size = new Size(121, 45);
             AddEmployee.TabIndex = 14;
             AddEmployee.Text = "Add";
             AddEmployee.Click += AddEmployee_Click;

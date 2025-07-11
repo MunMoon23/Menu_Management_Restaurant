@@ -316,7 +316,7 @@
             DeleteEmployee.ForeColor = Color.White;
             DeleteEmployee.HoverState.FillColor = Color.FromArgb(211, 47, 47);
             DeleteEmployee.Image = (Image)resources.GetObject("DeleteEmployee.Image");
-            DeleteEmployee.Location = new Point(669, 606);
+            DeleteEmployee.Location = new Point(679, 623);
             DeleteEmployee.Name = "DeleteEmployee";
             DeleteEmployee.ShadowDecoration.CustomizableEdges = customizableEdges10;
             DeleteEmployee.Size = new Size(220, 50);
@@ -344,7 +344,7 @@
             DeleteAllEmployee.ForeColor = Color.White;
             DeleteAllEmployee.HoverState.FillColor = Color.FromArgb(211, 47, 47);
             DeleteAllEmployee.Image = (Image)resources.GetObject("DeleteAllEmployee.Image");
-            DeleteAllEmployee.Location = new Point(714, 672);
+            DeleteAllEmployee.Location = new Point(724, 689);
             DeleteAllEmployee.Name = "DeleteAllEmployee";
             DeleteAllEmployee.ShadowDecoration.CustomizableEdges = customizableEdges12;
             DeleteAllEmployee.Size = new Size(130, 50);

@@ -30,17 +30,17 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_UserItem));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             panel1 = new Panel();
-            label4 = new Label();
-            label3 = new Label();
-            label7 = new Label();
-            label6 = new Label();
-            label5 = new Label();
-            label2 = new Label();
+            RoleLabel = new Label();
+            GenderLabel = new Label();
+            RoleValue = new Label();
+            GenderValue = new Label();
+            FullnameValue = new Label();
+            FullnameLabel = new Label();
             panel2 = new Panel();
-            label1 = new Label();
+            UsernameValue = new Label();
             guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -55,12 +55,12 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ControlLight;
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label7);
-            panel1.Controls.Add(label6);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(label2);
+            panel1.Controls.Add(RoleLabel);
+            panel1.Controls.Add(GenderLabel);
+            panel1.Controls.Add(RoleValue);
+            panel1.Controls.Add(GenderValue);
+            panel1.Controls.Add(FullnameValue);
+            panel1.Controls.Add(FullnameLabel);
             panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
@@ -68,76 +68,76 @@
             panel1.Size = new Size(350, 300);
             panel1.TabIndex = 0;
             // 
-            // label4
+            // RoleLabel
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.FromArgb(255, 107, 0);
-            label4.Location = new Point(27, 261);
-            label4.Name = "label4";
-            label4.Size = new Size(47, 21);
-            label4.TabIndex = 1;
-            label4.Text = "Role:";
+            RoleLabel.AutoSize = true;
+            RoleLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            RoleLabel.ForeColor = Color.FromArgb(255, 107, 0);
+            RoleLabel.Location = new Point(27, 261);
+            RoleLabel.Name = "RoleLabel";
+            RoleLabel.Size = new Size(47, 21);
+            RoleLabel.TabIndex = 1;
+            RoleLabel.Text = "Role:";
             // 
-            // label3
+            // GenderLabel
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.FromArgb(255, 107, 0);
-            label3.Location = new Point(27, 217);
-            label3.Name = "label3";
-            label3.Size = new Size(69, 21);
-            label3.TabIndex = 1;
-            label3.Text = "Gender:";
+            GenderLabel.AutoSize = true;
+            GenderLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            GenderLabel.ForeColor = Color.FromArgb(255, 107, 0);
+            GenderLabel.Location = new Point(27, 217);
+            GenderLabel.Name = "GenderLabel";
+            GenderLabel.Size = new Size(69, 21);
+            GenderLabel.TabIndex = 1;
+            GenderLabel.Text = "Gender:";
             // 
-            // label7
+            // RoleValue
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.DarkRed;
-            label7.Location = new Point(134, 261);
-            label7.Name = "label7";
-            label7.Size = new Size(72, 21);
-            label7.TabIndex = 1;
-            label7.Text = "Manager";
+            RoleValue.AutoSize = true;
+            RoleValue.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            RoleValue.ForeColor = Color.DarkRed;
+            RoleValue.Location = new Point(134, 261);
+            RoleValue.Name = "RoleValue";
+            RoleValue.Size = new Size(77, 21);
+            RoleValue.TabIndex = 1;
+            RoleValue.Text = "Unknown";
             // 
-            // label6
+            // GenderValue
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.Black;
-            label6.Location = new Point(134, 217);
-            label6.Name = "label6";
-            label6.Size = new Size(44, 21);
-            label6.TabIndex = 1;
-            label6.Text = "Male";
+            GenderValue.AutoSize = true;
+            GenderValue.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            GenderValue.ForeColor = Color.Black;
+            GenderValue.Location = new Point(134, 217);
+            GenderValue.Name = "GenderValue";
+            GenderValue.Size = new Size(77, 21);
+            GenderValue.TabIndex = 1;
+            GenderValue.Text = "Unknown";
             // 
-            // label5
+            // FullnameValue
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.Black;
-            label5.Location = new Point(134, 174);
-            label5.Name = "label5";
-            label5.Size = new Size(102, 21);
-            label5.TabIndex = 1;
-            label5.Text = "Ngo Phuc Du";
+            FullnameValue.AutoSize = true;
+            FullnameValue.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            FullnameValue.ForeColor = Color.Black;
+            FullnameValue.Location = new Point(134, 174);
+            FullnameValue.Name = "FullnameValue";
+            FullnameValue.Size = new Size(77, 21);
+            FullnameValue.TabIndex = 1;
+            FullnameValue.Text = "Unknown";
             // 
-            // label2
+            // FullnameLabel
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.FromArgb(255, 107, 0);
-            label2.Location = new Point(27, 174);
-            label2.Name = "label2";
-            label2.Size = new Size(86, 21);
-            label2.TabIndex = 1;
-            label2.Text = "Full Name:";
+            FullnameLabel.AutoSize = true;
+            FullnameLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            FullnameLabel.ForeColor = Color.FromArgb(255, 107, 0);
+            FullnameLabel.Location = new Point(27, 174);
+            FullnameLabel.Name = "FullnameLabel";
+            FullnameLabel.Size = new Size(86, 21);
+            FullnameLabel.TabIndex = 1;
+            FullnameLabel.Text = "Full Name:";
             // 
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(28, 40, 51);
-            panel2.Controls.Add(label1);
+            panel2.Controls.Add(UsernameValue);
             panel2.Controls.Add(guna2CirclePictureBox1);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
@@ -145,16 +145,16 @@
             panel2.Size = new Size(350, 151);
             panel2.TabIndex = 0;
             // 
-            // label1
+            // UsernameValue
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(255, 107, 0);
-            label1.Location = new Point(134, 114);
-            label1.Name = "label1";
-            label1.Size = new Size(83, 21);
-            label1.TabIndex = 1;
-            label1.Text = "Username";
+            UsernameValue.AutoSize = true;
+            UsernameValue.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            UsernameValue.ForeColor = Color.FromArgb(255, 107, 0);
+            UsernameValue.Location = new Point(134, 114);
+            UsernameValue.Name = "UsernameValue";
+            UsernameValue.Size = new Size(86, 21);
+            UsernameValue.TabIndex = 1;
+            UsernameValue.Text = "UserName";
             // 
             // guna2CirclePictureBox1
             // 
@@ -162,7 +162,7 @@
             guna2CirclePictureBox1.ImageRotate = 0F;
             guna2CirclePictureBox1.Location = new Point(125, 16);
             guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges1;
+            guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CirclePictureBox1.Size = new Size(100, 95);
             guna2CirclePictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -188,14 +188,14 @@
 
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Panel panel1;
-        private Label label4;
-        private Label label3;
-        private Label label2;
+        private Label RoleLabel;
+        private Label GenderLabel;
+        private Label FullnameLabel;
         private Panel panel2;
-        private Label label1;
+        private Label UsernameValue;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
-        private Label label7;
-        private Label label6;
-        private Label label5;
+        private Label RoleValue;
+        private Label GenderValue;
+        private Label FullnameValue;
     }
 }

@@ -8,16 +8,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Menu_Management
 {
-    public partial class DeleteEmployee : Form
+    public partial class DeleteEmployeeButton : Form
     {
-        public DeleteEmployee()
+        public DeleteEmployeeButton()
         {
             InitializeComponent();
+            DeleteEmployee.Enabled = false;
             DatabaseHelper.LoadRoles(RoleComboBox);
             DatabaseHelper.ShowEmployee(EmployeeViewer);
+
         }
         private bool isValidInput()
         {
@@ -88,6 +91,15 @@ namespace Menu_Management
 
         private void DelelteEmployee_Click(object sender, EventArgs e)
         {
+
+            DialogResult r = MessageBox.Show("Are you sure to delete this account?",
+                "Confirm Deletion",
+                MessageBoxButtons.YesNo);
+            if (r == DialogResult.No)
+            {
+                return;
+            }
+
             DataGridViewRow selectedRow = EmployeeViewer.SelectedRows[0];
             string username = selectedRow.Cells["UserName"].Value.ToString();
             using (SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
@@ -109,6 +121,62 @@ namespace Menu_Management
                     return;
                 }
             }
+        }
+
+        private void EmployeeViewer_SelectionChanged(object sender, EventArgs e)
+        {
+            CurrentEmployeeFlowPanel.Controls.Clear();
+            UC_UserItem user;
+            if (EmployeeViewer.SelectedRows.Count == 0)
+            {
+                DeleteEmployee.Enabled = false;
+                user = new UC_UserItem();
+            }
+            else
+            {
+                DeleteEmployee.Enabled = true;
+                DataGridViewRow selectedrow = EmployeeViewer.SelectedRows[0];
+                string username = selectedrow.Cells["UserName"].Value.ToString();
+                string fullname = selectedrow.Cells["FullName"].Value.ToString();
+                string gender = selectedrow.Cells["Gender"].Value.ToString();
+                string role = selectedrow.Cells["RoleName"].Value.ToString();
+                user = new UC_UserItem(username, fullname, gender, role);
+            }
+            CurrentEmployeeFlowPanel.Controls.Add(user);
+
+
+        }
+
+        private void DeleteAllEmployee_Click(object sender, EventArgs e)
+        {
+            DialogResult r = MessageBox.Show("This gonna delete all of the employees'accounts exclude admins\nThink twice before decide",
+            "Confirm All Deletion",
+            MessageBoxButtons.YesNo);
+            if (r == DialogResult.No)
+            {
+                return;
+            }
+            else
+            {
+                using (SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
+                {
+                    sqlcon.Open();
+                    string query = "DELETE FROM Accounts WHERE RoleID = (SELECT RoleID FROM Roles WHERE RoleName = 'Employee')";
+                    SqlCommand sqlcmd = new SqlCommand(query, sqlcon);
+                    int rows = sqlcmd.ExecuteNonQuery();
+                    if (rows == 0)
+                    {
+                        MessageBox.Show("Fail to delete all");
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Accounts deleted successfully");
+                        DatabaseHelper.ShowEmployee(EmployeeViewer);
+                        return;
+                    }
+                }
+            }    
         }
     }
 }

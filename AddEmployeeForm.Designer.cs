@@ -1,6 +1,6 @@
 ﻿namespace Menu_Management
 {
-    partial class DeleteEmployee
+    partial class DeleteEmployeeButton
     {
         /// <summary>
         /// Required designer variable.
@@ -35,13 +35,15 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeleteEmployee));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeleteEmployeeButton));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             Username = new Guna.UI2.WinForms.Guna2TextBox();
             Fullname = new Guna.UI2.WinForms.Guna2TextBox();
@@ -56,12 +58,11 @@
             groupBox1 = new GroupBox();
             AddEmployee = new Guna.UI2.WinForms.Guna2Button();
             EmployeeViewer = new Guna.UI2.WinForms.Guna2DataGridView();
-            DelelteEmployee = new Guna.UI2.WinForms.Guna2Button();
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            uC_UserItem1 = new UC_UserItem();
+            DeleteEmployee = new Guna.UI2.WinForms.Guna2Button();
+            CurrentEmployeeFlowPanel = new FlowLayoutPanel();
+            DeleteAllEmployee = new Guna.UI2.WinForms.Guna2Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)EmployeeViewer).BeginInit();
-            flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // guna2HtmlLabel1
@@ -299,59 +300,73 @@
             EmployeeViewer.ThemeStyle.RowsStyle.Height = 25;
             EmployeeViewer.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             EmployeeViewer.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            // 
-            // DelelteEmployee
-            // 
-            DelelteEmployee.CustomizableEdges = customizableEdges9;
-            DelelteEmployee.DisabledState.BorderColor = Color.DarkGray;
-            DelelteEmployee.DisabledState.CustomBorderColor = Color.DarkGray;
-            DelelteEmployee.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            DelelteEmployee.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            DelelteEmployee.FillColor = Color.FromArgb(229, 57, 53);
-            DelelteEmployee.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            DelelteEmployee.ForeColor = Color.White;
-            DelelteEmployee.HoverState.FillColor = Color.FromArgb(211, 47, 47);
-            DelelteEmployee.Image = (Image)resources.GetObject("DelelteEmployee.Image");
-            DelelteEmployee.Location = new Point(680, 613);
-            DelelteEmployee.Name = "DelelteEmployee";
-            DelelteEmployee.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            DelelteEmployee.Size = new Size(218, 45);
-            DelelteEmployee.TabIndex = 15;
-            DelelteEmployee.Text = "Delete this account?";
-            DelelteEmployee.Click += DelelteEmployee_Click;
-            // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.Controls.Add(uC_UserItem1);
-            flowLayoutPanel1.Location = new Point(602, 290);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(355, 310);
-            flowLayoutPanel1.TabIndex = 16;
-            // 
-            // uC_UserItem1
-            // 
-            uC_UserItem1.Location = new Point(3, 3);
-            uC_UserItem1.Name = "uC_UserItem1";
-            uC_UserItem1.Size = new Size(350, 300);
-            uC_UserItem1.TabIndex = 0;
+            EmployeeViewer.SelectionChanged += EmployeeViewer_SelectionChanged;
             // 
             // DeleteEmployee
+            // 
+            DeleteEmployee.CustomizableEdges = customizableEdges9;
+            DeleteEmployee.DisabledState.BorderColor = Color.DarkGray;
+            DeleteEmployee.DisabledState.CustomBorderColor = Color.DarkGray;
+            DeleteEmployee.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            DeleteEmployee.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            DeleteEmployee.Enabled = false;
+            DeleteEmployee.FillColor = Color.FromArgb(229, 57, 53);
+            DeleteEmployee.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DeleteEmployee.ForeColor = Color.White;
+            DeleteEmployee.HoverState.FillColor = Color.FromArgb(211, 47, 47);
+            DeleteEmployee.Image = (Image)resources.GetObject("DeleteEmployee.Image");
+            DeleteEmployee.Location = new Point(657, 606);
+            DeleteEmployee.Name = "DeleteEmployee";
+            DeleteEmployee.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            DeleteEmployee.Size = new Size(224, 64);
+            DeleteEmployee.TabIndex = 15;
+            DeleteEmployee.Text = "Delete this account?";
+            DeleteEmployee.Click += DelelteEmployee_Click;
+            // 
+            // CurrentEmployeeFlowPanel
+            // 
+            CurrentEmployeeFlowPanel.Location = new Point(602, 290);
+            CurrentEmployeeFlowPanel.Name = "CurrentEmployeeFlowPanel";
+            CurrentEmployeeFlowPanel.Size = new Size(355, 310);
+            CurrentEmployeeFlowPanel.TabIndex = 16;
+            // 
+            // DeleteAllEmployee
+            // 
+            DeleteAllEmployee.CustomizableEdges = customizableEdges11;
+            DeleteAllEmployee.DisabledState.BorderColor = Color.DarkGray;
+            DeleteAllEmployee.DisabledState.CustomBorderColor = Color.DarkGray;
+            DeleteAllEmployee.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            DeleteAllEmployee.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            DeleteAllEmployee.FillColor = Color.FromArgb(229, 57, 53);
+            DeleteAllEmployee.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DeleteAllEmployee.ForeColor = Color.White;
+            DeleteAllEmployee.HoverState.FillColor = Color.FromArgb(211, 47, 47);
+            DeleteAllEmployee.Image = (Image)resources.GetObject("DeleteAllEmployee.Image");
+            DeleteAllEmployee.Location = new Point(701, 708);
+            DeleteAllEmployee.Name = "DeleteAllEmployee";
+            DeleteAllEmployee.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            DeleteAllEmployee.Size = new Size(138, 64);
+            DeleteAllEmployee.TabIndex = 17;
+            DeleteAllEmployee.Text = "Delete all";
+            DeleteAllEmployee.Click += DeleteAllEmployee_Click;
+            // 
+            // DeleteEmployeeButton
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(974, 1070);
-            Controls.Add(flowLayoutPanel1);
-            Controls.Add(DelelteEmployee);
+            Controls.Add(DeleteAllEmployee);
+            Controls.Add(CurrentEmployeeFlowPanel);
+            Controls.Add(DeleteEmployee);
             Controls.Add(EmployeeViewer);
             Controls.Add(groupBox1);
             Controls.Add(guna2HtmlLabel1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "DeleteEmployee";
+            Name = "DeleteEmployeeButton";
             Text = "AddEmployeeForm";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)EmployeeViewer).EndInit();
-            flowLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -372,8 +387,9 @@
         private GroupBox groupBox1;
         private Guna.UI2.WinForms.Guna2Button AddEmployee;
         private Guna.UI2.WinForms.Guna2DataGridView EmployeeViewer;
-        private Guna.UI2.WinForms.Guna2Button DelelteEmployee;
-        private FlowLayoutPanel flowLayoutPanel1;
+        private Guna.UI2.WinForms.Guna2Button DeleteEmployee;
+        private FlowLayoutPanel CurrentEmployeeFlowPanel;
         private UC_UserItem uC_UserItem1;
+        private Guna.UI2.WinForms.Guna2Button DeleteAllEmployee;
     }
 }

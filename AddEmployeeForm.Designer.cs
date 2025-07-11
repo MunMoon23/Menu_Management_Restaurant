@@ -304,6 +304,7 @@
             // 
             // DeleteEmployee
             // 
+            DeleteEmployee.BorderRadius = 10;
             DeleteEmployee.CustomizableEdges = customizableEdges9;
             DeleteEmployee.DisabledState.BorderColor = Color.DarkGray;
             DeleteEmployee.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -315,10 +316,10 @@
             DeleteEmployee.ForeColor = Color.White;
             DeleteEmployee.HoverState.FillColor = Color.FromArgb(211, 47, 47);
             DeleteEmployee.Image = (Image)resources.GetObject("DeleteEmployee.Image");
-            DeleteEmployee.Location = new Point(657, 606);
+            DeleteEmployee.Location = new Point(669, 606);
             DeleteEmployee.Name = "DeleteEmployee";
             DeleteEmployee.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            DeleteEmployee.Size = new Size(224, 64);
+            DeleteEmployee.Size = new Size(220, 50);
             DeleteEmployee.TabIndex = 15;
             DeleteEmployee.Text = "Delete this account?";
             DeleteEmployee.Click += DelelteEmployee_Click;
@@ -332,6 +333,7 @@
             // 
             // DeleteAllEmployee
             // 
+            DeleteAllEmployee.BorderRadius = 10;
             DeleteAllEmployee.CustomizableEdges = customizableEdges11;
             DeleteAllEmployee.DisabledState.BorderColor = Color.DarkGray;
             DeleteAllEmployee.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -342,10 +344,10 @@
             DeleteAllEmployee.ForeColor = Color.White;
             DeleteAllEmployee.HoverState.FillColor = Color.FromArgb(211, 47, 47);
             DeleteAllEmployee.Image = (Image)resources.GetObject("DeleteAllEmployee.Image");
-            DeleteAllEmployee.Location = new Point(701, 708);
+            DeleteAllEmployee.Location = new Point(714, 672);
             DeleteAllEmployee.Name = "DeleteAllEmployee";
             DeleteAllEmployee.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            DeleteAllEmployee.Size = new Size(138, 64);
+            DeleteAllEmployee.Size = new Size(130, 50);
             DeleteAllEmployee.TabIndex = 17;
             DeleteAllEmployee.Text = "Delete all";
             DeleteAllEmployee.Click += DeleteAllEmployee_Click;

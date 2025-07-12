@@ -13,13 +13,14 @@ namespace Menu_Management
     public partial class UC_BillItem : UserControl
     {
         public FlowLayoutPanel OrderPanel => OrderItemHolderFlowPanel;
+        public event EventHandler ClearBillItemClicked;
 
-        string BillID;
-        string OrderTime;
-        string EmloyeeName;
+        public string BillID;
+        public string OrderTime;
+        public string EmloyeeName;
 
-        float totalPrice;
-        public UC_BillItem(string billid, string OrderTime, string employeename, float total)
+        public float totalPrice;
+        public UC_BillItem(string billid, string OrderTime, string employeename)
         {
             InitializeComponent();
             Bill.Text = billid;
@@ -30,9 +31,6 @@ namespace Menu_Management
 
             EmployeeName.Text = employeename;
             this.EmloyeeName = employeename;
-
-            OrderTotal.Text = total.ToString("C2");
-            this.totalPrice = total;
         }
 
         public UC_BillItem()
@@ -40,17 +38,32 @@ namespace Menu_Management
             InitializeComponent();
         }
 
-        public void AddToBill(int ItemNumber, string itemName, string quantity,float price)
+        public void AddToBill(int ItemNumber, string itemName, string quantity, string price)
         {
             Label item = new Label();
-            item.Text = ItemNumber.ToString() + "---" + itemName + "---" + quantity + "---" + price.ToString();
-            OrderItemHolderFlowPanel.Controls.Add(item);
+            item.AutoSize = true;
+            item.MaximumSize = new Size(260, 0);
+            item.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+            item.Text = ItemNumber.ToString() + " --- " + itemName + " --- " + quantity + " --- " + price;
+            item.Margin = new Padding(3);
+
+            OrderPanel.Controls.Add(item);
         }
 
         public void CalculateTotalPrice()
         {
+            OrderTotal.Text = "";
+            OrderTotal.Text = totalPrice.ToString();
+        }
+
+        private void ClearBillItem_Click(object sender, EventArgs e)
+        {
+            ClearBillItemClicked?.Invoke(this, e);
+        }
+
+        private void PrintButton_Click(object sender, EventArgs e)
+        {
 
         }
-        
     }
 }

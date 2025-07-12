@@ -64,11 +64,6 @@ namespace Menu_Management
             Home_Click(sender, e);
         }
 
-        private void Tables_Click(object sender, EventArgs e)
-        {
-            //
-        }
-
         private void Settings_Click(object sender, EventArgs e)
         {
             Setting setting = new Setting(MainPanel, billForm);

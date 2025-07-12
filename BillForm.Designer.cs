@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BillForm));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             panel1 = new Panel();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -60,13 +60,13 @@
             // 
             // guna2PictureBox1
             // 
-            guna2PictureBox1.CustomizableEdges = customizableEdges5;
+            guna2PictureBox1.CustomizableEdges = customizableEdges1;
             guna2PictureBox1.FillColor = Color.Transparent;
             guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.Location = new Point(27, 12);
             guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2PictureBox1.Size = new Size(45, 41);
             guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox1.TabIndex = 1;
@@ -85,7 +85,6 @@
             // 
             // BillflowPanel
             // 
-            BillflowPanel.AutoScroll = true;
             BillflowPanel.BackColor = Color.FromArgb(234, 234, 234);
             BillflowPanel.Location = new Point(19, 72);
             BillflowPanel.Name = "BillflowPanel";
@@ -101,7 +100,7 @@
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             Name = "BillForm";
-            StartPosition = FormStartPosition.CenterScreen;
+            StartPosition = FormStartPosition.CenterParent;
             Text = "BillForm";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

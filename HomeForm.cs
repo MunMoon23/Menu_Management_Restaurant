@@ -39,6 +39,9 @@ namespace Menu_Management
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
+            Random rd = new Random();
+            int billid = rd.Next(1000, 9999);
+            string timestamp = DateTime.Now.ToString("dd/MM/yyyy - HH:mm:ss");
             float total = 0;
             try
             {
@@ -50,22 +53,29 @@ namespace Menu_Management
                 return;
             }
 
-            UC_BillItem BillItem = new UC_BillItem();
+            UC_BillItem BillItem = new UC_BillItem( "#"+ billid.ToString(), timestamp, "AKZM");
+            BillItem.ClearBillItemClicked += (sender, e) =>
+            {
+                billform.billflowpanel.Controls.Remove(BillItem);
+            };
+            int itemnumber = 0;
+            float totalprice = 0;
             foreach (Control controlitem in OrderflowLayout.Controls)
             {
-                int itemnumber = 0;
                 if(controlitem is UC_OrderItem Orderitem)
                 {
                     itemnumber++;
                     string itemname = Orderitem.name;
                     int itemquantity = Orderitem.quantity;
                     float itemprice = Orderitem.orderPrice * itemquantity;
-                    BillItem.AddToBill(itemnumber, itemname, itemquantity.ToString(), itemprice);
+                    totalprice += itemprice;
+                    BillItem.AddToBill(itemnumber, itemname, itemquantity.ToString(), itemprice.ToString());
 
                 }
             }
+            BillItem.totalPrice = totalprice;
+            BillItem.CalculateTotalPrice();
             billform.billflowpanel.Controls.Add(BillItem);
-
         }
     }
 }

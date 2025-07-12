@@ -13,7 +13,10 @@ namespace Menu_Management
             MainPanel.Controls.Clear();
             f.TopLevel = false;
             f.Dock = DockStyle.Fill;
+            f.StartPosition = FormStartPosition.Manual; // Không cho tự căn giữa
+            f.Location = new Point(0, 0);
             MainPanel.Controls.Add(f);
+
             f.Show();
         }
     }

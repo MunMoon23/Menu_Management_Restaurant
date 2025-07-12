@@ -79,9 +79,10 @@
             // 
             // OrderItemHolderFlowPanel
             // 
-            OrderItemHolderFlowPanel.Location = new Point(3, 28);
+            OrderItemHolderFlowPanel.AutoScroll = true;
+            OrderItemHolderFlowPanel.Location = new Point(0, 28);
             OrderItemHolderFlowPanel.Name = "OrderItemHolderFlowPanel";
-            OrderItemHolderFlowPanel.Size = new Size(275, 164);
+            OrderItemHolderFlowPanel.Size = new Size(280, 166);
             OrderItemHolderFlowPanel.TabIndex = 1;
             // 
             // label9
@@ -110,16 +111,17 @@
             // 
             OrderTotal.AutoSize = true;
             OrderTotal.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            OrderTotal.Location = new Point(68, 14);
+            OrderTotal.Location = new Point(98, 3);
             OrderTotal.Name = "OrderTotal";
-            OrderTotal.Size = new Size(0, 17);
+            OrderTotal.Size = new Size(69, 17);
             OrderTotal.TabIndex = 23;
+            OrderTotal.Text = "something";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(13, 11);
+            label4.Location = new Point(12, 3);
             label4.Name = "label4";
             label4.Size = new Size(49, 21);
             label4.TabIndex = 23;
@@ -142,6 +144,7 @@
             PrintButton.Size = new Size(153, 49);
             PrintButton.TabIndex = 18;
             PrintButton.Text = "Print";
+            PrintButton.Click += PrintButton_Click;
             // 
             // panelHeader
             // 
@@ -247,6 +250,7 @@
             ClearBillItem.ShadowDecoration.CustomizableEdges = customizableEdges4;
             ClearBillItem.Size = new Size(30, 22);
             ClearBillItem.TabIndex = 3;
+            ClearBillItem.Click += ClearBillItem_Click;
             // 
             // UC_BillItem
             // 

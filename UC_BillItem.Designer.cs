@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_BillItem));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panelMain = new Panel();
-            panel2 = new Panel();
-            OrderItemInfo = new Label();
+            OrderHolderPanel = new Panel();
+            OrderItemHolderFlowPanel = new FlowLayoutPanel();
             label9 = new Label();
             panel1 = new Panel();
             OrderTotal = new Label();
@@ -50,14 +50,14 @@
             label1 = new Label();
             ClearBillItem = new Guna.UI2.WinForms.Guna2Button();
             panelMain.SuspendLayout();
-            panel2.SuspendLayout();
+            OrderHolderPanel.SuspendLayout();
             panel1.SuspendLayout();
             panelHeader.SuspendLayout();
             SuspendLayout();
             // 
             // panelMain
             // 
-            panelMain.Controls.Add(panel2);
+            panelMain.Controls.Add(OrderHolderPanel);
             panelMain.Controls.Add(panel1);
             panelMain.Controls.Add(panelHeader);
             panelMain.Dock = DockStyle.Fill;
@@ -66,32 +66,29 @@
             panelMain.Size = new Size(280, 400);
             panelMain.TabIndex = 0;
             // 
-            // panel2
+            // OrderHolderPanel
             // 
-            panel2.BackColor = Color.White;
-            panel2.Controls.Add(OrderItemInfo);
-            panel2.Controls.Add(label9);
-            panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(0, 108);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(280, 194);
-            panel2.TabIndex = 2;
+            OrderHolderPanel.BackColor = Color.White;
+            OrderHolderPanel.Controls.Add(OrderItemHolderFlowPanel);
+            OrderHolderPanel.Controls.Add(label9);
+            OrderHolderPanel.Dock = DockStyle.Fill;
+            OrderHolderPanel.Location = new Point(0, 108);
+            OrderHolderPanel.Name = "OrderHolderPanel";
+            OrderHolderPanel.Size = new Size(280, 194);
+            OrderHolderPanel.TabIndex = 2;
             // 
-            // OrderItemInfo
+            // OrderItemHolderFlowPanel
             // 
-            OrderItemInfo.AutoSize = true;
-            OrderItemInfo.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            OrderItemInfo.Location = new Point(15, 43);
-            OrderItemInfo.Name = "OrderItemInfo";
-            OrderItemInfo.Size = new Size(198, 17);
-            OrderItemInfo.TabIndex = 0;
-            OrderItemInfo.Text = "1 --- Hamburger ---- 2  ---90000";
+            OrderItemHolderFlowPanel.Location = new Point(3, 28);
+            OrderItemHolderFlowPanel.Name = "OrderItemHolderFlowPanel";
+            OrderItemHolderFlowPanel.Size = new Size(275, 164);
+            OrderItemHolderFlowPanel.TabIndex = 1;
             // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(13, 16);
+            label9.Location = new Point(12, 3);
             label9.Name = "label9";
             label9.Size = new Size(265, 17);
             label9.TabIndex = 0;
@@ -115,9 +112,8 @@
             OrderTotal.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             OrderTotal.Location = new Point(68, 14);
             OrderTotal.Name = "OrderTotal";
-            OrderTotal.Size = new Size(74, 17);
+            OrderTotal.Size = new Size(0, 17);
             OrderTotal.TabIndex = 23;
-            OrderTotal.Text = "45000 VNĐ";
             // 
             // label4
             // 
@@ -132,7 +128,7 @@
             // PrintButton
             // 
             PrintButton.BorderRadius = 25;
-            PrintButton.CustomizableEdges = customizableEdges5;
+            PrintButton.CustomizableEdges = customizableEdges1;
             PrintButton.DisabledState.BorderColor = Color.DarkGray;
             PrintButton.DisabledState.CustomBorderColor = Color.DarkGray;
             PrintButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -142,7 +138,7 @@
             PrintButton.ForeColor = Color.White;
             PrintButton.Location = new Point(60, 40);
             PrintButton.Name = "PrintButton";
-            PrintButton.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            PrintButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
             PrintButton.Size = new Size(153, 49);
             PrintButton.TabIndex = 18;
             PrintButton.Text = "Print";
@@ -233,10 +229,10 @@
             // 
             ClearBillItem.BackColor = Color.Transparent;
             ClearBillItem.BorderRadius = 5;
-            customizableEdges7.BottomRight = false;
-            customizableEdges7.TopLeft = false;
-            customizableEdges7.TopRight = false;
-            ClearBillItem.CustomizableEdges = customizableEdges7;
+            customizableEdges3.BottomRight = false;
+            customizableEdges3.TopLeft = false;
+            customizableEdges3.TopRight = false;
+            ClearBillItem.CustomizableEdges = customizableEdges3;
             ClearBillItem.DisabledState.BorderColor = Color.DarkGray;
             ClearBillItem.DisabledState.CustomBorderColor = Color.DarkGray;
             ClearBillItem.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -248,7 +244,7 @@
             ClearBillItem.ImageSize = new Size(12, 12);
             ClearBillItem.Location = new Point(250, 0);
             ClearBillItem.Name = "ClearBillItem";
-            ClearBillItem.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            ClearBillItem.ShadowDecoration.CustomizableEdges = customizableEdges4;
             ClearBillItem.Size = new Size(30, 22);
             ClearBillItem.TabIndex = 3;
             // 
@@ -260,8 +256,8 @@
             Name = "UC_BillItem";
             Size = new Size(280, 400);
             panelMain.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            OrderHolderPanel.ResumeLayout(false);
+            OrderHolderPanel.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panelHeader.ResumeLayout(false);
@@ -272,7 +268,7 @@
         #endregion
 
         private Panel panelMain;
-        private Panel panel2;
+        private Panel OrderHolderPanel;
         private Panel panel1;
         private Panel panelHeader;
         private Guna.UI2.WinForms.Guna2Button PrintButton;
@@ -285,7 +281,7 @@
         private Label label1;
         private Label EmployeeName;
         private Label OrderedTime;
-        private Label OrderItemInfo;
         private Label label9;
+        private FlowLayoutPanel OrderItemHolderFlowPanel;
     }
 }

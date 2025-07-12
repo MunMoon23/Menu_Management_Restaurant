@@ -55,6 +55,7 @@
             btnEatIn = new Guna.UI2.WinForms.Guna2Button();
             label3 = new Label();
             label2 = new Label();
+            Currency = new Label();
             panelMainContent.SuspendLayout();
             panelMenu.SuspendLayout();
             panelCategory.SuspendLayout();
@@ -171,6 +172,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(234, 234, 234);
+            panel1.Controls.Add(Currency);
             panel1.Controls.Add(OrderTotalLabel);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(btnOrder);
@@ -190,11 +192,10 @@
             OrderTotalLabel.AutoSize = true;
             OrderTotalLabel.BackColor = Color.Transparent;
             OrderTotalLabel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            OrderTotalLabel.Location = new Point(142, 670);
+            OrderTotalLabel.Location = new Point(182, 670);
             OrderTotalLabel.Name = "OrderTotalLabel";
-            OrderTotalLabel.Size = new Size(69, 25);
+            OrderTotalLabel.Size = new Size(0, 25);
             OrderTotalLabel.TabIndex = 23;
-            OrderTotalLabel.Text = "VNĐ 0";
             // 
             // label4
             // 
@@ -301,6 +302,16 @@
             label2.TabIndex = 2;
             label2.Text = "Current Order";
             // 
+            // Currency
+            // 
+            Currency.AutoSize = true;
+            Currency.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Currency.Location = new Point(104, 670);
+            Currency.Name = "Currency";
+            Currency.Size = new Size(53, 25);
+            Currency.TabIndex = 24;
+            Currency.Text = "VNĐ";
+            // 
             // HomeForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -345,5 +356,6 @@
         private Label label3;
         private Label label2;
         private UC_OrderItem uC_OrderItem1;
+        private Label Currency;
     }
 }

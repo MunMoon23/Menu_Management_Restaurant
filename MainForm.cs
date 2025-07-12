@@ -15,6 +15,7 @@ namespace Menu_Management
 {
     public partial class MainForm : Form
     {
+        public BillForm billForm = new BillForm();
         SqlConnection sqlcon = null;
         public MainForm()
         {
@@ -52,7 +53,7 @@ namespace Menu_Management
 
         private void Home_Click(object sender, EventArgs e)
         {
-            HomeForm hf = new HomeForm();
+            HomeForm hf = new HomeForm(billForm);
 
             MainHelper.ShowForm(hf, MainPanel);
 
@@ -70,8 +71,13 @@ namespace Menu_Management
 
         private void Settings_Click(object sender, EventArgs e)
         {
-            Setting setting = new Setting(MainPanel);
+            Setting setting = new Setting(MainPanel, billForm);
             MainHelper.ShowForm(setting, MainPanel);
+        }
+
+        private void btnBill_Click(object sender, EventArgs e)
+        {    
+            MainHelper.ShowForm(billForm, MainPanel);
         }
     }
 }

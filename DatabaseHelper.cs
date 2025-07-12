@@ -129,18 +129,18 @@ namespace Menu_Management
                             Orderfl.Controls.Remove(orderItem); //Xóa món ăn đã chọn khỏi FlowLayoutPanel Orderfl
                             totalpriceLabel.ResetText();
                             OrderHelper.CalculateTotalPrice(Orderfl);
-                            totalpriceLabel.Text = "VNĐ " + OrderHelper.totalPrice.ToString();
+                            totalpriceLabel.Text = OrderHelper.totalPrice.ToString();
                         };
                         orderItem.quantityChanged += (sender, ev) => //Gán hành động cho sự kiện đã khai báo trước
                         {
                             OrderHelper.CalculateTotalPrice(Orderfl);
                             totalpriceLabel.ResetText();
-                            totalpriceLabel.Text = "VNĐ " + OrderHelper.totalPrice.ToString();
+                            totalpriceLabel.Text = OrderHelper.totalPrice.ToString();
                         };
                         Orderfl.Controls.Add(orderItem); //Thêm món ăn đã chọn vào FlowLayoutPanel Orderfl
                         totalpriceLabel.ResetText();
                         OrderHelper.CalculateTotalPrice(Orderfl);
-                        totalpriceLabel.Text = "VNĐ " + OrderHelper.totalPrice.ToString();
+                        totalpriceLabel.Text = OrderHelper.totalPrice.ToString();
                     };
                     fl.Controls.Add(Dish);
                 }

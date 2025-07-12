@@ -12,6 +12,7 @@ namespace Menu_Management
 {
     public partial class BillForm : Form
     {
+        public FlowLayoutPanel billflowpanel => BillflowPanel;
         public BillForm()
         {
             InitializeComponent();

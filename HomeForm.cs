@@ -13,12 +13,14 @@ namespace Menu_Management
 {
     public partial class HomeForm : Form
     {
-        public HomeForm()
+        private BillForm billform;
+        public HomeForm(BillForm billform)
         {
             InitializeComponent();
             CategoryLabel.Text = "All";
-            DatabaseHelper.ShowCategory(CategoryFlowPanel, OrderflowLayout,OrderTotalLabel, DishFlowPanel);
+            DatabaseHelper.ShowCategory(CategoryFlowPanel, OrderflowLayout, OrderTotalLabel, DishFlowPanel);
             DatabaseHelper.ShowDishes(DishFlowPanel, OrderflowLayout, OrderTotalLabel);
+            this.billform=billform;
         }
 
         private void SearchBar_TextChanged(object sender, EventArgs e)
@@ -37,6 +39,32 @@ namespace Menu_Management
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
+            float total = 0;
+            try
+            {
+                total = float.Parse(OrderTotalLabel.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Please add items to the order before placing it.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            UC_BillItem BillItem = new UC_BillItem();
+            foreach (Control controlitem in OrderflowLayout.Controls)
+            {
+                int itemnumber = 0;
+                if(controlitem is UC_OrderItem Orderitem)
+                {
+                    itemnumber++;
+                    string itemname = Orderitem.name;
+                    int itemquantity = Orderitem.quantity;
+                    float itemprice = Orderitem.orderPrice * itemquantity;
+                    BillItem.AddToBill(itemnumber, itemname, itemquantity.ToString(), itemprice);
+
+                }
+            }
+            billform.billflowpanel.Controls.Add(BillItem);
 
         }
     }

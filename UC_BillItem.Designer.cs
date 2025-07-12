@@ -110,10 +110,10 @@
             // OrderTotal
             // 
             OrderTotal.AutoSize = true;
-            OrderTotal.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            OrderTotal.Location = new Point(98, 3);
+            OrderTotal.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            OrderTotal.Location = new Point(83, 7);
             OrderTotal.Name = "OrderTotal";
-            OrderTotal.Size = new Size(69, 17);
+            OrderTotal.Size = new Size(73, 17);
             OrderTotal.TabIndex = 23;
             OrderTotal.Text = "something";
             // 

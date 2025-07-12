@@ -259,6 +259,7 @@ namespace Menu_Management
             btnBill.HoverState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             btnBill.HoverState.ForeColor = Color.FromArgb(255, 162, 80);
             btnBill.HoverState.Image = (Image)resources.GetObject("resource.Image7");
+            btnBill.Image = (Image)resources.GetObject("btnBill.Image");
             btnBill.ImageAlign = HorizontalAlignment.Left;
             btnBill.ImageOffset = new Point(15, 0);
             btnBill.ImageSize = new Size(25, 25);
@@ -284,6 +285,7 @@ namespace Menu_Management
             Home.CheckedState.FillColor = Color.WhiteSmoke;
             Home.CheckedState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             Home.CheckedState.ForeColor = Color.FromArgb(255, 107, 0);
+            Home.CheckedState.Image = (Image)resources.GetObject("resource.Image8");
             Home.CustomizableEdges = customizableEdges13;
             Home.DisabledState.BorderColor = Color.DarkGray;
             Home.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -296,6 +298,7 @@ namespace Menu_Management
             Home.HoverState.FillColor = Color.WhiteSmoke;
             Home.HoverState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             Home.HoverState.ForeColor = Color.FromArgb(255, 162, 80);
+            Home.HoverState.Image = (Image)resources.GetObject("resource.Image9");
             Home.Image = (Image)resources.GetObject("Home.Image");
             Home.ImageAlign = HorizontalAlignment.Left;
             Home.ImageOffset = new Point(15, 0);

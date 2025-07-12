@@ -59,7 +59,6 @@ namespace Menu_Management
             Settings = new Guna2Button();
             Reports = new Guna2Button();
             btnBill = new Guna2Button();
-            Tables = new Guna2Button();
             Home = new Guna2Button();
             MainPanel = new Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
@@ -90,7 +89,6 @@ namespace Menu_Management
             SidePanel.Controls.Add(Settings);
             SidePanel.Controls.Add(Reports);
             SidePanel.Controls.Add(btnBill);
-            SidePanel.Controls.Add(Tables);
             SidePanel.Controls.Add(Home);
             SidePanel.Controls.Add(guna2PictureBox1);
             SidePanel.CustomizableEdges = customizableEdges17;
@@ -276,45 +274,6 @@ namespace Menu_Management
             btnBill.Text = "Bill";
             btnBill.TextAlign = HorizontalAlignment.Left;
             btnBill.TextOffset = new Point(20, 0);
-            // 
-            // Tables
-            // 
-            Tables.BorderColor = Color.Empty;
-            Tables.BorderRadius = 20;
-            Tables.BorderThickness = 2;
-            Tables.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            Tables.CheckedState.BorderColor = Color.FromArgb(255, 107, 0);
-            Tables.CheckedState.FillColor = Color.WhiteSmoke;
-            Tables.CheckedState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            Tables.CheckedState.ForeColor = Color.FromArgb(255, 107, 0);
-            Tables.CheckedState.Image = (Image)resources.GetObject("resource.Image8");
-            Tables.CustomizableEdges = customizableEdges13;
-            Tables.DisabledState.BorderColor = Color.DarkGray;
-            Tables.DisabledState.CustomBorderColor = Color.DarkGray;
-            Tables.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            Tables.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            Tables.FillColor = Color.WhiteSmoke;
-            Tables.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Tables.ForeColor = Color.FromArgb(28, 40, 51);
-            Tables.HoverState.BorderColor = Color.FromArgb(255, 162, 80);
-            Tables.HoverState.FillColor = Color.WhiteSmoke;
-            Tables.HoverState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            Tables.HoverState.ForeColor = Color.FromArgb(255, 162, 80);
-            Tables.HoverState.Image = (Image)resources.GetObject("resource.Image9");
-            Tables.Image = (Image)resources.GetObject("Tables.Image");
-            Tables.ImageAlign = HorizontalAlignment.Left;
-            Tables.ImageOffset = new Point(15, 0);
-            Tables.ImageSize = new Size(25, 25);
-            Tables.Location = new Point(38, 273);
-            Tables.Name = "Tables";
-            Tables.PressedColor = Color.LightGray;
-            Tables.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            Tables.Size = new Size(211, 45);
-            Tables.TabIndex = 1;
-            Tables.Text = "Tables";
-            Tables.TextAlign = HorizontalAlignment.Left;
-            Tables.TextOffset = new Point(20, 0);
-            Tables.Click += Tables_Click;
             // 
             // Home
             // 

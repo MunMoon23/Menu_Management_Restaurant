@@ -37,6 +37,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Shift = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ShiftGridview = new Guna.UI2.WinForms.Guna2DataGridView();
             Mon = new DataGridViewTextBoxColumn();
@@ -53,14 +55,17 @@
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             label1 = new Label();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            MainPanel = new Panel();
+            AddEmployee = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)ShiftGridview).BeginInit();
+            MainPanel.SuspendLayout();
             SuspendLayout();
             // 
             // Shift
             // 
             Shift.BackColor = Color.Transparent;
             Shift.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Shift.Location = new Point(41, 52);
+            Shift.Location = new Point(59, 68);
             Shift.Name = "Shift";
             Shift.Size = new Size(68, 27);
             Shift.TabIndex = 0;
@@ -90,10 +95,10 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             ShiftGridview.DefaultCellStyle = dataGridViewCellStyle3;
             ShiftGridview.GridColor = Color.FromArgb(231, 229, 255);
-            ShiftGridview.Location = new Point(41, 92);
+            ShiftGridview.Location = new Point(41, 158);
             ShiftGridview.Name = "ShiftGridview";
             ShiftGridview.RowHeadersVisible = false;
-            ShiftGridview.Size = new Size(666, 150);
+            ShiftGridview.Size = new Size(876, 274);
             ShiftGridview.TabIndex = 1;
             ShiftGridview.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             ShiftGridview.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -158,7 +163,7 @@
             // 
             FShift.BackColor = Color.Transparent;
             FShift.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            FShift.Location = new Point(41, 268);
+            FShift.Location = new Point(59, 507);
             FShift.Name = "FShift";
             FShift.Size = new Size(148, 27);
             FShift.TabIndex = 0;
@@ -168,7 +173,7 @@
             // 
             FShiftStat.AutoSize = true;
             FShiftStat.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            FShiftStat.Location = new Point(249, 272);
+            FShiftStat.Location = new Point(267, 511);
             FShiftStat.Name = "FShiftStat";
             FShiftStat.Size = new Size(83, 30);
             FShiftStat.TabIndex = 2;
@@ -186,7 +191,7 @@
             ChangeMenuBtn.FillColor = Color.FromArgb(238, 140, 33);
             ChangeMenuBtn.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ChangeMenuBtn.ForeColor = Color.White;
-            ChangeMenuBtn.Location = new Point(327, 413);
+            ChangeMenuBtn.Location = new Point(519, 690);
             ChangeMenuBtn.Name = "ChangeMenuBtn";
             ChangeMenuBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
             ChangeMenuBtn.Size = new Size(180, 45);
@@ -206,18 +211,19 @@
             ExitBtn.FillColor = Color.FromArgb(26, 29, 30);
             ExitBtn.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ExitBtn.ForeColor = Color.White;
-            ExitBtn.Location = new Point(527, 413);
+            ExitBtn.Location = new Point(719, 690);
             ExitBtn.Name = "ExitBtn";
             ExitBtn.ShadowDecoration.CustomizableEdges = customizableEdges4;
             ExitBtn.Size = new Size(180, 45);
             ExitBtn.TabIndex = 3;
             ExitBtn.Text = "Back";
+            ExitBtn.Click += ExitBtn_Click;
             // 
             // guna2HtmlLabel1
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel1.Location = new Point(41, 338);
+            guna2HtmlLabel1.Location = new Point(59, 577);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             guna2HtmlLabel1.Size = new Size(150, 27);
             guna2HtmlLabel1.TabIndex = 0;
@@ -227,7 +233,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(249, 341);
+            label1.Location = new Point(267, 580);
             label1.Name = "label1";
             label1.Size = new Size(72, 30);
             label1.TabIndex = 2;
@@ -245,33 +251,64 @@
             guna2Button1.FillColor = Color.FromArgb(238, 140, 33);
             guna2Button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(141, 413);
+            guna2Button1.Location = new Point(104, 690);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2Button1.Size = new Size(180, 45);
             guna2Button1.TabIndex = 3;
             guna2Button1.Text = "Admin Checkout";
             // 
+            // MainPanel
+            // 
+            MainPanel.Controls.Add(AddEmployee);
+            MainPanel.Controls.Add(Shift);
+            MainPanel.Controls.Add(ShiftGridview);
+            MainPanel.Controls.Add(label1);
+            MainPanel.Controls.Add(ExitBtn);
+            MainPanel.Controls.Add(FShiftStat);
+            MainPanel.Controls.Add(guna2Button1);
+            MainPanel.Controls.Add(guna2HtmlLabel1);
+            MainPanel.Controls.Add(ChangeMenuBtn);
+            MainPanel.Controls.Add(FShift);
+            MainPanel.Dock = DockStyle.Fill;
+            MainPanel.Location = new Point(0, 0);
+            MainPanel.Name = "MainPanel";
+            MainPanel.Size = new Size(974, 775);
+            MainPanel.TabIndex = 4;
+            // 
+            // AddEmployee
+            // 
+            AddEmployee.BorderRadius = 20;
+            customizableEdges7.TopRight = false;
+            AddEmployee.CustomizableEdges = customizableEdges7;
+            AddEmployee.DisabledState.BorderColor = Color.DarkGray;
+            AddEmployee.DisabledState.CustomBorderColor = Color.DarkGray;
+            AddEmployee.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            AddEmployee.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            AddEmployee.FillColor = Color.FromArgb(238, 140, 33);
+            AddEmployee.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            AddEmployee.ForeColor = Color.White;
+            AddEmployee.Location = new Point(323, 690);
+            AddEmployee.Name = "AddEmployee";
+            AddEmployee.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            AddEmployee.Size = new Size(180, 45);
+            AddEmployee.TabIndex = 4;
+            AddEmployee.Text = "Add employee";
+            AddEmployee.Click += AddEmployee_Click;
+            // 
             // Setting
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(759, 485);
-            Controls.Add(ExitBtn);
-            Controls.Add(guna2Button1);
-            Controls.Add(ChangeMenuBtn);
-            Controls.Add(label1);
-            Controls.Add(FShiftStat);
-            Controls.Add(ShiftGridview);
-            Controls.Add(guna2HtmlLabel1);
-            Controls.Add(FShift);
-            Controls.Add(Shift);
+            ClientSize = new Size(974, 775);
+            Controls.Add(MainPanel);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Setting";
             Text = "Setting";
             ((System.ComponentModel.ISupportInitialize)ShiftGridview).EndInit();
+            MainPanel.ResumeLayout(false);
+            MainPanel.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -292,5 +329,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Label label1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Panel MainPanel;
+        private Guna.UI2.WinForms.Guna2Button AddEmployee;
     }
 }

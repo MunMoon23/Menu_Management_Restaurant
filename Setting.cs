@@ -12,17 +12,29 @@ namespace Menu_Management
 {
     public partial class Setting : Form
     {
-        private Panel mainform;
+        Panel mainpanel;
         public Setting(Panel main)
         {
             InitializeComponent();
-            mainform = main;
+            mainpanel = main;
         }
 
         private void ChangeMenuBtn_Click(object sender, EventArgs e)
         {
-            HomeForm hf = new HomeForm();
-            MainHelper.ShowForm(hf, mainform);
+            ChangeMenuForm ChangeMenuForm = new ChangeMenuForm(mainpanel);
+            MainHelper.ShowForm(ChangeMenuForm, mainpanel);
+        }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            HomeForm homeForm = new HomeForm();
+            MainHelper.ShowForm(homeForm, mainpanel);
+        }
+
+        private void AddEmployee_Click(object sender, EventArgs e)
+        {
+            DeleteEmployeeButton addform = new DeleteEmployeeButton();
+            MainHelper.ShowForm(addform, mainpanel);
         }
     }
 }

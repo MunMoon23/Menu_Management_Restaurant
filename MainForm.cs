@@ -44,7 +44,6 @@ namespace Menu_Management
                 }
             }
         }
-
         private void Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -54,7 +53,9 @@ namespace Menu_Management
         private void Home_Click(object sender, EventArgs e)
         {
             HomeForm hf = new HomeForm();
+
             MainHelper.ShowForm(hf, MainPanel);
+
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -64,8 +65,7 @@ namespace Menu_Management
 
         private void Tables_Click(object sender, EventArgs e)
         {
-            TableForm tf = new TableForm();
-            MainHelper.ShowForm(tf, MainPanel);
+            //
         }
 
         private void Settings_Click(object sender, EventArgs e)

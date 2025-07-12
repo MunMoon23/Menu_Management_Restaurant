@@ -393,7 +393,6 @@ namespace Menu_Management
         private Guna.UI2.WinForms.Guna2Button Home;
         private Guna.UI2.WinForms.Guna2Button Settings;
         private Guna.UI2.WinForms.Guna2Button Reports;
-        private Guna.UI2.WinForms.Guna2Button Tables;
         private Guna.UI2.WinForms.Guna2Button Exit;
         private Label label1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;

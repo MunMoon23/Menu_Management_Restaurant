@@ -1,6 +1,7 @@
 ﻿using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Security.Cryptography.Xml;
 using System.Text;
@@ -145,6 +146,42 @@ namespace Menu_Management
                 }
                 reader.Close();
             }
+        }
+
+        internal static void ShowEmployee(DataGridView datagridview)
+        {
+            datagridview.Columns.Clear();
+            using (SqlConnection sqlcon = new SqlConnection(GetConnectionString()))
+            {
+                sqlcon.Open();
+
+                string q = "SELECT UserName, FullName, Gender, RoleName FROM Accounts\r\nJOIN Roles ON Roles.RoleID = Accounts.RoleID";
+                SqlDataAdapter adapter = new SqlDataAdapter(q, sqlcon);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                datagridview.DataSource = dt;
+                
+            }    
+        }
+        internal static void LoadRoles(ComboBox roleCombobox)
+        {
+            using (SqlConnection sqlcon = new SqlConnection(GetConnectionString()))
+            {
+                sqlcon.Open();
+                string rolequery = "SELECT RoleName FROM Roles";
+                SqlCommand sqlcmd = new SqlCommand(rolequery, sqlcon);
+                SqlDataReader reader = sqlcmd.ExecuteReader();
+                while(reader.Read())
+                {
+                    string roleName = reader["RoleName"].ToString();
+                    roleCombobox.Items.Add(roleName);
+                }    
+            }    
+        }
+
+        internal static void LoadInfo(Panel infopanel)
+        {
+            infopanel.Controls.Clear();
         }
     }
 }

@@ -12,6 +12,7 @@ namespace Menu_Management
 {
     public partial class UC_BillItem : UserControl
     {
+        string BillID = 
         public UC_BillItem()
         {
             InitializeComponent();

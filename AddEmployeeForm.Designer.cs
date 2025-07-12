@@ -223,7 +223,7 @@
             groupBox1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             groupBox1.Location = new Point(12, 84);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(938, 200);
+            groupBox1.Size = new Size(945, 200);
             groupBox1.TabIndex = 13;
             groupBox1.TabStop = false;
             groupBox1.Text = "Add Account";
@@ -242,10 +242,10 @@
             AddEmployee.ForeColor = Color.FromArgb(28, 40, 51);
             AddEmployee.Image = (Image)resources.GetObject("AddEmployee.Image");
             AddEmployee.ImageSize = new Size(15, 15);
-            AddEmployee.Location = new Point(727, 137);
+            AddEmployee.Location = new Point(786, 128);
             AddEmployee.Name = "AddEmployee";
             AddEmployee.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            AddEmployee.Size = new Size(180, 45);
+            AddEmployee.Size = new Size(121, 45);
             AddEmployee.TabIndex = 14;
             AddEmployee.Text = "Add";
             AddEmployee.Click += AddEmployee_Click;
@@ -304,6 +304,7 @@
             // 
             // DeleteEmployee
             // 
+            DeleteEmployee.BorderRadius = 10;
             DeleteEmployee.CustomizableEdges = customizableEdges9;
             DeleteEmployee.DisabledState.BorderColor = Color.DarkGray;
             DeleteEmployee.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -315,10 +316,10 @@
             DeleteEmployee.ForeColor = Color.White;
             DeleteEmployee.HoverState.FillColor = Color.FromArgb(211, 47, 47);
             DeleteEmployee.Image = (Image)resources.GetObject("DeleteEmployee.Image");
-            DeleteEmployee.Location = new Point(657, 606);
+            DeleteEmployee.Location = new Point(679, 623);
             DeleteEmployee.Name = "DeleteEmployee";
             DeleteEmployee.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            DeleteEmployee.Size = new Size(224, 64);
+            DeleteEmployee.Size = new Size(220, 50);
             DeleteEmployee.TabIndex = 15;
             DeleteEmployee.Text = "Delete this account?";
             DeleteEmployee.Click += DelelteEmployee_Click;
@@ -332,6 +333,7 @@
             // 
             // DeleteAllEmployee
             // 
+            DeleteAllEmployee.BorderRadius = 10;
             DeleteAllEmployee.CustomizableEdges = customizableEdges11;
             DeleteAllEmployee.DisabledState.BorderColor = Color.DarkGray;
             DeleteAllEmployee.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -342,10 +344,10 @@
             DeleteAllEmployee.ForeColor = Color.White;
             DeleteAllEmployee.HoverState.FillColor = Color.FromArgb(211, 47, 47);
             DeleteAllEmployee.Image = (Image)resources.GetObject("DeleteAllEmployee.Image");
-            DeleteAllEmployee.Location = new Point(701, 708);
+            DeleteAllEmployee.Location = new Point(724, 689);
             DeleteAllEmployee.Name = "DeleteAllEmployee";
             DeleteAllEmployee.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            DeleteAllEmployee.Size = new Size(138, 64);
+            DeleteAllEmployee.Size = new Size(130, 50);
             DeleteAllEmployee.TabIndex = 17;
             DeleteAllEmployee.Text = "Delete all";
             DeleteAllEmployee.Click += DeleteAllEmployee_Click;

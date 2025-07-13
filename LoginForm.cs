@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,16 +18,49 @@ namespace Menu_Management
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
+        private bool isValidInput()
+        {
+            if (string.IsNullOrWhiteSpace(Username.Text) || string.IsNullOrWhiteSpace(Password.Text))
+            {
+                return false;
+            }
+            return true;
         }
 
-        private void GotoRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+
+        private void LoginButton_Click(object sender, EventArgs e)
         {
-            RegisterForm regform = new RegisterForm();
-            regform.Show();
-            this.Hide();
+            if(!isValidInput())
+            {
+                MessageBox.Show("All fields must be filled");
+            }
+            else
+            {
+                using(SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
+                {
+                    sqlcon.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM Accounts WHERE UserName = @username AND Password = @password", sqlcon);
+                    cmd.Parameters.AddWithValue("@username", Username.Text);
+                    cmd.Parameters.AddWithValue("@password", Password.Text);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        reader.Read();
+                        Login.User = reader["UserName"].ToString();
+                        Login.Fullname = reader["FullName"].ToString();
+                        int RoleID = Convert.ToInt32(reader["RoleID"]);
+                        Login.Role = Login.GetRole(RoleID);
+                        this.Hide();
+                        MainForm mainForm = new MainForm(Login.Fullname);
+                        mainForm.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid username or password");
+                    }
+                }
+            }    
         }
     }
 }

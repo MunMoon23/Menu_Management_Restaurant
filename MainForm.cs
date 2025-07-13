@@ -18,10 +18,11 @@ namespace Menu_Management
         public BillForm billForm = new BillForm();
         SqlConnection sqlcon = null;
         public HomeForm homeForm;
-        public MainForm()
+        public MainForm(string User)
         {
             CheckConnection();
             InitializeComponent();
+            CurrentUser.Text = User;
         }
         private void CheckConnection()
         {

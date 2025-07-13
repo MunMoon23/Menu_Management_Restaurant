@@ -56,7 +56,7 @@ namespace Menu_Management
                 return;
             }
 
-            UC_BillItem BillItem = new UC_BillItem("#"+ billid.ToString(), timestamp, "AKZM");
+            UC_BillItem BillItem = new UC_BillItem("#"+ billid.ToString(), timestamp, Login.User);
             BillItem.ClearBillItemClicked += (sender, e) =>
             {
                 billform.billflowpanel.Controls.Remove(BillItem);

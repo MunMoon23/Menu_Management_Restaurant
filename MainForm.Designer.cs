@@ -30,28 +30,28 @@ namespace Menu_Management
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2PictureBox1 = new Guna2PictureBox();
             SidePanel = new Guna2Panel();
-            label1 = new Label();
+            CurrentUser = new Label();
             guna2PictureBox2 = new Guna2PictureBox();
             Exit = new Guna2Button();
             Settings = new Guna2Button();
@@ -66,12 +66,12 @@ namespace Menu_Management
             // 
             // guna2PictureBox1
             // 
-            guna2PictureBox1.CustomizableEdges = customizableEdges1;
+            guna2PictureBox1.CustomizableEdges = customizableEdges19;
             guna2PictureBox1.Image = Properties.Resources.delicousrestaurantlogo;
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.Location = new Point(38, 12);
             guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges20;
             guna2PictureBox1.Size = new Size(211, 127);
             guna2PictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             guna2PictureBox1.TabIndex = 0;
@@ -81,7 +81,7 @@ namespace Menu_Management
             // 
             SidePanel.BackColor = Color.WhiteSmoke;
             SidePanel.BorderThickness = 1;
-            SidePanel.Controls.Add(label1);
+            SidePanel.Controls.Add(CurrentUser);
             SidePanel.Controls.Add(guna2PictureBox2);
             SidePanel.Controls.Add(Exit);
             SidePanel.Controls.Add(Settings);
@@ -89,32 +89,32 @@ namespace Menu_Management
             SidePanel.Controls.Add(btnBill);
             SidePanel.Controls.Add(Home);
             SidePanel.Controls.Add(guna2PictureBox1);
-            SidePanel.CustomizableEdges = customizableEdges15;
+            SidePanel.CustomizableEdges = customizableEdges33;
             SidePanel.Dock = DockStyle.Left;
             SidePanel.Location = new Point(0, 0);
             SidePanel.Name = "SidePanel";
-            SidePanel.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            SidePanel.ShadowDecoration.CustomizableEdges = customizableEdges34;
             SidePanel.Size = new Size(276, 775);
             SidePanel.TabIndex = 0;
             // 
-            // label1
+            // CurrentUser
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(97, 716);
-            label1.Name = "label1";
-            label1.Size = new Size(69, 17);
-            label1.TabIndex = 3;
-            label1.Text = "Username";
+            CurrentUser.AutoSize = true;
+            CurrentUser.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            CurrentUser.Location = new Point(97, 716);
+            CurrentUser.Name = "CurrentUser";
+            CurrentUser.Size = new Size(69, 17);
+            CurrentUser.TabIndex = 3;
+            CurrentUser.Text = "Username";
             // 
             // guna2PictureBox2
             // 
-            guna2PictureBox2.CustomizableEdges = customizableEdges3;
+            guna2PictureBox2.CustomizableEdges = customizableEdges21;
             guna2PictureBox2.Image = (Image)resources.GetObject("guna2PictureBox2.Image");
             guna2PictureBox2.ImageRotate = 0F;
             guna2PictureBox2.Location = new Point(38, 696);
             guna2PictureBox2.Name = "guna2PictureBox2";
-            guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges22;
             guna2PictureBox2.Size = new Size(53, 55);
             guna2PictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             guna2PictureBox2.TabIndex = 2;
@@ -130,7 +130,7 @@ namespace Menu_Management
             Exit.CheckedState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             Exit.CheckedState.ForeColor = Color.FromArgb(255, 107, 0);
             Exit.CheckedState.Image = (Image)resources.GetObject("resource.Image");
-            Exit.CustomizableEdges = customizableEdges5;
+            Exit.CustomizableEdges = customizableEdges23;
             Exit.DisabledState.BorderColor = Color.DarkGray;
             Exit.DisabledState.CustomBorderColor = Color.DarkGray;
             Exit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -150,7 +150,7 @@ namespace Menu_Management
             Exit.Location = new Point(38, 375);
             Exit.Name = "Exit";
             Exit.PressedColor = Color.LightGray;
-            Exit.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            Exit.ShadowDecoration.CustomizableEdges = customizableEdges24;
             Exit.Size = new Size(211, 45);
             Exit.TabIndex = 1;
             Exit.Text = "Exit";
@@ -169,7 +169,7 @@ namespace Menu_Management
             Settings.CheckedState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             Settings.CheckedState.ForeColor = Color.FromArgb(255, 107, 0);
             Settings.CheckedState.Image = (Image)resources.GetObject("resource.Image2");
-            Settings.CustomizableEdges = customizableEdges7;
+            Settings.CustomizableEdges = customizableEdges25;
             Settings.DisabledState.BorderColor = Color.DarkGray;
             Settings.DisabledState.CustomBorderColor = Color.DarkGray;
             Settings.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -189,7 +189,7 @@ namespace Menu_Management
             Settings.Location = new Point(38, 324);
             Settings.Name = "Settings";
             Settings.PressedColor = Color.LightGray;
-            Settings.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            Settings.ShadowDecoration.CustomizableEdges = customizableEdges26;
             Settings.Size = new Size(211, 45);
             Settings.TabIndex = 1;
             Settings.Text = "Settings";
@@ -208,7 +208,7 @@ namespace Menu_Management
             Reports.CheckedState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             Reports.CheckedState.ForeColor = Color.FromArgb(255, 107, 0);
             Reports.CheckedState.Image = (Image)resources.GetObject("resource.Image4");
-            Reports.CustomizableEdges = customizableEdges9;
+            Reports.CustomizableEdges = customizableEdges27;
             Reports.DisabledState.BorderColor = Color.DarkGray;
             Reports.DisabledState.CustomBorderColor = Color.DarkGray;
             Reports.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -228,7 +228,7 @@ namespace Menu_Management
             Reports.Location = new Point(38, 273);
             Reports.Name = "Reports";
             Reports.PressedColor = Color.LightGray;
-            Reports.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            Reports.ShadowDecoration.CustomizableEdges = customizableEdges28;
             Reports.Size = new Size(211, 45);
             Reports.TabIndex = 1;
             Reports.Text = "Reports";
@@ -246,7 +246,7 @@ namespace Menu_Management
             btnBill.CheckedState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             btnBill.CheckedState.ForeColor = Color.FromArgb(255, 107, 0);
             btnBill.CheckedState.Image = (Image)resources.GetObject("resource.Image6");
-            btnBill.CustomizableEdges = customizableEdges11;
+            btnBill.CustomizableEdges = customizableEdges29;
             btnBill.DisabledState.BorderColor = Color.DarkGray;
             btnBill.DisabledState.CustomBorderColor = Color.DarkGray;
             btnBill.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -266,7 +266,7 @@ namespace Menu_Management
             btnBill.Location = new Point(38, 222);
             btnBill.Name = "btnBill";
             btnBill.PressedColor = Color.LightGray;
-            btnBill.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnBill.ShadowDecoration.CustomizableEdges = customizableEdges30;
             btnBill.Size = new Size(211, 45);
             btnBill.TabIndex = 1;
             btnBill.Text = "Bill";
@@ -286,7 +286,7 @@ namespace Menu_Management
             Home.CheckedState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             Home.CheckedState.ForeColor = Color.FromArgb(255, 107, 0);
             Home.CheckedState.Image = (Image)resources.GetObject("resource.Image8");
-            Home.CustomizableEdges = customizableEdges13;
+            Home.CustomizableEdges = customizableEdges31;
             Home.DisabledState.BorderColor = Color.DarkGray;
             Home.DisabledState.CustomBorderColor = Color.DarkGray;
             Home.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -306,7 +306,7 @@ namespace Menu_Management
             Home.Location = new Point(38, 171);
             Home.Name = "Home";
             Home.PressedColor = Color.LightGray;
-            Home.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            Home.ShadowDecoration.CustomizableEdges = customizableEdges32;
             Home.Size = new Size(211, 45);
             Home.TabIndex = 1;
             Home.Text = "Home";
@@ -316,11 +316,11 @@ namespace Menu_Management
             // 
             // MainPanel
             // 
-            MainPanel.CustomizableEdges = customizableEdges17;
+            MainPanel.CustomizableEdges = customizableEdges35;
             MainPanel.Dock = DockStyle.Fill;
             MainPanel.Location = new Point(276, 0);
             MainPanel.Name = "MainPanel";
-            MainPanel.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            MainPanel.ShadowDecoration.CustomizableEdges = customizableEdges36;
             MainPanel.Size = new Size(974, 775);
             MainPanel.TabIndex = 1;
             // 
@@ -352,7 +352,7 @@ namespace Menu_Management
         private Guna.UI2.WinForms.Guna2Button Settings;
         private Guna.UI2.WinForms.Guna2Button Reports;
         private Guna.UI2.WinForms.Guna2Button Exit;
-        private Label label1;
+        private Label CurrentUser;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2Panel MainPanel;
         private Guna2Panel SidePanel;

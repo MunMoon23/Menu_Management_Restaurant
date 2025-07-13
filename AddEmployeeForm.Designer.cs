@@ -262,7 +262,8 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             EmployeeViewer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            EmployeeViewer.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            EmployeeViewer.ColumnHeadersHeight = 4;
+            EmployeeViewer.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -289,7 +290,7 @@
             EmployeeViewer.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
             EmployeeViewer.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
             EmployeeViewer.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            EmployeeViewer.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            EmployeeViewer.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             EmployeeViewer.ThemeStyle.HeaderStyle.Height = 4;
             EmployeeViewer.ThemeStyle.ReadOnly = false;
             EmployeeViewer.ThemeStyle.RowsStyle.BackColor = Color.White;
@@ -315,7 +316,7 @@
             DeleteEmployee.ForeColor = Color.White;
             DeleteEmployee.HoverState.FillColor = Color.FromArgb(211, 47, 47);
             DeleteEmployee.Image = (Image)resources.GetObject("DeleteEmployee.Image");
-            DeleteEmployee.Location = new Point(679, 623);
+            DeleteEmployee.Location = new Point(683, 618);
             DeleteEmployee.Name = "DeleteEmployee";
             DeleteEmployee.ShadowDecoration.CustomizableEdges = customizableEdges10;
             DeleteEmployee.Size = new Size(220, 50);
@@ -325,7 +326,7 @@
             // 
             // CurrentEmployeeFlowPanel
             // 
-            CurrentEmployeeFlowPanel.Location = new Point(602, 290);
+            CurrentEmployeeFlowPanel.Location = new Point(607, 290);
             CurrentEmployeeFlowPanel.Name = "CurrentEmployeeFlowPanel";
             CurrentEmployeeFlowPanel.Size = new Size(355, 310);
             CurrentEmployeeFlowPanel.TabIndex = 16;
@@ -343,7 +344,7 @@
             DeleteAllEmployee.ForeColor = Color.White;
             DeleteAllEmployee.HoverState.FillColor = Color.FromArgb(211, 47, 47);
             DeleteAllEmployee.Image = (Image)resources.GetObject("DeleteAllEmployee.Image");
-            DeleteAllEmployee.Location = new Point(724, 689);
+            DeleteAllEmployee.Location = new Point(734, 690);
             DeleteAllEmployee.Name = "DeleteAllEmployee";
             DeleteAllEmployee.ShadowDecoration.CustomizableEdges = customizableEdges12;
             DeleteAllEmployee.Size = new Size(130, 50);
@@ -390,7 +391,6 @@
         private Guna.UI2.WinForms.Guna2DataGridView EmployeeViewer;
         private Guna.UI2.WinForms.Guna2Button DeleteEmployee;
         private FlowLayoutPanel CurrentEmployeeFlowPanel;
-        private UC_UserItem uC_UserItem1;
         private Guna.UI2.WinForms.Guna2Button DeleteAllEmployee;
     }
 }

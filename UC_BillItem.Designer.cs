@@ -39,6 +39,7 @@
             label9 = new Label();
             panel1 = new Panel();
             OrderTotal = new Label();
+            label2 = new Label();
             label4 = new Label();
             PrintButton = new Guna.UI2.WinForms.Guna2Button();
             panelHeader = new Panel();
@@ -99,6 +100,7 @@
             // 
             panel1.BackColor = Color.White;
             panel1.Controls.Add(OrderTotal);
+            panel1.Controls.Add(label2);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(PrintButton);
             panel1.Dock = DockStyle.Bottom;
@@ -110,12 +112,23 @@
             // OrderTotal
             // 
             OrderTotal.AutoSize = true;
-            OrderTotal.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            OrderTotal.Location = new Point(83, 7);
+            OrderTotal.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            OrderTotal.Location = new Point(68, 3);
             OrderTotal.Name = "OrderTotal";
-            OrderTotal.Size = new Size(73, 17);
+            OrderTotal.Size = new Size(88, 21);
             OrderTotal.TabIndex = 23;
             OrderTotal.Text = "something";
+            OrderTotal.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(162, 3);
+            label2.Name = "label2";
+            label2.Size = new Size(43, 21);
+            label2.TabIndex = 23;
+            label2.Text = "VNĐ";
             // 
             // label4
             // 
@@ -287,5 +300,6 @@
         private Label OrderedTime;
         private Label label9;
         private FlowLayoutPanel OrderItemHolderFlowPanel;
+        private Label label2;
     }
 }

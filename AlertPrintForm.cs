@@ -67,17 +67,17 @@ namespace Menu_Management
         private void printDocument_PrintPage(object sender, PrintPageEventArgs e)
         {
             Font font = new Font("Courier New", 10);
-            float yPos = 10;
-            float leftMargin = 10;
-            float lineHeight = font.GetHeight(e.Graphics);
-            int linesPerPage = (int)(e.MarginBounds.Height / lineHeight);
+            float yPos = 10; // Vị trí bắt đầu vẽ văn bản
+            float leftMargin = 10; // Lề trái của trang in
+            float lineHeight = font.GetHeight(e.Graphics); // Chiều cao của mỗi dòng văn bản
+            int linesPerPage = (int)(e.MarginBounds.Height / lineHeight); // Số dòng có thể in trên mỗi trang
 
-            while (currentLine < billLines.Count)
+            while (currentLine < billLines.Count) //Lặp qua từng dòng trong danh sách
             {
                 string line = billLines[currentLine];
-                e.Graphics.DrawString(line, font, Brushes.Black, leftMargin, yPos);
-                yPos += lineHeight;
-                currentLine++;
+                e.Graphics.DrawString(line, font, Brushes.Black, leftMargin, yPos); // Vẽ dòng văn bản, DrawString sẽ vẽ dòng văn bản tại vị trí (leftMargin, yPos) trên trang in
+                yPos += lineHeight; // Cập nhật vị trí yPos cho dòng tiếp theo
+                currentLine++; //tăng thêm 1 dòng
 
                 if ((currentLine % linesPerPage) == 0)
                 {
@@ -85,7 +85,6 @@ namespace Menu_Management
                     return;
                 }
             }
-
             e.HasMorePages = false;
             currentLine = 0; // Reset cho lần in tiếp theo
         }

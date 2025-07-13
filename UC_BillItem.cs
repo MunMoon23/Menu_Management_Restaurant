@@ -63,7 +63,8 @@ namespace Menu_Management
 
         private void PrintButton_Click(object sender, EventArgs e)
         {
-
+            AlertPrintForm printform = new AlertPrintForm();
+            printform.Show();
         }
     }
 }

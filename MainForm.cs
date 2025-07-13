@@ -65,8 +65,13 @@ namespace Menu_Management
         }
 
         private void btnBill_Click(object sender, EventArgs e)
-        {    
+        {
             MainHelper.ShowForm(billForm, MainPanel);
+        }
+
+        private void Settings_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

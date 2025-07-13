@@ -10,13 +10,18 @@ namespace Menu_Management
     {
         internal static void ShowForm(Form f, Panel MainPanel)
         {
-            MainPanel.Controls.Clear();
-            f.TopLevel = false;
-            f.Dock = DockStyle.Fill;
-            f.StartPosition = FormStartPosition.Manual; // Không cho tự căn giữa
-            f.Location = new Point(0, 0);
-            MainPanel.Controls.Add(f);
+            // Nếu chưa có thì mới add
+            if (!MainPanel.Controls.Contains(f))
+            {
+                f.TopLevel = false;
+                f.Dock = DockStyle.Fill;
+                f.StartPosition = FormStartPosition.Manual;
+                f.Location = new Point(0, 0);
+                MainPanel.Controls.Add(f);
+            }
 
+            // Đưa form lên đầu (hiển thị)
+            f.BringToFront();
             f.Show();
         }
     }

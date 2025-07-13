@@ -232,9 +232,9 @@
             // OrderflowLayout
             // 
             OrderflowLayout.AutoScroll = true;
-            OrderflowLayout.Location = new Point(0, 121);
+            OrderflowLayout.Location = new Point(0, 66);
             OrderflowLayout.Name = "OrderflowLayout";
-            OrderflowLayout.Size = new Size(323, 528);
+            OrderflowLayout.Size = new Size(323, 583);
             OrderflowLayout.TabIndex = 6;
             // 
             // OrderID

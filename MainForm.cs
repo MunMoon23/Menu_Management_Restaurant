@@ -17,6 +17,7 @@ namespace Menu_Management
     {
         public BillForm billForm = new BillForm();
         SqlConnection sqlcon = null;
+        public HomeForm homeForm;
         public MainForm()
         {
             CheckConnection();
@@ -53,15 +54,14 @@ namespace Menu_Management
 
         private void Home_Click(object sender, EventArgs e)
         {
-            HomeForm hf = new HomeForm(billForm);
-
-            MainHelper.ShowForm(hf, MainPanel);
+            MainHelper.ShowForm(homeForm, MainPanel);
 
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            Home_Click(sender, e);
+            homeForm = new HomeForm(billForm); // chỉ khởi tạo 1 lần
+            MainHelper.ShowForm(homeForm, MainPanel);
         }
 
         private void Settings_Click(object sender, EventArgs e)

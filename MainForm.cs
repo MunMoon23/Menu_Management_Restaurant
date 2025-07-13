@@ -71,7 +71,8 @@ namespace Menu_Management
 
         private void Settings_Click(object sender, EventArgs e)
         {
-
+            Setting setting = new Setting(MainPanel, billForm);
+            MainHelper.ShowForm(setting, MainPanel);
         }
     }
 }

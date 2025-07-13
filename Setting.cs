@@ -13,7 +13,7 @@ namespace Menu_Management
     public partial class Setting : Form
     {
         Panel mainpanel;
-        BillForm billform;
+        private BillForm billform;
         public Setting(Panel main, BillForm billform)
         {
             InitializeComponent();

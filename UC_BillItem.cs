@@ -73,7 +73,7 @@ namespace Menu_Management
 
         private void PrintButton_Click(object sender, EventArgs e)
         {
-            AlertPrintForm printform = new AlertPrintForm(this.BillID, this.OrderedTime.ToString(), this.EmloyeeName, this.ItemNumber, this.totalPrice, this.OrderInfos);
+            AlertPrintForm printform = new AlertPrintForm(this.BillID, this.OrderTime, this.EmloyeeName, this.ItemNumber, this.totalPrice, this.OrderInfos);
             printform.Show();
         }
     }

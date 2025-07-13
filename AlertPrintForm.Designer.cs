@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlertPrintForm));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             panel1 = new Panel();
             NotPrintButton = new Guna.UI2.WinForms.Guna2Button();
@@ -67,7 +67,7 @@
             // NotPrintButton
             // 
             NotPrintButton.BorderRadius = 20;
-            NotPrintButton.CustomizableEdges = customizableEdges1;
+            NotPrintButton.CustomizableEdges = customizableEdges7;
             NotPrintButton.DisabledState.BorderColor = Color.DarkGray;
             NotPrintButton.DisabledState.CustomBorderColor = Color.DarkGray;
             NotPrintButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -77,7 +77,7 @@
             NotPrintButton.ForeColor = Color.White;
             NotPrintButton.Location = new Point(203, 250);
             NotPrintButton.Name = "NotPrintButton";
-            NotPrintButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            NotPrintButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
             NotPrintButton.Size = new Size(115, 50);
             NotPrintButton.TabIndex = 25;
             NotPrintButton.Text = "No";
@@ -86,7 +86,7 @@
             // PrintButton
             // 
             PrintButton.BorderRadius = 20;
-            PrintButton.CustomizableEdges = customizableEdges3;
+            PrintButton.CustomizableEdges = customizableEdges9;
             PrintButton.DisabledState.BorderColor = Color.DarkGray;
             PrintButton.DisabledState.CustomBorderColor = Color.DarkGray;
             PrintButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -96,7 +96,7 @@
             PrintButton.ForeColor = Color.White;
             PrintButton.Location = new Point(39, 250);
             PrintButton.Name = "PrintButton";
-            PrintButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            PrintButton.ShadowDecoration.CustomizableEdges = customizableEdges10;
             PrintButton.Size = new Size(115, 50);
             PrintButton.TabIndex = 26;
             PrintButton.Text = "Yes";
@@ -116,12 +116,12 @@
             // guna2PictureBox1
             // 
             guna2PictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            guna2PictureBox1.CustomizableEdges = customizableEdges5;
+            guna2PictureBox1.CustomizableEdges = customizableEdges11;
             guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.Location = new Point(96, 26);
             guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2PictureBox1.Size = new Size(156, 130);
             guna2PictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             guna2PictureBox1.TabIndex = 23;

@@ -18,11 +18,14 @@ namespace Menu_Management
         public string BillID;
         public string OrderTime;
         public string EmloyeeName;
-
+        public int ItemNumber;
         public float totalPrice;
+
+        public List<OrderInfoClass> OrderInfos;
         public UC_BillItem(string billid, string OrderTime, string employeename)
         {
             InitializeComponent();
+            OrderInfos = new List<OrderInfoClass>();
             Bill.Text = billid;
             this.BillID = billid;
 
@@ -36,10 +39,17 @@ namespace Menu_Management
         public UC_BillItem()
         {
             InitializeComponent();
+            OrderInfos = new List<OrderInfoClass>();
         }
 
         public void AddToBill(int ItemNumber, string itemName, string quantity, string price)
         {
+            this.OrderInfos.Add(new OrderInfoClass
+            {
+                ItemName = itemName,
+                ItemQuantity = int.Parse(quantity),
+                ItemTotalPrice = float.Parse(price)
+            });
             Label item = new Label();
             item.AutoSize = true;
             item.MaximumSize = new Size(260, 0);
@@ -63,7 +73,7 @@ namespace Menu_Management
 
         private void PrintButton_Click(object sender, EventArgs e)
         {
-            AlertPrintForm printform = new AlertPrintForm();
+            AlertPrintForm printform = new AlertPrintForm(this.BillID, this.OrderedTime.ToString(), this.EmloyeeName, this.ItemNumber, this.totalPrice, this.OrderInfos);
             printform.Show();
         }
     }

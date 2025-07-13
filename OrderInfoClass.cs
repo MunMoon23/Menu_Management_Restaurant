@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Menu_Management
+{
+    public class OrderInfoClass
+    {
+        public string ItemName;
+        public int ItemQuantity;
+        public float ItemTotalPrice;
+    }
+}

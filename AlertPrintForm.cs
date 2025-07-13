@@ -12,9 +12,24 @@ namespace Menu_Management
 {
     public partial class AlertPrintForm : Form
     {
-        public AlertPrintForm()
+        public string BillID;
+        public string OrderTime;
+        public string EmloyeeName;
+        public int ItemNumber;
+        public float totalPrice;
+
+
+
+        public List<OrderInfoClass> OrderInfos;
+        public AlertPrintForm(string BillID, string OrderTime, string EmployeeName, int ItemNumber, float totalPrice, List<OrderInfoClass> OrderInfos)
         {
             InitializeComponent();
+            this.BillID = BillID;
+            this.OrderTime = OrderTime;
+            this.EmloyeeName = EmployeeName;
+            this.ItemNumber = ItemNumber;
+            this.totalPrice = totalPrice;
+            this.OrderInfos = OrderInfos;
         }
     }
 }

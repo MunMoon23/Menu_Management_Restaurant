@@ -76,6 +76,8 @@ namespace Menu_Management
             BillItem.totalPrice = totalprice;
             BillItem.CalculateTotalPrice();
             billform.billflowpanel.Controls.Add(BillItem);
+            OrderflowLayout.Controls.Clear(); // Xóa các mục trong OrderflowLayout sau khi đặt hàng
+            OrderTotalLabel.Text = "";
         }
     }
 }

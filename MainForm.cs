@@ -31,7 +31,7 @@ namespace Menu_Management
                 sqlcon.Open();
                 if (sqlcon.State == ConnectionState.Open)
                 {
-                    MessageBox.Show("Database connection successful!", "Connection Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
                 }
             }
             catch (Exception ex)

@@ -153,7 +153,10 @@ namespace Menu_Management
 
         internal static void ShowEmployee(DataGridView datagridview)
         {
-            datagridview.Columns.Clear();
+            datagridview.Columns.Clear(); //Xóa các cột hiện tại trong DataGridView
+            datagridview.ColumnHeadersHeight = 30;
+            datagridview.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 107, 0);
+            datagridview.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
             using (SqlConnection sqlcon = new SqlConnection(GetConnectionString()))
             {
                 sqlcon.Open();
@@ -163,7 +166,6 @@ namespace Menu_Management
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 datagridview.DataSource = dt;
-                
             }    
         }
         internal static void LoadRoles(ComboBox roleCombobox)

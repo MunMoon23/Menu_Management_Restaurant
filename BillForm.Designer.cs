@@ -77,6 +77,7 @@
             // 
             // BillflowPanel
             // 
+            BillflowPanel.AutoScroll = true;
             BillflowPanel.BackColor = Color.FromArgb(234, 234, 234);
             BillflowPanel.Location = new Point(19, 72);
             BillflowPanel.Name = "BillflowPanel";

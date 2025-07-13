@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlertPrintForm));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             panel1 = new Panel();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            NotPrintButton = new Guna.UI2.WinForms.Guna2Button();
+            PrintButton = new Guna.UI2.WinForms.Guna2Button();
             label2 = new Label();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             panel1.SuspendLayout();
@@ -54,8 +54,8 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
-            panel1.Controls.Add(guna2Button2);
-            panel1.Controls.Add(guna2Button1);
+            panel1.Controls.Add(NotPrintButton);
+            panel1.Controls.Add(PrintButton);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(guna2PictureBox1);
             panel1.Dock = DockStyle.Fill;
@@ -64,41 +64,43 @@
             panel1.Size = new Size(350, 330);
             panel1.TabIndex = 0;
             // 
-            // guna2Button2
+            // NotPrintButton
             // 
-            guna2Button2.BorderRadius = 20;
-            guna2Button2.CustomizableEdges = customizableEdges7;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.FillColor = Color.FromArgb(255, 107, 0);
-            guna2Button2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(203, 250);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button2.Size = new Size(115, 50);
-            guna2Button2.TabIndex = 25;
-            guna2Button2.Text = "No";
+            NotPrintButton.BorderRadius = 20;
+            NotPrintButton.CustomizableEdges = customizableEdges1;
+            NotPrintButton.DisabledState.BorderColor = Color.DarkGray;
+            NotPrintButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            NotPrintButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            NotPrintButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            NotPrintButton.FillColor = Color.FromArgb(255, 107, 0);
+            NotPrintButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            NotPrintButton.ForeColor = Color.White;
+            NotPrintButton.Location = new Point(203, 250);
+            NotPrintButton.Name = "NotPrintButton";
+            NotPrintButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            NotPrintButton.Size = new Size(115, 50);
+            NotPrintButton.TabIndex = 25;
+            NotPrintButton.Text = "No";
+            NotPrintButton.Click += NotPrintButton_Click;
             // 
-            // guna2Button1
+            // PrintButton
             // 
-            guna2Button1.BorderRadius = 20;
-            guna2Button1.CustomizableEdges = customizableEdges9;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.FromArgb(28, 40, 51);
-            guna2Button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(39, 250);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Button1.Size = new Size(115, 50);
-            guna2Button1.TabIndex = 26;
-            guna2Button1.Text = "Yes";
+            PrintButton.BorderRadius = 20;
+            PrintButton.CustomizableEdges = customizableEdges3;
+            PrintButton.DisabledState.BorderColor = Color.DarkGray;
+            PrintButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            PrintButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            PrintButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            PrintButton.FillColor = Color.FromArgb(28, 40, 51);
+            PrintButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            PrintButton.ForeColor = Color.White;
+            PrintButton.Location = new Point(39, 250);
+            PrintButton.Name = "PrintButton";
+            PrintButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            PrintButton.Size = new Size(115, 50);
+            PrintButton.TabIndex = 26;
+            PrintButton.Text = "Yes";
+            PrintButton.Click += PrintButton_Click;
             // 
             // label2
             // 
@@ -114,12 +116,12 @@
             // guna2PictureBox1
             // 
             guna2PictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            guna2PictureBox1.CustomizableEdges = customizableEdges11;
+            guna2PictureBox1.CustomizableEdges = customizableEdges5;
             guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.Location = new Point(96, 26);
             guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2PictureBox1.Size = new Size(156, 130);
             guna2PictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             guna2PictureBox1.TabIndex = 23;
@@ -146,8 +148,8 @@
 
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Panel panel1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button NotPrintButton;
+        private Guna.UI2.WinForms.Guna2Button PrintButton;
         private Label label2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }

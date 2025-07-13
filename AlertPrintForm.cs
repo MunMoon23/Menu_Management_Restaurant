@@ -31,5 +31,15 @@ namespace Menu_Management
             this.totalPrice = totalPrice;
             this.OrderInfos = OrderInfos;
         }
+
+        private void PrintButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NotPrintButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

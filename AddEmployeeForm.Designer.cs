@@ -262,8 +262,7 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             EmployeeViewer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            EmployeeViewer.ColumnHeadersHeight = 4;
-            EmployeeViewer.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            EmployeeViewer.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -290,7 +289,7 @@
             EmployeeViewer.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
             EmployeeViewer.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
             EmployeeViewer.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            EmployeeViewer.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            EmployeeViewer.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             EmployeeViewer.ThemeStyle.HeaderStyle.Height = 4;
             EmployeeViewer.ThemeStyle.ReadOnly = false;
             EmployeeViewer.ThemeStyle.RowsStyle.BackColor = Color.White;

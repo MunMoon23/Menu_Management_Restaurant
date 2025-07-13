@@ -98,9 +98,13 @@ namespace Menu_Management
             if (r == DialogResult.No)
             {
                 return;
-            }
-
+            }   
             DataGridViewRow selectedRow = EmployeeViewer.SelectedRows[0];
+            if (selectedRow.Cells[0].Value == null)
+            {
+                MessageBox.Show("Please select an account to delete.");
+                return;
+            }
             string username = selectedRow.Cells["UserName"].Value.ToString();
             using (SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
             {
@@ -176,7 +180,7 @@ namespace Menu_Management
                         return;
                     }
                 }
-            }    
+            }
         }
     }
 }

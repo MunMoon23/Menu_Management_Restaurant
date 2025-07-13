@@ -15,6 +15,7 @@ namespace Menu_Management
 {
     public partial class MainForm : Form
     {
+
         public BillForm billForm = new BillForm();
         SqlConnection sqlcon = null;
         public HomeForm homeForm;

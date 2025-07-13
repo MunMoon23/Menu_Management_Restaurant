@@ -3,6 +3,7 @@ using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,13 +16,17 @@ namespace Menu_Management
         public static string Role;
 
 
-        public static void PhanQuyen(string Role)
+        public static void PhanQuyen(Form form, string role)
         {
-            if (Role != "Admin")
+            if(form is Setting settingform)
             {
-
+                if(role != "Admin")
+                {
+                    settingform.addEmployeeBtn.Enabled = false;
+                    settingform.changeMenuBtn.Enabled = false;
+                    settingform.admincheckout.Enabled = false;
+                }    
             }
-
         }
         public static string GetRole(int RoleID)
         {

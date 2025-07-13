@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,16 @@ namespace Menu_Management
 {
     public partial class Setting : Form
     {
+        public Guna2Button admincheckout => AdminCheckOut;
+        public Guna2Button changeMenuBtn => ChangeMenuBtn;
+
+        public Guna2Button addEmployeeBtn => AddEmployee;
         Panel mainpanel;
         private BillForm billform;
         public Setting(Panel main, BillForm billform)
         {
             InitializeComponent();
+            Login.PhanQuyen(this, Login.Role);
             mainpanel = main;
             this.billform = billform;
 

@@ -16,6 +16,7 @@ namespace Menu_Management
         public BillForm()
         {
             InitializeComponent();
+            Login.PhanQuyen(this, Login.Role);
             this.StartPosition = FormStartPosition.Manual; // Không cho tự căn giữa
             this.Location = new Point(0, 0);
         }

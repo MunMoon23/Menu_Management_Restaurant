@@ -17,6 +17,7 @@ namespace Menu_Management
         public HomeForm(BillForm billform)
         {
             InitializeComponent();
+            Login.PhanQuyen(this, Login.Role);
             CategoryLabel.Text = "All";
             DatabaseHelper.ShowCategory(CategoryFlowPanel, OrderflowLayout, OrderTotalLabel, DishFlowPanel);
             DatabaseHelper.ShowDishes(DishFlowPanel, OrderflowLayout, OrderTotalLabel);

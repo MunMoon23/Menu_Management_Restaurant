@@ -12,10 +12,11 @@ namespace Menu_Management
 {
     public partial class UC_OrderItem : UserControl
     {
-        string orderID;
-        string orderCategoryID;
+        public string orderID;
+        public string orderCategoryID;
         public float orderPrice;
-        public float quantity;
+        public int quantity;
+        public string name;
 
         public event EventHandler quantityChanged; // Sự kiện khi số lượng thay đổi
         public event EventHandler removeOrderItem; // Sự kiện khi xóa mục đơn hàng
@@ -25,7 +26,8 @@ namespace Menu_Management
             OrderImage.Image = orderImage;
             OrderName.Text = orderName;
             OrderPrice.Text = orderPrice.ToString();
-            this.quantity = float.Parse(Quantity.Text);
+            this.name = orderName;
+            this.quantity = int.Parse(Quantity.Text);
             this.orderPrice = orderPrice;
             this.orderCategoryID=orderCategoryID;
             this.orderID = orderID;

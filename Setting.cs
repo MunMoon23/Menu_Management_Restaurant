@@ -13,10 +13,13 @@ namespace Menu_Management
     public partial class Setting : Form
     {
         Panel mainpanel;
-        public Setting(Panel main)
+        private BillForm billform;
+        public Setting(Panel main, BillForm billform)
         {
             InitializeComponent();
             mainpanel = main;
+            this.billform = billform;
+
         }
 
         private void ChangeMenuBtn_Click(object sender, EventArgs e)
@@ -27,7 +30,7 @@ namespace Menu_Management
 
         private void ExitBtn_Click(object sender, EventArgs e)
         {
-            HomeForm homeForm = new HomeForm();
+            HomeForm homeForm = new HomeForm(billform);
             MainHelper.ShowForm(homeForm, mainpanel);
         }
 

@@ -122,25 +122,28 @@ namespace Menu_Management
                     UC_MenuItem Dish = new UC_MenuItem(dishName, price, DishImage, ID, dishtypeID);
                     Dish.DishSelected += (sender, e) => //Gán hành động cho sự kiện đã khai báo trước
                     {
-                        
+                        if(OrderHelper.CurrentOrderID == 0) //Kiểm tra xem đã có đơn hàng nào được tạo chưa
+                        {
+                            OrderHelper.CurrentOrderID = new Random().Next(1000, 9999); //Tạo ID đơn hàng ngẫu nhiên nếu chưa có
+                        }
                         UC_OrderItem orderItem = new UC_OrderItem(dishName, price, DishImage, ID, dishtypeID);
                         orderItem.removeOrderItem += (s, ev) => //Gán hành động cho sự kiện đã khai báo trước
                         {
                             Orderfl.Controls.Remove(orderItem); //Xóa món ăn đã chọn khỏi FlowLayoutPanel Orderfl
                             totalpriceLabel.ResetText();
                             OrderHelper.CalculateTotalPrice(Orderfl);
-                            totalpriceLabel.Text = "VNĐ " + OrderHelper.totalPrice.ToString();
+                            totalpriceLabel.Text = OrderHelper.totalPrice.ToString();
                         };
                         orderItem.quantityChanged += (sender, ev) => //Gán hành động cho sự kiện đã khai báo trước
                         {
                             OrderHelper.CalculateTotalPrice(Orderfl);
                             totalpriceLabel.ResetText();
-                            totalpriceLabel.Text = "VNĐ " + OrderHelper.totalPrice.ToString();
+                            totalpriceLabel.Text = OrderHelper.totalPrice.ToString();
                         };
                         Orderfl.Controls.Add(orderItem); //Thêm món ăn đã chọn vào FlowLayoutPanel Orderfl
                         totalpriceLabel.ResetText();
                         OrderHelper.CalculateTotalPrice(Orderfl);
-                        totalpriceLabel.Text = "VNĐ " + OrderHelper.totalPrice.ToString();
+                        totalpriceLabel.Text = OrderHelper.totalPrice.ToString();
                     };
                     fl.Controls.Add(Dish);
                 }
@@ -150,7 +153,10 @@ namespace Menu_Management
 
         internal static void ShowEmployee(DataGridView datagridview)
         {
-            datagridview.Columns.Clear();
+            datagridview.Columns.Clear(); //Xóa các cột hiện tại trong DataGridView
+            datagridview.ColumnHeadersHeight = 30;
+            datagridview.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 107, 0);
+            datagridview.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
             using (SqlConnection sqlcon = new SqlConnection(GetConnectionString()))
             {
                 sqlcon.Open();
@@ -160,7 +166,6 @@ namespace Menu_Management
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 datagridview.DataSource = dt;
-                
             }    
         }
         internal static void LoadRoles(ComboBox roleCombobox)

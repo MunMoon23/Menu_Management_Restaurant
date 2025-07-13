@@ -15,7 +15,9 @@ namespace Menu_Management
 {
     public partial class MainForm : Form
     {
+        public BillForm billForm = new BillForm();
         SqlConnection sqlcon = null;
+        public HomeForm homeForm;
         public MainForm()
         {
             CheckConnection();
@@ -29,7 +31,7 @@ namespace Menu_Management
                 sqlcon.Open();
                 if (sqlcon.State == ConnectionState.Open)
                 {
-                    MessageBox.Show("Database connection successful!", "Connection Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
                 }
             }
             catch (Exception ex)
@@ -52,26 +54,25 @@ namespace Menu_Management
 
         private void Home_Click(object sender, EventArgs e)
         {
-            HomeForm hf = new HomeForm();
-
-            MainHelper.ShowForm(hf, MainPanel);
+            MainHelper.ShowForm(homeForm, MainPanel);
 
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            Home_Click(sender, e);
-        }
-
-        private void Tables_Click(object sender, EventArgs e)
-        {
-            //
+            homeForm = new HomeForm(billForm); // chỉ khởi tạo 1 lần
+            MainHelper.ShowForm(homeForm, MainPanel);
         }
 
         private void Settings_Click(object sender, EventArgs e)
         {
-            Setting setting = new Setting(MainPanel);
+            Setting setting = new Setting(MainPanel, billForm);
             MainHelper.ShowForm(setting, MainPanel);
+        }
+
+        private void btnBill_Click(object sender, EventArgs e)
+        {    
+            MainHelper.ShowForm(billForm, MainPanel);
         }
     }
 }

@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panelMainContent = new Panel();
             panelMenu = new Panel();
             CategoryLabel = new Label();
@@ -42,19 +42,19 @@
             panelHeader = new Panel();
             SearchBar = new Guna.UI2.WinForms.Guna2TextBox();
             label1 = new Label();
-            panel1 = new Panel();
+            CurrentOrderPanel = new Panel();
+            Currency = new Label();
             OrderTotalLabel = new Label();
             label4 = new Label();
             btnOrder = new Guna.UI2.WinForms.Guna2Button();
             OrderflowLayout = new FlowLayoutPanel();
-            label3 = new Label();
+            OrderID = new Label();
             label2 = new Label();
-            Currency = new Label();
             panelMainContent.SuspendLayout();
             panelMenu.SuspendLayout();
             panelCategory.SuspendLayout();
             panelHeader.SuspendLayout();
-            panel1.SuspendLayout();
+            CurrentOrderPanel.SuspendLayout();
             SuspendLayout();
             // 
             // panelMainContent
@@ -62,7 +62,7 @@
             panelMainContent.Controls.Add(panelMenu);
             panelMainContent.Controls.Add(panelCategory);
             panelMainContent.Controls.Add(panelHeader);
-            panelMainContent.Controls.Add(panel1);
+            panelMainContent.Controls.Add(CurrentOrderPanel);
             panelMainContent.Dock = DockStyle.Fill;
             panelMainContent.Location = new Point(0, 0);
             panelMainContent.Name = "panelMainContent";
@@ -130,7 +130,7 @@
             // 
             SearchBar.BorderRadius = 20;
             SearchBar.BorderThickness = 0;
-            SearchBar.CustomizableEdges = customizableEdges7;
+            SearchBar.CustomizableEdges = customizableEdges1;
             SearchBar.DefaultText = "";
             SearchBar.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             SearchBar.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -148,7 +148,7 @@
             SearchBar.PlaceholderForeColor = Color.Silver;
             SearchBar.PlaceholderText = "Search dish";
             SearchBar.SelectedText = "";
-            SearchBar.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            SearchBar.ShadowDecoration.CustomizableEdges = customizableEdges2;
             SearchBar.Size = new Size(385, 45);
             SearchBar.TabIndex = 11;
             SearchBar.TextChanged += SearchBar_TextChanged;
@@ -163,21 +163,31 @@
             label1.TabIndex = 10;
             label1.Text = "Dishes";
             // 
-            // panel1
+            // CurrentOrderPanel
             // 
-            panel1.BackColor = Color.FromArgb(234, 234, 234);
-            panel1.Controls.Add(Currency);
-            panel1.Controls.Add(OrderTotalLabel);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(btnOrder);
-            panel1.Controls.Add(OrderflowLayout);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
-            panel1.Dock = DockStyle.Right;
-            panel1.Location = new Point(659, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(323, 775);
-            panel1.TabIndex = 0;
+            CurrentOrderPanel.BackColor = Color.FromArgb(234, 234, 234);
+            CurrentOrderPanel.Controls.Add(Currency);
+            CurrentOrderPanel.Controls.Add(OrderTotalLabel);
+            CurrentOrderPanel.Controls.Add(label4);
+            CurrentOrderPanel.Controls.Add(btnOrder);
+            CurrentOrderPanel.Controls.Add(OrderflowLayout);
+            CurrentOrderPanel.Controls.Add(OrderID);
+            CurrentOrderPanel.Controls.Add(label2);
+            CurrentOrderPanel.Dock = DockStyle.Right;
+            CurrentOrderPanel.Location = new Point(659, 0);
+            CurrentOrderPanel.Name = "CurrentOrderPanel";
+            CurrentOrderPanel.Size = new Size(323, 775);
+            CurrentOrderPanel.TabIndex = 0;
+            // 
+            // Currency
+            // 
+            Currency.AutoSize = true;
+            Currency.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Currency.Location = new Point(104, 670);
+            Currency.Name = "Currency";
+            Currency.Size = new Size(53, 25);
+            Currency.TabIndex = 24;
+            Currency.Text = "VNĐ";
             // 
             // OrderTotalLabel
             // 
@@ -203,7 +213,7 @@
             // 
             btnOrder.BackColor = Color.Transparent;
             btnOrder.BorderRadius = 10;
-            btnOrder.CustomizableEdges = customizableEdges5;
+            btnOrder.CustomizableEdges = customizableEdges3;
             btnOrder.DisabledState.BorderColor = Color.DarkGray;
             btnOrder.DisabledState.CustomBorderColor = Color.DarkGray;
             btnOrder.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -213,7 +223,7 @@
             btnOrder.ForeColor = Color.White;
             btnOrder.Location = new Point(13, 714);
             btnOrder.Name = "btnOrder";
-            btnOrder.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnOrder.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnOrder.Size = new Size(298, 49);
             btnOrder.TabIndex = 21;
             btnOrder.Text = "Order";
@@ -227,15 +237,14 @@
             OrderflowLayout.Size = new Size(323, 528);
             OrderflowLayout.TabIndex = 6;
             // 
-            // label3
+            // OrderID
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(20, 49);
-            label3.Name = "label3";
-            label3.Size = new Size(107, 17);
-            label3.TabIndex = 3;
-            label3.Text = "Transaction #243";
+            OrderID.AutoSize = true;
+            OrderID.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            OrderID.Location = new Point(20, 49);
+            OrderID.Name = "OrderID";
+            OrderID.Size = new Size(0, 17);
+            OrderID.TabIndex = 3;
             // 
             // label2
             // 
@@ -246,16 +255,6 @@
             label2.Size = new Size(131, 25);
             label2.TabIndex = 2;
             label2.Text = "Current Order";
-            // 
-            // Currency
-            // 
-            Currency.AutoSize = true;
-            Currency.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Currency.Location = new Point(104, 670);
-            Currency.Name = "Currency";
-            Currency.Size = new Size(53, 25);
-            Currency.TabIndex = 24;
-            Currency.Text = "VNĐ";
             // 
             // HomeForm
             // 
@@ -275,8 +274,8 @@
             panelCategory.ResumeLayout(false);
             panelHeader.ResumeLayout(false);
             panelHeader.PerformLayout();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            CurrentOrderPanel.ResumeLayout(false);
+            CurrentOrderPanel.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -291,12 +290,12 @@
         private Panel panelHeader;
         private Guna.UI2.WinForms.Guna2TextBox SearchBar;
         private Label label1;
-        private Panel panel1;
+        private Panel CurrentOrderPanel;
         private Label OrderTotalLabel;
         private Label label4;
         private Guna.UI2.WinForms.Guna2Button btnOrder;
         private FlowLayoutPanel OrderflowLayout;
-        private Label label3;
+        private Label OrderID;
         private Label label2;
         private UC_OrderItem uC_OrderItem1;
         private Label Currency;

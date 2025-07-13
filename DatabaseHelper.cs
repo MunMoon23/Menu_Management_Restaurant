@@ -122,7 +122,10 @@ namespace Menu_Management
                     UC_MenuItem Dish = new UC_MenuItem(dishName, price, DishImage, ID, dishtypeID);
                     Dish.DishSelected += (sender, e) => //Gán hành động cho sự kiện đã khai báo trước
                     {
-                        
+                        if(OrderHelper.CurrentOrderID == 0) //Kiểm tra xem đã có đơn hàng nào được tạo chưa
+                        {
+                            OrderHelper.CurrentOrderID = new Random().Next(1000, 9999); //Tạo ID đơn hàng ngẫu nhiên nếu chưa có
+                        }
                         UC_OrderItem orderItem = new UC_OrderItem(dishName, price, DishImage, ID, dishtypeID);
                         orderItem.removeOrderItem += (s, ev) => //Gán hành động cho sự kiện đã khai báo trước
                         {

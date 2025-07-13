@@ -14,7 +14,6 @@ namespace Menu_Management
     {
         string DishID;
         string DishTypeID;
-        Color colorChanged = Color.Gray;
 
         public event EventHandler DishSelected; // Sự kiện khi món ăn được chọn
         public UC_MenuItem(string name, float price, Image img, string ID, string dishTypeID)

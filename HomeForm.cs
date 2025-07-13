@@ -21,6 +21,10 @@ namespace Menu_Management
             DatabaseHelper.ShowCategory(CategoryFlowPanel, OrderflowLayout, OrderTotalLabel, DishFlowPanel);
             DatabaseHelper.ShowDishes(DishFlowPanel, OrderflowLayout, OrderTotalLabel);
             this.billform=billform;
+            OrderHelper.OrderIDChanged += (sender, e) =>
+            {
+                OrderID.Text = "Transaction #" +  OrderHelper.CurrentOrderID.ToString();
+            };
         }
 
         private void SearchBar_TextChanged(object sender, EventArgs e)
@@ -39,8 +43,7 @@ namespace Menu_Management
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            Random rd = new Random();
-            int billid = rd.Next(1000, 9999);
+            int billid = OrderHelper.CurrentOrderID;
             string timestamp = DateTime.Now.ToString("dd/MM/yyyy - HH:mm:ss");
             float total = 0;
             try
@@ -53,7 +56,7 @@ namespace Menu_Management
                 return;
             }
 
-            UC_BillItem BillItem = new UC_BillItem( "#"+ billid.ToString(), timestamp, "AKZM");
+            UC_BillItem BillItem = new UC_BillItem("#"+ billid.ToString(), timestamp, "AKZM");
             BillItem.ClearBillItemClicked += (sender, e) =>
             {
                 billform.billflowpanel.Controls.Remove(BillItem);
@@ -62,7 +65,7 @@ namespace Menu_Management
             float totalprice = 0;
             foreach (Control controlitem in OrderflowLayout.Controls)
             {
-                if(controlitem is UC_OrderItem Orderitem)
+                if (controlitem is UC_OrderItem Orderitem)
                 {
                     itemnumber++;
                     string itemname = Orderitem.name;
@@ -78,6 +81,9 @@ namespace Menu_Management
             billform.billflowpanel.Controls.Add(BillItem);
             OrderflowLayout.Controls.Clear(); // Xóa các mục trong OrderflowLayout sau khi đặt hàng
             OrderTotalLabel.Text = "";
+            OrderID.Text = ""; // Đặt lại ID đơn hàng
+            OrderHelper.CurrentOrderID = 0; // Đặt lại tổng tiền đơn hàng
+
         }
     }
 }

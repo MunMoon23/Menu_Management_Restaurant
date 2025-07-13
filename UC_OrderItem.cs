@@ -12,8 +12,8 @@ namespace Menu_Management
 {
     public partial class UC_OrderItem : UserControl
     {
-        string orderID;
-        string orderCategoryID;
+        public string orderID;
+        public string orderCategoryID;
         public float orderPrice;
         public int quantity;
         public string name;

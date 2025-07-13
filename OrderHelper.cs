@@ -9,7 +9,19 @@ namespace Menu_Management
     internal class OrderHelper
     {
         public static float totalPrice = 0; //Tổng tiền của đơn hàng hiện tại
+        private static int currentOrderID = 0;
 
+        public static event EventHandler OrderIDChanged;
+
+        public static int CurrentOrderID
+        {
+            get { return currentOrderID; }
+            set
+            {
+                currentOrderID = value;
+                OrderIDChanged?.Invoke(null, EventArgs.Empty); // Gọi sự kiện khi ID đơn hàng thay đổi
+            }
+        }
         internal static void CalculateTotalPrice(FlowLayoutPanel Orderfl)
         {
             float total = 0;

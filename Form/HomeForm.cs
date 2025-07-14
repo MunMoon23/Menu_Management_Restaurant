@@ -114,19 +114,22 @@ namespace Menu_Management
                 return;
             }
 
-            UC_BillItem BillItem = new UC_BillItem(billid.ToString(), timestamp, Login.User);
+            UC_BillItem BillItem = new UC_BillItem(this.billform, billid.ToString(), timestamp, Login.User);
             BillItem.ClearBillItemClicked += (sender, e) =>
             {
-                //Khi bấm xóa bill thì không hẳn xóa khỏi CSDL mà xóa mềm (cập nhật status thành Cancelled)
-                using(SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
+                if (sender is UC_BillItem clickedItem)
                 {
-                    sqlcon.Open();
-                    string deleteBillQuery = "UPDATE Bills SET Status = 'Cancelled' WHERE BillID = @BillID";
-                    SqlCommand cmd = new SqlCommand(deleteBillQuery, sqlcon);
-                    cmd.Parameters.AddWithValue("@BillID", BillItem.BillID);
-                    cmd.ExecuteNonQuery();
+                    billform.billflowpanel.Controls.Remove(clickedItem); // ✅ đúng control đang được click
+
+                    using (SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
+                    {
+                        sqlcon.Open();
+                        string deleteBillQuery = "UPDATE Bills SET Status = 'Cancelled' WHERE BillID = @BillID";
+                        SqlCommand cmd = new SqlCommand(deleteBillQuery, sqlcon);
+                        cmd.Parameters.AddWithValue("@BillID", clickedItem.BillID); // ✅ đúng BillID thực tế
+                        cmd.ExecuteNonQuery();
+                    }
                 }
-                billform.billflowpanel.Controls.Remove(BillItem);
             };
             int itemnumber = 0;
             float totalprice = 0;
@@ -156,7 +159,7 @@ namespace Menu_Management
             BillItem.ItemNumber = itemnumber;
             // Cập nhật tổng giá và số lượng món ăn trong hóa đơn (hiển thị)
 
-            BillItem.CalculateTotalPrice(); //Làm ơn đừng xóa dòng code =)))))
+            BillItem.CalculateTotalPrice(); //Làm ơn đừng xóa dòng code này =)))))
 
             billform.billflowpanel.Controls.Add(BillItem);
 

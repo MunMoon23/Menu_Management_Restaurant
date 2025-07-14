@@ -49,7 +49,7 @@
             OrderedTime = new Label();
             Bill = new Label();
             label1 = new Label();
-            ClearBillItem = new Guna.UI2.WinForms.Guna2Button();
+            ClearBill = new Guna.UI2.WinForms.Guna2Button();
             panelMain.SuspendLayout();
             OrderHolderPanel.SuspendLayout();
             panel1.SuspendLayout();
@@ -168,7 +168,7 @@
             panelHeader.Controls.Add(OrderedTime);
             panelHeader.Controls.Add(Bill);
             panelHeader.Controls.Add(label1);
-            panelHeader.Controls.Add(ClearBillItem);
+            panelHeader.Controls.Add(ClearBill);
             panelHeader.Dock = DockStyle.Top;
             panelHeader.Location = new Point(0, 0);
             panelHeader.Name = "panelHeader";
@@ -241,29 +241,29 @@
             label1.TabIndex = 4;
             label1.Text = "Hóa đơn:";
             // 
-            // ClearBillItem
+            // ClearBill
             // 
-            ClearBillItem.BackColor = Color.Transparent;
-            ClearBillItem.BorderRadius = 5;
+            ClearBill.BackColor = Color.Transparent;
+            ClearBill.BorderRadius = 5;
             customizableEdges3.BottomRight = false;
             customizableEdges3.TopLeft = false;
             customizableEdges3.TopRight = false;
-            ClearBillItem.CustomizableEdges = customizableEdges3;
-            ClearBillItem.DisabledState.BorderColor = Color.DarkGray;
-            ClearBillItem.DisabledState.CustomBorderColor = Color.DarkGray;
-            ClearBillItem.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            ClearBillItem.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            ClearBillItem.FillColor = Color.FromArgb(255, 107, 0);
-            ClearBillItem.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ClearBillItem.ForeColor = Color.Black;
-            ClearBillItem.Image = (Image)resources.GetObject("ClearBillItem.Image");
-            ClearBillItem.ImageSize = new Size(12, 12);
-            ClearBillItem.Location = new Point(250, 0);
-            ClearBillItem.Name = "ClearBillItem";
-            ClearBillItem.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            ClearBillItem.Size = new Size(30, 22);
-            ClearBillItem.TabIndex = 3;
-            ClearBillItem.Click += ClearBillItem_Click;
+            ClearBill.CustomizableEdges = customizableEdges3;
+            ClearBill.DisabledState.BorderColor = Color.DarkGray;
+            ClearBill.DisabledState.CustomBorderColor = Color.DarkGray;
+            ClearBill.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            ClearBill.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            ClearBill.FillColor = Color.FromArgb(255, 107, 0);
+            ClearBill.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ClearBill.ForeColor = Color.Black;
+            ClearBill.Image = (Image)resources.GetObject("ClearBill.Image");
+            ClearBill.ImageSize = new Size(12, 12);
+            ClearBill.Location = new Point(250, 0);
+            ClearBill.Name = "ClearBill";
+            ClearBill.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            ClearBill.Size = new Size(30, 22);
+            ClearBill.TabIndex = 3;
+            ClearBill.Click += ClearBill_Click;
             // 
             // UC_BillItem
             // 
@@ -291,7 +291,7 @@
         private Guna.UI2.WinForms.Guna2Button PrintButton;
         private Label label4;
         private Label OrderTotal;
-        private Guna.UI2.WinForms.Guna2Button ClearBillItem;
+        private Guna.UI2.WinForms.Guna2Button ClearBill;
         private Label label5;
         private Label label3;
         private Label Bill;

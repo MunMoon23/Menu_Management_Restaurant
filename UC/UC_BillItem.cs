@@ -13,6 +13,8 @@ namespace Menu_Management
 {
     public partial class UC_BillItem : UserControl
     {
+        BillForm billform;
+
         public FlowLayoutPanel OrderPanel => OrderItemHolderFlowPanel;
         public event EventHandler ClearBillItemClicked;
 
@@ -23,9 +25,12 @@ namespace Menu_Management
         public float totalPrice;
 
         public List<OrderInfoClass> OrderInfos;
-        public UC_BillItem(string billid, DateTime OrderTime, string employeename, float totalprice = 0)
+        public UC_BillItem(BillForm billform, string billid, DateTime OrderTime, string employeename, float totalprice = 0)
         {
             InitializeComponent();
+
+            ClearBill.Click += ClearBill_Click;
+            this.billform = billform;
             OrderInfos = new List<OrderInfoClass>();
             Bill.Text = billid;
             this.BillID = billid;
@@ -39,6 +44,7 @@ namespace Menu_Management
             this.totalPrice = totalprice;
             OrderTotal.Text = totalprice.ToString();
         }
+
 
         public UC_BillItem()
         {
@@ -72,15 +78,15 @@ namespace Menu_Management
             OrderTotal.Text = totalPrice.ToString();
         }
 
-        private void ClearBillItem_Click(object sender, EventArgs e)
-        {
-            ClearBillItemClicked?.Invoke(this, e);
-        }
-
         private void PrintButton_Click(object sender, EventArgs e)
         {
-            AlertPrintForm printform = new AlertPrintForm(this.BillID, this.OrderTime, this.EmloyeeName, this.ItemNumber, this.totalPrice, this.OrderInfos);
+            AlertPrintForm printform = new AlertPrintForm(this.billform, this.BillID, this.OrderTime, this.EmloyeeName, this.ItemNumber, this.totalPrice, this.OrderInfos);
             printform.Show();
+        }
+
+        private void ClearBill_Click(object sender, EventArgs e)
+        {
+            ClearBillItemClicked?.Invoke(this, e); // Gọi sự kiện khi nút Clear được nhấn
         }
     }
 }

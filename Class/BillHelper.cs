@@ -41,6 +41,22 @@ namespace Menu_Management.Class
                     {
                         UC_BillItem billItem = new UC_BillItem(billform, Bill.BillID, Bill.OrderTime, Bill.EmployeeName, Bill.TotalPrice);
 
+                        //Đăng ký sự kiện xóa hóa đơn
+                        billItem.ClearBillItemClicked += (sender, e) =>
+                        {
+                            if (sender is UC_BillItem clickedItem)
+                            {
+                                fl.Controls.Remove(clickedItem);
+                                using (SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
+                                {
+                                    sqlcon.Open();
+                                    string deleteBillQuery = "UPDATE Bills SET Status = 'Cancelled' WHERE BillID = @BillID";
+                                    SqlCommand cmd = new SqlCommand(deleteBillQuery, sqlcon);
+                                    cmd.Parameters.AddWithValue("@BillID", clickedItem.BillID);
+                                    cmd.ExecuteNonQuery();
+                                }
+                            }
+                        };
                         while (reader.Read())
                         {
                             string itemName = reader["DishName"].ToString();

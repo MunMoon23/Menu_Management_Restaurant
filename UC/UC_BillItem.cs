@@ -29,7 +29,6 @@ namespace Menu_Management
         {
             InitializeComponent();
 
-            ClearBill.Click += ClearBill_Click;
             this.billform = billform;
             OrderInfos = new List<OrderInfoClass>();
             Bill.Text = billid;
@@ -86,6 +85,7 @@ namespace Menu_Management
 
         private void ClearBill_Click(object sender, EventArgs e)
         {
+
             ClearBillItemClicked?.Invoke(this, e); // Gọi sự kiện khi nút Clear được nhấn
         }
     }

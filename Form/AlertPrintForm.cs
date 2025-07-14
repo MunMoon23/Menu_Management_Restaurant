@@ -118,7 +118,8 @@ namespace Menu_Management
                 }
             }
             this.Close(); // Đóng form sau khi in
-            FinalizeBill(); // Cập nhật trạng thái hóa đơn thành "Done" trước khi in
+            FinalizeBill(); // Cập nhật trạng thái hóa đơn thành "Done" sau khi in
+            BillHelper.LoadBills(billform.billflowpanel, billform); // Tải lại danh sách hóa đơn
         }
 
         private void NotPrintButton_Click(object sender, EventArgs e)

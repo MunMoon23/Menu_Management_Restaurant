@@ -119,8 +119,7 @@ namespace Menu_Management
             {
                 if (sender is UC_BillItem clickedItem)
                 {
-                    billform.billflowpanel.Controls.Remove(clickedItem); // ✅ đúng control đang được click
-
+                    billform.billflowpanel.Controls.Remove(clickedItem); //  đúng control đang được click
                     using (SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
                     {
                         sqlcon.Open();

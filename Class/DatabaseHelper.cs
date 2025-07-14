@@ -191,5 +191,8 @@ namespace Menu_Management.Class
         {
             infopanel.Controls.Clear();
         }
+
+
+        
     }
 }

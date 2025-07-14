@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Printing;
 using Menu_Management.Class;
+using Microsoft.Data.SqlClient;
 
 namespace Menu_Management
 {
@@ -22,18 +23,18 @@ namespace Menu_Management
 
         // Thông tin hóa đơn
         public string BillID;
-        public string OrderTime;
-        public string EmloyeeName;
+        public DateTime OrderTime;
+        public string EmployeeName;
         public int ItemNumber;
         public float totalPrice;
         public List<OrderInfoClass> OrderInfos;
 
-        public AlertPrintForm(string BillID, string OrderTime, string EmployeeName, int ItemNumber, float totalPrice, List<OrderInfoClass> OrderInfos)
+        public AlertPrintForm(string BillID, DateTime OrderTime, string EmployeeName, int ItemNumber, float totalPrice, List<OrderInfoClass> OrderInfos)
         {
             InitializeComponent();
             this.BillID = BillID;
             this.OrderTime = OrderTime;
-            this.EmloyeeName = EmployeeName;
+            this.EmployeeName = EmployeeName;
             this.ItemNumber = ItemNumber;
             this.totalPrice = totalPrice;
             this.OrderInfos = OrderInfos;
@@ -48,7 +49,7 @@ namespace Menu_Management
             billLines.Add("         HÓA ĐƠN BÁN HÀNG");
             billLines.Add("-------------------------------");
             billLines.Add($"Mã hóa đơn : {BillID}");
-            billLines.Add($"Nhân viên   : {EmloyeeName}");
+            billLines.Add($"Nhân viên   : {EmployeeName}");
             billLines.Add($"Thời gian   : {OrderTime}");
             billLines.Add("-------------------------------");
             billLines.Add("Món           SL   Đơn giá");
@@ -120,5 +121,7 @@ namespace Menu_Management
         {
             this.Close(); // Không in, chỉ đóng form
         }
+
+
     }
 }

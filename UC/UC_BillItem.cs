@@ -17,20 +17,20 @@ namespace Menu_Management
         public event EventHandler ClearBillItemClicked;
 
         public string BillID;
-        public string OrderTime;
+        public DateTime OrderTime;
         public string EmloyeeName;
         public int ItemNumber;
         public float totalPrice;
 
         public List<OrderInfoClass> OrderInfos;
-        public UC_BillItem(string billid, string OrderTime, string employeename)
+        public UC_BillItem(string billid, DateTime OrderTime, string employeename)
         {
             InitializeComponent();
             OrderInfos = new List<OrderInfoClass>();
             Bill.Text = billid;
             this.BillID = billid;
 
-            OrderedTime.Text = OrderTime;
+            OrderedTime.Text = OrderTime.ToString();
             this.OrderTime = OrderTime;
 
             EmployeeName.Text = employeename;
@@ -43,14 +43,16 @@ namespace Menu_Management
             OrderInfos = new List<OrderInfoClass>();
         }
 
-        public void AddToBill(int ItemNumber, string itemName, string quantity, string price)
+        public void AddToBill(string ItemID, int ItemNumber, string itemName, string quantity, string price)
         {
             this.OrderInfos.Add(new OrderInfoClass
             {
+                ItemID = ItemID,
                 ItemName = itemName,
                 ItemQuantity = int.Parse(quantity),
                 ItemTotalPrice = float.Parse(price)
             });
+            this.ItemNumber = ItemNumber;
             Label item = new Label();
             item.AutoSize = true;
             item.MaximumSize = new Size(260, 0);

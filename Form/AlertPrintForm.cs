@@ -24,6 +24,7 @@ namespace Menu_Management
         private List<string> billLines;
 
         // Thông tin hóa đơn
+        public string BillStatus;
         public string BillID;
         public DateTime OrderTime;
         public string EmployeeName;

@@ -18,6 +18,7 @@ namespace Menu_Management
         public FlowLayoutPanel OrderPanel => OrderItemHolderFlowPanel;
         public event EventHandler ClearBillItemClicked;
 
+        public string BillStatus;
         public string BillID;
         public DateTime OrderTime;
         public string EmloyeeName;
@@ -25,7 +26,7 @@ namespace Menu_Management
         public float totalPrice;
 
         public List<OrderInfoClass> OrderInfos;
-        public UC_BillItem(BillForm billform, string billid, DateTime OrderTime, string employeename, float totalprice = 0)
+        public UC_BillItem(BillForm billform, string billid, DateTime OrderTime, string employeename, string BillStatus , float totalprice = 0)
         {
             InitializeComponent();
 
@@ -42,6 +43,9 @@ namespace Menu_Management
 
             this.totalPrice = totalprice;
             OrderTotal.Text = totalprice.ToString();
+
+            this.BillStatus = BillStatus;
+            Status.Text = BillStatus;
         }
 
 
@@ -79,7 +83,7 @@ namespace Menu_Management
 
         private void PrintButton_Click(object sender, EventArgs e)
         {
-            AlertPrintForm printform = new AlertPrintForm(this.billform, this.BillID, this.OrderTime, this.EmloyeeName, this.ItemNumber, this.totalPrice, this.OrderInfos);
+            AlertPrintForm printform = new AlertPrintForm(this.billform, this.BillID, this.OrderTime, this.EmloyeeName, this.ItemNumber, this.totalPrice,  this.OrderInfos);
             printform.Show();
         }
 

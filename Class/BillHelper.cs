@@ -39,7 +39,7 @@ namespace Menu_Management.Class
                     SqlDataReader reader = sqlcmd.ExecuteReader();
                     if(reader.HasRows)
                     {
-                        UC_BillItem billItem = new UC_BillItem(billform, Bill.BillID, Bill.OrderTime, Bill.EmployeeName, Bill.TotalPrice);
+                        UC_BillItem billItem = new UC_BillItem(billform, Bill.BillID, Bill.OrderTime, Bill.EmployeeName, Bill.Status, Bill.TotalPrice);
 
                         //Đăng ký sự kiện xóa hóa đơn
                         billItem.ClearBillItemClicked += (sender, e) =>

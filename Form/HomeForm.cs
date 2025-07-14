@@ -114,7 +114,7 @@ namespace Menu_Management
                 return;
             }
 
-            UC_BillItem BillItem = new UC_BillItem(this.billform, billid.ToString(), timestamp, Login.User);
+            UC_BillItem BillItem = new UC_BillItem(this.billform, billid.ToString(), timestamp, Login.User, "Apending");
             BillItem.ClearBillItemClicked += (sender, e) =>
             {
                 if (sender is UC_BillItem clickedItem)

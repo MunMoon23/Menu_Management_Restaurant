@@ -50,6 +50,8 @@
             Bill = new Label();
             label1 = new Label();
             ClearBill = new Guna.UI2.WinForms.Guna2Button();
+            StatusLabel = new Label();
+            Status = new Label();
             panelMain.SuspendLayout();
             OrderHolderPanel.SuspendLayout();
             panel1.SuspendLayout();
@@ -73,17 +75,17 @@
             OrderHolderPanel.Controls.Add(OrderItemHolderFlowPanel);
             OrderHolderPanel.Controls.Add(label9);
             OrderHolderPanel.Dock = DockStyle.Fill;
-            OrderHolderPanel.Location = new Point(0, 108);
+            OrderHolderPanel.Location = new Point(0, 134);
             OrderHolderPanel.Name = "OrderHolderPanel";
-            OrderHolderPanel.Size = new Size(280, 194);
+            OrderHolderPanel.Size = new Size(280, 168);
             OrderHolderPanel.TabIndex = 2;
             // 
             // OrderItemHolderFlowPanel
             // 
             OrderItemHolderFlowPanel.AutoScroll = true;
-            OrderItemHolderFlowPanel.Location = new Point(0, 28);
+            OrderItemHolderFlowPanel.Location = new Point(0, 23);
             OrderItemHolderFlowPanel.Name = "OrderItemHolderFlowPanel";
-            OrderItemHolderFlowPanel.Size = new Size(280, 166);
+            OrderItemHolderFlowPanel.Size = new Size(280, 171);
             OrderItemHolderFlowPanel.TabIndex = 1;
             // 
             // label9
@@ -162,6 +164,8 @@
             // panelHeader
             // 
             panelHeader.BackColor = Color.FromArgb(28, 40, 51);
+            panelHeader.Controls.Add(Status);
+            panelHeader.Controls.Add(StatusLabel);
             panelHeader.Controls.Add(label5);
             panelHeader.Controls.Add(label3);
             panelHeader.Controls.Add(EmployeeName);
@@ -172,7 +176,7 @@
             panelHeader.Dock = DockStyle.Top;
             panelHeader.Location = new Point(0, 0);
             panelHeader.Name = "panelHeader";
-            panelHeader.Size = new Size(280, 108);
+            panelHeader.Size = new Size(280, 134);
             panelHeader.TabIndex = 0;
             // 
             // label5
@@ -213,7 +217,7 @@
             OrderedTime.AutoSize = true;
             OrderedTime.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             OrderedTime.ForeColor = Color.FromArgb(255, 107, 0);
-            OrderedTime.Location = new Point(89, 44);
+            OrderedTime.Location = new Point(93, 44);
             OrderedTime.Name = "OrderedTime";
             OrderedTime.Size = new Size(115, 17);
             OrderedTime.TabIndex = 4;
@@ -265,6 +269,28 @@
             ClearBill.TabIndex = 3;
             ClearBill.Click += ClearBill_Click;
             // 
+            // StatusLabel
+            // 
+            StatusLabel.AutoSize = true;
+            StatusLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            StatusLabel.ForeColor = Color.FromArgb(255, 107, 0);
+            StatusLabel.Location = new Point(13, 101);
+            StatusLabel.Name = "StatusLabel";
+            StatusLabel.Size = new Size(73, 17);
+            StatusLabel.TabIndex = 5;
+            StatusLabel.Text = "Nhân viên:";
+            // 
+            // Status
+            // 
+            Status.AutoSize = true;
+            Status.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Status.ForeColor = Color.FromArgb(255, 107, 0);
+            Status.Location = new Point(98, 101);
+            Status.Name = "Status";
+            Status.Size = new Size(66, 17);
+            Status.TabIndex = 6;
+            Status.Text = "Unknown";
+            // 
             // UC_BillItem
             // 
             AutoScaleMode = AutoScaleMode.None;
@@ -301,5 +327,7 @@
         private Label label9;
         private FlowLayoutPanel OrderItemHolderFlowPanel;
         private Label label2;
+        private Label Status;
+        private Label StatusLabel;
     }
 }

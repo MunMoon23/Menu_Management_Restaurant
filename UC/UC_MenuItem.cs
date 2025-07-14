@@ -24,6 +24,7 @@ namespace Menu_Management
             DishImage.Image = img;
             this.DishID = ID;
             this.DishTypeID = dishTypeID;
+
         }
 
         private void DishImage_Click(object sender, EventArgs e)

@@ -43,7 +43,8 @@
             // 
             // guna2Panel1
             // 
-            guna2Panel1.BackColor = Color.White;
+            guna2Panel1.BackColor = SystemColors.Control;
+            guna2Panel1.BorderColor = Color.White;
             guna2Panel1.BorderRadius = 20;
             guna2Panel1.Controls.Add(DishPrice);
             guna2Panel1.Controls.Add(DishName);
@@ -54,18 +55,18 @@
             guna2Panel1.Location = new Point(0, 0);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Panel1.Size = new Size(150, 180);
+            guna2Panel1.Size = new Size(150, 150);
             guna2Panel1.TabIndex = 0;
             // 
             // DishPrice
             // 
-            DishPrice.BackColor = Color.Transparent;
+            DishPrice.BackColor = SystemColors.Control;
             DishPrice.Dock = DockStyle.Top;
             DishPrice.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             DishPrice.ForeColor = Color.FromArgb(255, 107, 0);
-            DishPrice.Location = new Point(0, 134);
+            DishPrice.Location = new Point(0, 121);
             DishPrice.Name = "DishPrice";
-            DishPrice.Size = new Size(150, 16);
+            DishPrice.Size = new Size(150, 28);
             DishPrice.TabIndex = 2;
             DishPrice.Text = "$5.99";
             DishPrice.TextAlign = ContentAlignment.MiddleCenter;
@@ -73,13 +74,13 @@
             // 
             // DishName
             // 
-            DishName.BackColor = Color.Transparent;
+            DishName.BackColor = SystemColors.Control;
             DishName.Dock = DockStyle.Top;
             DishName.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             DishName.ForeColor = Color.FromArgb(28, 40, 51);
-            DishName.Location = new Point(0, 89);
+            DishName.Location = new Point(0, 86);
             DishName.Name = "DishName";
-            DishName.Size = new Size(150, 23);
+            DishName.Size = new Size(150, 35);
             DishName.TabIndex = 1;
             DishName.Text = "Pancake";
             DishName.TextAlign = ContentAlignment.MiddleCenter;
@@ -87,11 +88,13 @@
             // 
             // DishImage
             // 
+            DishImage.BackColor = SystemColors.Control;
             DishImage.BorderRadius = 20;
             customizableEdges1.BottomLeft = false;
             customizableEdges1.BottomRight = false;
             DishImage.CustomizableEdges = customizableEdges1;
             DishImage.Dock = DockStyle.Top;
+            DishImage.FillColor = Color.Transparent;
             DishImage.Image = (Image)resources.GetObject("DishImage.Image");
             DishImage.ImageRotate = 0F;
             DishImage.Location = new Point(0, 0);

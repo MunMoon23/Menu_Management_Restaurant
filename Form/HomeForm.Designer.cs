@@ -35,7 +35,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panelMainContent = new Panel();
             panelMenu = new Panel();
-            CategoryLabel = new Label();
+            Category = new Label();
             DishFlowPanel = new FlowLayoutPanel();
             panelCategory = new Panel();
             CategoryFlowPanel = new FlowLayoutPanel();
@@ -71,7 +71,7 @@
             // 
             // panelMenu
             // 
-            panelMenu.Controls.Add(CategoryLabel);
+            panelMenu.Controls.Add(Category);
             panelMenu.Controls.Add(DishFlowPanel);
             panelMenu.Dock = DockStyle.Fill;
             panelMenu.Location = new Point(0, 196);
@@ -79,15 +79,15 @@
             panelMenu.Size = new Size(659, 579);
             panelMenu.TabIndex = 3;
             // 
-            // CategoryLabel
+            // Category
             // 
-            CategoryLabel.AutoSize = true;
-            CategoryLabel.Font = new Font("Segoe UI", 15.75F);
-            CategoryLabel.Location = new Point(8, 3);
-            CategoryLabel.Name = "CategoryLabel";
-            CategoryLabel.Size = new Size(98, 30);
-            CategoryLabel.TabIndex = 4;
-            CategoryLabel.Text = "Breakfast";
+            Category.AutoSize = true;
+            Category.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Category.Location = new Point(8, 3);
+            Category.Name = "Category";
+            Category.Size = new Size(133, 25);
+            Category.TabIndex = 12;
+            Category.Text = "CategoryItems";
             // 
             // DishFlowPanel
             // 
@@ -299,5 +299,6 @@
         private Label label2;
         private UC_OrderItem uC_OrderItem1;
         private Label Currency;
+        private Label Category;
     }
 }

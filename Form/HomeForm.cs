@@ -15,14 +15,15 @@ namespace Menu_Management
     public partial class HomeForm : Form
     {
         private BillForm billform;
+        public Label CategoryLBL => Category;
         public HomeForm(BillForm billform)
         {
             InitializeComponent();
             Login.PhanQuyen(this, Login.Role);
-            CategoryLabel.Text = "All";
-            DatabaseHelper.ShowCategory(CategoryFlowPanel, OrderflowLayout, OrderTotalLabel, DishFlowPanel);
+            DatabaseHelper.ShowCategory(CategoryFlowPanel, OrderflowLayout, OrderTotalLabel, DishFlowPanel, this);
             DatabaseHelper.ShowDishes(DishFlowPanel, OrderflowLayout, OrderTotalLabel);
             this.billform=billform;
+            Category.Text = "ALL"; // Đặt tiêu đề danh mục là "ALL" khi khởi tạo
             OrderHelper.OrderIDChanged += (sender, e) =>
             {
                 OrderID.Text = "Transaction #" +  OrderHelper.CurrentOrderID.ToString();
@@ -34,8 +35,10 @@ namespace Menu_Management
             string searchText = SearchBar.Text.Trim();
             if (string.IsNullOrEmpty(searchText))
             {
+                Category.Text = "ALL"; // Đặt tiêu đề danh mục là "ALL" nếu không có từ khóa tìm kiếm
                 DishFlowPanel.Controls.Clear(); // Xóa tất cả các điều khiển trong DishFlowPanel nếu không có từ khóa tìm kiếm
                 DatabaseHelper.ShowDishes(DishFlowPanel, OrderflowLayout, OrderTotalLabel); // Hiển thị lại tất cả các món ăn
+
             }
             else
             {

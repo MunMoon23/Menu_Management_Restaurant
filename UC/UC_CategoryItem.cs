@@ -15,7 +15,7 @@ namespace Menu_Management
     public partial class UC_CategoryItem : UserControl
     {
         public event EventHandler OnCategorySelect; //Khai báo 1 sự kiện
-        string CategoryID;
+        public string CategoryID;
 
         public UC_CategoryItem(string name, Image image, string categoryID)
         {

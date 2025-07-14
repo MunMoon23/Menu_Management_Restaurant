@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Printing;
 using Menu_Management.Class;
+using Microsoft.Data.SqlClient;
 
 namespace Menu_Management
 {
@@ -22,18 +23,18 @@ namespace Menu_Management
 
         // Thông tin hóa đơn
         public string BillID;
-        public string OrderTime;
-        public string EmloyeeName;
+        public DateTime OrderTime;
+        public string EmployeeName;
         public int ItemNumber;
         public float totalPrice;
         public List<OrderInfoClass> OrderInfos;
 
-        public AlertPrintForm(string BillID, string OrderTime, string EmployeeName, int ItemNumber, float totalPrice, List<OrderInfoClass> OrderInfos)
+        public AlertPrintForm(string BillID, DateTime OrderTime, string EmployeeName, int ItemNumber, float totalPrice, List<OrderInfoClass> OrderInfos)
         {
             InitializeComponent();
             this.BillID = BillID;
             this.OrderTime = OrderTime;
-            this.EmloyeeName = EmployeeName;
+            this.EmployeeName = EmployeeName;
             this.ItemNumber = ItemNumber;
             this.totalPrice = totalPrice;
             this.OrderInfos = OrderInfos;
@@ -48,7 +49,7 @@ namespace Menu_Management
             billLines.Add("         HÓA ĐƠN BÁN HÀNG");
             billLines.Add("-------------------------------");
             billLines.Add($"Mã hóa đơn : {BillID}");
-            billLines.Add($"Nhân viên   : {EmloyeeName}");
+            billLines.Add($"Nhân viên   : {EmployeeName}");
             billLines.Add($"Thời gian   : {OrderTime}");
             billLines.Add("-------------------------------");
             billLines.Add("Món           SL   Đơn giá");
@@ -109,6 +110,7 @@ namespace Menu_Management
 
                 if (printDialog.ShowDialog() == DialogResult.OK)
                 {
+                    FinalizeBill(); // Cập nhật trạng thái hóa đơn thành "Done" trước khi in
                     printDocument.Print();
                 }
             }
@@ -119,6 +121,19 @@ namespace Menu_Management
         private void NotPrintButton_Click(object sender, EventArgs e)
         {
             this.Close(); // Không in, chỉ đóng form
+        }
+
+
+        private void FinalizeBill()
+        {
+            using (SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
+            {
+                sqlcon.Open();
+                string updatestatusQuery = "UPDATE Bills SET Status = 'Done' WHERE BillID = @OrderID";
+                SqlCommand sqlcmd = new SqlCommand(updatestatusQuery, sqlcon);
+                sqlcmd.Parameters.AddWithValue("@OrderID", BillID);
+                sqlcmd.ExecuteNonQuery(); // Cập nhật trạng thái hóa đơn thành "Done"
+            }    
         }
     }
 }

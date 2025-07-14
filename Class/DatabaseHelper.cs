@@ -37,7 +37,7 @@ namespace Menu_Management.Class
 
 
 
-        internal static void ShowCategory(FlowLayoutPanel fl,FlowLayoutPanel Orderfl,Label TotalLabel, FlowLayoutPanel DishShowPanel)
+        internal static void ShowCategory(FlowLayoutPanel fl,FlowLayoutPanel Orderfl,Label TotalLabel, FlowLayoutPanel DishShowPanel, HomeForm hf)
         {
             using (SqlConnection sqlcon = new SqlConnection(GetConnectionString()))
             {
@@ -51,15 +51,18 @@ namespace Menu_Management.Class
                     string ID = reader["CategoryID"].ToString();
                     Image categoryImage = convertToImage(cateimgdata);
                     UC_CategoryItem categoryItem = new UC_CategoryItem(categoryName, categoryImage, ID);
+                   
+
                     categoryItem.OnCategorySelect += (sender, e) => //Gán hành động cho sự kiện đã khai báo trước
                     {
+                        MainHelper.currentCategoryID = ID; //Cập nhật ID danh mục hiện tại
+                        hf.CategoryLBL.Text = MainHelper.GetCurrentCategory(ID); //Cập nhật tiêu đề danh mục
                         ShowDishes(DishShowPanel, Orderfl, TotalLabel, ID); //tại vì ở UC không hề reference được tới FlowPanel của form này nên phải gán sự kiện ở đây
                     };
                     fl.Controls.Add(categoryItem);
                 }
             }
         }
-
 
         internal static void ShowDishesBySearch(FlowLayoutPanel fl, string text)
         {
@@ -188,5 +191,8 @@ namespace Menu_Management.Class
         {
             infopanel.Controls.Clear();
         }
+
+
+        
     }
 }

@@ -23,7 +23,7 @@ namespace Menu_Management
         public float totalPrice;
 
         public List<OrderInfoClass> OrderInfos;
-        public UC_BillItem(string billid, DateTime OrderTime, string employeename)
+        public UC_BillItem(string billid, DateTime OrderTime, string employeename, float totalprice = 0)
         {
             InitializeComponent();
             OrderInfos = new List<OrderInfoClass>();
@@ -35,6 +35,9 @@ namespace Menu_Management
 
             EmployeeName.Text = employeename;
             this.EmloyeeName = employeename;
+
+            this.totalPrice = totalprice;
+            OrderTotal.Text = totalprice.ToString();
         }
 
         public UC_BillItem()
@@ -43,16 +46,16 @@ namespace Menu_Management
             OrderInfos = new List<OrderInfoClass>();
         }
 
-        public void AddToBill(string ItemID, int ItemNumber, string itemName, string quantity, string price)
+        public void AddToBill(string ItemID, string itemName, int quantity, float price)
         {
             this.OrderInfos.Add(new OrderInfoClass
             {
                 ItemID = ItemID,
                 ItemName = itemName,
-                ItemQuantity = int.Parse(quantity),
-                ItemTotalPrice = float.Parse(price)
+                ItemQuantity = quantity,
+                ItemTotalPrice = price
             });
-            this.ItemNumber = ItemNumber;
+            this.ItemNumber = quantity;
             Label item = new Label();
             item.AutoSize = true;
             item.MaximumSize = new Size(260, 0);

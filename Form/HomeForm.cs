@@ -117,6 +117,7 @@ namespace Menu_Management
             UC_BillItem BillItem = new UC_BillItem(billid.ToString(), timestamp, Login.User);
             BillItem.ClearBillItemClicked += (sender, e) =>
             {
+                //Khi bấm xóa bill thì không hẳn xóa khỏi CSDL mà xóa mềm (cập nhật status thành Cancelled)
                 using(SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
                 {
                     sqlcon.Open();
@@ -145,14 +146,18 @@ namespace Menu_Management
                         ItemQuantity = itemquantity,
                         ItemTotalPrice = itemprice
                     });
-                    BillItem.AddToBill(itemid ,itemnumber, itemname, itemquantity.ToString(), itemprice.ToString());
+                    BillItem.AddToBill(itemid , itemname, itemquantity, itemprice);
                     itemnumber++;
                 }
             }
 
+            //Tổng giá của hóa đơn
             BillItem.totalPrice = totalprice;
-            BillItem.ItemNumber = itemnumber;   
-            BillItem.CalculateTotalPrice();
+            BillItem.ItemNumber = itemnumber;
+            // Cập nhật tổng giá và số lượng món ăn trong hóa đơn (hiển thị)
+
+            BillItem.CalculateTotalPrice(); //Làm ơn đừng xóa dòng code =)))))
+
             billform.billflowpanel.Controls.Add(BillItem);
 
             //Lưu thông tin hóa đơn vào CSDL
@@ -163,8 +168,6 @@ namespace Menu_Management
             OrderTotalLabel.Text = "";
             OrderID.Text = ""; // Đặt lại ID đơn hàng
             OrderHelper.CurrentOrderID = 0; // Đặt lại tổng tiền đơn hàng
-
-            
         }
     }
 }

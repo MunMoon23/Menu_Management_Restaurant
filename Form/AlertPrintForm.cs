@@ -110,6 +110,7 @@ namespace Menu_Management
 
                 if (printDialog.ShowDialog() == DialogResult.OK)
                 {
+                    FinalizeBill(); // Cập nhật trạng thái hóa đơn thành "Done" trước khi in
                     printDocument.Print();
                 }
             }
@@ -123,5 +124,16 @@ namespace Menu_Management
         }
 
 
+        private void FinalizeBill()
+        {
+            using (SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
+            {
+                sqlcon.Open();
+                string updatestatusQuery = "UPDATE Bills SET Status = 'Done' WHERE BillID = @OrderID";
+                SqlCommand sqlcmd = new SqlCommand(updatestatusQuery, sqlcon);
+                sqlcmd.Parameters.AddWithValue("@OrderID", BillID);
+                sqlcmd.ExecuteNonQuery(); // Cập nhật trạng thái hóa đơn thành "Done"
+            }    
+        }
     }
 }

@@ -48,6 +48,7 @@ namespace Menu_Management
             }
         }
 
+        //Hàm thêm bIll và lưu thông tin hóa đơn vào CSDL
         private void SaveBill(string BillID, DateTime OrderTime, string EmployeeName, int ItemNumber, float totalPrice, List<OrderInfoClass> OrderInfos)
         {
             using (SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
@@ -116,6 +117,14 @@ namespace Menu_Management
             UC_BillItem BillItem = new UC_BillItem(billid.ToString(), timestamp, Login.User);
             BillItem.ClearBillItemClicked += (sender, e) =>
             {
+                using(SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
+                {
+                    sqlcon.Open();
+                    string deleteBillQuery = "UPDATE Bills SET Status = 'Cancelled' WHERE BillID = @BillID";
+                    SqlCommand cmd = new SqlCommand(deleteBillQuery, sqlcon);
+                    cmd.Parameters.AddWithValue("@BillID", BillItem.BillID);
+                    cmd.ExecuteNonQuery();
+                }
                 billform.billflowpanel.Controls.Remove(BillItem);
             };
             int itemnumber = 0;

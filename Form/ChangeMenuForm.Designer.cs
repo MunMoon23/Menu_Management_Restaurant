@@ -36,11 +36,6 @@
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             panel2 = new Panel();
             ShowData = new DataGridView();
-            DishID = new DataGridViewTextBoxColumn();
-            DishName = new DataGridViewTextBoxColumn();
-            CategoryID = new DataGridViewTextBoxColumn();
-            Price = new DataGridViewTextBoxColumn();
-            DishIMG = new DataGridViewTextBoxColumn();
             CategoryCBB = new ComboBox();
             panel3 = new Panel();
             pictureBox = new PictureBox();
@@ -134,38 +129,13 @@
             // 
             // ShowData
             // 
+            ShowData.AllowUserToOrderColumns = true;
             ShowData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            ShowData.Columns.AddRange(new DataGridViewColumn[] { DishID, DishName, CategoryID, Price, DishIMG });
             ShowData.Location = new Point(24, 259);
             ShowData.Name = "ShowData";
             ShowData.Size = new Size(664, 376);
             ShowData.TabIndex = 7;
             ShowData.SelectionChanged += ShowData_SelectionChanged;
-            // 
-            // DishID
-            // 
-            DishID.HeaderText = "Dish ID";
-            DishID.Name = "DishID";
-            // 
-            // DishName
-            // 
-            DishName.HeaderText = "Dish Name";
-            DishName.Name = "DishName";
-            // 
-            // CategoryID
-            // 
-            CategoryID.HeaderText = " Category ID";
-            CategoryID.Name = "CategoryID";
-            // 
-            // Price
-            // 
-            Price.HeaderText = "Price";
-            Price.Name = "Price";
-            // 
-            // DishIMG
-            // 
-            DishIMG.HeaderText = "Dish Image";
-            DishIMG.Name = "DishIMG";
             // 
             // CategoryCBB
             // 
@@ -338,11 +308,6 @@
         private Label label4;
         private Button Browse;
         private DataGridView ShowData;
-        private DataGridViewTextBoxColumn DishID;
-        private DataGridViewTextBoxColumn DishName;
-        private DataGridViewTextBoxColumn CategoryID;
-        private DataGridViewTextBoxColumn Price;
-        private DataGridViewTextBoxColumn DishIMG;
         private TextBox DishIdTxt;
         private Label label5;
         private PictureBox pictureBox;

@@ -39,6 +39,7 @@ namespace Menu_Management.Class
 
         internal static void ShowCategory(FlowLayoutPanel fl,FlowLayoutPanel Orderfl,Label TotalLabel, FlowLayoutPanel DishShowPanel, HomeForm hf)
         {
+            fl.Controls.Clear(); //Xóa tất cả các điều khiển trong FlowLayoutPanel trước khi thêm mới
             using (SqlConnection sqlcon = new SqlConnection(GetConnectionString()))
             {
                 sqlcon.Open();

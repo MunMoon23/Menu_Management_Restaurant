@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panelMainContent = new Panel();
             panelMenu = new Panel();
             Category = new Label();
@@ -50,6 +50,7 @@
             OrderflowLayout = new FlowLayoutPanel();
             OrderID = new Label();
             label2 = new Label();
+            reload = new Button();
             panelMainContent.SuspendLayout();
             panelMenu.SuspendLayout();
             panelCategory.SuspendLayout();
@@ -118,6 +119,7 @@
             // 
             // panelHeader
             // 
+            panelHeader.Controls.Add(reload);
             panelHeader.Controls.Add(SearchBar);
             panelHeader.Controls.Add(label1);
             panelHeader.Dock = DockStyle.Top;
@@ -130,7 +132,7 @@
             // 
             SearchBar.BorderRadius = 20;
             SearchBar.BorderThickness = 0;
-            SearchBar.CustomizableEdges = customizableEdges1;
+            SearchBar.CustomizableEdges = customizableEdges5;
             SearchBar.DefaultText = "";
             SearchBar.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             SearchBar.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -142,14 +144,14 @@
             SearchBar.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             SearchBar.IconRight = (Image)resources.GetObject("SearchBar.IconRight");
             SearchBar.IconRightSize = new Size(36, 36);
-            SearchBar.Location = new Point(250, 11);
+            SearchBar.Location = new Point(359, 11);
             SearchBar.Margin = new Padding(4);
             SearchBar.Name = "SearchBar";
             SearchBar.PlaceholderForeColor = Color.Silver;
             SearchBar.PlaceholderText = "Search dish";
             SearchBar.SelectedText = "";
-            SearchBar.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            SearchBar.Size = new Size(385, 45);
+            SearchBar.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            SearchBar.Size = new Size(267, 45);
             SearchBar.TabIndex = 11;
             SearchBar.TextChanged += SearchBar_TextChanged;
             // 
@@ -213,7 +215,7 @@
             // 
             btnOrder.BackColor = Color.Transparent;
             btnOrder.BorderRadius = 10;
-            btnOrder.CustomizableEdges = customizableEdges3;
+            btnOrder.CustomizableEdges = customizableEdges7;
             btnOrder.DisabledState.BorderColor = Color.DarkGray;
             btnOrder.DisabledState.CustomBorderColor = Color.DarkGray;
             btnOrder.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -223,7 +225,7 @@
             btnOrder.ForeColor = Color.White;
             btnOrder.Location = new Point(13, 714);
             btnOrder.Name = "btnOrder";
-            btnOrder.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnOrder.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnOrder.Size = new Size(298, 49);
             btnOrder.TabIndex = 21;
             btnOrder.Text = "Order";
@@ -255,6 +257,16 @@
             label2.Size = new Size(131, 25);
             label2.TabIndex = 2;
             label2.Text = "Current Order";
+            // 
+            // reload
+            // 
+            reload.Location = new Point(205, 11);
+            reload.Name = "reload";
+            reload.Size = new Size(95, 43);
+            reload.TabIndex = 12;
+            reload.Text = "Reload Form";
+            reload.UseVisualStyleBackColor = true;
+            reload.Click += reload_Click;
             // 
             // HomeForm
             // 
@@ -300,5 +312,6 @@
         private UC_OrderItem uC_OrderItem1;
         private Label Currency;
         private Label Category;
+        private Button reload;
     }
 }

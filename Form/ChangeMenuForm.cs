@@ -16,7 +16,7 @@ namespace Menu_Management
     public partial class ChangeMenuForm : Form
     {
         Panel mainpanel;
-        SqlConnection sqlcon = null;
+        SqlConnection sqlcon;
         public ChangeMenuForm(Panel mainpanel)
         {
             InitializeComponent();
@@ -35,23 +35,15 @@ namespace Menu_Management
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
 
-                    // Chuyển cột ảnh sang Image
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        if (row["DishImage"] != DBNull.Value)
-                        {
-                            byte[] imgData = (byte[])row["DishImage"];
-                            using (MemoryStream ms = new MemoryStream(imgData))
-                            {
-                                row["DishImage"] = Image.FromStream(ms);
-                            }
-                        }
-                    }
 
                     // Gán dữ liệu vào DataGridView
                     ShowData.DataSource = dt;
 
-
+                    //ẩn ảnh khỏi Datagridview vì nhìn nó xấu vcl
+                    if (ShowData.Columns.Contains("DishIMG"))
+                    {
+                        ShowData.Columns["DishIMG"].Visible = false;
+                    }
                 }
             }
             catch (Exception ex)
@@ -68,27 +60,11 @@ namespace Menu_Management
                 {
 
                     sqlcon.Open();
-
-                    // Lấy CategoryID từ tên
-                    SqlCommand getCategoryCmd = new SqlCommand("SELECT CategoryID FROM Categories WHERE CategoryName = @CategoryName", sqlcon);
-                    getCategoryCmd.Parameters.AddWithValue("@CategoryName", CategoryCBB.SelectedItem.ToString());
-
-                    SqlDataReader reader = getCategoryCmd.ExecuteReader();
-                    string categoryID = "";
-
-                    if (reader.Read())
+                    if (pictureBox.Image == null)
                     {
-                        categoryID = reader["CategoryID"].ToString();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Không tìm thấy Category.", "Thông báo");
-                        reader.Close();
+                        MessageBox.Show("Vui lòng chọn hình ảnh món ăn!");
                         return;
                     }
-
-                    reader.Close(); // đóng reader trước khi dùng SqlCommand khác
-
                     // Xử lý ảnh
                     byte[] imageBytes;
                     using (MemoryStream ms = new MemoryStream())
@@ -101,20 +77,24 @@ namespace Menu_Management
                     SqlCommand insertCmd = new SqlCommand("INSERT INTO Dishes (DishID, DishName, CategoryID, Price, DishIMG) VALUES (@DishID, @DishName, @CategoryID, @Price, @DishImage)", sqlcon);
                     insertCmd.Parameters.AddWithValue("@DishID", DishIdTxt.Text);
                     insertCmd.Parameters.AddWithValue("@DishName", NameTxt.Text);
-                    insertCmd.Parameters.AddWithValue("@CategoryID", categoryID);
+                    insertCmd.Parameters.AddWithValue("@CategoryID", CategoryCBB.SelectedValue);
                     insertCmd.Parameters.AddWithValue("@Price", float.Parse(PriceTxt.Text));
-                    //insertCmd.Parameters.AddWithValue("@DishImage", imageBytes);
+                    insertCmd.Parameters.AddWithValue("@DishImage", imageBytes);
 
                     int rowsAffected = insertCmd.ExecuteNonQuery();
 
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Thêm món ăn thành công!");
+
                         LoadDishes();
+
+                        return;
                     }
                     else
                     {
                         MessageBox.Show("Không thể thêm món ăn.");
+                        return;
                     }
 
                 }
@@ -122,6 +102,7 @@ namespace Menu_Management
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
         }
@@ -143,7 +124,7 @@ namespace Menu_Management
                         imageBytes = ms.ToArray();
                     }
 
-                    SqlCommand updateCmd = new SqlCommand("UPDATE Dishes SET DishName=@DishName, CategoryID=@CategoryID, Price=@Price, DishImage=@DishImage WHERE DishID=@DishID", sqlcon);
+                    SqlCommand updateCmd = new SqlCommand("UPDATE Dishes SET DishName=@DishName, CategoryID=@CategoryID, Price=@Price, DishIMG=@DishImage WHERE DishID=@DishID", sqlcon);
                     updateCmd.Parameters.AddWithValue("@DishID", DishIdTxt.Text);
                     updateCmd.Parameters.AddWithValue("@DishName", NameTxt.Text);
                     updateCmd.Parameters.AddWithValue("@CategoryID", CategoryCBB.SelectedItem.ToString());
@@ -163,10 +144,6 @@ namespace Menu_Management
             {
                 MessageBox.Show("Lỗi: " + ex.Message);
             }
-            finally
-            {
-                sqlcon.Close();
-            }
         }
 
 
@@ -178,7 +155,9 @@ namespace Menu_Management
                 {
                     sqlcon.Open();
                     SqlCommand deleteCmd = new SqlCommand("DELETE FROM Dishes WHERE DishID=@DishID", sqlcon);
-                    deleteCmd.Parameters.AddWithValue("@DishID", DishIdTxt.Text);
+                    DataGridViewRow selectedish = ShowData.CurrentRow;
+                    string DishID = selectedish.Cells["DishID"].Value.ToString();
+                    deleteCmd.Parameters.AddWithValue("@DishID", DishID);
 
                     int rows = deleteCmd.ExecuteNonQuery();
                     if (rows > 0)
@@ -191,7 +170,7 @@ namespace Menu_Management
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi: " + ex.Message);
+                MessageBox.Show("Lỗi: Có Bill chưa thanh toán chứa món ăn hiện tại");
             }
 
         }
@@ -204,15 +183,15 @@ namespace Menu_Management
             {
                 sqlcon.Open();
                 SqlCommand sqlcmd = new SqlCommand("SELECT * FROM Categories", sqlcon);
-                SqlDataReader reader = sqlcmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    string categoryName = reader["CategoryName"].ToString();
-                    CategoryCBB.Items.AddRange(categoryName);
+                SqlDataAdapter adapter = new SqlDataAdapter(sqlcmd); 
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
 
-                }
-                LoadDishes();
+                CategoryCBB.DataSource = dt;
+                CategoryCBB.DisplayMember = "CategoryName"; // Hiển thị tên danh mục
+                CategoryCBB.ValueMember = "CategoryID"; // Lưu giá trị ID của danh mục
             }
+            LoadDishes();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -222,6 +201,7 @@ namespace Menu_Management
 
         private void Browse_Click(object sender, EventArgs e)
         {
+            pictureBox.Controls.Clear(); // Xóa ảnh cũ nếu có
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
 
@@ -230,7 +210,6 @@ namespace Menu_Management
                 pictureBox.Image = Image.FromFile(openFileDialog.FileName);
                 pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             }
-            LoadDishes();
             pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
 
         }
@@ -243,9 +222,9 @@ namespace Menu_Management
                 {
                     DataGridViewRow row = ShowData.CurrentRow;
 
-                    if (row.Cells["DishImage"].Value != DBNull.Value)
+                    if (row.Cells["DishIMG"].Value != DBNull.Value)
                     {
-                        object cellValue = row.Cells["DishImage"].Value;
+                        object cellValue = row.Cells["DishIMG"].Value;
 
                         if (cellValue is byte[] imgBytes)
                         {

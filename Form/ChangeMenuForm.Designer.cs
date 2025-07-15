@@ -154,6 +154,7 @@
             // 
             // pictureBox
             // 
+            pictureBox.BorderStyle = BorderStyle.FixedSingle;
             pictureBox.Location = new Point(3, 3);
             pictureBox.Name = "pictureBox";
             pictureBox.Size = new Size(214, 224);
@@ -264,7 +265,7 @@
             label1.AutoSize = true;
             label1.Location = new Point(52, 186);
             label1.Name = "label1";
-            label1.Size = new Size(54, 15);
+            label1.Size = new Size(53, 15);
             label1.TabIndex = 2;
             label1.Text = "Tên món";
             // 

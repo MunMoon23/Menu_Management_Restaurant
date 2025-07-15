@@ -39,6 +39,7 @@ namespace Menu_Management.Class
 
         internal static void ShowCategory(FlowLayoutPanel fl,FlowLayoutPanel Orderfl,Label TotalLabel, FlowLayoutPanel DishShowPanel, HomeForm hf)
         {
+            fl.Controls.Clear(); //Xóa tất cả các điều khiển trong FlowLayoutPanel trước khi thêm mới
             using (SqlConnection sqlcon = new SqlConnection(GetConnectionString()))
             {
                 sqlcon.Open();
@@ -70,7 +71,7 @@ namespace Menu_Management.Class
             using (SqlConnection sqlcon = new SqlConnection(GetConnectionString()))
             {
                 sqlcon.Open();
-                string query = "SELECT * FROM Dishes WHERE DishName LIKE @text";
+                string query = "SELECT * FROM Dishes WHERE DishName LIKE @text AND IsDeleted = 0";
                 SqlCommand sqlcmd = new SqlCommand(query, sqlcon);
                 sqlcmd.Parameters.AddWithValue("@text", '%' + text + '%'); //Thêm tham số để tránh SQL Injection
 
@@ -100,8 +101,8 @@ namespace Menu_Management.Class
             using (SqlConnection sqlcon = new SqlConnection(GetConnectionString()))
             {
                 sqlcon.Open();
-                string dishfilteredQuery = "SELECT * FROM Dishes WHERE CategoryID = @categoryid";
-                string fulldishQuery = "SELECT * FROM Dishes";
+                string dishfilteredQuery = "SELECT * FROM Dishes WHERE CategoryID = @categoryid AND IsDeleted = 0";
+                string fulldishQuery = "SELECT * FROM Dishes WHERE IsDeleted = 0";
                 SqlCommand sqlcmd = new SqlCommand();
                 sqlcmd.Connection = sqlcon;
                 if (string.IsNullOrEmpty(categoryselection))

@@ -17,7 +17,7 @@ namespace Menu_Management
         private BillForm billform;
         public Label CategoryLBL => Category;
 
-        List <OrderInfoClass> OrderInfos = new List<OrderInfoClass>();
+        List<OrderInfoClass> OrderInfos = new List<OrderInfoClass>();
         public HomeForm(BillForm billform)
         {
             InitializeComponent();
@@ -148,7 +148,7 @@ namespace Menu_Management
                         ItemQuantity = itemquantity,
                         ItemTotalPrice = itemprice
                     });
-                    BillItem.AddToBill(itemid , itemname, itemquantity, itemprice);
+                    BillItem.AddToBill(itemid, itemname, itemquantity, itemprice);
                     itemnumber++;
                 }
             }
@@ -170,6 +170,12 @@ namespace Menu_Management
             OrderTotalLabel.Text = "";
             OrderID.Text = ""; // Đặt lại ID đơn hàng
             OrderHelper.CurrentOrderID = 0; // Đặt lại tổng tiền đơn hàng
+        }
+
+        private void reload_Click(object sender, EventArgs e)
+        {
+            DatabaseHelper.ShowDishes(DishFlowPanel, OrderflowLayout, OrderTotalLabel);
+            DatabaseHelper.ShowCategory(CategoryFlowPanel, OrderflowLayout, OrderTotalLabel, DishFlowPanel, this);
         }
     }
 }

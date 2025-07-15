@@ -20,8 +20,9 @@ namespace Menu_Management.Class
         }
 
         public static List <Bills> GroupedBill = new List<Bills>();
-        internal static void LoadBills(FlowLayoutPanel fl)
+        internal static void LoadBills(FlowLayoutPanel fl, BillForm billform)
         {
+            GroupedBill.Clear();
             fl.Controls.Clear(); // Xóa các điều khiển hiện tại trong FlowLayoutPanel trước khi thêm các mục mới
             using (SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
             {
@@ -32,14 +33,30 @@ namespace Menu_Management.Class
                     string query = "SELECT d.DishID, DishName, Quantity, UnitPrice FROM Bills b\r\n"
                     + "JOIN BillDetails bd ON bd.BillID = b.BillID\r\n"
                     + "JOIN Dishes d ON d.DishID = bd.DishID\r\n"
-                    +"WHERE b.BillID = @BillID";
+                    +"WHERE b.BillID = @BillID AND Status = 'Appending'";
                     SqlCommand sqlcmd = new SqlCommand(query, sqlcon);
                     sqlcmd.Parameters.AddWithValue("@BillID", Bill.BillID);
                     SqlDataReader reader = sqlcmd.ExecuteReader();
                     if(reader.HasRows)
                     {
-                        UC_BillItem billItem = new UC_BillItem(Bill.BillID, Bill.OrderTime, Bill.EmployeeName, Bill.TotalPrice);
+                        UC_BillItem billItem = new UC_BillItem(billform, Bill.BillID, Bill.OrderTime, Bill.EmployeeName, Bill.Status, Bill.TotalPrice);
 
+                        //Đăng ký sự kiện xóa hóa đơn
+                        billItem.ClearBillItemClicked += (sender, e) =>
+                        {
+                            if (sender is UC_BillItem clickedItem)
+                            {
+                                fl.Controls.Remove(clickedItem);
+                                using (SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
+                                {
+                                    sqlcon.Open();
+                                    string deleteBillQuery = "UPDATE Bills SET Status = 'Cancelled' WHERE BillID = @BillID";
+                                    SqlCommand cmd = new SqlCommand(deleteBillQuery, sqlcon);
+                                    cmd.Parameters.AddWithValue("@BillID", clickedItem.BillID);
+                                    cmd.ExecuteNonQuery();
+                                }
+                            }
+                        };
                         while (reader.Read())
                         {
                             string itemName = reader["DishName"].ToString();

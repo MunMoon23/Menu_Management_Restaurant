@@ -15,6 +15,8 @@ namespace Menu_Management
 {
     public partial class AlertPrintForm : Form
     {
+        BillForm billform;
+
         // Biến để hỗ trợ in hóa đơn
         private PrintDocument printDocument = new PrintDocument();
         private PrintPreviewDialog previewDialog = new PrintPreviewDialog();
@@ -22,6 +24,7 @@ namespace Menu_Management
         private List<string> billLines;
 
         // Thông tin hóa đơn
+        public string BillStatus;
         public string BillID;
         public DateTime OrderTime;
         public string EmployeeName;
@@ -29,15 +32,17 @@ namespace Menu_Management
         public float totalPrice;
         public List<OrderInfoClass> OrderInfos;
 
-        public AlertPrintForm(string BillID, DateTime OrderTime, string EmployeeName, int ItemNumber, float totalPrice, List<OrderInfoClass> OrderInfos)
+        public AlertPrintForm(BillForm billform,string BillID, DateTime OrderTime, string EmployeeName, int ItemNumber, float totalPrice, List<OrderInfoClass> OrderInfos)
         {
             InitializeComponent();
+            this.billform = billform;
             this.BillID = BillID;
             this.OrderTime = OrderTime;
             this.EmployeeName = EmployeeName;
             this.ItemNumber = ItemNumber;
             this.totalPrice = totalPrice;
             this.OrderInfos = OrderInfos;
+
 
             // Gắn sự kiện in 1 lần
             printDocument.PrintPage += new PrintPageEventHandler(printDocument_PrintPage);
@@ -110,12 +115,12 @@ namespace Menu_Management
 
                 if (printDialog.ShowDialog() == DialogResult.OK)
                 {
-                    FinalizeBill(); // Cập nhật trạng thái hóa đơn thành "Done" trước khi in
                     printDocument.Print();
                 }
             }
-
             this.Close(); // Đóng form sau khi in
+            FinalizeBill(); // Cập nhật trạng thái hóa đơn thành "Done" sau khi in
+            BillHelper.LoadBills(billform.billflowpanel, billform); // Tải lại danh sách hóa đơn
         }
 
         private void NotPrintButton_Click(object sender, EventArgs e)

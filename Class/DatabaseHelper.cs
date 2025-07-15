@@ -186,13 +186,6 @@ namespace Menu_Management.Class
                 }    
             }    
         }
-
-        internal static void LoadInfo(Panel infopanel)
-        {
-            infopanel.Controls.Clear();
-        }
-
-
         
     }
 }

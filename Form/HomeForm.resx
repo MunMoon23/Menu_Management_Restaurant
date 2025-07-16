@@ -121,7 +121,7 @@
   <data name="reload.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAA8USURBVHhe7d19
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAA8USURBVHhe7d19
         jB1Xecfx9TolhTZRQ2yc3DmztsnNnXO8dtidZ3YXk9KsUqDwT0hLt+qLmj9QRF/UF4WmEChtUgoEoSK1
         QWlIgEIqNZVaWtKGQFUKqgTIAamRIBXQNDikbQgmsWOaF9fOelOd9aRxnnscZ3fvPfP2/Ui//xLvM3PO
         M3PvnZkzExMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8Pz6/YWz
@@ -468,7 +468,4 @@
         hBBCCCGEEEIIIYQQQggZX/4/ssda8ezN86wAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="guna2Elipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
 </root>

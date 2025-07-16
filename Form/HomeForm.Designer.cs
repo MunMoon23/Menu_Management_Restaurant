@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -54,7 +53,6 @@
             OrderflowLayout = new FlowLayoutPanel();
             OrderID = new Label();
             label2 = new Label();
-            guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             panelMainContent.SuspendLayout();
             panelMenu.SuspendLayout();
             panelCategory.SuspendLayout();
@@ -168,14 +166,14 @@
             SearchBar.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             SearchBar.IconRight = (Image)resources.GetObject("SearchBar.IconRight");
             SearchBar.IconRightSize = new Size(36, 36);
-            SearchBar.Location = new Point(379, 9);
+            SearchBar.Location = new Point(331, 9);
             SearchBar.Margin = new Padding(4);
             SearchBar.Name = "SearchBar";
             SearchBar.PlaceholderForeColor = Color.Silver;
             SearchBar.PlaceholderText = "Search dish";
             SearchBar.SelectedText = "";
             SearchBar.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            SearchBar.Size = new Size(267, 45);
+            SearchBar.Size = new Size(315, 45);
             SearchBar.TabIndex = 11;
             SearchBar.TextChanged += SearchBar_TextChanged;
             // 
@@ -283,11 +281,6 @@
             label2.TabIndex = 2;
             label2.Text = "Current Order";
             // 
-            // guna2Elipse1
-            // 
-            guna2Elipse1.BorderRadius = 20;
-            guna2Elipse1.TargetControl = OrderflowLayout;
-            // 
             // HomeForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -333,6 +326,5 @@
         private Label Currency;
         private Label Category;
         private Guna.UI2.WinForms.Guna2Button reload;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

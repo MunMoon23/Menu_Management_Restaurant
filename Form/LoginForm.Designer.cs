@@ -197,6 +197,7 @@
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "LoginForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "LoginForm";
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).EndInit();

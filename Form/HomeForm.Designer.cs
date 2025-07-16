@@ -33,10 +33,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panelMainContent = new Panel();
             panelMenu = new Panel();
             reload = new Guna.UI2.WinForms.Guna2Button();
@@ -48,6 +48,7 @@
             SearchBar = new Guna.UI2.WinForms.Guna2TextBox();
             label1 = new Label();
             CurrentOrderPanel = new Panel();
+            ClearBillButton = new Guna.UI2.WinForms.Guna2Button();
             Currency = new Label();
             OrderTotalLabel = new Label();
             label4 = new Label();
@@ -55,7 +56,6 @@
             OrderflowLayout = new FlowLayoutPanel();
             OrderID = new Label();
             label2 = new Label();
-            ClearBillButton = new Guna.UI2.WinForms.Guna2Button();
             panelMainContent.SuspendLayout();
             panelMenu.SuspendLayout();
             panelCategory.SuspendLayout();
@@ -207,6 +207,26 @@
             CurrentOrderPanel.Size = new Size(323, 775);
             CurrentOrderPanel.TabIndex = 0;
             // 
+            // ClearBillButton
+            // 
+            ClearBillButton.BorderRadius = 5;
+            ClearBillButton.CustomizableEdges = customizableEdges5;
+            ClearBillButton.DisabledState.BorderColor = Color.DarkGray;
+            ClearBillButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            ClearBillButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            ClearBillButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            ClearBillButton.FillColor = Color.Transparent;
+            ClearBillButton.Font = new Font("Segoe UI", 9F);
+            ClearBillButton.ForeColor = Color.White;
+            ClearBillButton.Image = (Image)resources.GetObject("ClearBillButton.Image");
+            ClearBillButton.ImageSize = new Size(30, 30);
+            ClearBillButton.Location = new Point(276, 31);
+            ClearBillButton.Name = "ClearBillButton";
+            ClearBillButton.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            ClearBillButton.Size = new Size(47, 35);
+            ClearBillButton.TabIndex = 15;
+            ClearBillButton.Click += ClearBillButton_Click;
+            // 
             // Currency
             // 
             Currency.AutoSize = true;
@@ -284,26 +304,6 @@
             label2.Size = new Size(131, 25);
             label2.TabIndex = 2;
             label2.Text = "Current Order";
-            // 
-            // ClearBillButton
-            // 
-            ClearBillButton.BorderRadius = 5;
-            ClearBillButton.CustomizableEdges = customizableEdges5;
-            ClearBillButton.DisabledState.BorderColor = Color.DarkGray;
-            ClearBillButton.DisabledState.CustomBorderColor = Color.DarkGray;
-            ClearBillButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            ClearBillButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            ClearBillButton.FillColor = Color.Transparent;
-            ClearBillButton.Font = new Font("Segoe UI", 9F);
-            ClearBillButton.ForeColor = Color.White;
-            ClearBillButton.Image = (Image)resources.GetObject("ClearBillButton.Image");
-            ClearBillButton.ImageSize = new Size(30, 30);
-            ClearBillButton.Location = new Point(273, 31);
-            ClearBillButton.Name = "ClearBillButton";
-            ClearBillButton.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            ClearBillButton.Size = new Size(47, 35);
-            ClearBillButton.TabIndex = 15;
-            ClearBillButton.Click += ClearBillButton_Click;
             // 
             // HomeForm
             // 

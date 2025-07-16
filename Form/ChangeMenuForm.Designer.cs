@@ -28,18 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangeMenuForm));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
+            guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             SearchBar = new Guna.UI2.WinForms.Guna2TextBox();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             panel2 = new Panel();
+            pictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             ShowData = new DataGridView();
             CategoryCBB = new ComboBox();
-            panel3 = new Panel();
-            pictureBox = new PictureBox();
             Browse = new Button();
             RemoveBtn = new Button();
             AlterBtn = new Button();
@@ -52,14 +55,11 @@
             label2 = new Label();
             label4 = new Label();
             label1 = new Label();
-            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             panel1.SuspendLayout();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)ShowData).BeginInit();
-            panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ShowData).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -74,11 +74,26 @@
             panel1.Size = new Size(974, 775);
             panel1.TabIndex = 0;
             // 
+            // guna2PictureBox1
+            // 
+            guna2PictureBox1.BackColor = Color.Transparent;
+            guna2PictureBox1.CustomizableEdges = customizableEdges1;
+            guna2PictureBox1.FillColor = Color.Transparent;
+            guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
+            guna2PictureBox1.ImageRotate = 0F;
+            guna2PictureBox1.Location = new Point(24, 12);
+            guna2PictureBox1.Name = "guna2PictureBox1";
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2PictureBox1.Size = new Size(66, 61);
+            guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            guna2PictureBox1.TabIndex = 11;
+            guna2PictureBox1.TabStop = false;
+            // 
             // SearchBar
             // 
             SearchBar.BorderRadius = 20;
             SearchBar.BorderThickness = 0;
-            SearchBar.CustomizableEdges = customizableEdges7;
+            SearchBar.CustomizableEdges = customizableEdges3;
             SearchBar.DefaultText = "";
             SearchBar.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             SearchBar.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -96,15 +111,26 @@
             SearchBar.PlaceholderForeColor = Color.Silver;
             SearchBar.PlaceholderText = "Search dish";
             SearchBar.SelectedText = "";
-            SearchBar.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            SearchBar.ShadowDecoration.CustomizableEdges = customizableEdges4;
             SearchBar.Size = new Size(385, 45);
             SearchBar.TabIndex = 10;
             // 
+            // guna2HtmlLabel1
+            // 
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.ForeColor = Color.FromArgb(28, 40, 51);
+            guna2HtmlLabel1.Location = new Point(96, 26);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(135, 32);
+            guna2HtmlLabel1.TabIndex = 1;
+            guna2HtmlLabel1.Text = "Change Menu";
+            // 
             // panel2
             // 
+            panel2.Controls.Add(pictureBox);
             panel2.Controls.Add(ShowData);
             panel2.Controls.Add(CategoryCBB);
-            panel2.Controls.Add(panel3);
             panel2.Controls.Add(Browse);
             panel2.Controls.Add(RemoveBtn);
             panel2.Controls.Add(AlterBtn);
@@ -122,6 +148,22 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(974, 683);
             panel2.TabIndex = 4;
+            // 
+            // pictureBox
+            // 
+            pictureBox.BackColor = Color.Transparent;
+            pictureBox.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox.BorderStyle = BorderStyle.Fixed3D;
+            pictureBox.CustomizableEdges = customizableEdges5;
+            pictureBox.ImageRotate = 0F;
+            pictureBox.Location = new Point(720, 117);
+            pictureBox.Name = "pictureBox";
+            pictureBox.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            pictureBox.Size = new Size(220, 230);
+            pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox.TabIndex = 8;
+            pictureBox.TabStop = false;
+            pictureBox.Click += Browse_Click;
             // 
             // ShowData
             // 
@@ -141,22 +183,6 @@
             CategoryCBB.Name = "CategoryCBB";
             CategoryCBB.Size = new Size(204, 29);
             CategoryCBB.TabIndex = 6;
-            // 
-            // panel3
-            // 
-            panel3.Controls.Add(pictureBox);
-            panel3.Location = new Point(720, 128);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(220, 230);
-            panel3.TabIndex = 5;
-            // 
-            // pictureBox
-            // 
-            pictureBox.Location = new Point(715, 3);
-            pictureBox.Name = "pictureBox";
-            pictureBox.Size = new Size(214, 224);
-            pictureBox.TabIndex = 0;
-            pictureBox.TabStop = false;
             // 
             // Browse
             // 
@@ -274,32 +300,6 @@
             label1.TabIndex = 2;
             label1.Text = "Name";
             // 
-            // guna2HtmlLabel1
-            // 
-            guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel1.ForeColor = Color.FromArgb(28, 40, 51);
-            guna2HtmlLabel1.Location = new Point(96, 26);
-            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(135, 32);
-            guna2HtmlLabel1.TabIndex = 1;
-            guna2HtmlLabel1.Text = "Change Menu";
-            // 
-            // guna2PictureBox1
-            // 
-            guna2PictureBox1.BackColor = Color.Transparent;
-            guna2PictureBox1.CustomizableEdges = customizableEdges5;
-            guna2PictureBox1.FillColor = Color.Transparent;
-            guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
-            guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new Point(24, 12);
-            guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2PictureBox1.Size = new Size(66, 61);
-            guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            guna2PictureBox1.TabIndex = 11;
-            guna2PictureBox1.TabStop = false;
-            // 
             // ChangeMenuForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -312,12 +312,11 @@
             Load += ChangeMenuForm_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)ShowData).EndInit();
-            panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox).EndInit();
-            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ShowData).EndInit();
             ResumeLayout(false);
         }
 
@@ -331,7 +330,6 @@
         private TextBox PriceTxt;
         private Label label3;
         private Guna.UI2.WinForms.Guna2TextBox SearchBar;
-        private Panel panel3;
         private Button RemoveBtn;
         private Button AlterBtn;
         private Button AddBtn;
@@ -341,8 +339,8 @@
         private DataGridView ShowData;
         private TextBox DishIdTxt;
         private Label label5;
-        private PictureBox pictureBox;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2PictureBox pictureBox;
     }
 }

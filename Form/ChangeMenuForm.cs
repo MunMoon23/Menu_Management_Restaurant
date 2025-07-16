@@ -53,53 +53,53 @@ namespace Menu_Management
         }
         private void AddBtn_Click(object sender, EventArgs e)
         { 
-                try
+            try
+            {
+                using (SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
                 {
-                    using (SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
+
+                    sqlcon.Open();
+
+                    if (pictureBox.Image == null)
                     {
-
-                        sqlcon.Open();
-
-                        if (pictureBox.Image == null)
-                        {
-                            MessageBox.Show("Vui lòng chọn ảnh món ăn.");
-                            return;
-                        }
-
-                        // Xử lý ảnh
-                        byte[] imageBytes;
-                        using (MemoryStream ms = new MemoryStream())
-                        {
-                            pictureBox.Image.Save(ms, pictureBox.Image.RawFormat);
-                            imageBytes = ms.ToArray();
-                        }
-
-                        // Thêm món ăn vào bảng Dishes
-                        SqlCommand insertCmd = new SqlCommand("INSERT INTO Dishes (DishID, DishName, CategoryID, Price, DishIMG) VALUES (@DishID, @DishName, @CategoryID, @Price, @DishIMG)", sqlcon);
-                        insertCmd.Parameters.AddWithValue("@DishID", DishIdTxt.Text);
-                        insertCmd.Parameters.AddWithValue("@DishName", NameTxt.Text);
-                        insertCmd.Parameters.AddWithValue("@CategoryID", CategoryCBB.SelectedValue);
-                        insertCmd.Parameters.AddWithValue("@Price", float.Parse(PriceTxt.Text));
-                        insertCmd.Parameters.AddWithValue("@DishIMG", imageBytes);
-
-                        int rowsAffected = insertCmd.ExecuteNonQuery();
-
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Thêm món ăn thành công!");
-                            LoadDishes();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Không thể thêm món ăn.");
-                        }
-
+                        MessageBox.Show("Vui lòng chọn ảnh món ăn.");
+                        return;
                     }
+
+                    // Xử lý ảnh
+                    byte[] imageBytes;
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        pictureBox.Image.Save(ms, pictureBox.Image.RawFormat);
+                        imageBytes = ms.ToArray();
+                    }
+
+                    // Thêm món ăn vào bảng Dishes
+                    SqlCommand insertCmd = new SqlCommand("INSERT INTO Dishes (DishID, DishName, CategoryID, Price, DishIMG) VALUES (@DishID, @DishName, @CategoryID, @Price, @DishIMG)", sqlcon);
+                    insertCmd.Parameters.AddWithValue("@DishID", DishIdTxt.Text);
+                    insertCmd.Parameters.AddWithValue("@DishName", NameTxt.Text);
+                    insertCmd.Parameters.AddWithValue("@CategoryID", CategoryCBB.SelectedValue);
+                    insertCmd.Parameters.AddWithValue("@Price", float.Parse(PriceTxt.Text));
+                    insertCmd.Parameters.AddWithValue("@DishIMG", imageBytes);
+
+                    int rowsAffected = insertCmd.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Thêm món ăn thành công!");
+                        LoadDishes();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không thể thêm món ăn.");
+                    }
+
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 

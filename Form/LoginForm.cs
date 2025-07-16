@@ -17,9 +17,17 @@ namespace Menu_Management
         public LoginForm()
         {
             InitializeComponent();
+            Username.KeyDown += Input_KeyDown;
+            Password.KeyDown += Input_KeyDown;
         }
 
-
+        private void Input_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                LoginButton.PerformClick(); // Gọi hàm đăng nhập
+            }
+        }
         private bool isValidInput()
         {
             if (string.IsNullOrWhiteSpace(Username.Text) || string.IsNullOrWhiteSpace(Password.Text))
@@ -32,13 +40,13 @@ namespace Menu_Management
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            if(!isValidInput())
+            if (!isValidInput())
             {
                 MessageBox.Show("All fields must be filled");
             }
             else
             {
-                using(SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
+                using (SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
                 {
                     sqlcon.Open();
                     SqlCommand cmd = new SqlCommand("SELECT * FROM Accounts WHERE UserName = @username AND Password = @password", sqlcon);
@@ -61,7 +69,7 @@ namespace Menu_Management
                         MessageBox.Show("Invalid username or password");
                     }
                 }
-            }    
+            }
         }
     }
 }

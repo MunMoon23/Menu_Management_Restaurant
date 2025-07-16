@@ -237,7 +237,7 @@ namespace Menu_Management
                         {
                             pictureBox.Image = img;
                         }
-                        pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+                        pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
                     }
                     else
                     {

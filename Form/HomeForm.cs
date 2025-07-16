@@ -174,8 +174,18 @@ namespace Menu_Management
 
         private void reload_Click(object sender, EventArgs e)
         {
+            SearchBar.Text = ""; // Xóa nội dung tìm kiếm
+            Category.Text = "ALL"; // Đặt tiêu đề danh mục là "ALL" khi tải lại
             DatabaseHelper.ShowDishes(DishFlowPanel, OrderflowLayout, OrderTotalLabel);
             DatabaseHelper.ShowCategory(CategoryFlowPanel, OrderflowLayout, OrderTotalLabel, DishFlowPanel, this);
+        }
+
+        private void ClearBillButton_Click(object sender, EventArgs e)
+        {
+            OrderHelper.CurrentOrderID = 0; // Đặt lại ID đơn hàng
+            OrderID.Text = ""; // Xóa ID đơn hàng
+            OrderflowLayout.Controls.Clear(); // Xóa các mục trong OrderflowLayout
+            OrderTotalLabel.Text = ""; // Xóa tổng tiền
         }
     }
 }

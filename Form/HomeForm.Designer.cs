@@ -33,6 +33,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panelMainContent = new Panel();
@@ -53,6 +55,7 @@
             OrderflowLayout = new FlowLayoutPanel();
             OrderID = new Label();
             label2 = new Label();
+            ClearBillButton = new Guna.UI2.WinForms.Guna2Button();
             panelMainContent.SuspendLayout();
             panelMenu.SuspendLayout();
             panelCategory.SuspendLayout();
@@ -190,6 +193,7 @@
             // CurrentOrderPanel
             // 
             CurrentOrderPanel.BackColor = Color.FromArgb(234, 234, 234);
+            CurrentOrderPanel.Controls.Add(ClearBillButton);
             CurrentOrderPanel.Controls.Add(Currency);
             CurrentOrderPanel.Controls.Add(OrderTotalLabel);
             CurrentOrderPanel.Controls.Add(label4);
@@ -237,7 +241,7 @@
             // 
             btnOrder.BackColor = Color.Transparent;
             btnOrder.BorderRadius = 10;
-            btnOrder.CustomizableEdges = customizableEdges5;
+            btnOrder.CustomizableEdges = customizableEdges7;
             btnOrder.DisabledState.BorderColor = Color.DarkGray;
             btnOrder.DisabledState.CustomBorderColor = Color.DarkGray;
             btnOrder.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -247,7 +251,7 @@
             btnOrder.ForeColor = Color.White;
             btnOrder.Location = new Point(13, 714);
             btnOrder.Name = "btnOrder";
-            btnOrder.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnOrder.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnOrder.Size = new Size(298, 49);
             btnOrder.TabIndex = 21;
             btnOrder.Text = "Order";
@@ -280,6 +284,26 @@
             label2.Size = new Size(131, 25);
             label2.TabIndex = 2;
             label2.Text = "Current Order";
+            // 
+            // ClearBillButton
+            // 
+            ClearBillButton.BorderRadius = 5;
+            ClearBillButton.CustomizableEdges = customizableEdges5;
+            ClearBillButton.DisabledState.BorderColor = Color.DarkGray;
+            ClearBillButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            ClearBillButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            ClearBillButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            ClearBillButton.FillColor = Color.Transparent;
+            ClearBillButton.Font = new Font("Segoe UI", 9F);
+            ClearBillButton.ForeColor = Color.White;
+            ClearBillButton.Image = (Image)resources.GetObject("ClearBillButton.Image");
+            ClearBillButton.ImageSize = new Size(30, 30);
+            ClearBillButton.Location = new Point(273, 31);
+            ClearBillButton.Name = "ClearBillButton";
+            ClearBillButton.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            ClearBillButton.Size = new Size(47, 35);
+            ClearBillButton.TabIndex = 15;
+            ClearBillButton.Click += ClearBillButton_Click;
             // 
             // HomeForm
             // 
@@ -326,5 +350,6 @@
         private Label Currency;
         private Label Category;
         private Guna.UI2.WinForms.Guna2Button reload;
+        private Guna.UI2.WinForms.Guna2Button ClearBillButton;
     }
 }

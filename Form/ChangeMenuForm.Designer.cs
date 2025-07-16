@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangeMenuForm));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
             SearchBar = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             panel2 = new Panel();
             ShowData = new DataGridView();
             CategoryCBB = new ComboBox();
@@ -51,15 +52,19 @@
             label2 = new Label();
             label4 = new Label();
             label1 = new Label();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ShowData).BeginInit();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(guna2PictureBox1);
             panel1.Controls.Add(SearchBar);
             panel1.Controls.Add(guna2HtmlLabel1);
             panel1.Controls.Add(panel2);
@@ -73,7 +78,7 @@
             // 
             SearchBar.BorderRadius = 20;
             SearchBar.BorderThickness = 0;
-            SearchBar.CustomizableEdges = customizableEdges1;
+            SearchBar.CustomizableEdges = customizableEdges7;
             SearchBar.DefaultText = "";
             SearchBar.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             SearchBar.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -85,25 +90,15 @@
             SearchBar.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             SearchBar.IconRight = (Image)resources.GetObject("SearchBar.IconRight");
             SearchBar.IconRightSize = new Size(36, 36);
-            SearchBar.Location = new Point(264, 47);
+            SearchBar.Location = new Point(576, 20);
             SearchBar.Margin = new Padding(4);
             SearchBar.Name = "SearchBar";
             SearchBar.PlaceholderForeColor = Color.Silver;
             SearchBar.PlaceholderText = "Search dish";
             SearchBar.SelectedText = "";
-            SearchBar.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            SearchBar.ShadowDecoration.CustomizableEdges = customizableEdges8;
             SearchBar.Size = new Size(385, 45);
             SearchBar.TabIndex = 10;
-            // 
-            // guna2HtmlLabel1
-            // 
-            guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel1.Location = new Point(52, 47);
-            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(171, 27);
-            guna2HtmlLabel1.TabIndex = 1;
-            guna2HtmlLabel1.Text = "CHANGE MENU";
             // 
             // panel2
             // 
@@ -122,27 +117,29 @@
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label4);
             panel2.Controls.Add(label1);
-            panel2.Location = new Point(0, 115);
+            panel2.Dock = DockStyle.Bottom;
+            panel2.Location = new Point(0, 92);
             panel2.Name = "panel2";
-            panel2.Size = new Size(974, 657);
+            panel2.Size = new Size(974, 683);
             panel2.TabIndex = 4;
             // 
             // ShowData
             // 
             ShowData.AllowUserToOrderColumns = true;
             ShowData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            ShowData.Location = new Point(24, 259);
+            ShowData.Location = new Point(24, 219);
             ShowData.Name = "ShowData";
-            ShowData.Size = new Size(664, 376);
+            ShowData.Size = new Size(664, 452);
             ShowData.TabIndex = 7;
             ShowData.SelectionChanged += ShowData_SelectionChanged;
             // 
             // CategoryCBB
             // 
+            CategoryCBB.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             CategoryCBB.FormattingEnabled = true;
-            CategoryCBB.Location = new Point(52, 128);
+            CategoryCBB.Location = new Point(27, 56);
             CategoryCBB.Name = "CategoryCBB";
-            CategoryCBB.Size = new Size(204, 23);
+            CategoryCBB.Size = new Size(204, 29);
             CategoryCBB.TabIndex = 6;
             // 
             // panel3
@@ -155,7 +152,7 @@
             // 
             // pictureBox
             // 
-            pictureBox.Location = new Point(3, 3);
+            pictureBox.Location = new Point(715, 3);
             pictureBox.Name = "pictureBox";
             pictureBox.Size = new Size(214, 224);
             pictureBox.TabIndex = 0;
@@ -163,7 +160,7 @@
             // 
             // Browse
             // 
-            Browse.Location = new Point(750, 380);
+            Browse.Location = new Point(768, 378);
             Browse.Name = "Browse";
             Browse.Size = new Size(133, 58);
             Browse.TabIndex = 4;
@@ -203,71 +200,105 @@
             // 
             // DishIdTxt
             // 
-            DishIdTxt.Location = new Point(346, 128);
+            DishIdTxt.Font = new Font("Segoe UI", 12F);
+            DishIdTxt.Location = new Point(346, 56);
             DishIdTxt.Name = "DishIdTxt";
-            DishIdTxt.Size = new Size(179, 23);
+            DishIdTxt.Size = new Size(110, 29);
             DishIdTxt.TabIndex = 3;
             // 
             // PriceTxt
             // 
-            PriceTxt.Location = new Point(355, 230);
+            PriceTxt.Font = new Font("Segoe UI", 12F);
+            PriceTxt.Location = new Point(346, 155);
             PriceTxt.Name = "PriceTxt";
-            PriceTxt.Size = new Size(179, 23);
+            PriceTxt.Size = new Size(204, 29);
             PriceTxt.TabIndex = 3;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(346, 84);
+            label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            label5.Location = new Point(346, 22);
             label5.Name = "label5";
-            label5.Size = new Size(21, 15);
+            label5.Size = new Size(30, 21);
             label5.TabIndex = 2;
             label5.Text = "ID ";
             label5.Click += label3_Click;
             // 
             // NameTxt
             // 
-            NameTxt.Location = new Point(52, 230);
+            NameTxt.Font = new Font("Segoe UI", 12F);
+            NameTxt.Location = new Point(27, 155);
             NameTxt.Name = "NameTxt";
-            NameTxt.Size = new Size(179, 23);
+            NameTxt.Size = new Size(204, 29);
             NameTxt.TabIndex = 3;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(355, 186);
+            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            label3.Location = new Point(343, 117);
             label3.Name = "label3";
-            label3.Size = new Size(24, 15);
+            label3.Size = new Size(46, 21);
             label3.TabIndex = 2;
-            label3.Text = "Giá";
+            label3.Text = "Price";
             label3.Click += label3_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(720, 85);
+            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(793, 83);
             label2.Name = "label2";
-            label2.Size = new Size(56, 15);
+            label2.Size = new Size(75, 25);
             label2.TabIndex = 2;
-            label2.Text = "Hình ảnh";
+            label2.Text = "Picture";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(52, 84);
+            label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(27, 22);
             label4.Name = "label4";
-            label4.Size = new Size(61, 15);
+            label4.Size = new Size(78, 21);
             label4.TabIndex = 2;
-            label4.Text = "danh mục";
+            label4.Text = "Category";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(52, 186);
+            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            label1.Location = new Point(27, 117);
             label1.Name = "label1";
-            label1.Size = new Size(53, 15);
+            label1.Size = new Size(53, 21);
             label1.TabIndex = 2;
-            label1.Text = "Tên món";
+            label1.Text = "Name";
+            // 
+            // guna2HtmlLabel1
+            // 
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.ForeColor = Color.FromArgb(28, 40, 51);
+            guna2HtmlLabel1.Location = new Point(96, 26);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(135, 32);
+            guna2HtmlLabel1.TabIndex = 1;
+            guna2HtmlLabel1.Text = "Change Menu";
+            // 
+            // guna2PictureBox1
+            // 
+            guna2PictureBox1.BackColor = Color.Transparent;
+            guna2PictureBox1.CustomizableEdges = customizableEdges5;
+            guna2PictureBox1.FillColor = Color.Transparent;
+            guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
+            guna2PictureBox1.ImageRotate = 0F;
+            guna2PictureBox1.Location = new Point(24, 12);
+            guna2PictureBox1.Name = "guna2PictureBox1";
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2PictureBox1.Size = new Size(66, 61);
+            guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            guna2PictureBox1.TabIndex = 11;
+            guna2PictureBox1.TabStop = false;
             // 
             // ChangeMenuForm
             // 
@@ -286,6 +317,7 @@
             ((System.ComponentModel.ISupportInitialize)ShowData).EndInit();
             panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -295,7 +327,6 @@
         private Panel panel2;
         private TextBox NameTxt;
         private Label label1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Label label2;
         private TextBox PriceTxt;
         private Label label3;
@@ -311,5 +342,7 @@
         private TextBox DishIdTxt;
         private Label label5;
         private PictureBox pictureBox;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }

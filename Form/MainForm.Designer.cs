@@ -32,11 +32,8 @@ namespace Menu_Management
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -47,8 +44,13 @@ namespace Menu_Management
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2PictureBox1 = new Guna2PictureBox();
             SidePanel = new Guna2Panel();
             CurrentUser = new Label();
@@ -59,6 +61,7 @@ namespace Menu_Management
             btnBill = new Guna2Button();
             Home = new Guna2Button();
             MainPanel = new Guna2Panel();
+            Logout = new Guna2Button();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             SidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).BeginInit();
@@ -81,6 +84,7 @@ namespace Menu_Management
             // 
             SidePanel.BackColor = Color.WhiteSmoke;
             SidePanel.BorderThickness = 1;
+            SidePanel.Controls.Add(Logout);
             SidePanel.Controls.Add(CurrentUser);
             SidePanel.Controls.Add(guna2PictureBox2);
             SidePanel.Controls.Add(Exit);
@@ -89,11 +93,11 @@ namespace Menu_Management
             SidePanel.Controls.Add(btnBill);
             SidePanel.Controls.Add(Home);
             SidePanel.Controls.Add(guna2PictureBox1);
-            SidePanel.CustomizableEdges = customizableEdges15;
+            SidePanel.CustomizableEdges = customizableEdges17;
             SidePanel.Dock = DockStyle.Left;
             SidePanel.Location = new Point(0, 0);
             SidePanel.Name = "SidePanel";
-            SidePanel.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            SidePanel.ShadowDecoration.CustomizableEdges = customizableEdges18;
             SidePanel.Size = new Size(276, 775);
             SidePanel.TabIndex = 0;
             // 
@@ -101,7 +105,7 @@ namespace Menu_Management
             // 
             CurrentUser.AutoSize = true;
             CurrentUser.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            CurrentUser.Location = new Point(97, 716);
+            CurrentUser.Location = new Point(122, 704);
             CurrentUser.Name = "CurrentUser";
             CurrentUser.Size = new Size(69, 17);
             CurrentUser.TabIndex = 3;
@@ -109,12 +113,12 @@ namespace Menu_Management
             // 
             // guna2PictureBox2
             // 
-            guna2PictureBox2.CustomizableEdges = customizableEdges3;
+            guna2PictureBox2.CustomizableEdges = customizableEdges5;
             guna2PictureBox2.Image = (Image)resources.GetObject("guna2PictureBox2.Image");
             guna2PictureBox2.ImageRotate = 0F;
-            guna2PictureBox2.Location = new Point(38, 696);
+            guna2PictureBox2.Location = new Point(63, 684);
             guna2PictureBox2.Name = "guna2PictureBox2";
-            guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2PictureBox2.Size = new Size(53, 55);
             guna2PictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             guna2PictureBox2.TabIndex = 2;
@@ -129,8 +133,8 @@ namespace Menu_Management
             Exit.CheckedState.FillColor = Color.WhiteSmoke;
             Exit.CheckedState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             Exit.CheckedState.ForeColor = Color.FromArgb(255, 107, 0);
-            Exit.CheckedState.Image = (Image)resources.GetObject("resource.Image");
-            Exit.CustomizableEdges = customizableEdges5;
+            Exit.CheckedState.Image = (Image)resources.GetObject("resource.Image2");
+            Exit.CustomizableEdges = customizableEdges7;
             Exit.DisabledState.BorderColor = Color.DarkGray;
             Exit.DisabledState.CustomBorderColor = Color.DarkGray;
             Exit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -142,7 +146,7 @@ namespace Menu_Management
             Exit.HoverState.FillColor = Color.WhiteSmoke;
             Exit.HoverState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             Exit.HoverState.ForeColor = Color.FromArgb(255, 162, 80);
-            Exit.HoverState.Image = (Image)resources.GetObject("resource.Image1");
+            Exit.HoverState.Image = (Image)resources.GetObject("resource.Image3");
             Exit.Image = (Image)resources.GetObject("Exit.Image");
             Exit.ImageAlign = HorizontalAlignment.Left;
             Exit.ImageOffset = new Point(15, 0);
@@ -150,7 +154,7 @@ namespace Menu_Management
             Exit.Location = new Point(38, 375);
             Exit.Name = "Exit";
             Exit.PressedColor = Color.LightGray;
-            Exit.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            Exit.ShadowDecoration.CustomizableEdges = customizableEdges8;
             Exit.Size = new Size(211, 45);
             Exit.TabIndex = 1;
             Exit.Text = "Exit";
@@ -168,8 +172,8 @@ namespace Menu_Management
             Settings.CheckedState.FillColor = Color.WhiteSmoke;
             Settings.CheckedState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             Settings.CheckedState.ForeColor = Color.FromArgb(255, 107, 0);
-            Settings.CheckedState.Image = (Image)resources.GetObject("resource.Image2");
-            Settings.CustomizableEdges = customizableEdges7;
+            Settings.CheckedState.Image = (Image)resources.GetObject("resource.Image4");
+            Settings.CustomizableEdges = customizableEdges9;
             Settings.DisabledState.BorderColor = Color.DarkGray;
             Settings.DisabledState.CustomBorderColor = Color.DarkGray;
             Settings.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -181,7 +185,7 @@ namespace Menu_Management
             Settings.HoverState.FillColor = Color.WhiteSmoke;
             Settings.HoverState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             Settings.HoverState.ForeColor = Color.FromArgb(255, 162, 80);
-            Settings.HoverState.Image = (Image)resources.GetObject("resource.Image3");
+            Settings.HoverState.Image = (Image)resources.GetObject("resource.Image5");
             Settings.Image = (Image)resources.GetObject("Settings.Image");
             Settings.ImageAlign = HorizontalAlignment.Left;
             Settings.ImageOffset = new Point(15, 0);
@@ -189,7 +193,7 @@ namespace Menu_Management
             Settings.Location = new Point(38, 324);
             Settings.Name = "Settings";
             Settings.PressedColor = Color.LightGray;
-            Settings.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            Settings.ShadowDecoration.CustomizableEdges = customizableEdges10;
             Settings.Size = new Size(211, 45);
             Settings.TabIndex = 1;
             Settings.Text = "Settings";
@@ -207,8 +211,8 @@ namespace Menu_Management
             Reports.CheckedState.FillColor = Color.WhiteSmoke;
             Reports.CheckedState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             Reports.CheckedState.ForeColor = Color.FromArgb(255, 107, 0);
-            Reports.CheckedState.Image = (Image)resources.GetObject("resource.Image4");
-            Reports.CustomizableEdges = customizableEdges9;
+            Reports.CheckedState.Image = (Image)resources.GetObject("resource.Image6");
+            Reports.CustomizableEdges = customizableEdges11;
             Reports.DisabledState.BorderColor = Color.DarkGray;
             Reports.DisabledState.CustomBorderColor = Color.DarkGray;
             Reports.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -220,7 +224,7 @@ namespace Menu_Management
             Reports.HoverState.FillColor = Color.WhiteSmoke;
             Reports.HoverState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             Reports.HoverState.ForeColor = Color.FromArgb(255, 162, 80);
-            Reports.HoverState.Image = (Image)resources.GetObject("resource.Image5");
+            Reports.HoverState.Image = (Image)resources.GetObject("resource.Image7");
             Reports.Image = (Image)resources.GetObject("Reports.Image");
             Reports.ImageAlign = HorizontalAlignment.Left;
             Reports.ImageOffset = new Point(15, 0);
@@ -228,7 +232,7 @@ namespace Menu_Management
             Reports.Location = new Point(38, 273);
             Reports.Name = "Reports";
             Reports.PressedColor = Color.LightGray;
-            Reports.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            Reports.ShadowDecoration.CustomizableEdges = customizableEdges12;
             Reports.Size = new Size(211, 45);
             Reports.TabIndex = 1;
             Reports.Text = "Reports";
@@ -246,8 +250,8 @@ namespace Menu_Management
             btnBill.CheckedState.FillColor = Color.WhiteSmoke;
             btnBill.CheckedState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             btnBill.CheckedState.ForeColor = Color.FromArgb(255, 107, 0);
-            btnBill.CheckedState.Image = (Image)resources.GetObject("resource.Image6");
-            btnBill.CustomizableEdges = customizableEdges11;
+            btnBill.CheckedState.Image = (Image)resources.GetObject("resource.Image8");
+            btnBill.CustomizableEdges = customizableEdges13;
             btnBill.DisabledState.BorderColor = Color.DarkGray;
             btnBill.DisabledState.CustomBorderColor = Color.DarkGray;
             btnBill.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -259,7 +263,7 @@ namespace Menu_Management
             btnBill.HoverState.FillColor = Color.WhiteSmoke;
             btnBill.HoverState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             btnBill.HoverState.ForeColor = Color.FromArgb(255, 162, 80);
-            btnBill.HoverState.Image = (Image)resources.GetObject("resource.Image7");
+            btnBill.HoverState.Image = (Image)resources.GetObject("resource.Image9");
             btnBill.Image = (Image)resources.GetObject("btnBill.Image");
             btnBill.ImageAlign = HorizontalAlignment.Left;
             btnBill.ImageOffset = new Point(15, 0);
@@ -267,7 +271,7 @@ namespace Menu_Management
             btnBill.Location = new Point(38, 222);
             btnBill.Name = "btnBill";
             btnBill.PressedColor = Color.LightGray;
-            btnBill.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnBill.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btnBill.Size = new Size(211, 45);
             btnBill.TabIndex = 1;
             btnBill.Text = "Bill";
@@ -286,8 +290,8 @@ namespace Menu_Management
             Home.CheckedState.FillColor = Color.WhiteSmoke;
             Home.CheckedState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             Home.CheckedState.ForeColor = Color.FromArgb(255, 107, 0);
-            Home.CheckedState.Image = (Image)resources.GetObject("resource.Image8");
-            Home.CustomizableEdges = customizableEdges13;
+            Home.CheckedState.Image = (Image)resources.GetObject("resource.Image10");
+            Home.CustomizableEdges = customizableEdges15;
             Home.DisabledState.BorderColor = Color.DarkGray;
             Home.DisabledState.CustomBorderColor = Color.DarkGray;
             Home.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -299,7 +303,7 @@ namespace Menu_Management
             Home.HoverState.FillColor = Color.WhiteSmoke;
             Home.HoverState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             Home.HoverState.ForeColor = Color.FromArgb(255, 162, 80);
-            Home.HoverState.Image = (Image)resources.GetObject("resource.Image9");
+            Home.HoverState.Image = (Image)resources.GetObject("resource.Image11");
             Home.Image = (Image)resources.GetObject("Home.Image");
             Home.ImageAlign = HorizontalAlignment.Left;
             Home.ImageOffset = new Point(15, 0);
@@ -307,7 +311,7 @@ namespace Menu_Management
             Home.Location = new Point(38, 171);
             Home.Name = "Home";
             Home.PressedColor = Color.LightGray;
-            Home.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            Home.ShadowDecoration.CustomizableEdges = customizableEdges16;
             Home.Size = new Size(211, 45);
             Home.TabIndex = 1;
             Home.Text = "Home";
@@ -317,13 +321,51 @@ namespace Menu_Management
             // 
             // MainPanel
             // 
-            MainPanel.CustomizableEdges = customizableEdges17;
+            MainPanel.CustomizableEdges = customizableEdges19;
             MainPanel.Dock = DockStyle.Fill;
             MainPanel.Location = new Point(276, 0);
             MainPanel.Name = "MainPanel";
-            MainPanel.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            MainPanel.ShadowDecoration.CustomizableEdges = customizableEdges20;
             MainPanel.Size = new Size(974, 775);
             MainPanel.TabIndex = 1;
+            // 
+            // Logout
+            // 
+            Logout.BorderColor = Color.Empty;
+            Logout.BorderRadius = 20;
+            Logout.BorderThickness = 2;
+            Logout.CheckedState.BorderColor = Color.FromArgb(255, 107, 0);
+            Logout.CheckedState.FillColor = Color.WhiteSmoke;
+            Logout.CheckedState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            Logout.CheckedState.ForeColor = Color.FromArgb(255, 107, 0);
+            Logout.CheckedState.Image = (Image)resources.GetObject("resource.Image");
+            Logout.CustomizableEdges = customizableEdges3;
+            Logout.DisabledState.BorderColor = Color.DarkGray;
+            Logout.DisabledState.CustomBorderColor = Color.DarkGray;
+            Logout.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            Logout.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            Logout.FillColor = Color.WhiteSmoke;
+            Logout.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Logout.ForeColor = Color.FromArgb(28, 40, 51);
+            Logout.HoverState.BorderColor = Color.FromArgb(255, 162, 80);
+            Logout.HoverState.FillColor = Color.WhiteSmoke;
+            Logout.HoverState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            Logout.HoverState.ForeColor = Color.FromArgb(255, 162, 80);
+            Logout.HoverState.Image = (Image)resources.GetObject("resource.Image1");
+            Logout.Image = (Image)resources.GetObject("Logout.Image");
+            Logout.ImageAlign = HorizontalAlignment.Left;
+            Logout.ImageOffset = new Point(15, 0);
+            Logout.ImageSize = new Size(25, 25);
+            Logout.Location = new Point(63, 624);
+            Logout.Name = "Logout";
+            Logout.PressedColor = Color.LightGray;
+            Logout.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            Logout.Size = new Size(128, 45);
+            Logout.TabIndex = 4;
+            Logout.Text = "Log out";
+            Logout.TextAlign = HorizontalAlignment.Left;
+            Logout.TextOffset = new Point(20, 0);
+            Logout.Click += Logout_Click;
             // 
             // MainForm
             // 
@@ -358,5 +400,6 @@ namespace Menu_Management
         private Guna.UI2.WinForms.Guna2Panel MainPanel;
         private Guna2Panel SidePanel;
         private Guna2Button btnBill;
+        private Guna2Button Logout;
     }
 }

@@ -83,5 +83,15 @@ namespace Menu_Management
             AdminCheckoutFrm adminCheckout = new AdminCheckoutFrm();
             MainHelper.ShowForm(adminCheckout, MainPanel);
         }
+
+        private void Logout_Click(object sender, EventArgs e)
+        {
+            Login.User = string.Empty;
+            Login.Fullname = string.Empty;
+            Login.Role = string.Empty;
+            LoginForm loginForm = new LoginForm();
+            this.Hide(); // ẩn MainForm trước khi hiển thị LoginForm
+            loginForm.Show();
+        }
     }
 }

@@ -77,5 +77,11 @@ namespace Menu_Management
             Setting setting = new Setting(MainPanel, billForm);
             MainHelper.ShowForm(setting, MainPanel);
         }
+
+        private void Reports_Click(object sender, EventArgs e)
+        {
+            AdminCheckoutFrm adminCheckout = new AdminCheckoutFrm();
+            MainHelper.ShowForm(adminCheckout, MainPanel);
+        }
     }
 }

@@ -43,8 +43,14 @@ namespace Menu_Management
 
         private void AddEmployee_Click(object sender, EventArgs e)
         {
-            DeleteEmployeeButton addform = new DeleteEmployeeButton();
+            DeleteEmployeeButton addform = new DeleteEmployeeButton(); //do cái form nó tên vậy á, còn tên file là EmployeeManagement.cs
             MainHelper.ShowForm(addform, mainpanel);
+        }
+
+        private void AdminCheckOut_Click(object sender, EventArgs e)
+        {
+            AdminCheckoutFrm admincheckout = new AdminCheckoutFrm();
+            MainHelper.ShowForm(admincheckout, mainpanel);
         }
     }
 }

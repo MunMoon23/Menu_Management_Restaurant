@@ -262,6 +262,7 @@
             AdminCheckOut.Size = new Size(180, 45);
             AdminCheckOut.TabIndex = 3;
             AdminCheckOut.Text = "Admin Checkout";
+            AdminCheckOut.Click += AdminCheckOut_Click;
             // 
             // MainPanel
             // 

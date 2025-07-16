@@ -25,6 +25,8 @@ namespace Menu_Management
 
         private void LoadDishes()
         {
+            ShowData.ColumnHeadersHeight = 30; // Đặt chiều cao tiêu đề cột
+            ShowData.Columns.Clear(); // Xóa các cột hiện tại trong DataGridView
             try
             {
                 using (SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
@@ -40,7 +42,6 @@ namespace Menu_Management
 
                     ShowData.Columns["DishIMG"].Visible = false; // Ẩn cột ảnh gốc nếu không cần thiết
                     ShowData.Columns["IsDeleted"].Visible = false; 
-
 
                 }
             }
@@ -193,19 +194,6 @@ namespace Menu_Management
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-            pictureBox.Controls.Clear(); // Đặt lại ảnh trước khi chọn ảnh mới
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox.Image = Image.FromFile(openFileDialog.FileName);
-                pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-            }
-            pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
-        }
 
         private void Browse_Click(object sender, EventArgs e)
         {

@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_BillItem));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panelMain = new Panel();
             OrderHolderPanel = new Panel();
             OrderItemHolderFlowPanel = new FlowLayoutPanel();
@@ -43,6 +43,8 @@
             label4 = new Label();
             PrintButton = new Guna.UI2.WinForms.Guna2Button();
             panelHeader = new Panel();
+            Status = new Label();
+            StatusLabel = new Label();
             label5 = new Label();
             label3 = new Label();
             EmployeeName = new Label();
@@ -50,8 +52,6 @@
             Bill = new Label();
             label1 = new Label();
             ClearBill = new Guna.UI2.WinForms.Guna2Button();
-            StatusLabel = new Label();
-            Status = new Label();
             panelMain.SuspendLayout();
             OrderHolderPanel.SuspendLayout();
             panel1.SuspendLayout();
@@ -94,9 +94,9 @@
             label9.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label9.Location = new Point(12, 3);
             label9.Name = "label9";
-            label9.Size = new Size(265, 17);
+            label9.Size = new Size(246, 17);
             label9.TabIndex = 0;
-            label9.Text = "[số tt] --- [Tên món] ---- [số lượng]  --- [Giá]";
+            label9.Text = "[No.] --- [Item Name] --- [Qty]  --- [Price]";
             // 
             // panel1
             // 
@@ -145,7 +145,7 @@
             // PrintButton
             // 
             PrintButton.BorderRadius = 25;
-            PrintButton.CustomizableEdges = customizableEdges1;
+            PrintButton.CustomizableEdges = customizableEdges9;
             PrintButton.DisabledState.BorderColor = Color.DarkGray;
             PrintButton.DisabledState.CustomBorderColor = Color.DarkGray;
             PrintButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -155,7 +155,7 @@
             PrintButton.ForeColor = Color.White;
             PrintButton.Location = new Point(60, 40);
             PrintButton.Name = "PrintButton";
-            PrintButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            PrintButton.ShadowDecoration.CustomizableEdges = customizableEdges10;
             PrintButton.Size = new Size(153, 49);
             PrintButton.TabIndex = 18;
             PrintButton.Text = "Print";
@@ -179,6 +179,28 @@
             panelHeader.Size = new Size(280, 134);
             panelHeader.TabIndex = 0;
             // 
+            // Status
+            // 
+            Status.AutoSize = true;
+            Status.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Status.ForeColor = Color.FromArgb(255, 107, 0);
+            Status.Location = new Point(98, 101);
+            Status.Name = "Status";
+            Status.Size = new Size(66, 17);
+            Status.TabIndex = 6;
+            Status.Text = "Unknown";
+            // 
+            // StatusLabel
+            // 
+            StatusLabel.AutoSize = true;
+            StatusLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            StatusLabel.ForeColor = Color.FromArgb(255, 107, 0);
+            StatusLabel.Location = new Point(13, 101);
+            StatusLabel.Name = "StatusLabel";
+            StatusLabel.Size = new Size(49, 17);
+            StatusLabel.TabIndex = 5;
+            StatusLabel.Text = "Status:";
+            // 
             // label5
             // 
             label5.AutoSize = true;
@@ -186,9 +208,9 @@
             label5.ForeColor = Color.FromArgb(255, 107, 0);
             label5.Location = new Point(13, 70);
             label5.Name = "label5";
-            label5.Size = new Size(73, 17);
+            label5.Size = new Size(70, 17);
             label5.TabIndex = 4;
-            label5.Text = "Nhân viên:";
+            label5.Text = "Employee:";
             // 
             // label3
             // 
@@ -197,9 +219,9 @@
             label3.ForeColor = Color.FromArgb(255, 107, 0);
             label3.Location = new Point(13, 44);
             label3.Name = "label3";
-            label3.Size = new Size(67, 17);
+            label3.Size = new Size(40, 17);
             label3.TabIndex = 4;
-            label3.Text = "Thời gian:";
+            label3.Text = "Time:";
             // 
             // EmployeeName
             // 
@@ -241,18 +263,18 @@
             label1.ForeColor = Color.FromArgb(255, 107, 0);
             label1.Location = new Point(13, 17);
             label1.Name = "label1";
-            label1.Size = new Size(64, 17);
+            label1.Size = new Size(50, 17);
             label1.TabIndex = 4;
-            label1.Text = "Hóa đơn:";
+            label1.Text = "Bill No:";
             // 
             // ClearBill
             // 
             ClearBill.BackColor = Color.Transparent;
             ClearBill.BorderRadius = 5;
-            customizableEdges3.BottomRight = false;
-            customizableEdges3.TopLeft = false;
-            customizableEdges3.TopRight = false;
-            ClearBill.CustomizableEdges = customizableEdges3;
+            customizableEdges11.BottomRight = false;
+            customizableEdges11.TopLeft = false;
+            customizableEdges11.TopRight = false;
+            ClearBill.CustomizableEdges = customizableEdges11;
             ClearBill.DisabledState.BorderColor = Color.DarkGray;
             ClearBill.DisabledState.CustomBorderColor = Color.DarkGray;
             ClearBill.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -264,32 +286,10 @@
             ClearBill.ImageSize = new Size(12, 12);
             ClearBill.Location = new Point(250, 0);
             ClearBill.Name = "ClearBill";
-            ClearBill.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            ClearBill.ShadowDecoration.CustomizableEdges = customizableEdges12;
             ClearBill.Size = new Size(30, 22);
             ClearBill.TabIndex = 3;
             ClearBill.Click += ClearBill_Click;
-            // 
-            // StatusLabel
-            // 
-            StatusLabel.AutoSize = true;
-            StatusLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            StatusLabel.ForeColor = Color.FromArgb(255, 107, 0);
-            StatusLabel.Location = new Point(13, 101);
-            StatusLabel.Name = "StatusLabel";
-            StatusLabel.Size = new Size(73, 17);
-            StatusLabel.TabIndex = 5;
-            StatusLabel.Text = "Nhân viên:";
-            // 
-            // Status
-            // 
-            Status.AutoSize = true;
-            Status.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Status.ForeColor = Color.FromArgb(255, 107, 0);
-            Status.Location = new Point(98, 101);
-            Status.Name = "Status";
-            Status.Size = new Size(66, 17);
-            Status.TabIndex = 6;
-            Status.Text = "Unknown";
             // 
             // UC_BillItem
             // 

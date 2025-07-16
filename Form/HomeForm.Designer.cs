@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panelMainContent = new Panel();
             panelMenu = new Panel();
-            reload = new Guna.UI2.WinForms.Guna2CircleButton();
             Category = new Label();
             DishFlowPanel = new FlowLayoutPanel();
             panelCategory = new Panel();
@@ -52,6 +52,7 @@
             OrderflowLayout = new FlowLayoutPanel();
             OrderID = new Label();
             label2 = new Label();
+            reload = new Guna.UI2.WinForms.Guna2Button();
             panelMainContent.SuspendLayout();
             panelMenu.SuspendLayout();
             panelCategory.SuspendLayout();
@@ -81,26 +82,6 @@
             panelMenu.Name = "panelMenu";
             panelMenu.Size = new Size(659, 579);
             panelMenu.TabIndex = 3;
-            // 
-            // reload
-            // 
-            reload.BackColor = Color.Transparent;
-            reload.DisabledState.BorderColor = Color.DarkGray;
-            reload.DisabledState.CustomBorderColor = Color.DarkGray;
-            reload.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            reload.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            reload.FillColor = Color.Transparent;
-            reload.Font = new Font("Segoe UI", 9F);
-            reload.ForeColor = Color.Transparent;
-            reload.Image = (Image)resources.GetObject("reload.Image");
-            reload.ImageSize = new Size(25, 25);
-            reload.Location = new Point(608, 0);
-            reload.Name = "reload";
-            reload.ShadowDecoration.CustomizableEdges = customizableEdges1;
-            reload.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            reload.Size = new Size(38, 36);
-            reload.TabIndex = 13;
-            reload.Click += reload_Click;
             // 
             // Category
             // 
@@ -153,7 +134,7 @@
             // 
             SearchBar.BorderRadius = 20;
             SearchBar.BorderThickness = 0;
-            SearchBar.CustomizableEdges = customizableEdges2;
+            SearchBar.CustomizableEdges = customizableEdges3;
             SearchBar.DefaultText = "";
             SearchBar.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             SearchBar.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -171,7 +152,7 @@
             SearchBar.PlaceholderForeColor = Color.Silver;
             SearchBar.PlaceholderText = "Search dish";
             SearchBar.SelectedText = "";
-            SearchBar.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            SearchBar.ShadowDecoration.CustomizableEdges = customizableEdges4;
             SearchBar.Size = new Size(267, 45);
             SearchBar.TabIndex = 11;
             SearchBar.TextChanged += SearchBar_TextChanged;
@@ -236,7 +217,7 @@
             // 
             btnOrder.BackColor = Color.Transparent;
             btnOrder.BorderRadius = 10;
-            btnOrder.CustomizableEdges = customizableEdges4;
+            btnOrder.CustomizableEdges = customizableEdges5;
             btnOrder.DisabledState.BorderColor = Color.DarkGray;
             btnOrder.DisabledState.CustomBorderColor = Color.DarkGray;
             btnOrder.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -246,7 +227,7 @@
             btnOrder.ForeColor = Color.White;
             btnOrder.Location = new Point(13, 714);
             btnOrder.Name = "btnOrder";
-            btnOrder.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            btnOrder.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnOrder.Size = new Size(298, 49);
             btnOrder.TabIndex = 21;
             btnOrder.Text = "Order";
@@ -278,6 +259,26 @@
             label2.Size = new Size(131, 25);
             label2.TabIndex = 2;
             label2.Text = "Current Order";
+            // 
+            // reload
+            // 
+            reload.BorderRadius = 5;
+            reload.CustomizableEdges = customizableEdges1;
+            reload.DisabledState.BorderColor = Color.DarkGray;
+            reload.DisabledState.CustomBorderColor = Color.DarkGray;
+            reload.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            reload.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            reload.FillColor = Color.Transparent;
+            reload.Font = new Font("Segoe UI", 9F);
+            reload.ForeColor = Color.White;
+            reload.Image = (Image)resources.GetObject("reload.Image");
+            reload.ImageSize = new Size(30, 30);
+            reload.Location = new Point(599, 1);
+            reload.Name = "reload";
+            reload.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            reload.Size = new Size(47, 35);
+            reload.TabIndex = 14;
+            reload.Click += reload_Click;
             // 
             // HomeForm
             // 
@@ -323,6 +324,6 @@
         private UC_OrderItem uC_OrderItem1;
         private Label Currency;
         private Label Category;
-        private Guna.UI2.WinForms.Guna2CircleButton reload;
+        private Guna.UI2.WinForms.Guna2Button reload;
     }
 }

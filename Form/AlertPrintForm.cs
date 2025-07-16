@@ -53,15 +53,25 @@ namespace Menu_Management
             billLines = new List<string>();
             billLines.Add("         Sales Invoice");
             billLines.Add("-------------------------------");
-            billLines.Add($"Invoice No.  : {BillID}");
+            billLines.Add($"Invoice No  : {BillID}");
             billLines.Add($"Employee   : {EmployeeName}");
             billLines.Add($"Date & Time   : {OrderTime}");
             billLines.Add("-------------------------------");
-            billLines.Add("Item           Qty   Unit Price");
+            billLines.Add(string.Format("{0,-20} {1,5} {2,12}", "Item", "Qty", "Price"));
 
             foreach (var item in OrderInfos)
             {
-                billLines.Add($"{item.ItemName,-13} {item.ItemQuantity,2}   {item.ItemTotalPrice,7:N0}");
+                // Rút gọn tên món nếu quá dài để tránh bị tràn dòng
+                string itemName = item.ItemName.Length > 20
+                    ? item.ItemName.Substring(0, 17) + "..."
+                    : item.ItemName;
+
+                string line = string.Format("{0,-20} {1,5} {2,12:N0}",
+                    itemName,
+                    item.ItemQuantity,
+                    item.ItemTotalPrice);
+
+                billLines.Add(line);
             }
 
             billLines.Add("-------------------------------");
@@ -73,7 +83,7 @@ namespace Menu_Management
 
         private void printDocument_PrintPage(object sender, PrintPageEventArgs e)
         {
-            Font font = new Font("Courier New", 10);
+            Font font = new Font("Courier New", 12);
             float yPos = 10; // Vị trí bắt đầu vẽ văn bản
             float leftMargin = 10; // Lề trái của trang in
             float lineHeight = font.GetHeight(e.Graphics); // Chiều cao của mỗi dòng văn bản
@@ -102,6 +112,7 @@ namespace Menu_Management
 
             // Gán tài liệu cho dialog xem trước
             previewDialog.Document = printDocument;
+            previewDialog.PrintPreviewControl.Zoom = 1.3;
             previewDialog.Width = 600;
             previewDialog.Height = 800;
 

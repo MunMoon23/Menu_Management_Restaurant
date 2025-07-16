@@ -60,6 +60,7 @@
             customizableEdges1.TopRight = false;
             OrderImage.CustomizableEdges = customizableEdges1;
             OrderImage.Dock = DockStyle.Left;
+            OrderImage.FillColor = Color.LightGray;
             OrderImage.Image = (Image)resources.GetObject("OrderImage.Image");
             OrderImage.ImageRotate = 0F;
             OrderImage.Location = new Point(0, 0);
@@ -88,7 +89,7 @@
             guna2Panel1.Location = new Point(136, 0);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Panel1.Size = new Size(154, 110);
+            guna2Panel1.Size = new Size(149, 110);
             guna2Panel1.TabIndex = 1;
             // 
             // Quantity
@@ -171,7 +172,7 @@
             ClearOrderItem.ForeColor = Color.Black;
             ClearOrderItem.Image = (Image)resources.GetObject("ClearOrderItem.Image");
             ClearOrderItem.ImageSize = new Size(12, 12);
-            ClearOrderItem.Location = new Point(124, 0);
+            ClearOrderItem.Location = new Point(119, 0);
             ClearOrderItem.Name = "ClearOrderItem";
             ClearOrderItem.ShadowDecoration.CustomizableEdges = customizableEdges10;
             ClearOrderItem.Size = new Size(30, 22);
@@ -205,8 +206,9 @@
             BackColor = Color.Transparent;
             Controls.Add(guna2Panel1);
             Controls.Add(OrderImage);
+            Margin = new Padding(15, 3, 3, 3);
             Name = "UC_OrderItem";
-            Size = new Size(290, 110);
+            Size = new Size(285, 110);
             ((System.ComponentModel.ISupportInitialize)OrderImage).EndInit();
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();

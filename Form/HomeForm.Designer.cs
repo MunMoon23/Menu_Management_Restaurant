@@ -28,15 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panelMainContent = new Panel();
             panelMenu = new Panel();
+            reload = new Guna.UI2.WinForms.Guna2Button();
             Category = new Label();
             DishFlowPanel = new FlowLayoutPanel();
             panelCategory = new Panel();
@@ -52,7 +54,7 @@
             OrderflowLayout = new FlowLayoutPanel();
             OrderID = new Label();
             label2 = new Label();
-            reload = new Guna.UI2.WinForms.Guna2Button();
+            guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             panelMainContent.SuspendLayout();
             panelMenu.SuspendLayout();
             panelCategory.SuspendLayout();
@@ -83,6 +85,26 @@
             panelMenu.Size = new Size(659, 579);
             panelMenu.TabIndex = 3;
             // 
+            // reload
+            // 
+            reload.BorderRadius = 5;
+            reload.CustomizableEdges = customizableEdges1;
+            reload.DisabledState.BorderColor = Color.DarkGray;
+            reload.DisabledState.CustomBorderColor = Color.DarkGray;
+            reload.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            reload.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            reload.FillColor = Color.Transparent;
+            reload.Font = new Font("Segoe UI", 9F);
+            reload.ForeColor = Color.White;
+            reload.Image = (Image)resources.GetObject("reload.Image");
+            reload.ImageSize = new Size(30, 30);
+            reload.Location = new Point(609, 0);
+            reload.Name = "reload";
+            reload.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            reload.Size = new Size(47, 35);
+            reload.TabIndex = 14;
+            reload.Click += reload_Click;
+            // 
             // Category
             // 
             Category.AutoSize = true;
@@ -98,7 +120,7 @@
             DishFlowPanel.AutoScroll = true;
             DishFlowPanel.Location = new Point(3, 36);
             DishFlowPanel.Name = "DishFlowPanel";
-            DishFlowPanel.Size = new Size(643, 543);
+            DishFlowPanel.Size = new Size(653, 543);
             DishFlowPanel.TabIndex = 3;
             // 
             // panelCategory
@@ -236,6 +258,7 @@
             // OrderflowLayout
             // 
             OrderflowLayout.AutoScroll = true;
+            OrderflowLayout.BackColor = Color.FromArgb(234, 234, 234);
             OrderflowLayout.Location = new Point(0, 66);
             OrderflowLayout.Name = "OrderflowLayout";
             OrderflowLayout.Size = new Size(323, 583);
@@ -260,25 +283,10 @@
             label2.TabIndex = 2;
             label2.Text = "Current Order";
             // 
-            // reload
+            // guna2Elipse1
             // 
-            reload.BorderRadius = 5;
-            reload.CustomizableEdges = customizableEdges1;
-            reload.DisabledState.BorderColor = Color.DarkGray;
-            reload.DisabledState.CustomBorderColor = Color.DarkGray;
-            reload.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            reload.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            reload.FillColor = Color.Transparent;
-            reload.Font = new Font("Segoe UI", 9F);
-            reload.ForeColor = Color.White;
-            reload.Image = (Image)resources.GetObject("reload.Image");
-            reload.ImageSize = new Size(30, 30);
-            reload.Location = new Point(599, 1);
-            reload.Name = "reload";
-            reload.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            reload.Size = new Size(47, 35);
-            reload.TabIndex = 14;
-            reload.Click += reload_Click;
+            guna2Elipse1.BorderRadius = 20;
+            guna2Elipse1.TargetControl = OrderflowLayout;
             // 
             // HomeForm
             // 
@@ -325,5 +333,6 @@
         private Label Currency;
         private Label Category;
         private Guna.UI2.WinForms.Guna2Button reload;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

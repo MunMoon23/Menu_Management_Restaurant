@@ -31,22 +31,23 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangeMenuForm));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            SearchBar = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             panel2 = new Panel();
             pictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             ShowData = new DataGridView();
             CategoryCBB = new ComboBox();
-            Browse = new Button();
-            RemoveBtn = new Button();
-            AlterBtn = new Button();
-            AddBtn = new Button();
             DishIdTxt = new TextBox();
             PriceTxt = new TextBox();
             label5 = new Label();
@@ -55,6 +56,10 @@
             label2 = new Label();
             label4 = new Label();
             label1 = new Label();
+            Browse = new Guna.UI2.WinForms.Guna2Button();
+            AddBtn = new Guna.UI2.WinForms.Guna2Button();
+            AlterBtn = new Guna.UI2.WinForms.Guna2Button();
+            RemoveBtn = new Guna.UI2.WinForms.Guna2Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -65,7 +70,6 @@
             // panel1
             // 
             panel1.Controls.Add(guna2PictureBox1);
-            panel1.Controls.Add(SearchBar);
             panel1.Controls.Add(guna2HtmlLabel1);
             panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Fill;
@@ -89,32 +93,6 @@
             guna2PictureBox1.TabIndex = 11;
             guna2PictureBox1.TabStop = false;
             // 
-            // SearchBar
-            // 
-            SearchBar.BorderRadius = 20;
-            SearchBar.BorderThickness = 0;
-            SearchBar.CustomizableEdges = customizableEdges3;
-            SearchBar.DefaultText = "";
-            SearchBar.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            SearchBar.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            SearchBar.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            SearchBar.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            SearchBar.FillColor = Color.FromArgb(224, 224, 224);
-            SearchBar.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            SearchBar.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            SearchBar.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            SearchBar.IconRight = (Image)resources.GetObject("SearchBar.IconRight");
-            SearchBar.IconRightSize = new Size(36, 36);
-            SearchBar.Location = new Point(576, 20);
-            SearchBar.Margin = new Padding(4);
-            SearchBar.Name = "SearchBar";
-            SearchBar.PlaceholderForeColor = Color.Silver;
-            SearchBar.PlaceholderText = "Search dish";
-            SearchBar.SelectedText = "";
-            SearchBar.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            SearchBar.Size = new Size(385, 45);
-            SearchBar.TabIndex = 10;
-            // 
             // guna2HtmlLabel1
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
@@ -128,13 +106,13 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(pictureBox);
-            panel2.Controls.Add(ShowData);
-            panel2.Controls.Add(CategoryCBB);
-            panel2.Controls.Add(Browse);
             panel2.Controls.Add(RemoveBtn);
             panel2.Controls.Add(AlterBtn);
             panel2.Controls.Add(AddBtn);
+            panel2.Controls.Add(Browse);
+            panel2.Controls.Add(pictureBox);
+            panel2.Controls.Add(ShowData);
+            panel2.Controls.Add(CategoryCBB);
             panel2.Controls.Add(DishIdTxt);
             panel2.Controls.Add(PriceTxt);
             panel2.Controls.Add(label5);
@@ -153,12 +131,12 @@
             // 
             pictureBox.BackColor = Color.Transparent;
             pictureBox.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox.BorderStyle = BorderStyle.Fixed3D;
-            pictureBox.CustomizableEdges = customizableEdges5;
+            pictureBox.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox.CustomizableEdges = customizableEdges11;
             pictureBox.ImageRotate = 0F;
             pictureBox.Location = new Point(720, 117);
             pictureBox.Name = "pictureBox";
-            pictureBox.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            pictureBox.ShadowDecoration.CustomizableEdges = customizableEdges12;
             pictureBox.Size = new Size(220, 230);
             pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox.TabIndex = 8;
@@ -169,9 +147,9 @@
             // 
             ShowData.AllowUserToOrderColumns = true;
             ShowData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            ShowData.Location = new Point(24, 219);
+            ShowData.Location = new Point(24, 221);
             ShowData.Name = "ShowData";
-            ShowData.Size = new Size(664, 452);
+            ShowData.Size = new Size(664, 450);
             ShowData.TabIndex = 7;
             ShowData.SelectionChanged += ShowData_SelectionChanged;
             // 
@@ -179,55 +157,15 @@
             // 
             CategoryCBB.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             CategoryCBB.FormattingEnabled = true;
-            CategoryCBB.Location = new Point(27, 56);
+            CategoryCBB.Location = new Point(27, 46);
             CategoryCBB.Name = "CategoryCBB";
             CategoryCBB.Size = new Size(204, 29);
             CategoryCBB.TabIndex = 6;
             // 
-            // Browse
-            // 
-            Browse.Location = new Point(768, 378);
-            Browse.Name = "Browse";
-            Browse.Size = new Size(133, 58);
-            Browse.TabIndex = 4;
-            Browse.Text = "Tìm kiếm";
-            Browse.UseVisualStyleBackColor = true;
-            Browse.Click += Browse_Click;
-            // 
-            // RemoveBtn
-            // 
-            RemoveBtn.Location = new Point(876, 502);
-            RemoveBtn.Name = "RemoveBtn";
-            RemoveBtn.Size = new Size(85, 40);
-            RemoveBtn.TabIndex = 4;
-            RemoveBtn.Text = "Xóa";
-            RemoveBtn.UseVisualStyleBackColor = true;
-            RemoveBtn.Click += RemoveBtn_Click;
-            // 
-            // AlterBtn
-            // 
-            AlterBtn.Location = new Point(785, 502);
-            AlterBtn.Name = "AlterBtn";
-            AlterBtn.Size = new Size(85, 40);
-            AlterBtn.TabIndex = 4;
-            AlterBtn.Text = "Sửa";
-            AlterBtn.UseVisualStyleBackColor = true;
-            AlterBtn.Click += AlterBtn_Click;
-            // 
-            // AddBtn
-            // 
-            AddBtn.Location = new Point(694, 502);
-            AddBtn.Name = "AddBtn";
-            AddBtn.Size = new Size(85, 40);
-            AddBtn.TabIndex = 4;
-            AddBtn.Text = "Thêm";
-            AddBtn.UseVisualStyleBackColor = true;
-            AddBtn.Click += AddBtn_Click;
-            // 
             // DishIdTxt
             // 
             DishIdTxt.Font = new Font("Segoe UI", 12F);
-            DishIdTxt.Location = new Point(346, 56);
+            DishIdTxt.Location = new Point(346, 46);
             DishIdTxt.Name = "DishIdTxt";
             DishIdTxt.Size = new Size(110, 29);
             DishIdTxt.TabIndex = 3;
@@ -235,9 +173,9 @@
             // PriceTxt
             // 
             PriceTxt.Font = new Font("Segoe UI", 12F);
-            PriceTxt.Location = new Point(346, 155);
+            PriceTxt.Location = new Point(343, 118);
             PriceTxt.Name = "PriceTxt";
-            PriceTxt.Size = new Size(204, 29);
+            PriceTxt.Size = new Size(196, 29);
             PriceTxt.TabIndex = 3;
             // 
             // label5
@@ -254,7 +192,7 @@
             // NameTxt
             // 
             NameTxt.Font = new Font("Segoe UI", 12F);
-            NameTxt.Location = new Point(27, 155);
+            NameTxt.Location = new Point(24, 118);
             NameTxt.Name = "NameTxt";
             NameTxt.Size = new Size(204, 29);
             NameTxt.TabIndex = 3;
@@ -263,7 +201,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            label3.Location = new Point(343, 117);
+            label3.Location = new Point(343, 94);
             label3.Name = "label3";
             label3.Size = new Size(46, 21);
             label3.TabIndex = 2;
@@ -294,11 +232,91 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            label1.Location = new Point(27, 117);
+            label1.Location = new Point(27, 94);
             label1.Name = "label1";
             label1.Size = new Size(53, 21);
             label1.TabIndex = 2;
             label1.Text = "Name";
+            // 
+            // Browse
+            // 
+            Browse.BorderRadius = 10;
+            Browse.CustomizableEdges = customizableEdges9;
+            Browse.DisabledState.BorderColor = Color.DarkGray;
+            Browse.DisabledState.CustomBorderColor = Color.DarkGray;
+            Browse.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            Browse.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            Browse.FillColor = Color.FromArgb(255, 107, 0);
+            Browse.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Browse.ForeColor = Color.FromArgb(28, 40, 51);
+            Browse.Image = (Image)resources.GetObject("Browse.Image");
+            Browse.ImageSize = new Size(25, 25);
+            Browse.Location = new Point(772, 353);
+            Browse.Name = "Browse";
+            Browse.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            Browse.Size = new Size(117, 57);
+            Browse.TabIndex = 9;
+            Browse.Text = "Browse";
+            Browse.Click += Browse_Click;
+            // 
+            // AddBtn
+            // 
+            AddBtn.BorderRadius = 10;
+            AddBtn.CustomizableEdges = customizableEdges7;
+            AddBtn.DisabledState.BorderColor = Color.DarkGray;
+            AddBtn.DisabledState.CustomBorderColor = Color.DarkGray;
+            AddBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            AddBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            AddBtn.FillColor = Color.FromArgb(255, 107, 0);
+            AddBtn.Font = new Font("Segoe UI", 9F);
+            AddBtn.ForeColor = Color.White;
+            AddBtn.Image = (Image)resources.GetObject("AddBtn.Image");
+            AddBtn.ImageSize = new Size(25, 25);
+            AddBtn.Location = new Point(541, 175);
+            AddBtn.Name = "AddBtn";
+            AddBtn.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            AddBtn.Size = new Size(45, 40);
+            AddBtn.TabIndex = 10;
+            AddBtn.Click += AddBtn_Click;
+            // 
+            // AlterBtn
+            // 
+            AlterBtn.BorderRadius = 10;
+            AlterBtn.CustomizableEdges = customizableEdges5;
+            AlterBtn.DisabledState.BorderColor = Color.DarkGray;
+            AlterBtn.DisabledState.CustomBorderColor = Color.DarkGray;
+            AlterBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            AlterBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            AlterBtn.FillColor = Color.FromArgb(255, 107, 0);
+            AlterBtn.Font = new Font("Segoe UI", 9F);
+            AlterBtn.ForeColor = Color.White;
+            AlterBtn.Image = (Image)resources.GetObject("AlterBtn.Image");
+            AlterBtn.Location = new Point(592, 175);
+            AlterBtn.Name = "AlterBtn";
+            AlterBtn.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            AlterBtn.Size = new Size(45, 40);
+            AlterBtn.TabIndex = 10;
+            AlterBtn.Click += AlterBtn_Click;
+            // 
+            // RemoveBtn
+            // 
+            RemoveBtn.BorderRadius = 10;
+            RemoveBtn.CustomizableEdges = customizableEdges3;
+            RemoveBtn.DisabledState.BorderColor = Color.DarkGray;
+            RemoveBtn.DisabledState.CustomBorderColor = Color.DarkGray;
+            RemoveBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            RemoveBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            RemoveBtn.FillColor = Color.FromArgb(255, 107, 0);
+            RemoveBtn.Font = new Font("Segoe UI", 9F);
+            RemoveBtn.ForeColor = Color.White;
+            RemoveBtn.Image = (Image)resources.GetObject("RemoveBtn.Image");
+            RemoveBtn.ImageSize = new Size(25, 25);
+            RemoveBtn.Location = new Point(643, 175);
+            RemoveBtn.Name = "RemoveBtn";
+            RemoveBtn.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            RemoveBtn.Size = new Size(45, 40);
+            RemoveBtn.TabIndex = 10;
+            RemoveBtn.Click += RemoveBtn_Click;
             // 
             // ChangeMenuForm
             // 
@@ -329,18 +347,17 @@
         private Label label2;
         private TextBox PriceTxt;
         private Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox SearchBar;
-        private Button RemoveBtn;
-        private Button AlterBtn;
-        private Button AddBtn;
         private ComboBox CategoryCBB;
         private Label label4;
-        private Button Browse;
         private DataGridView ShowData;
         private TextBox DishIdTxt;
         private Label label5;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2PictureBox pictureBox;
+        private Guna.UI2.WinForms.Guna2Button Browse;
+        private Guna.UI2.WinForms.Guna2Button AddBtn;
+        private Guna.UI2.WinForms.Guna2Button RemoveBtn;
+        private Guna.UI2.WinForms.Guna2Button AlterBtn;
     }
 }

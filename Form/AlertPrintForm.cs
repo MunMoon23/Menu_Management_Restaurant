@@ -51,13 +51,13 @@ namespace Menu_Management
         private void BuildBillContent()
         {
             billLines = new List<string>();
-            billLines.Add("         HÓA ĐƠN BÁN HÀNG");
+            billLines.Add("         Sales Invoice");
             billLines.Add("-------------------------------");
-            billLines.Add($"Mã hóa đơn : {BillID}");
-            billLines.Add($"Nhân viên   : {EmployeeName}");
-            billLines.Add($"Thời gian   : {OrderTime}");
+            billLines.Add($"Invoice No.  : {BillID}");
+            billLines.Add($"Employee   : {EmployeeName}");
+            billLines.Add($"Date & Time   : {OrderTime}");
             billLines.Add("-------------------------------");
-            billLines.Add("Món           SL   Đơn giá");
+            billLines.Add("Item           Qty   Unit Price");
 
             foreach (var item in OrderInfos)
             {
@@ -65,10 +65,10 @@ namespace Menu_Management
             }
 
             billLines.Add("-------------------------------");
-            billLines.Add($"Tổng món: {ItemNumber}");
-            billLines.Add($"Tổng tiền: {totalPrice:N0} VND");
+            billLines.Add($"Total Items: {ItemNumber}");
+            billLines.Add($"Total Amount: {totalPrice:N0} VND");
             billLines.Add("-------------------------------");
-            billLines.Add("  Cảm ơn quý khách đã ủng hộ!");
+            billLines.Add("  Thank you for your support!");
         }
 
         private void printDocument_PrintPage(object sender, PrintPageEventArgs e)

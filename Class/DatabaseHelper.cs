@@ -165,7 +165,7 @@ namespace Menu_Management.Class
             {
                 sqlcon.Open();
 
-                string q = "SELECT UserName, FullName, Gender, RoleName FROM Accounts\r\nJOIN Roles ON Roles.RoleID = Accounts.RoleID";
+                string q = "SELECT UserName, FullName, Gender, RoleName, Status FROM Accounts\r\nJOIN Roles ON Roles.RoleID = Accounts.RoleID";
                 SqlDataAdapter adapter = new SqlDataAdapter(q, sqlcon);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);

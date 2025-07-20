@@ -57,9 +57,11 @@ namespace Menu_Management
                     {
                         reader.Read();
                         Login.User = reader["UserName"].ToString();
+                        Login.Password = reader["Password"].ToString();
                         Login.Fullname = reader["FullName"].ToString();
                         int RoleID = Convert.ToInt32(reader["RoleID"]);
                         Login.Role = Login.GetRole(RoleID);
+                        Login.SetAccountStatus(Login.User, "Online");
                         this.Hide();
                         MainForm mainForm = new MainForm(Login.Fullname);
                         mainForm.Show();

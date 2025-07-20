@@ -51,6 +51,7 @@ namespace Menu_Management
         }
         private void Exit_Click(object sender, EventArgs e)
         {
+            Login.SetAccountStatus(Login.User, "Offline");
             Application.Exit();
         }
 
@@ -86,9 +87,12 @@ namespace Menu_Management
 
         private void Logout_Click(object sender, EventArgs e)
         {
+            Login.SetAccountStatus(Login.User, "Offline");
             Login.User = string.Empty;
             Login.Fullname = string.Empty;
             Login.Role = string.Empty;
+            Login.Password = string.Empty;
+
             LoginForm loginForm = new LoginForm();
             this.Hide(); // ẩn MainForm trước khi hiển thị LoginForm
             loginForm.Show();

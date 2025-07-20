@@ -45,7 +45,7 @@
             CurrentPasswordtxt = new Guna.UI2.WinForms.Guna2TextBox();
             ConfirmNewPasswordtxt = new Guna.UI2.WinForms.Guna2TextBox();
             NewPasswordtxt = new Guna.UI2.WinForms.Guna2TextBox();
-            LoginButton = new Guna.UI2.WinForms.Guna2Button();
+            ChangePwdButton = new Guna.UI2.WinForms.Guna2Button();
             Closebtn = new Guna.UI2.WinForms.Guna2Button();
             SuspendLayout();
             // 
@@ -87,7 +87,7 @@
             CurrentPasswordtxt.SelectedText = "";
             CurrentPasswordtxt.ShadowDecoration.CustomizableEdges = customizableEdges10;
             CurrentPasswordtxt.Size = new Size(320, 45);
-            CurrentPasswordtxt.TabIndex = 6;
+            CurrentPasswordtxt.TabIndex = 1;
             CurrentPasswordtxt.UseSystemPasswordChar = true;
             // 
             // ConfirmNewPasswordtxt
@@ -111,7 +111,7 @@
             ConfirmNewPasswordtxt.SelectedText = "";
             ConfirmNewPasswordtxt.ShadowDecoration.CustomizableEdges = customizableEdges8;
             ConfirmNewPasswordtxt.Size = new Size(320, 45);
-            ConfirmNewPasswordtxt.TabIndex = 6;
+            ConfirmNewPasswordtxt.TabIndex = 3;
             ConfirmNewPasswordtxt.UseSystemPasswordChar = true;
             // 
             // NewPasswordtxt
@@ -135,26 +135,27 @@
             NewPasswordtxt.SelectedText = "";
             NewPasswordtxt.ShadowDecoration.CustomizableEdges = customizableEdges6;
             NewPasswordtxt.Size = new Size(320, 45);
-            NewPasswordtxt.TabIndex = 6;
+            NewPasswordtxt.TabIndex = 2;
             NewPasswordtxt.UseSystemPasswordChar = true;
             // 
-            // LoginButton
+            // ChangePwdButton
             // 
-            LoginButton.BorderRadius = 10;
-            LoginButton.CustomizableEdges = customizableEdges3;
-            LoginButton.DisabledState.BorderColor = Color.DarkGray;
-            LoginButton.DisabledState.CustomBorderColor = Color.DarkGray;
-            LoginButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            LoginButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            LoginButton.FillColor = Color.FromArgb(255, 107, 0);
-            LoginButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            LoginButton.ForeColor = Color.White;
-            LoginButton.Location = new Point(128, 265);
-            LoginButton.Name = "LoginButton";
-            LoginButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            LoginButton.Size = new Size(180, 50);
-            LoginButton.TabIndex = 7;
-            LoginButton.Text = "Change Password";
+            ChangePwdButton.BorderRadius = 10;
+            ChangePwdButton.CustomizableEdges = customizableEdges3;
+            ChangePwdButton.DisabledState.BorderColor = Color.DarkGray;
+            ChangePwdButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            ChangePwdButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            ChangePwdButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            ChangePwdButton.FillColor = Color.FromArgb(255, 107, 0);
+            ChangePwdButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ChangePwdButton.ForeColor = Color.White;
+            ChangePwdButton.Location = new Point(128, 265);
+            ChangePwdButton.Name = "ChangePwdButton";
+            ChangePwdButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            ChangePwdButton.Size = new Size(180, 50);
+            ChangePwdButton.TabIndex = 7;
+            ChangePwdButton.Text = "Change Password";
+            ChangePwdButton.Click += ChangePwdButton_Click;
             // 
             // Closebtn
             // 
@@ -175,6 +176,7 @@
             Closebtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
             Closebtn.Size = new Size(35, 30);
             Closebtn.TabIndex = 8;
+            Closebtn.Click += Closebtn_Click;
             // 
             // ChangePassForm
             // 
@@ -182,7 +184,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(450, 350);
             Controls.Add(Closebtn);
-            Controls.Add(LoginButton);
+            Controls.Add(ChangePwdButton);
             Controls.Add(NewPasswordtxt);
             Controls.Add(ConfirmNewPasswordtxt);
             Controls.Add(CurrentPasswordtxt);
@@ -202,7 +204,7 @@
         private Guna.UI2.WinForms.Guna2TextBox ConfirmNewPasswordtxt;
         private Guna.UI2.WinForms.Guna2TextBox CurrentPasswordtxt;
         private Guna.UI2.WinForms.Guna2TextBox NewPasswordtxt;
-        private Guna.UI2.WinForms.Guna2Button LoginButton;
+        private Guna.UI2.WinForms.Guna2Button ChangePwdButton;
         private Guna.UI2.WinForms.Guna2Button Closebtn;
     }
 }

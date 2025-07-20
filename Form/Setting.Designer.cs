@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Setting));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Shift = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ShiftGridview = new Guna.UI2.WinForms.Guna2DataGridView();
             Mon = new DataGridViewTextBoxColumn();
@@ -63,7 +63,7 @@
             ChangePassbtn = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)ShiftGridview).BeginInit();
             MainPanel.SuspendLayout();
-
+            SuspendLayout();
             // 
             // Shift
             // 
@@ -77,27 +77,27 @@
             // 
             // ShiftGridview
             // 
-            dataGridViewCellStyle4.BackColor = Color.White;
-            ShiftGridview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle5.ForeColor = Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            ShiftGridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            ShiftGridview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            ShiftGridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             ShiftGridview.ColumnHeadersHeight = 17;
             ShiftGridview.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             ShiftGridview.Columns.AddRange(new DataGridViewColumn[] { Mon, Tue, Wed, Thus, Fri, Sat, Sun });
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.White;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle6.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            ShiftGridview.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            ShiftGridview.DefaultCellStyle = dataGridViewCellStyle3;
             ShiftGridview.GridColor = Color.FromArgb(231, 229, 255);
             ShiftGridview.Location = new Point(41, 127);
             ShiftGridview.Name = "ShiftGridview";
@@ -186,8 +186,8 @@
             // ChangeMenuBtn
             // 
             ChangeMenuBtn.BorderRadius = 20;
-            customizableEdges11.TopRight = false;
-            ChangeMenuBtn.CustomizableEdges = customizableEdges11;
+            customizableEdges1.TopRight = false;
+            ChangeMenuBtn.CustomizableEdges = customizableEdges1;
             ChangeMenuBtn.DisabledState.BorderColor = Color.DarkGray;
             ChangeMenuBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             ChangeMenuBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -199,17 +199,17 @@
             ChangeMenuBtn.ImageSize = new Size(35, 35);
             ChangeMenuBtn.Location = new Point(528, 690);
             ChangeMenuBtn.Name = "ChangeMenuBtn";
-            ChangeMenuBtn.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            ChangeMenuBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
             ChangeMenuBtn.Size = new Size(180, 45);
             ChangeMenuBtn.TabIndex = 3;
-            ChangeMenuBtn.Text = "Change Menu Item";
+            ChangeMenuBtn.Text = "Menu Manage";
             ChangeMenuBtn.Click += ChangeMenuBtn_Click;
             // 
             // ExitBtn
             // 
             ExitBtn.BorderRadius = 20;
-            customizableEdges13.BottomRight = false;
-            ExitBtn.CustomizableEdges = customizableEdges13;
+            customizableEdges3.BottomRight = false;
+            ExitBtn.CustomizableEdges = customizableEdges3;
             ExitBtn.DisabledState.BorderColor = Color.DarkGray;
             ExitBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             ExitBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -221,7 +221,7 @@
             ExitBtn.ImageSize = new Size(25, 25);
             ExitBtn.Location = new Point(737, 76);
             ExitBtn.Name = "ExitBtn";
-            ExitBtn.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            ExitBtn.ShadowDecoration.CustomizableEdges = customizableEdges4;
             ExitBtn.Size = new Size(180, 45);
             ExitBtn.TabIndex = 3;
             ExitBtn.Text = "Back";
@@ -250,8 +250,8 @@
             // AdminCheckOut
             // 
             AdminCheckOut.BorderRadius = 20;
-            customizableEdges15.TopRight = false;
-            AdminCheckOut.CustomizableEdges = customizableEdges15;
+            customizableEdges5.TopRight = false;
+            AdminCheckOut.CustomizableEdges = customizableEdges5;
             AdminCheckOut.DisabledState.BorderColor = Color.DarkGray;
             AdminCheckOut.DisabledState.CustomBorderColor = Color.DarkGray;
             AdminCheckOut.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -261,7 +261,7 @@
             AdminCheckOut.ForeColor = Color.FromArgb(28, 40, 51);
             AdminCheckOut.Location = new Point(116, 690);
             AdminCheckOut.Name = "AdminCheckOut";
-            AdminCheckOut.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            AdminCheckOut.ShadowDecoration.CustomizableEdges = customizableEdges6;
             AdminCheckOut.Size = new Size(180, 45);
             AdminCheckOut.TabIndex = 3;
             AdminCheckOut.Text = "Admin Checkout";
@@ -289,8 +289,8 @@
             // AddEmployee
             // 
             AddEmployee.BorderRadius = 20;
-            customizableEdges17.TopRight = false;
-            AddEmployee.CustomizableEdges = customizableEdges17;
+            customizableEdges7.TopRight = false;
+            AddEmployee.CustomizableEdges = customizableEdges7;
             AddEmployee.DisabledState.BorderColor = Color.DarkGray;
             AddEmployee.DisabledState.CustomBorderColor = Color.DarkGray;
             AddEmployee.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -302,17 +302,17 @@
             AddEmployee.ImageSize = new Size(40, 40);
             AddEmployee.Location = new Point(322, 690);
             AddEmployee.Name = "AddEmployee";
-            AddEmployee.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            AddEmployee.ShadowDecoration.CustomizableEdges = customizableEdges8;
             AddEmployee.Size = new Size(180, 45);
             AddEmployee.TabIndex = 4;
-            AddEmployee.Text = "Add Employee";
+            AddEmployee.Text = "Account Manage";
             AddEmployee.Click += AddEmployee_Click;
             // 
             // ChangePassbtn
             // 
             ChangePassbtn.BorderRadius = 20;
-            customizableEdges19.TopRight = false;
-            ChangePassbtn.CustomizableEdges = customizableEdges19;
+            customizableEdges9.TopRight = false;
+            ChangePassbtn.CustomizableEdges = customizableEdges9;
             ChangePassbtn.DisabledState.BorderColor = Color.DarkGray;
             ChangePassbtn.DisabledState.CustomBorderColor = Color.DarkGray;
             ChangePassbtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -324,10 +324,11 @@
             ChangePassbtn.ImageSize = new Size(35, 35);
             ChangePassbtn.Location = new Point(734, 690);
             ChangePassbtn.Name = "ChangePassbtn";
-            ChangePassbtn.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            ChangePassbtn.ShadowDecoration.CustomizableEdges = customizableEdges10;
             ChangePassbtn.Size = new Size(180, 45);
             ChangePassbtn.TabIndex = 3;
             ChangePassbtn.Text = "Change Password";
+            ChangePassbtn.Click += ChangePassbtn_Click;
             // 
             // Setting
             // 

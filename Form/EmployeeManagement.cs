@@ -89,17 +89,15 @@ namespace Menu_Management
                 }
             }
         }
-
         private void DelelteEmployee_Click(object sender, EventArgs e)
         {
-
             DialogResult r = MessageBox.Show("Are you sure to delete this account?",
                 "Confirm Deletion",
                 MessageBoxButtons.YesNo);
             if (r == DialogResult.No)
             {
                 return;
-            }   
+            }    
             DataGridViewRow selectedRow = EmployeeViewer.SelectedRows[0];
             if (selectedRow.Cells[0].Value == null)
             {
@@ -107,6 +105,11 @@ namespace Menu_Management
                 return;
             }
             string username = selectedRow.Cells["UserName"].Value.ToString();
+            if(Login.isOnline(username))
+            {
+                MessageBox.Show("This account is currently online!!");
+                return;
+            }
             using (SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
             {
                 sqlcon.Open();
@@ -166,7 +169,7 @@ namespace Menu_Management
                 using (SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
                 {
                     sqlcon.Open();
-                    string query = "DELETE FROM Accounts WHERE RoleID = (SELECT RoleID FROM Roles WHERE RoleName = 'Employee')";
+                    string query = "DELETE FROM Accounts WHERE RoleID = (SELECT RoleID FROM Roles WHERE RoleName = 'Employee') AND Status = 'Offline'";
                     SqlCommand sqlcmd = new SqlCommand(query, sqlcon);
                     int rows = sqlcmd.ExecuteNonQuery();
                     if (rows == 0)

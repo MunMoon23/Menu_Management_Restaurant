@@ -63,7 +63,7 @@
             ChangePassbtn = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)ShiftGridview).BeginInit();
             MainPanel.SuspendLayout();
-            SuspendLayout();
+
             // 
             // Shift
             // 

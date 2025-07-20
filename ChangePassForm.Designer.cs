@@ -189,6 +189,7 @@
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ChangePassForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ChangePassForm";
             ResumeLayout(false);
             PerformLayout();

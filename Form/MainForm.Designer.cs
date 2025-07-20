@@ -34,6 +34,9 @@ namespace Menu_Management
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -48,20 +51,17 @@ namespace Menu_Management
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2PictureBox1 = new Guna2PictureBox();
             SidePanel = new Guna2Panel();
             CurrentUser = new Label();
             guna2PictureBox2 = new Guna2PictureBox();
+            Logout = new Guna2Button();
             Exit = new Guna2Button();
             Settings = new Guna2Button();
             Reports = new Guna2Button();
             btnBill = new Guna2Button();
             Home = new Guna2Button();
             MainPanel = new Guna2Panel();
-            Logout = new Guna2Button();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             SidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).BeginInit();
@@ -84,9 +84,9 @@ namespace Menu_Management
             // 
             SidePanel.BackColor = Color.WhiteSmoke;
             SidePanel.BorderThickness = 1;
-            SidePanel.Controls.Add(Logout);
             SidePanel.Controls.Add(CurrentUser);
             SidePanel.Controls.Add(guna2PictureBox2);
+            SidePanel.Controls.Add(Logout);
             SidePanel.Controls.Add(Exit);
             SidePanel.Controls.Add(Settings);
             SidePanel.Controls.Add(Reports);
@@ -105,7 +105,7 @@ namespace Menu_Management
             // 
             CurrentUser.AutoSize = true;
             CurrentUser.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            CurrentUser.Location = new Point(122, 704);
+            CurrentUser.Location = new Point(106, 678);
             CurrentUser.Name = "CurrentUser";
             CurrentUser.Size = new Size(69, 17);
             CurrentUser.TabIndex = 3;
@@ -113,16 +113,53 @@ namespace Menu_Management
             // 
             // guna2PictureBox2
             // 
-            guna2PictureBox2.CustomizableEdges = customizableEdges5;
+            guna2PictureBox2.CustomizableEdges = customizableEdges3;
             guna2PictureBox2.Image = (Image)resources.GetObject("guna2PictureBox2.Image");
             guna2PictureBox2.ImageRotate = 0F;
-            guna2PictureBox2.Location = new Point(63, 684);
+            guna2PictureBox2.Location = new Point(47, 659);
             guna2PictureBox2.Name = "guna2PictureBox2";
-            guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2PictureBox2.Size = new Size(53, 55);
             guna2PictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             guna2PictureBox2.TabIndex = 2;
             guna2PictureBox2.TabStop = false;
+            // 
+            // Logout
+            // 
+            Logout.BorderColor = Color.FromArgb(255, 107, 0);
+            Logout.BorderRadius = 20;
+            Logout.BorderThickness = 2;
+            Logout.CheckedState.BorderColor = Color.FromArgb(255, 107, 0);
+            Logout.CheckedState.FillColor = Color.WhiteSmoke;
+            Logout.CheckedState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            Logout.CheckedState.ForeColor = Color.FromArgb(255, 107, 0);
+            Logout.CheckedState.Image = (Image)resources.GetObject("resource.Image");
+            Logout.CustomizableEdges = customizableEdges5;
+            Logout.DisabledState.BorderColor = Color.DarkGray;
+            Logout.DisabledState.CustomBorderColor = Color.DarkGray;
+            Logout.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            Logout.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            Logout.FillColor = Color.WhiteSmoke;
+            Logout.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Logout.ForeColor = Color.FromArgb(255, 107, 0);
+            Logout.HoverState.BorderColor = Color.FromArgb(255, 162, 80);
+            Logout.HoverState.FillColor = Color.WhiteSmoke;
+            Logout.HoverState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            Logout.HoverState.ForeColor = Color.FromArgb(255, 162, 80);
+            Logout.HoverState.Image = (Image)resources.GetObject("resource.Image1");
+            Logout.Image = (Image)resources.GetObject("Logout.Image");
+            Logout.ImageAlign = HorizontalAlignment.Left;
+            Logout.ImageOffset = new Point(50, 0);
+            Logout.ImageSize = new Size(25, 25);
+            Logout.Location = new Point(38, 718);
+            Logout.Name = "Logout";
+            Logout.PressedColor = Color.LightGray;
+            Logout.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            Logout.Size = new Size(211, 45);
+            Logout.TabIndex = 1;
+            Logout.Text = "Log Out";
+            Logout.TextOffset = new Point(20, 0);
+            Logout.Click += Logout_Click;
             // 
             // Exit
             // 
@@ -328,44 +365,6 @@ namespace Menu_Management
             MainPanel.ShadowDecoration.CustomizableEdges = customizableEdges20;
             MainPanel.Size = new Size(974, 775);
             MainPanel.TabIndex = 1;
-            // 
-            // Logout
-            // 
-            Logout.BorderColor = Color.Empty;
-            Logout.BorderRadius = 20;
-            Logout.BorderThickness = 2;
-            Logout.CheckedState.BorderColor = Color.FromArgb(255, 107, 0);
-            Logout.CheckedState.FillColor = Color.WhiteSmoke;
-            Logout.CheckedState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            Logout.CheckedState.ForeColor = Color.FromArgb(255, 107, 0);
-            Logout.CheckedState.Image = (Image)resources.GetObject("resource.Image");
-            Logout.CustomizableEdges = customizableEdges3;
-            Logout.DisabledState.BorderColor = Color.DarkGray;
-            Logout.DisabledState.CustomBorderColor = Color.DarkGray;
-            Logout.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            Logout.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            Logout.FillColor = Color.WhiteSmoke;
-            Logout.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Logout.ForeColor = Color.FromArgb(28, 40, 51);
-            Logout.HoverState.BorderColor = Color.FromArgb(255, 162, 80);
-            Logout.HoverState.FillColor = Color.WhiteSmoke;
-            Logout.HoverState.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            Logout.HoverState.ForeColor = Color.FromArgb(255, 162, 80);
-            Logout.HoverState.Image = (Image)resources.GetObject("resource.Image1");
-            Logout.Image = (Image)resources.GetObject("Logout.Image");
-            Logout.ImageAlign = HorizontalAlignment.Left;
-            Logout.ImageOffset = new Point(15, 0);
-            Logout.ImageSize = new Size(25, 25);
-            Logout.Location = new Point(63, 624);
-            Logout.Name = "Logout";
-            Logout.PressedColor = Color.LightGray;
-            Logout.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            Logout.Size = new Size(128, 45);
-            Logout.TabIndex = 4;
-            Logout.Text = "Log out";
-            Logout.TextAlign = HorizontalAlignment.Left;
-            Logout.TextOffset = new Point(20, 0);
-            Logout.Click += Logout_Click;
             // 
             // MainForm
             // 

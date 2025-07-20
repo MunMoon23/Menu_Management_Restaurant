@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="07/20/2025 21:30:03" ReportInfo.Modified="07/20/2025 22:09:45" ReportInfo.CreatorVersion="2025.2.0.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Data;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+  }
+}
+</ScriptText>
+  <Dictionary>
+    <MsSqlDataConnection Name="Connection" ConnectionString="rijcmlqAFHGp6KQj27H4qUwAIR20hSnyrpNtgmeY+I5zyTmYE0HuZfX1hs9fAqnt4DRtzHmVD0cV5atMoCjd6dWng4ikUEpMMaKWNpKjY9iGtJw8CmD8Jx+wFBEz50/DmuiMcHaVnZ+GE3gskJVx7bRreRBePUjI3l8waeKODtBc+WlvCGCohjd4lX+13cz2f36qNZ7">
+      <TableDataSource Name="Dishes" DataType="System.Int32" Enabled="true" TableName="Dishes">
+        <Column Name="DishID" DataType="System.String"/>
+        <Column Name="DishName" DataType="System.String"/>
+        <Column Name="CategoryID" DataType="System.String"/>
+        <Column Name="Price" DataType="System.Decimal"/>
+        <Column Name="DishIMG" DataType="System.Byte[]" BindableControl="Picture"/>
+        <Column Name="IsDeleted" DataType="System.Boolean" BindableControl="CheckBox"/>
+      </TableDataSource>
+      <TableDataSource Name="Bills" DataType="System.Int32" Enabled="true" TableName="Bills">
+        <Column Name="BillID" DataType="System.String"/>
+        <Column Name="OrderTime" DataType="System.DateTime"/>
+        <Column Name="EmployeeName" DataType="System.String"/>
+        <Column Name="TotalItem" DataType="System.Int32"/>
+        <Column Name="TotalPrice" DataType="System.Decimal"/>
+        <Column Name="Status" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="BillDetails" DataType="System.Int32" Enabled="true" TableName="BillDetails">
+        <Column Name="BillDetailID" DataType="System.Int32"/>
+        <Column Name="BillID" DataType="System.String"/>
+        <Column Name="DishID" DataType="System.String"/>
+        <Column Name="Quantity" DataType="System.Int32"/>
+        <Column Name="UnitPrice" DataType="System.Decimal"/>
+      </TableDataSource>
+      <TableDataSource Name="Table" Alias="Revenue" DataType="System.Int32" Enabled="true" SelectCommand="SELECT &#13;&#10;    D.DishName,&#13;&#10;    BD.UnitPrice,&#13;&#10;    SUM(BD.Quantity) AS SoLuong,&#13;&#10;    SUM(BD.Quantity * BD.UnitPrice) AS ThanhTien&#13;&#10;FROM BillDetails BD&#13;&#10;JOIN Dishes D ON BD.DishID = D.DishID&#13;&#10;JOIN Bills B ON BD.BillID = B.BillID&#13;&#10;WHERE B.OrderTime BETWEEN @FromDate AND @ToDate&#13;&#10;      AND B.Status = N'Done'&#13;&#10;GROUP BY D.DishName, BD.UnitPrice&#13;&#10;&#13;&#10;UNION ALL&#13;&#10;&#13;&#10;SELECT &#13;&#10;    N'TỔNG CỘNG' AS DishName,&#13;&#10;    NULL AS UnitPrice,&#13;&#10;    SUM(BD.Quantity),&#13;&#10;    SUM(BD.Quantity * BD.UnitPrice)&#13;&#10;FROM BillDetails BD&#13;&#10;JOIN Dishes D ON BD.DishID = D.DishID&#13;&#10;JOIN Bills B ON BD.BillID = B.BillID&#13;&#10;WHERE B.OrderTime BETWEEN @FromDate AND @ToDate&#13;&#10;      AND B.Status = N'Done';">
+        <Column Name="DishName" DataType="System.String"/>
+        <Column Name="UnitPrice" DataType="System.Decimal"/>
+        <Column Name="SoLuong" DataType="System.Int32"/>
+        <Column Name="ThanhTien" DataType="System.Decimal"/>
+        <CommandParameter Name="FromDate" DataType="22"/>
+        <CommandParameter Name="ToDate" DataType="22"/>
+      </TableDataSource>
+    </MsSqlDataConnection>
+  </Dictionary>
+  <ReportPage Name="Page1" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="85.05">
+      <TextObject Name="Text1" Left="232.95" Top="15" Width="160.65" Height="47.25" Text="Doanh thu " Font="Arial, 20.25pt"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="88.25" Width="718.2" Height="66.15">
+      <TextObject Name="Text4" Left="9.45" Top="9.45" Width="122.85" Height="47.25" Text="Tên món" Font="Arial, 15.75pt"/>
+      <TextObject Name="Text5" Left="170.1" Top="9.45" Width="122.85" Height="47.25" Text="Đơn giá" Font="Arial, 15.75pt"/>
+      <TextObject Name="Text6" Left="349.65" Top="9.45" Width="122.85" Height="47.25" Text="Số lượng" Font="Arial, 15.75pt"/>
+      <TextObject Name="Text7" Left="519.75" Top="9.45" Width="189" Height="47.25" Text="Tổng giá mỗi món" Font="Arial, 15.75pt"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="157.6" Width="718.2" Height="321.3" DataSource="Table">
+      <TextObject Name="Text8" Left="9.45" Top="37.8" Width="122.85" Height="18.9" Text="[Revenue.DishName]" Font="Arial, 10pt"/>
+      <TextObject Name="Text9" Left="170.1" Top="37.8" Width="122.85" Height="18.9" Text="[Revenue.UnitPrice]" Format="Currency" Format.UseLocale="true" Format.DecimalDigits="2" HorzAlign="Right" WordWrap="false" Font="Arial, 10pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text10" Left="349.65" Top="37.8" Width="122.85" Height="18.9" Text="[Revenue.SoLuong]" Font="Arial, 10pt"/>
+      <TextObject Name="Text11" Left="519.75" Top="37.8" Width="132.3" Height="18.9" Text="[Revenue.ThanhTien]" Format="Currency" Format.UseLocale="true" Format.DecimalDigits="2" HorzAlign="Right" WordWrap="false" Font="Arial, 10pt" Trimming="EllipsisCharacter"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="482.1" Width="718.2" Height="66.15"/>
+  </ReportPage>
+</Report>

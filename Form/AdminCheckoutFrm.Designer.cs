@@ -34,17 +34,12 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Shift = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            comboBox1 = new ComboBox();
-            guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            ExitBtn = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            StartDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            EndDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            ReportItemWise = new Guna.UI2.WinForms.Guna2Button();
             SuspendLayout();
             // 
             // Shift
@@ -57,123 +52,79 @@
             Shift.TabIndex = 1;
             Shift.Text = "Checkout";
             // 
-            // comboBox1
+            // StartDate
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(523, 52);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(242, 23);
-            comboBox1.TabIndex = 4;
+            StartDate.Checked = true;
+            StartDate.CustomizableEdges = customizableEdges1;
+            StartDate.Font = new Font("Segoe UI", 9F);
+            StartDate.Format = DateTimePickerFormat.Long;
+            StartDate.Location = new Point(133, 124);
+            StartDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            StartDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            StartDate.Name = "StartDate";
+            StartDate.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            StartDate.Size = new Size(215, 60);
+            StartDate.TabIndex = 2;
+            StartDate.Value = new DateTime(2025, 7, 20, 21, 10, 13, 286);
             // 
-            // guna2Button4
+            // EndDate
             // 
-            guna2Button4.BorderRadius = 20;
-            customizableEdges1.TopRight = false;
-            guna2Button4.CustomizableEdges = customizableEdges1;
-            guna2Button4.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button4.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button4.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button4.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button4.FillColor = Color.FromArgb(238, 140, 33);
-            guna2Button4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button4.ForeColor = Color.White;
-            guna2Button4.Location = new Point(391, 580);
-            guna2Button4.Name = "guna2Button4";
-            guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button4.Size = new Size(147, 41);
-            guna2Button4.TabIndex = 4;
-            guna2Button4.Text = "Prints";
+            EndDate.Checked = true;
+            EndDate.CustomizableEdges = customizableEdges3;
+            EndDate.Font = new Font("Segoe UI", 9F);
+            EndDate.Format = DateTimePickerFormat.Long;
+            EndDate.Location = new Point(510, 124);
+            EndDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            EndDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            EndDate.Name = "EndDate";
+            EndDate.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            EndDate.Size = new Size(215, 60);
+            EndDate.TabIndex = 3;
+            EndDate.Value = new DateTime(2025, 7, 20, 21, 10, 13, 286);
             // 
-            // ExitBtn
+            // guna2HtmlLabel1
             // 
-            ExitBtn.BorderRadius = 20;
-            customizableEdges3.TopRight = false;
-            ExitBtn.CustomizableEdges = customizableEdges3;
-            ExitBtn.DisabledState.BorderColor = Color.DarkGray;
-            ExitBtn.DisabledState.CustomBorderColor = Color.DarkGray;
-            ExitBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            ExitBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            ExitBtn.FillColor = Color.FromArgb(26, 29, 30);
-            ExitBtn.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ExitBtn.ForeColor = Color.White;
-            ExitBtn.Location = new Point(557, 580);
-            ExitBtn.Name = "ExitBtn";
-            ExitBtn.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            ExitBtn.Size = new Size(147, 41);
-            ExitBtn.TabIndex = 4;
-            ExitBtn.Text = "Close";
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Font = new Font("Segoe UI", 14.25F);
+            guna2HtmlLabel1.Location = new Point(133, 82);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(86, 27);
+            guna2HtmlLabel1.TabIndex = 4;
+            guna2HtmlLabel1.Text = "Start Date";
             // 
-            // guna2Button1
+            // guna2HtmlLabel2
             // 
-            guna2Button1.BorderRadius = 20;
-            customizableEdges5.BottomLeft = false;
-            customizableEdges5.BottomRight = false;
-            guna2Button1.CustomizableEdges = customizableEdges5;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.FromArgb(238, 140, 33);
-            guna2Button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(29, 123);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button1.Size = new Size(94, 41);
-            guna2Button1.TabIndex = 4;
-            guna2Button1.Text = "Days";
+            guna2HtmlLabel2.BackColor = Color.Transparent;
+            guna2HtmlLabel2.Font = new Font("Segoe UI", 14.25F);
+            guna2HtmlLabel2.Location = new Point(510, 89);
+            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            guna2HtmlLabel2.Size = new Size(79, 27);
+            guna2HtmlLabel2.TabIndex = 5;
+            guna2HtmlLabel2.Text = "End Date";
             // 
-            // guna2Button2
+            // ReportItemWise
             // 
-            guna2Button2.BorderRadius = 20;
-            customizableEdges7.BottomLeft = false;
-            customizableEdges7.BottomRight = false;
-            guna2Button2.CustomizableEdges = customizableEdges7;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.FillColor = Color.FromArgb(238, 140, 33);
-            guna2Button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(124, 123);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button2.Size = new Size(94, 41);
-            guna2Button2.TabIndex = 4;
-            guna2Button2.Text = "Month";
-            // 
-            // guna2Button3
-            // 
-            guna2Button3.BorderRadius = 20;
-            customizableEdges9.BottomLeft = false;
-            customizableEdges9.BottomRight = false;
-            guna2Button3.CustomizableEdges = customizableEdges9;
-            guna2Button3.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button3.FillColor = Color.FromArgb(238, 140, 33);
-            guna2Button3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button3.ForeColor = Color.White;
-            guna2Button3.Location = new Point(219, 123);
-            guna2Button3.Name = "guna2Button3";
-            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Button3.Size = new Size(94, 41);
-            guna2Button3.TabIndex = 4;
-            guna2Button3.Text = "Year";
+            ReportItemWise.CustomizableEdges = customizableEdges5;
+            ReportItemWise.Font = new Font("Segoe UI", 9F);
+            ReportItemWise.ForeColor = Color.White;
+            ReportItemWise.Location = new Point(133, 252);
+            ReportItemWise.Name = "ReportItemWise";
+            ReportItemWise.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            ReportItemWise.Size = new Size(180, 45);
+            ReportItemWise.TabIndex = 0;
+            ReportItemWise.Text = "Report";
+            ReportItemWise.Click += ReportItemWise_Click;
             // 
             // AdminCheckoutFrm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1115, 632);
-            Controls.Add(guna2Button3);
-            Controls.Add(guna2Button2);
-            Controls.Add(comboBox1);
-            Controls.Add(guna2Button1);
-            Controls.Add(ExitBtn);
-            Controls.Add(guna2Button4);
+            Controls.Add(ReportItemWise);
+            Controls.Add(guna2HtmlLabel2);
+            Controls.Add(guna2HtmlLabel1);
+            Controls.Add(EndDate);
+            Controls.Add(StartDate);
             Controls.Add(Shift);
             FormBorderStyle = FormBorderStyle.None;
             Name = "AdminCheckoutFrm";
@@ -185,11 +136,10 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2HtmlLabel Shift;
-        private ComboBox comboBox1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button ExitBtn;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2DateTimePicker StartDate;
+        private Guna.UI2.WinForms.Guna2DateTimePicker EndDate;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2Button ReportItemWise;
     }
 }

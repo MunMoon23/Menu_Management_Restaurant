@@ -31,31 +31,31 @@ namespace Menu_Management
             {
                 conn.Open();
                 string query = @"
-                SELECT 
-                    D.DishName,
-                    BD.UnitPrice,
-                    SUM(BD.Quantity) AS SoLuong,
-                    SUM(BD.Quantity * BD.UnitPrice) AS ThanhTien
-                FROM BillDetails BD
-                JOIN Dishes D ON BD.DishID = D.DishID
-                JOIN Bills B ON BD.BillID = B.BillID
-                WHERE B.OrderTime BETWEEN @FromDate AND @ToDate
-                      AND B.Status = N'Done'
-                GROUP BY D.DishName, BD.UnitPrice
+            SELECT 
+                D.DishName,
+                BD.UnitPrice,
+                SUM(BD.Quantity) AS SoLuong,
+                SUM(BD.Quantity * BD.UnitPrice) AS ThanhTien
+            FROM BillDetails BD
+            JOIN Dishes D ON BD.DishID = D.DishID
+            JOIN Bills B ON BD.BillID = B.BillID
+            WHERE B.OrderTime BETWEEN @FromDate AND @ToDate
+                  AND B.Status = N'Done'
+            GROUP BY D.DishName, BD.UnitPrice
 
-                UNION ALL
+            UNION ALL
 
-                SELECT 
-                    N'TỔNG CỘNG' AS DishName,
-                    NULL AS UnitPrice,
-                    SUM(BD.Quantity),
-                    SUM(BD.Quantity * BD.UnitPrice)
-                FROM BillDetails BD
-                JOIN Dishes D ON BD.DishID = D.DishID
-                JOIN Bills B ON BD.BillID = B.BillID
-                WHERE B.OrderTime BETWEEN @FromDate AND @ToDate
-                      AND B.Status = N'Done';";
-
+            SELECT 
+                N'TỔNG CỘNG' AS DishName,
+                NULL AS UnitPrice,
+                SUM(BD.Quantity),
+                SUM(BD.Quantity * BD.UnitPrice)
+            FROM BillDetails BD
+            JOIN Dishes D ON BD.DishID = D.DishID
+            JOIN Bills B ON BD.BillID = B.BillID
+            WHERE B.OrderTime BETWEEN @FromDate AND @ToDate
+                  AND B.Status = N'Done';
+        ";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@FromDate", fromDate);
                 cmd.Parameters.AddWithValue("@ToDate", toDate);
@@ -65,19 +65,19 @@ namespace Menu_Management
 
             Report report = new Report();
             report.Load("C:/Users/Phu/Desktop/.net project/Menu Management/Reports/ItemWiseReport.frx"); //cần thêm file
-            report.RegisterData(dt, "Revenue");
-            report.GetDataSource("Revenue").Enabled = true;
 
             report.SetParameterValue("FromDate", fromDate);
             report.SetParameterValue("ToDate", toDate);
+            report.RegisterData(dt,"Revenue");
+            report.GetDataSource("Revenue").Enabled = true;
 
             report.Prepare();
-            string exportPath = $"C:/Users/Phu/Desktop/.net project/Menu Management/ExportReport/DoanhThu_{DateTime.Now:yyyyMMdd_HHmmss}.pdf";
+            string exportPath = $"C:/Users/Phu/Desktop/.net project/Menu Management/ExportReport/DoanhThu_{DateTime.Now:yyyyMMdd}.pdf";
             PDFSimpleExport pdfExport = new PDFSimpleExport();
             report.Export(pdfExport, exportPath);
             report.Dispose();
 
-            MessageBox.Show("✅ Đã xuất báo cáo thành công:\n" + exportPath, "FastReport", MessageBoxButtons.OK);
+            MessageBox.Show("Đã xuất báo cáo thành công:\n" + exportPath, "FastReport", MessageBoxButtons.OK);
         }
     }
 }

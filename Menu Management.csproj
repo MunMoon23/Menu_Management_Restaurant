@@ -19,7 +19,6 @@
 
   <ItemGroup>
     <Folder Include="ExportReport\" />
-    <Folder Include="Reports\" />
   </ItemGroup>
 
 </Project>

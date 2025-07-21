@@ -30,7 +30,11 @@ namespace Menu_Management
                 MessageBox.Show("Ngày bắt đầu không được lớn hơn ngày kết thúc.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
+            if(fromDate > DateTime.Now || toDate > DateTime.Now)
+            {
+                MessageBox.Show("Ngày bắt đầu và ngày kết thúc không được lớn hơn ngày hiện tại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             DataTable dt = new DataTable();
             using (SqlConnection conn = new SqlConnection(DatabaseHelper.GetConnectionString()))
             {
@@ -82,10 +86,11 @@ namespace Menu_Management
             string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop); //lấy đường dẫn mặc định đến Desktop
 
             string exportFolder = Path.Combine(desktopPath, "MenuReports");  //tạo thư mục "MenuReports" trên Desktop nếu chưa tồn tại
-
-            Directory.CreateDirectory(exportFolder); //kiểm tra nếu thư mục không tồn tại thì tạo mới
-
-            string exportPath = Path.Combine(exportFolder, $"DoanhThu_{DateTime.Now:yyyyMMdd}.pdf"); //đặt tên file xuất báo cáo với định dạng ngày tháng
+            if(!Directory.Exists(exportFolder)) //kiểm tra nếu thư mục không tồn tại
+            {
+                Directory.CreateDirectory(exportFolder); //kiểm tra nếu thư mục không tồn tại thì tạo mới
+            }    
+            string exportPath = Path.Combine(exportFolder, $"DoanhThu_{fromDate:yyyyMMdd}_to_{toDate:yyyyMMdd}.pdf"); //đặt tên file xuất báo cáo với định dạng ngày tháng
             PDFSimpleExport pdfExport = new PDFSimpleExport();
             report.Export(pdfExport, exportPath);
             report.Dispose();

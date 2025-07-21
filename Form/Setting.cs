@@ -52,5 +52,11 @@ namespace Menu_Management
             AdminCheckoutFrm admincheckout = new AdminCheckoutFrm();
             MainHelper.ShowForm(admincheckout, mainpanel);
         }
+
+        private void ChangePassbtn_Click(object sender, EventArgs e)
+        {
+            ChangePassForm changePassForm = new ChangePassForm();
+            changePassForm.Show();
+        }
     }
 }

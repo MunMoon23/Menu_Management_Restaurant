@@ -12,6 +12,7 @@ namespace Menu_Management.Class
     internal class Login
     {
         public static string User;
+        public static string Password;
         public static string Fullname;
         public static string Role;
 
@@ -45,6 +46,32 @@ namespace Menu_Management.Class
                     return "Unknown Role";
                 }
             }    
+        }
+
+        public static bool isOnline(string username)
+        {
+            using (SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
+            {
+                sqlcon.Open();
+                string query = "SELECT COUNT(*) FROM Accounts WHERE UserName = @username AND Status = 'Online'";
+                SqlCommand sqlcmd = new SqlCommand(query, sqlcon);
+                sqlcmd.Parameters.AddWithValue("@username", username);
+                int count = (int)sqlcmd.ExecuteScalar();
+                return count == 1; // Trả về true nếu tài khoản đang online, false nếu không
+            }
+        }
+
+        public static void SetAccountStatus(string username, string status)
+        {
+            using (SqlConnection sqlcon = new SqlConnection(DatabaseHelper.GetConnectionString()))
+            {
+                sqlcon.Open();
+                string query = "UPDATE Accounts SET Status = @status WHERE UserName = @username";
+                SqlCommand sqlcmd = new SqlCommand(query, sqlcon);
+                sqlcmd.Parameters.AddWithValue("@status", status);
+                sqlcmd.Parameters.AddWithValue("@username", username);
+                sqlcmd.ExecuteNonQuery();
+            }
         }
     }
 

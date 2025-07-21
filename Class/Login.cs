@@ -25,7 +25,7 @@ namespace Menu_Management.Class
                 {
                     settingform.addEmployeeBtn.Enabled = false;
                     settingform.changeMenuBtn.Enabled = false;
-                    settingform.admincheckout.Enabled = false;
+                    
                 }    
             }
         }

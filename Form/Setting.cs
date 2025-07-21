@@ -14,7 +14,7 @@ namespace Menu_Management
 {
     public partial class Setting : Form
     {
-        public Guna2Button admincheckout => AdminCheckOut;
+        
         public Guna2Button changeMenuBtn => ChangeMenuBtn;
 
         public Guna2Button addEmployeeBtn => AddEmployee;

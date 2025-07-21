@@ -25,7 +25,16 @@ namespace Menu_Management
         {
             DateTime fromDate = StartDate.Value.Date;
             DateTime toDate = EndDate.Value.Date.AddDays(1).AddTicks(-1);
-
+            if(fromDate > toDate)
+            {
+                MessageBox.Show("Ngày bắt đầu không được lớn hơn ngày kết thúc.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if(fromDate > DateTime.Now || toDate > DateTime.Now)
+            {
+                MessageBox.Show("Ngày bắt đầu và ngày kết thúc không được lớn hơn ngày hiện tại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             DataTable dt = new DataTable();
             using (SqlConnection conn = new SqlConnection(DatabaseHelper.GetConnectionString()))
             {
@@ -65,14 +74,23 @@ namespace Menu_Management
 
             Report report = new Report();
             report.Load("C:/Users/Phu/Desktop/.net project/Menu Management/Reports/ItemWiseReport.frx"); //cần thêm file
-
+            //thêm tham số cho báo cáo
             report.SetParameterValue("FromDate", fromDate);
             report.SetParameterValue("ToDate", toDate);
+            //thêm dữ liệu vào báo cáo
             report.RegisterData(dt,"Revenue");
             report.GetDataSource("Revenue").Enabled = true;
 
             report.Prepare();
-            string exportPath = $"C:/Users/Phu/Desktop/.net project/Menu Management/ExportReport/DoanhThu_{DateTime.Now:yyyyMMdd}.pdf";
+
+            string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop); //lấy đường dẫn mặc định đến Desktop
+
+            string exportFolder = Path.Combine(desktopPath, "MenuReports");  //tạo thư mục "MenuReports" trên Desktop nếu chưa tồn tại
+            if(!Directory.Exists(exportFolder)) //kiểm tra nếu thư mục không tồn tại
+            {
+                Directory.CreateDirectory(exportFolder); //kiểm tra nếu thư mục không tồn tại thì tạo mới
+            }    
+            string exportPath = Path.Combine(exportFolder, $"DoanhThu_{fromDate:yyyyMMdd}_to_{toDate:yyyyMMdd}.pdf"); //đặt tên file xuất báo cáo với định dạng ngày tháng
             PDFSimpleExport pdfExport = new PDFSimpleExport();
             report.Export(pdfExport, exportPath);
             report.Dispose();
